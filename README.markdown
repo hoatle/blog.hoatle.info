@@ -1,4 +1,4 @@
-teracy-official-blog
-====================
+blog.hoatle.info
+================
 
-Teracy's official blog at http://blog.teracy.com
+hoatle's blog at http://blog.hoatle.info
