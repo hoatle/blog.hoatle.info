@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[blog.hoatle.info]]></title>
+  <link href="http://blog.hoatle.info/atom.xml" rel="self"/>
+  <link href="http://blog.hoatle.info/"/>
+  <updated>2013-11-20T18:36:39+00:00</updated>
+  <id>http://blog.hoatle.info/</id>
+  <author>
+    <name><![CDATA[hoatle]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+</feed>
