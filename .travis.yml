@@ -16,4 +16,4 @@ after_script:
 env:
   global:
   - GH_REPO="hoatle/blog.hoatle.info"
-  - secure: ll0qKyaIMGw5Fw+CXNKUE5Afy9zNdQimJHLoyNKi8TzIBFgwyARq/IrTllxA+NTdSWoIGnfV1HHtEbpwbaYlwA+/HxbxGqTza995N8V1llEfp0m1E63dh3qfbKcvJ9Xhg6502VMeXyTYPKAK4nAl2FW4BVhwIrCOTfN1U4oseu8=
+  - secure: afk+pGHhsNqdhJ/rfhqaAqLjF8wlbrn2APdVkPBje0K/i0t/ifokQM6B9fm1XTIPwNHpVU5q79iL93AOYPmHXfoWe8nY8LwQINZrDc/+N1j6H3sQl1N5G1z75IXKGHKat48U4Dn12TioE/TqflkDzDmpVTVLlf40sVIilVly5f8=
