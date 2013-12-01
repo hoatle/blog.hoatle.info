@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: en | blog.hoatle.info]]></title>
+  <link href="http://blog.hoatle.info/categories/en/atom.xml" rel="self"/>
+  <link href="http://blog.hoatle.info/"/>
+  <updated>2013-12-01T15:25:16+00:00</updated>
+  <id>http://blog.hoatle.info/</id>
+  <author>
+    <name><![CDATA[hoatle]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[http errors by images]]></title>
+    <link href="http://blog.hoatle.info/2008/11/22/http-errors-by-images/"/>
+    <updated>2008-11-22T09:12:00+00:00</updated>
+    <id>http://blog.hoatle.info/2008/11/22/http-errors-by-images</id>
+    <content type="html"><![CDATA[<p>There are many cases that HTTP errors occurs with tedious text like &ldquo;Access Denied&rdquo; or
+&ldquo;Page Not Found&rdquo;. If we add an image for illustration, it&rsquo;s more interesting. Even people will like
+to get HTTP errors to see such these interesting images :)).</p>
+
+<!-- more -->
+
+
+<h2>400 &ndash; Bad Request</h2>
+
+<p><img class="center <a" src="href="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/109/304192669_105139f8e0_m.jpg">http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/109/304192669_105139f8e0_m.jpg</a>" width="400" title="&ndash; Bad Request" ></p>
+
+<h2>401 &ndash; Unauthorized</h2>
+
+<p><img class="center <a" src="href="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/122/304193001_7ed9b91756_m.jpg">http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/122/304193001_7ed9b91756_m.jpg</a>" width="401" title="&ndash; Unauthorized" ></p>
+
+<h2>402 &ndash; Payment Required</h2>
+
+<p><img class="center <a" src="href="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/106/304193323_3d98d9fcbe_m.jpg">http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/106/304193323_3d98d9fcbe_m.jpg</a>" width="402" title="&ndash; Payment Required" ></p>
+
+<h2>403 &ndash; Forbidden</h2>
+
+<p><img class="center <a" src="href="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/117/304193677_7ac63a179e_m.jpg">http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/117/304193677_7ac63a179e_m.jpg</a>" width="403" title="&ndash; Forbidden" ></p>
+
+<h2>404 &ndash; Not Found</h2>
+
+<p><img class="center <a" src="href="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/105/304194006_922af2210e_m.jpg">http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/105/304194006_922af2210e_m.jpg</a>" width="404" title="&ndash; Not Found" ></p>
+
+<h2>405 &ndash; Method Not Allowed</h2>
+
+<p><img class="center <a" src="href="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/112/304194299_2fc0718bb5_m.jpg">http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/112/304194299_2fc0718bb5_m.jpg</a>" width="405" title="&ndash; Method Not Allowed" ></p>
+
+<h2>406 &ndash; Not Acceptable</h2>
+
+<p><img class="center <a" src="href="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/116/304194659_eca0264c29_m.jpg">http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/116/304194659_eca0264c29_m.jpg</a>" width="406" title="&ndash; Not Acceptable" ></p>
+
+<h2>408 &ndash; Request Timeout</h2>
+
+<p><img class="center <a" src="href="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/120/304195027_092906cf44_m.jpg">http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/120/304195027_092906cf44_m.jpg</a>" width="408" title="&ndash; Request Timeout" ></p>
+
+<h2>409 &ndash; Conflict</h2>
+
+<p><img class="center <a" src="href="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/115/304195427_f15002a254_m.jpg">http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/115/304195427_f15002a254_m.jpg</a>" width="409" title="&ndash; Conflict" ></p>
+
+<h2>410 &ndash; Gone</h2>
+
+<p><img class="center <a" src="href="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/99/304195684_7ed943c933_m.jpg">http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/99/304195684_7ed943c933_m.jpg</a>" width="410" title="&ndash; Gone" ></p>
+
+<h2>411 &ndash; Length Required</h2>
+
+<p><img class="center <a" src="href="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/109/304195993_bcc87426eb_m.jpg">http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/109/304195993_bcc87426eb_m.jpg</a>" width="411" title="&ndash; Length Required" ></p>
+
+<h2>413 &ndash; Request Entity Too Large</h2>
+
+<p><img class="center <a" src="href="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/101/304196358_0afd41ba2e_m.jpg">http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/101/304196358_0afd41ba2e_m.jpg</a>" width="413" title="&ndash; Request Entity Too Large" ></p>
+
+<h2>414 &ndash; Requested URL Too Long</h2>
+
+<p><img class="center <a" src="href="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/113/304196775_0b461475f7_m.jpg">http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/113/304196775_0b461475f7_m.jpg</a>" width="414" title="&ndash; Requested URL Too Long" ></p>
+
+<h2>415 &ndash; Unsuported Media Type</h2>
+
+<p><img class="center <a" src="href="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/120/304197126_079c77762b_m.jpg">http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/120/304197126_079c77762b_m.jpg</a>" width="415" title="&ndash; Unsupported Media Type" ></p>
+
+<h2>416 &ndash; Requested Range Not Satisfied</h2>
+
+<p><img class="center <a" src="href="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/111/304197454_7d2319e1d6_m.jpg">http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/111/304197454_7d2319e1d6_m.jpg</a>" width="416" title="&ndash; Requested Range Not Satisfied" ></p>
+
+<h2>417 &ndash; Expectation Failed</h2>
+
+<p><img class="center <a" src="href="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/106/304197810_cbd6d2ff5e_m.jpg">http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/106/304197810_cbd6d2ff5e_m.jpg</a>" width="417" title="&ndash; Expectation Failed" ></p>
+
+<p>To me the most interesting one is: 411 Length Required :))</p>
+
+<p>Recommended links:</p>
+
+<p>List of HTTP status codes: <a href="http://en.wikipedia.org/wiki/List_of_HTTP_status_codes">http://en.wikipedia.org/wiki/List_of_HTTP_status_codes</a>
+Images for illustration: <a href="http://www.flickr.com/photos/apelad/sets/72157594388426362/detail">http://www.flickr.com/photos/apelad/sets/72157594388426362/detail</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Drupal revealed as 2008 open source CMS award winner]]></title>
+    <link href="http://blog.hoatle.info/2008/11/06/drupal-revealed-as-2008-open-source-cms-award-winner/"/>
+    <updated>2008-11-06T22:21:00+00:00</updated>
+    <id>http://blog.hoatle.info/2008/11/06/drupal-revealed-as-2008-open-source-cms-award-winner</id>
+    <content type="html"><![CDATA[<p>Packt’s annual Open Source Content Management System (CMS) Award reached its climax today with the announcement that Drupal has won the Overall category, collecting a first prize of $5,000. Three months after it was launched and a staggering 20,000 votes later, Drupal finished ahead of Joomla! and DotNetNuke to retain the Award it won in 2007.</p>
+
+<p>Released as an Open Source project by founder Dries Buytaert in 2001, Drupal has grown substantially and has been downloaded almost 1.5 million times in the last 12 months. It is currently being applied by companies such as Warner Brothers Music, MTV UK, and the New York Observer amongst others.</p>
+
+<p>&ldquo;These awards are a testament to the valuable contributions from dedicated Drupal community members around the globe&rdquo; said Buytaert in response to the news. &ldquo;Working together, the Drupal community is building the future of the dynamic web so that anyone can quickly build great social publishing websites&rdquo; he concluded.</p>
+
+<p>With votes coming from a panel of industry experts and visitors to Packt’s website, this year’s Awards proved to be the most popular and also the highest quality. The task of selecting a top three from the finalists was a difficult one for the judges due to their high standards and myriad features.</p>
+
+<p>Finishing in second place and receiving $3,000 was Joomla!, the youngest of the three finalists and a previous winner of the Overall Award. Judges were impressed with Joomla’s ease of installation and ability to get a website up-and-running in a short space of time. Particular praise was reserved for its sizeable and enthusiastic community, which has allowed the project to grow so quickly in such a short space of time.</p>
+
+<p>In third place and receiving $2,000 was DotNetNuke, the only CMS in the final that is written in VB.NET for the ASP.NET framework. DotNetNuke received positive feedback from judges who were impressed with its ease of development and security implementation features.</p>
+
+<p>Alongside the Overall Award, Packt ran categories for best Open Source PHP Content Management System and best Open Source CMS that isn’t written in PHP. The final category was the Most Promising Open Source CMS, which was won by SilverStripe. Packt handed out a total of $20,000 in prize money to the winning Content Management Systems.</p>
+
+<p>Winners in the other final categories include:</p>
+
+<ul>
+<li>Most Promising: <strong>SilverStripe</strong></li>
+<li>Best Open Source PHP: <strong>Drupal</strong></li>
+<li>Best non PHP Open Source CMS: <strong>Plone</strong></li>
+</ul>
+
+
+<p>The Awards were designed to recognize and reward Open Source CMS’s for their consistently high standards in what is an extremely competitive field. The result of this year’s Award confirms this quality and also suggests that there isn’t necessarily one CMS that is the best, more that there is the best one to fit an individual user’s needs and requirements.</p>
+
+<p>Full results of the 2008 Open Source CMS Award can be found at <a href="http://www.PacktPub.com/Award">http://www.PacktPub.com/Award</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[hoatle.net - introduction]]></title>
+    <link href="http://blog.hoatle.info/2008/11/06/hoatle-net-introduction/"/>
+    <updated>2008-11-06T22:02:00+00:00</updated>
+    <id>http://blog.hoatle.info/2008/11/06/hoatle-net-introduction</id>
+    <content type="html"><![CDATA[<p>Hi everybody, welcome to my newly created weblog &ndash; hoatle.net! Let me introduce first :). Ah, about my domain name? It is very simple. My name is Hoat Le Van, so hoatle is the combination of my first (Hoat) and last name (Le). Moreover, hoatle is also my long-term username on the internet, just google to find out something about me, huh? After some weeks to develop this weblog, now it is open for me to share&hellip;uhm&hellip; so many things in life and in work :)! Some people want to know what is my weblog about and how to use it?</p>
+
+<!-- more -->
+
+
+<p>First of all, what is hoatle.net about? We should know a little history. I am really excited about writing many things that inspire me. My first weblog is from Y!&lsquo; 360 service. You can check it out from address: <a href="http://360.yahoo.com/wild_tiger8607.">http://360.yahoo.com/wild_tiger8607.</a> By the way, tiger is my year of birth as the convention of some Asian countries like China, Vietnam, etc. Recently, so many bad things happened to me, which has made me a bit different, I know it. I want to work more and in fact, I have played less and spent any time as I could with my computer to learn and to apply it in real life projects. In my learning curve, I found out some interesting knowledge to share, but my current blog on Y! is not suitable for me to share many different technical things in the easy way. And I decided to design my own weblog that meet my desire to easily share knowledge.</p>
+
+<p>However, the development of designing this weblog got many changes in progress. Initially, I decided to make my own website designed from beginning as I did for some websites such as <a href="http://dichthuatpti.com;">http://dichthuatpti.com;</a> <a href="http://vinateximex.com.vn.">http://vinateximex.com.vn.</a> You could see that these two first website that I built for customers are somehow simple because these sites are only from my beginning into ASP and PHP programming. Working with ASP was about more than 2 years ago, and with PHP was nearly 2 years ago. After two years with some knowledge of PHP and recently with MVC, I decided to build my own MVC system from PHP by combining some technologies like Smarty for Presentation, PEAR for Model, and I write my own Controller. I failed, of course, because it was overwhelming to me. After that, I decided to build my own weblog on Zend Framework. I spent about a month to code and experimented with it and have made a simple bilingual website. As you could see, to meet my initial requirement I had to work much harder to write some planning, to design database schema, and a lot much more. I failed, of course, because I had short time to develop it. At that time, I had a project from PTI translation company for a multilingual website. So instead of reinventing everything, open source is my solution. I can work and learn to use a CMS (content management system). Have known Drupal for long but worked less and I thought it was exciting but difficult to learn. So I decided to work harder, I completed the first phase of PTI project (<a href="http://ptitranslation.com.vn">http://ptitranslation.com.vn</a>) (Currently, it has only one language) and D9 project (<a href="http://d9k50.net">http://d9k50.net</a>) (for my own university class to share learning resource, but currently it has poor management and I am going to reorganize it). And then after some weeks working on how to manage my sharing knowledge and sharing in life, now hoatle.net can work as my desire. It will evolve as my experience evolve and so do I.</p>
+
+<p>You have known something about history and development. What about some features and how to use hoatle.net? Some outstanding features are: menu system: I have worked hard to categorize content on this weblog after many times of modifications. The menu system are really clear and neat, huh? Sharing: Ok, my weblog is for sharing interesting knowledge and practice it with some small projects. After some small projects, I will combine it into a real project, so awesome :D; Learning: Because I share immediately what I have learned, just learn with me to help us progress more in the world of computer, especially programming; Bilingual system: I am studying in Ha Noi university of Technology and expected to become a translator or an interpreter, so maintaining this bilingual system practices me more. Besides, sharing knowledge to many international visitors and developers is also my intention. With a simple mission in mind is that: Just learning and working to share and sharing to learn and work, I will try my best to achieve it.</p>
+
+<p>Last but not least, how to use hoatle.net? To my friends: Check out blog menu to get my latest information. To developers: Move around any menu as you like, and check it out. I am sure there are many interesting things waiting for you ;). To customers: To get your belief in an open source solution, just give me your requirement about a web application and I will make it true with the least cost and in a really short time. You will get my 24/7 support when the contract is signed and support has no expire day. Is it so great to know that? To myself: improving writing skill and sharing culture.</p>
+
+<p>To summary, I have introduced about my weblog hoatle.net: what is it about and how you can use it. So feel free to move around the website to know more about me and my work, my projects, my sharing, my support to many customers. This weblog is just beginning to operate, I will regularly update the content as my projects and ideas get bigger and bigger. If you have got any question, please contact me with the contact form. Thank you for your reading!</p>
+]]></content>
+  </entry>
+  
+</feed>

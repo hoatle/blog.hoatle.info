@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Tag: http | blog.hoatle.info]]></title>
+  <link href="http://blog.hoatle.info/tags/http/atom.xml" rel="self"/>
+  <link href="http://blog.hoatle.info/"/>
+  <updated>2013-12-01T15:25:16+00:00</updated>
+  <id>http://blog.hoatle.info/</id>
+  <author>
+    <name><![CDATA[hoatle]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[http errors by images]]></title>
+    <link href="http://blog.hoatle.info/2008/11/22/http-errors-by-images/"/>
+    <updated>2008-11-22T09:12:00+00:00</updated>
+    <id>http://blog.hoatle.info/2008/11/22/http-errors-by-images</id>
+    <content type="html"><![CDATA[<p>There are many cases that HTTP errors occurs with tedious text like &ldquo;Access Denied&rdquo; or
+&ldquo;Page Not Found&rdquo;. If we add an image for illustration, it&rsquo;s more interesting. Even people will like
+to get HTTP errors to see such these interesting images :)).</p>
+
+<!-- more -->
+
+
+<h2>400 &ndash; Bad Request</h2>
+
+<p><img class="center <a" src="href="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/109/304192669_105139f8e0_m.jpg">http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/109/304192669_105139f8e0_m.jpg</a>" width="400" title="&ndash; Bad Request" ></p>
+
+<h2>401 &ndash; Unauthorized</h2>
+
+<p><img class="center <a" src="href="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/122/304193001_7ed9b91756_m.jpg">http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/122/304193001_7ed9b91756_m.jpg</a>" width="401" title="&ndash; Unauthorized" ></p>
+
+<h2>402 &ndash; Payment Required</h2>
+
+<p><img class="center <a" src="href="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/106/304193323_3d98d9fcbe_m.jpg">http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/106/304193323_3d98d9fcbe_m.jpg</a>" width="402" title="&ndash; Payment Required" ></p>
+
+<h2>403 &ndash; Forbidden</h2>
+
+<p><img class="center <a" src="href="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/117/304193677_7ac63a179e_m.jpg">http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/117/304193677_7ac63a179e_m.jpg</a>" width="403" title="&ndash; Forbidden" ></p>
+
+<h2>404 &ndash; Not Found</h2>
+
+<p><img class="center <a" src="href="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/105/304194006_922af2210e_m.jpg">http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/105/304194006_922af2210e_m.jpg</a>" width="404" title="&ndash; Not Found" ></p>
+
+<h2>405 &ndash; Method Not Allowed</h2>
+
+<p><img class="center <a" src="href="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/112/304194299_2fc0718bb5_m.jpg">http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/112/304194299_2fc0718bb5_m.jpg</a>" width="405" title="&ndash; Method Not Allowed" ></p>
+
+<h2>406 &ndash; Not Acceptable</h2>
+
+<p><img class="center <a" src="href="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/116/304194659_eca0264c29_m.jpg">http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/116/304194659_eca0264c29_m.jpg</a>" width="406" title="&ndash; Not Acceptable" ></p>
+
+<h2>408 &ndash; Request Timeout</h2>
+
+<p><img class="center <a" src="href="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/120/304195027_092906cf44_m.jpg">http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/120/304195027_092906cf44_m.jpg</a>" width="408" title="&ndash; Request Timeout" ></p>
+
+<h2>409 &ndash; Conflict</h2>
+
+<p><img class="center <a" src="href="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/115/304195427_f15002a254_m.jpg">http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/115/304195427_f15002a254_m.jpg</a>" width="409" title="&ndash; Conflict" ></p>
+
+<h2>410 &ndash; Gone</h2>
+
+<p><img class="center <a" src="href="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/99/304195684_7ed943c933_m.jpg">http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/99/304195684_7ed943c933_m.jpg</a>" width="410" title="&ndash; Gone" ></p>
+
+<h2>411 &ndash; Length Required</h2>
+
+<p><img class="center <a" src="href="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/109/304195993_bcc87426eb_m.jpg">http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/109/304195993_bcc87426eb_m.jpg</a>" width="411" title="&ndash; Length Required" ></p>
+
+<h2>413 &ndash; Request Entity Too Large</h2>
+
+<p><img class="center <a" src="href="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/101/304196358_0afd41ba2e_m.jpg">http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/101/304196358_0afd41ba2e_m.jpg</a>" width="413" title="&ndash; Request Entity Too Large" ></p>
+
+<h2>414 &ndash; Requested URL Too Long</h2>
+
+<p><img class="center <a" src="href="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/113/304196775_0b461475f7_m.jpg">http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/113/304196775_0b461475f7_m.jpg</a>" width="414" title="&ndash; Requested URL Too Long" ></p>
+
+<h2>415 &ndash; Unsuported Media Type</h2>
+
+<p><img class="center <a" src="href="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/120/304197126_079c77762b_m.jpg">http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/120/304197126_079c77762b_m.jpg</a>" width="415" title="&ndash; Unsupported Media Type" ></p>
+
+<h2>416 &ndash; Requested Range Not Satisfied</h2>
+
+<p><img class="center <a" src="href="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/111/304197454_7d2319e1d6_m.jpg">http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/111/304197454_7d2319e1d6_m.jpg</a>" width="416" title="&ndash; Requested Range Not Satisfied" ></p>
+
+<h2>417 &ndash; Expectation Failed</h2>
+
+<p><img class="center <a" src="href="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/106/304197810_cbd6d2ff5e_m.jpg">http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/106/304197810_cbd6d2ff5e_m.jpg</a>" width="417" title="&ndash; Expectation Failed" ></p>
+
+<p>To me the most interesting one is: 411 Length Required :))</p>
+
+<p>Recommended links:</p>
+
+<p>List of HTTP status codes: <a href="http://en.wikipedia.org/wiki/List_of_HTTP_status_codes">http://en.wikipedia.org/wiki/List_of_HTTP_status_codes</a>
+Images for illustration: <a href="http://www.flickr.com/photos/apelad/sets/72157594388426362/detail">http://www.flickr.com/photos/apelad/sets/72157594388426362/detail</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[xử lý một số lỗi HTTP bằng hình ảnh minh hoạ]]></title>
+    <link href="http://blog.hoatle.info/2008/11/22/xu-ly-mot-so-loi-http-bang-hinh-anh-minh-hoa/"/>
+    <updated>2008-11-22T09:05:00+00:00</updated>
+    <id>http://blog.hoatle.info/2008/11/22/xu-ly-mot-so-loi-http-bang-hinh-anh-minh-hoa</id>
+    <content type="html"><![CDATA[<p>Các trang xử lý lỗi HTTP thường ra một thông báo là đoạn text vô hồn kiểu như &ldquo;Access denied&rdquo; hoặc &ldquo;Page Not Found&rdquo;. Thử thêm một số hình ảnh minh hoạ này có lẽ sẽ tạo cảm giác vui nhộn hơn cho người dùng, có khi họ lại thích gặp những lỗi HTTP để xem những hình ảnh này :)).</p>
+
+<!-- more -->
+
+
+<h2>400 &ndash; Bad Request</h2>
+
+<p><img class="center <a" src="href="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/109/304192669_105139f8e0_m.jpg">http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/109/304192669_105139f8e0_m.jpg</a>" width="400" title="&ndash; Bad Request" ></p>
+
+<h2>401 &ndash; Unauthorized</h2>
+
+<p><img class="center <a" src="href="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/122/304193001_7ed9b91756_m.jpg">http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/122/304193001_7ed9b91756_m.jpg</a>" width="401" title="&ndash; Unauthorized" ></p>
+
+<h2>402 &ndash; Payment Required</h2>
+
+<p><img class="center <a" src="href="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/106/304193323_3d98d9fcbe_m.jpg">http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/106/304193323_3d98d9fcbe_m.jpg</a>" width="402" title="&ndash; Payment Required" ></p>
+
+<h2>403 &ndash; Forbidden</h2>
+
+<p><img class="center <a" src="href="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/117/304193677_7ac63a179e_m.jpg">http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/117/304193677_7ac63a179e_m.jpg</a>" width="403" title="&ndash; Forbidden" ></p>
+
+<h2>404 &ndash; Not Found</h2>
+
+<p><img class="center <a" src="href="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/105/304194006_922af2210e_m.jpg">http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/105/304194006_922af2210e_m.jpg</a>" width="404" title="&ndash; Not Found" ></p>
+
+<h2>405 &ndash; Method Not Allowed</h2>
+
+<p><img class="center <a" src="href="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/112/304194299_2fc0718bb5_m.jpg">http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/112/304194299_2fc0718bb5_m.jpg</a>" width="405" title="&ndash; Method Not Allowed" ></p>
+
+<h2>406 &ndash; Not Acceptable</h2>
+
+<p><img class="center <a" src="href="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/116/304194659_eca0264c29_m.jpg">http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/116/304194659_eca0264c29_m.jpg</a>" width="406" title="&ndash; Not Acceptable" ></p>
+
+<h2>408 &ndash; Request Timeout</h2>
+
+<p><img class="center <a" src="href="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/120/304195027_092906cf44_m.jpg">http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/120/304195027_092906cf44_m.jpg</a>" width="408" title="&ndash; Request Timeout" ></p>
+
+<h2>409 &ndash; Conflict</h2>
+
+<p><img class="center <a" src="href="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/115/304195427_f15002a254_m.jpg">http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/115/304195427_f15002a254_m.jpg</a>" width="409" title="&ndash; Conflict" ></p>
+
+<h2>410 &ndash; Gone</h2>
+
+<p><img class="center <a" src="href="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/99/304195684_7ed943c933_m.jpg">http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/99/304195684_7ed943c933_m.jpg</a>" width="410" title="&ndash; Gone" ></p>
+
+<h2>411 &ndash; Length Required</h2>
+
+<p><img class="center <a" src="href="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/109/304195993_bcc87426eb_m.jpg">http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/109/304195993_bcc87426eb_m.jpg</a>" width="411" title="&ndash; Length Required" ></p>
+
+<h2>413 &ndash; Request Entity Too Large</h2>
+
+<p><img class="center <a" src="href="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/101/304196358_0afd41ba2e_m.jpg">http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/101/304196358_0afd41ba2e_m.jpg</a>" width="413" title="&ndash; Request Entity Too Large" ></p>
+
+<h2>414 &ndash; Requested URL Too Long</h2>
+
+<p><img class="center <a" src="href="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/113/304196775_0b461475f7_m.jpg">http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/113/304196775_0b461475f7_m.jpg</a>" width="414" title="&ndash; Requested URL Too Long" ></p>
+
+<h2>415 &ndash; Unsuported Media Type</h2>
+
+<p><img class="center <a" src="href="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/120/304197126_079c77762b_m.jpg">http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/120/304197126_079c77762b_m.jpg</a>" width="415" title="&ndash; Unsupported Media Type" ></p>
+
+<h2>416 &ndash; Requested Range Not Satisfied</h2>
+
+<p><img class="center <a" src="href="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/111/304197454_7d2319e1d6_m.jpg">http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/111/304197454_7d2319e1d6_m.jpg</a>" width="416" title="&ndash; Requested Range Not Satisfied" ></p>
+
+<h2>417 &ndash; Expectation Failed</h2>
+
+<p><img class="center <a" src="href="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/106/304197810_cbd6d2ff5e_m.jpg">http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/106/304197810_cbd6d2ff5e_m.jpg</a>" width="417" title="&ndash; Expectation Failed" ></p>
+
+<p>Hay nhất là hình minh hoạ lỗi 411 Length Required =))</p>
+
+<p>Xem thêm:</p>
+
+<p>Danh sách mã lỗi <a href="HTTP:">HTTP:</a> <a href="http://en.wikipedia.org/wiki/List_of_HTTP_status_codes">http://en.wikipedia.org/wiki/List_of_HTTP_status_codes</a>
+Hình ảnh minh hoạ: <a href="http://www.flickr.com/photos/apelad/sets/72157594388426362/detail">http://www.flickr.com/photos/apelad/sets/72157594388426362/detail</a></p>
+]]></content>
+  </entry>
+  
+</feed>

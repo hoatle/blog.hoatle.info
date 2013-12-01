@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: vi | blog.hoatle.info]]></title>
+  <link href="http://blog.hoatle.info/categories/vi/atom.xml" rel="self"/>
+  <link href="http://blog.hoatle.info/"/>
+  <updated>2013-12-01T15:25:16+00:00</updated>
+  <id>http://blog.hoatle.info/</id>
+  <author>
+    <name><![CDATA[hoatle]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[xử lý một số lỗi HTTP bằng hình ảnh minh hoạ]]></title>
+    <link href="http://blog.hoatle.info/2008/11/22/xu-ly-mot-so-loi-http-bang-hinh-anh-minh-hoa/"/>
+    <updated>2008-11-22T09:05:00+00:00</updated>
+    <id>http://blog.hoatle.info/2008/11/22/xu-ly-mot-so-loi-http-bang-hinh-anh-minh-hoa</id>
+    <content type="html"><![CDATA[<p>Các trang xử lý lỗi HTTP thường ra một thông báo là đoạn text vô hồn kiểu như &ldquo;Access denied&rdquo; hoặc &ldquo;Page Not Found&rdquo;. Thử thêm một số hình ảnh minh hoạ này có lẽ sẽ tạo cảm giác vui nhộn hơn cho người dùng, có khi họ lại thích gặp những lỗi HTTP để xem những hình ảnh này :)).</p>
+
+<!-- more -->
+
+
+<h2>400 &ndash; Bad Request</h2>
+
+<p><img class="center <a" src="href="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/109/304192669_105139f8e0_m.jpg">http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/109/304192669_105139f8e0_m.jpg</a>" width="400" title="&ndash; Bad Request" ></p>
+
+<h2>401 &ndash; Unauthorized</h2>
+
+<p><img class="center <a" src="href="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/122/304193001_7ed9b91756_m.jpg">http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/122/304193001_7ed9b91756_m.jpg</a>" width="401" title="&ndash; Unauthorized" ></p>
+
+<h2>402 &ndash; Payment Required</h2>
+
+<p><img class="center <a" src="href="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/106/304193323_3d98d9fcbe_m.jpg">http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/106/304193323_3d98d9fcbe_m.jpg</a>" width="402" title="&ndash; Payment Required" ></p>
+
+<h2>403 &ndash; Forbidden</h2>
+
+<p><img class="center <a" src="href="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/117/304193677_7ac63a179e_m.jpg">http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/117/304193677_7ac63a179e_m.jpg</a>" width="403" title="&ndash; Forbidden" ></p>
+
+<h2>404 &ndash; Not Found</h2>
+
+<p><img class="center <a" src="href="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/105/304194006_922af2210e_m.jpg">http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/105/304194006_922af2210e_m.jpg</a>" width="404" title="&ndash; Not Found" ></p>
+
+<h2>405 &ndash; Method Not Allowed</h2>
+
+<p><img class="center <a" src="href="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/112/304194299_2fc0718bb5_m.jpg">http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/112/304194299_2fc0718bb5_m.jpg</a>" width="405" title="&ndash; Method Not Allowed" ></p>
+
+<h2>406 &ndash; Not Acceptable</h2>
+
+<p><img class="center <a" src="href="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/116/304194659_eca0264c29_m.jpg">http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/116/304194659_eca0264c29_m.jpg</a>" width="406" title="&ndash; Not Acceptable" ></p>
+
+<h2>408 &ndash; Request Timeout</h2>
+
+<p><img class="center <a" src="href="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/120/304195027_092906cf44_m.jpg">http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/120/304195027_092906cf44_m.jpg</a>" width="408" title="&ndash; Request Timeout" ></p>
+
+<h2>409 &ndash; Conflict</h2>
+
+<p><img class="center <a" src="href="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/115/304195427_f15002a254_m.jpg">http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/115/304195427_f15002a254_m.jpg</a>" width="409" title="&ndash; Conflict" ></p>
+
+<h2>410 &ndash; Gone</h2>
+
+<p><img class="center <a" src="href="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/99/304195684_7ed943c933_m.jpg">http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/99/304195684_7ed943c933_m.jpg</a>" width="410" title="&ndash; Gone" ></p>
+
+<h2>411 &ndash; Length Required</h2>
+
+<p><img class="center <a" src="href="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/109/304195993_bcc87426eb_m.jpg">http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/109/304195993_bcc87426eb_m.jpg</a>" width="411" title="&ndash; Length Required" ></p>
+
+<h2>413 &ndash; Request Entity Too Large</h2>
+
+<p><img class="center <a" src="href="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/101/304196358_0afd41ba2e_m.jpg">http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/101/304196358_0afd41ba2e_m.jpg</a>" width="413" title="&ndash; Request Entity Too Large" ></p>
+
+<h2>414 &ndash; Requested URL Too Long</h2>
+
+<p><img class="center <a" src="href="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/113/304196775_0b461475f7_m.jpg">http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/113/304196775_0b461475f7_m.jpg</a>" width="414" title="&ndash; Requested URL Too Long" ></p>
+
+<h2>415 &ndash; Unsuported Media Type</h2>
+
+<p><img class="center <a" src="href="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/120/304197126_079c77762b_m.jpg">http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/120/304197126_079c77762b_m.jpg</a>" width="415" title="&ndash; Unsupported Media Type" ></p>
+
+<h2>416 &ndash; Requested Range Not Satisfied</h2>
+
+<p><img class="center <a" src="href="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/111/304197454_7d2319e1d6_m.jpg">http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/111/304197454_7d2319e1d6_m.jpg</a>" width="416" title="&ndash; Requested Range Not Satisfied" ></p>
+
+<h2>417 &ndash; Expectation Failed</h2>
+
+<p><img class="center <a" src="href="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/106/304197810_cbd6d2ff5e_m.jpg">http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/106/304197810_cbd6d2ff5e_m.jpg</a>" width="417" title="&ndash; Expectation Failed" ></p>
+
+<p>Hay nhất là hình minh hoạ lỗi 411 Length Required =))</p>
+
+<p>Xem thêm:</p>
+
+<p>Danh sách mã lỗi <a href="HTTP:">HTTP:</a> <a href="http://en.wikipedia.org/wiki/List_of_HTTP_status_codes">http://en.wikipedia.org/wiki/List_of_HTTP_status_codes</a>
+Hình ảnh minh hoạ: <a href="http://www.flickr.com/photos/apelad/sets/72157594388426362/detail">http://www.flickr.com/photos/apelad/sets/72157594388426362/detail</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Drupal giành giải CMS mã nguồn mở 2008]]></title>
+    <link href="http://blog.hoatle.info/2008/11/06/drupal-gianh-giai-cms-ma-nguon-mo-2008/"/>
+    <updated>2008-11-06T22:48:00+00:00</updated>
+    <id>http://blog.hoatle.info/2008/11/06/drupal-gianh-giai-cms-ma-nguon-mo-2008</id>
+    <content type="html"><![CDATA[<p>Hôm nay cuộc thi hệ quản trị nội dung (CMS) nguồn mở thường niên do nhà xuất bản Packt tổ chức đã lên đến đỉnh điểm khi Packt thông báo Drupal đã giành được giải Overall (Tổng thể) với giải thưởng trị giá 5.000 đô-la. Sau 3 tháng, Drupal nhận được 20.000 phiếu bình chọn và về đích trước Joomla! Và DotNetNuke để giữ nguyên danh hiệu đã giành được năm 2007.</p>
+
+<!-- more -->
+
+
+<p>Dự án mã nguồn mở này được nhà sáng lập – Dries Buytaert công bố vào năm 2001 và Drupal đã nhanh chóng lớn mạnh, được download khoảng 1,5 triệu lần trong vòng 12 tháng vừa qua. Hiện Drupal các công ty như Warner Brothers Music, MTV UK, trang tin New York Observer và nhiều công ty sử dụng.
+Nhận được giải này Buytaert phát biểu &ldquo;Những phần thưởng này có được chính là nhờ những đóng góp rất lớn từ cộng đồng thành viên Drupal trên toàn thế giới&rdquo;. Buytaert kết luận: &ldquo;Cộng đồng Drupal đang nỗ lực làm việc để xây dựng tương lai cho web động để từ đó bất cứ ai cũng có thể xây dựng những website xuất bản nội dung lớn&rdquo;.</p>
+
+<p>Với các lá phiếu từ các chuyên gia cùng khách ghé thăm website của nhà xuất bản Packt, các giải thưởng năm nay chứng tỏ sự phổ biến cũng như chất lượng cao của giải. Việc chọn ra top 3 hệ thống trong vòng chung kết thực sự là một nhiệm vụ khó khăn cho hội đồng đánh giá vì các hệ thống này đều đạt chuẩn cao và có vô số tính năng.</p>
+
+<p>Đứng thứ hai và nhận được giải thưởng 3.000 đô-la là Joomla! – cái tên trẻ nhất (được thành lập năm 2003) trong top 3 hệ thống và trước đây cũng đã giành giải Overall. Hội đồng đánh giá rất có ấn tượng với cách cài đặt dễ dàng và khả năng tạo website hoạt động ngay chỉ trong thời gian rất ngắn của Joomla. Được cộng đồng đông đảo và đầy nhiệt huyết đóng góp xây dựng chính là yếu tố khiến dự án lớn mạnh nhanh chóng trong một khoảng thời gian ngắn đến như vậy.</p>
+
+<p>Đứng ở vị trí thứ 3 và nhận được giải thưởng 2.000 đô-la là DotNetNuke &ndash; hệ thống CMS duy nhất được viết bằng VB.NET cho ASP.NET framework. DotNetNuke nhận được phải hồi tích cực từ hội đồng đánh giá khi họ rất ấn tượng với cách phát triển dễ dàng và các tính năng bảo mật.</p>
+
+<p>Cùng với giải Overall, nhà xuất bản Packt cũng có các giải cho CMS nguồn mở PHP tốt nhất và CMS nguồn mở tốt nhất không viết bằng PHP. Và giải cuối cùng chính là CMS nguồn mở triển vọng dành cho SilverStripe. Packts trao tổng số tiền khoảng 20.000 đô-la cho các hệ quản trị nội dung đạt giải.</p>
+
+<p>Giải thưởng khác gồm:
+&ndash; Hứa hẹn nhất: SilverStripe
+&ndash; PHP nguồn mở tốt nhất: Drupal
+&ndash; CMS nguồn mở không viết bằng PHP tốt nhất: Plone.</p>
+
+<p>Các giải thưởng này được đưa ra để phát hiện và trao giải cho các hệ thống CMS nguồn mở với những chuẩn nhất quán trong môi trường đầy tính cạnh tranh. Kết quả của giải thưởng năm nay nhấn mạnh đến chất lượng này và cũng nói rằng không nhất thiết một CMS nào phải là tốt nhất mà CMS đó tốt nhất khi phù hợp với nhu cầu và đòi hỏi của từng người dùng cụ thể.</p>
+
+<p>Để xem toàn bộ kết quả của Giải CMS nguồn mở 2008, mời bạn theo đường dẫn sau: <a href="http://www.PacktPub.com/Award">http://www.PacktPub.com/Award</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[hoatle.net - giới thiệu]]></title>
+    <link href="http://blog.hoatle.info/2008/11/06/hoatle-net-gioi-thieu/"/>
+    <updated>2008-11-06T22:04:00+00:00</updated>
+    <id>http://blog.hoatle.info/2008/11/06/hoatle-net-gioi-thieu</id>
+    <content type="html"><![CDATA[<p>Chào mừng bạn đến với weblog mới thành lập &ndash; hoatle.net! Trước tiên tôi có đôi lời muốn giới thiệu. Về tên miền weblog của tôi? Tại sao lại là hoatle.net; Đơn giản thôi, tên tôi là Lê Văn Hoạt, do vậy hoatle chính là sự kết hợp của tên (Hoạt) và họ (Lê). Hơn nữa, hoatle cũng là tên được tôi sử dụng nhiều nhất trên Internet, bạn thử google với từ khoá &ldquo;hoatle&rdquo; sẽ biết thêm 1 số thông tin về tôi. Sau vài tuần phát triển weblog này, đến thời điểm này thì hoatle.net có thể đi chập chững những bước đi đầu tiên để tôi chia sẻ cùng mọi người về nhiều khía cạnh trong công việc cũng như trong cuộc sống. Để giúp mọi người hiểu rõ hơn về hoatle.net, tôi xin nói về nguồn gốc, quá trình phát triển và làm thế nào để sử dụng tốt nhất weblog này?</p>
+
+<p>Trước tiên, tôi muốn giới thiệu thêm về hoatle.net. Tôi thực sự rất thích viết về những vấn đề mình quan tâm, được tìm hiểu thông tin từ nhiều chiều và đưa ra quan điểm của mình. Blog đầu tiên tôi viết khá nhiều là Blog 360 của Yahoo! Bạn có thể ngó qua tại địa chỉ <a href="http://360.yahoo.com/wild_tiger8607.">http://360.yahoo.com/wild_tiger8607.</a> À, tôi xin nói luôn dần (tiger) chính là năm sinh của tôi, còn wild chính là để tôi mạnh mẽ hơn, không được hiền lành quá :P. Trong thời gian gần đây có quá nhiều sự việc không mong muốn đã xảy ra với tôi và cũng đã làm tôi thay đổi đôi chút. Tôi muốn làm việc nhiều hơn và thực tế tôi đã chơi ít đi và tận dụng bất cứ khi nào có thể để học và áp dụng những kinh nghiệm mới vào những dự án của mình. Trong quá trình học tập này, tôi có những kiến thức thú vị muốn được chia sẻ nhưng cách tổ chức Blog trên 360 của Yahoo! không thích hợp cho việc chia sẻ những kiến thức thiên về kỹ thuật này (hiển thị mã nguồn, định dạng hiển thị, cách tổ chức nội dung.v.v&hellip;). Do vậy tôi quyết định tự thiết kế cho mình weblog riêng để tôi có thể chia sẻ kiến thức được nhanh và hiệu quả nhất.</p>
+
+<p>Tuy nhiên, quá trình thiết kế weblog này có khá nhiều sự thay đổi. Đầu tiên, tôi quyết định thiết từ đầu như tôi đã làm đối với website: <a href="http://dichthuatpti.com">http://dichthuatpti.com</a> (viết bằng ASP) và <a href="http://vinateximex.com.vn">http://vinateximex.com.vn</a> (viết bằng PHP). Bạn có thể thấy rõ 2 website được tôi thiết kế khá là đơn giản và có nhiều chỗ không hợp lý về cách tổ chức màu sắc, tuân theo các chuẩn thiết kế; cũng đơn giản thôi, hồi đó (cách đây 1 -2 năm) tôi mới làm để học chứ chưa phải học để làm. Tôi đã làm việc với ASP cách đây khoảng 2 năm sau khi tôi hoàn thành project kì thứ nhất ở Hà Nội &ndash; Aptech và sau đó là tự học PHP và thực hiện dự án cho công ty xuất nhập khẩu dệt may Việt Nam (vinateximex). Gần đây có thêm nhiều kinh nghiệm hơn về PHP và kiến trúc MVC (Model-View-Controller), tôi đã quyết định tự xây dựng cho mình một hệ thống MVC như thế bằng cách kết hợp một số công nghệ lại với nhau như Smarty &ndash; một &ldquo;template engine&rdquo; cho tầng &ldquo;Presentation&rdquo;, PEAR (bộ thư viện PHP) cho tầng &ldquo;Model&rdquo; và tôi tự viết tầng &ldquo;Controller&rdquo; từ đầu. Tất nhiên là tôi đã thất bại bởi vì thực sự hiện tại nó quá sức đối với tôi. Sau đó tôi tìm đến Zend Framework &ndash; một nền tảng được xây dựng lập trình PHP từ PHP 5.0 trở nên khi khả năng hướng đối tượng của PHP khá hoàn chỉnh và Zend Framework cũng theo kiến trúc MVC ngay từ đầu. Tôi đã mất khoảng một tháng để code và trải nghiệm với Zend Framework và cũng đã xây dựng được một website đơn giản với 2 thứ tiếng. Như bạn đã thấy, để đạt những yêu cầu ban đầu của weblog của mình, tôi phải làm việc nhiều hơn để lập kế hoạch, thiết kế cơ sở dữ liệu và nhiều vấn đề khác nữa. Tất nhiên là tôi đã thất bại bởi vì tôi có quá ít thời gian để hoàn thành nó. Vào thời điểm đó, tôi có một dự án bị &ldquo;delay&rdquo; khá lâu từ công ty dịch thuật PTI &ndash; xây dựng website với hệ thống đa ngữ. Do đó thay vì làm mọi thứ từ đầu, tôi quyết định mã nguồn mở sẽ là giải pháp của mình. Tôi có thể học rất nhanh một khi cái tôi cần học cho tôi nhiều cảm hứng. Tôi làm việc và học sử dụng một hệ quản trị nội dung mã nguồn mở. Tôi được biết đến Drupal cũng khá lâu từ dự án (không thành) với một người bạn và khoảng thời gian đó tôi cũng cảm thấy học Drupal khá khó. Do vậy tôi quyết định dành nhiều thời gian hơn cho Drupal và cũng đã hoàn thành xong giai đoạn đầu tiên cho dự án PTI &ndash; hiện tại mới có một loại ngôn ngữ (<a href="http://ptitranslation.com.vn">http://ptitranslation.com.vn</a>) và dự án D9 (cho lớp học đại học của tôi để chúng tôi có thể chia sẻ tài nguyên và làm cho việc học thú vị hơn, nhưng hiện nay cách quản lí nội dung khá không hợp lý và tôi đang tổ chức lại nội dung). Và sau đó sau một số tuần làm việc để quản lý cách chia sẻ kiến thức cũng như chia sẻ trong cuộc sống. Và đến thởi điểm này, hoatle.net thoả mãn yêu cầu của một weblog chia sẻ của tôi. Nó sẽ phát triển khi kinh nghiệm của tôi phát triển.</p>
+
+<p>Vừa rồi tôi đã nói về quá trình hình thành và phát triển weblog hoatle.net. Còn các tính năng và cách chia sẻ thông tin của hoatle.net? Có một số tính năng nổi bật như: hệ thống menu: tôi đã làm việc khá nhiều để phân loại nội dung theo cách hợp lý nhất sau nhiều lần sửa đổi. Đến thời điểm này tôi khá hài lòng với hệ thống menu hiện tại: rất rõ ràng và gọn. Tính năng chia sẻ: đây là tính năng được tôi đặt trọng tâm ngay từ đầu, chia sẻ kiến thức, thực hành với một số dư án nhỏ cũng như chia sẻ thông tin về bản thân, cuộc sống. Sau một số dự án nhỏ tôi sẽ kết hợp tất cả lại vào một số dự án thực tế, khá là hay :D; Tính năng học tập: Bởi vì tôi chia sẻ ngay khi tôi được học một cái gì đó cần chia sẻ, do đó hãy học cùng tôi và nhất định mọi người sẽ cùng tiến bộ trong thế giới công nghệ thông tin, đặc biệt là khả năng lập trình; Tính năng hệ thống 2 ngôn ngữ: Tôi hiện đang học ở Bách Khoa Hà Nội &ndash; chuyên ngành tiếng Anh khoa học kỹ thuật và được đào tạo thành những biên &ndash; phiên dịch trong tương lai, do đó phát triển một website 2 ngôn ngữ như vậy sẽ giúp tôi luyện tập kỹ năng dịch nhiều hơn. Ngoài ra, tôi cũng mong muốn chia sẻ kiến thức cũng như hình ảnh Việt Nam cùng với bạn bè quốc tế. Tôi luôn tâm niệm: Học tập và làm việc để chia sẻ và chia sẻ để học tập và làm việc. Sẽ thế và luôn như thế :)</p>
+
+<p>Cuối cùng nhưng không kém phần quan trọng là cách chia sẻ thông tin trên hoatle.net? Những người bạn của tôi có thể quan tâm đến đời sống cá nhân của tôi hơn là các yếu tố kỹ thuật, vì vậy mọi người có thể xem thông tin ở menu Blog nhá :D. Đối với những bạn lập trình viên thì cứ việc ngó qua tất cả những gì có trên weblog này. Tôi đảm bảo sẽ có nhiều điều thú vị khi đang chờ bạn khám phá ;). Đối với các khách hàng tiềm năng: giải pháp nguồn mở sẽ là giải pháp hiệu quả mà lại ít tốn kém nhất. Một khi kí hơp đồng, khách hàng sẽ nhận được tư vấn và hỗ trợ 24/7 và không hề có ngày hết hạn như hạn bảo hành gì gì đó. Hãy hợp tác và cùng phát triển. Còn riêng với bản thân tôi, viết weblog này sẽ cải thiện kỹ năng viết và văn hoá chia sẻ của mình.</p>
+
+<p>Nói tóm lại, vừa rồi tôi đã giới thiệu về weblog mới hoatle.net: nguồn gốc, quá trình phát triển và làm thế nào để sử dụng tốt nhất weblog này. Bạn cứ tự nhiên khám phá và biết nhiều về công việc , các dự án, cũng như cuộc sống của tôi. Weblog này vừa mới đi vào hoạt động, tôi sẽ thường xuyên cập nhật nội dung khi các dự án và ý tưởng ngày càng nhiều hơn thì tôi càng muốn chia sẻ nhiều hơn. Nếu bạn có bất cứ thắc mắc nào cần giải đáp, hãy liên hệ với tôi qua biểu mẫu liên hệ. Cảm ơn bạn đã đọc những dòng này!</p>
+]]></content>
+  </entry>
+  
+</feed>
