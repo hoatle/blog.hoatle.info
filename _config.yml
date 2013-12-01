@@ -98,7 +98,7 @@ disqus_show_comment_count: false
 google_analytics_tracking_id:
 
 # Facebook Like
-facebook_like: false
+facebook_like: true
 # Custom settings for https://developers.facebook.com/docs/reference/plugins/like-box/
 # the URL of the Facebook Page for this Like Box. Note: After July 2013 migration, href should be
 # an absolute URL.
