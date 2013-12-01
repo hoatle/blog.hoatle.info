@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Tag: yahoo | blog.hoatle.info]]></title>
+  <link href="http://blog.hoatle.info/tags/yahoo/atom.xml" rel="self"/>
+  <link href="http://blog.hoatle.info/"/>
+  <updated>2013-12-01T18:04:17+00:00</updated>
+  <id>http://blog.hoatle.info/</id>
+  <author>
+    <name><![CDATA[hoatle]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Yahoo! announed to make BrowserPlus open-source!]]></title>
+    <link href="http://blog.hoatle.info/2008/11/20/yahoo-announed-to-make-browserplus-open-source/"/>
+    <updated>2008-11-20T01:11:00+00:00</updated>
+    <id>http://blog.hoatle.info/2008/11/20/yahoo-announed-to-make-browserplus-open-source</id>
+    <content type="html"><![CDATA[<p>As Google did with Gears, on November 18, 2008 Yahoo! intended to make BrowserPlus open source.
+BrowserPlus and Gears are aimed at improving browsers' native abilities so Web applications can
+better match those running natively on a computer&rsquo;s operating system.</p>
+
+<p><img class="center <a" src="href="http://l.yimg.com/a/i/us/bp/s/1.4/site/home-sprite.jpg">http://l.yimg.com/a/i/us/bp/s/1.4/site/home-sprite.jpg</a>" title="BrowserPlus" ></p>
+
+<p>As on BrowserPlus' blog: &ldquo;The big idea here is that we&rsquo;ll have the whole platform open sourced by
+mid-next year, and as soon as possible we&rsquo;ll have many of the services we&rsquo;ve written open sourced,
+as well as the APIs needed to write new services. Our goal is to empower the community to contribute
+actual patches and new services &ndash; code to compliment the feedback. As we move forward, we hope that
+this platform will contribute to the open web by enabling rapid innovation and giving us all a
+chance to weigh in on what exactly the web of tomorrow should look like.&rdquo;
+(<a href="http://browserplus.yahoo.com">http://browserplus.yahoo.com</a>)</p>
+
+<p>&ldquo;BrowserPlus is a technology designed to &lsquo;extend the Web,&rsquo; so that developers can build more
+exciting Web applications and so end users can get more done inside their Web browsers,&rdquo; Yahoo
+said on a BrowserPlus frequently-asked-questions page. (<a href="http://browserplus.yahoo.com/faq/">http://browserplus.yahoo.com/faq/</a>)</p>
+
+<p>Technology is changing so fast, who knows what is the tomorrow browser look like? When combining
+Google Gears and Yahoo! BrowserPlus will actully make browsers a &ldquo;web OS&rdquo;.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Yahoo! công bố phần mềm nguồn mở BrowserPlus]]></title>
+    <link href="http://blog.hoatle.info/2008/11/20/yahoo-cong-bo-phan-mem-nguon-mo-browserplus/"/>
+    <updated>2008-11-20T00:59:00+00:00</updated>
+    <id>http://blog.hoatle.info/2008/11/20/yahoo-cong-bo-phan-mem-nguon-mo-browserplus</id>
+    <content type="html"><![CDATA[<p>Cũng giống như Google đã từng công bố nguồn mở đối với Gears thì ngày 18/11 vừa rồi Yahoo! chính
+thức công bố BrowserPlus trở thành phần mềm nguồn mở. Cả Google Gears và BrowserPlus đều có chung
+mục đích là tăng thêm tính năng cho trình duyệt để các ứng dụng web có thể chạy tốt hơn và thậm chí
+có thể chạy trong môi trường hệ điều hành mà không cần đến trình duyệt.</p>
+
+<p><img class="center <a" src="href="http://l.yimg.com/a/i/us/bp/s/1.4/site/home-sprite.jpg">http://l.yimg.com/a/i/us/bp/s/1.4/site/home-sprite.jpg</a>" title="BrowserPlus" ></p>
+
+<p>Trên Blog của BrowserPlus có nói: &ldquo;Chúng tôi có ý tưởng đến giữa năm tới toàn bộ nền tảng sẽ là
+nguồn mở khi chúng tôi có các dịch vụ mã nguồn mở cũng như hệ thống API cần thiết để viết các dịch
+vụ mới. Mục tiêu của chúng tôi là cho phép cộng đồng đóng góp thêm các gói dịch vụ mới. Khi chúng
+tôi tiếp tục phát triển, hy vọng nền tảng này sẽ đóng góp vào web mở và cho chúng tôi cơ hội đánh
+giá web của tương lai sẽ như thế nào.&rdquo;
+(<a href="http://wayback.archive.org/web/20120104122121/http://browserplus.yahoo.com/">http://wayback.archive.org/web/20120104122121/http://browserplus.yahoo.com/</a>)</p>
+
+<p>&ldquo;BrowserPlus là một công nghệ được thiết kể để mở rộng web, từ đó các nhà phát triển có thể xây dựng
+những ứng dụng web thú vị hơn và do đó người dùng cuối sẽ làm được nhiều việc hơn trong trình duyệt
+của mình&rdquo; &ndash; Theo Yahoo! trong trang những câu hỏi thường gặp (<a href="http://browserplus.yahoo.com/faq/">http://browserplus.yahoo.com/faq/</a>)</p>
+
+<p>Công nghệ thay đổi từng giờ, ai biết được rồi mai đây web sẽ như thế nào. Khi kết hợp công nghệ
+Google Gears và Yahoo! BrowserPlus, trình duyệt thực sự sẽ trở thành hệ điều hành web trong tương
+lai.</p>
+]]></content>
+  </entry>
+  
+</feed>
