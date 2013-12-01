@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Tag: contest | blog.hoatle.info]]></title>
+  <link href="http://blog.hoatle.info/tags/contest/atom.xml" rel="self"/>
+  <link href="http://blog.hoatle.info/"/>
+  <updated>2013-12-01T17:45:39+00:00</updated>
+  <id>http://blog.hoatle.info/</id>
+  <author>
+    <name><![CDATA[hoatle]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[SE Asia OpenSocial Application Contest]]></title>
+    <link href="http://blog.hoatle.info/2008/11/16/se-asia-opensocial-application-contest/"/>
+    <updated>2008-11-16T15:14:00+00:00</updated>
+    <id>http://blog.hoatle.info/2008/11/16/se-asia-opensocial-application-contest</id>
+    <content type="html"><![CDATA[<p>This contest is only for 5 SE Asia countries: Singapore, Malaysia, the Phillipines, Thailand, and
+Vietnam. All developers from these 5 countries can take part in. Entries are limited to three per
+person.</p>
+
+<p>The Open registration day is November 15, 2008 and the close registration day is January 10, 2009.</p>
+
+<p>Each entry will be judged by a panel of experts who are employees of Exo Platform, Friendster,
+Globant, Google Inc, and hi5. Entries will be evaluated on:</p>
+
+<ul>
+<li>Creativity and user appeal</li>
+<li>Internationalization (Message Bundles)</li>
+<li>Use of other Google APIs</li>
+<li>Cross-platform operability</li>
+<li>Use of App Engine for storing user data and hosting files</li>
+</ul>
+
+
+<p>What about prize? :D</p>
+
+<p>The top five entrants with the highest overall scores in each participating country will be awarded
+an Apple iPod Touch (valued at US$230). In addition, the entrant with the highest overall score in
+each participating country will also be awarded a Nintendo Wii (valued at US$270).</p>
+
+<ul>
+<li>Oh, nearly 2 months left to find ideas and implement an application ;)</li>
+</ul>
+
+
+<p>Useful links:
+&ndash; <a href="http://code.google.com">http://code.google.com</a> &ndash; developer network; find opensocial section</p>
+
+<ul>
+<li><p><a href="http://code.google.com/appengine/">http://code.google.com/appengine/</a> -App Engine Registration. What happens to Vietnamese developers?
+We can&rsquo;t registry because of the verification step: &ldquo;Verify Your Account by SMS&rdquo;?</p></li>
+<li><p><a href="http://code.google.com/events/apacdevfest/contest/index.html">http://code.google.com/events/apacdevfest/contest/index.html</a> &ndash; contest site</p></li>
+<li><p><a href="http://groups.google.com/group/seasia-social-gadget-contest?hl=en">http://groups.google.com/group/seasia-social-gadget-contest?hl=en</a> &ndash; Questions and answers about
+this contest</p></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>
