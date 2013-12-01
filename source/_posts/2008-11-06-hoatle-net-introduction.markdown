@@ -5,9 +5,8 @@ author: hoatle
 date: 2008-11-06 22:02
 comments: true
 categories:
-    -
-tags:
     - "en"
+tags:
     - "introduction"
 cover:
 description:

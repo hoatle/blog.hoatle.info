@@ -5,9 +5,8 @@ author: hoatle
 date: 2008-11-22 09:05
 comments: true
 categories:
-
-tags:
     - "vi"
+tags:
     - "http"
 cover:
 description:

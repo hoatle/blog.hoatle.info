@@ -5,10 +5,9 @@ author: hoatle
 date: 2008-11-06 22:04
 comments: true
 categories:
-    -
-tags:
     - "vi"
-    - "gioi-thieu"
+tags:
+    - "giới thiệu"
 cover:
 description:
 keywords:
