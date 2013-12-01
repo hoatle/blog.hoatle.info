@@ -4,7 +4,7 @@
   <title><![CDATA[Category: en | blog.hoatle.info]]></title>
   <link href="http://blog.hoatle.info/categories/en/atom.xml" rel="self"/>
   <link href="http://blog.hoatle.info/"/>
-  <updated>2013-12-01T18:04:17+00:00</updated>
+  <updated>2013-12-01T18:20:44+00:00</updated>
   <id>http://blog.hoatle.info/</id>
   <author>
     <name><![CDATA[hoatle]]></name>
@@ -12,6 +12,21 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Where is my Google SearchWiki???]]></title>
+    <link href="http://blog.hoatle.info/2008/11/23/where-is-my-google-searchwiki/"/>
+    <updated>2008-11-23T09:36:00+00:00</updated>
+    <id>http://blog.hoatle.info/2008/11/23/where-is-my-google-searchwiki</id>
+    <content type="html"><![CDATA[<p>Where is the Google SearchWiki that is a new feature encouraging people to have search more with new
+experience? Just 2 days after Google&rsquo;s announcement it&rsquo;s gone. Does it mean that SearchWiki is not
+very helpful and Google decided to take it out?</p>
+
+<p>Google says that this is a bug and is working on restoring SearchWiki now: “We’re really sorry that
+people can’t use SearchWiki at the moment &ndash; we’re working to fix the problem as quickly as we can.
+Please bear with us.”</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[http errors by images]]></title>
@@ -203,40 +218,6 @@ companies such as Oracle, Microsoft, Intel, F-Sercure.</p>
 biological identification, radio frequency identification and current wireless technology.</p>
 
 <p>Source: <a href="http://sohoa.vnexpress.net/tin-tuc/doi-song-so/bao-mat/viet-nam-doat-giai-nhat-cuoc-thi-bao-mat-uy-tin-nhat-chau-a-1534438.html">http://sohoa.vnexpress.net/tin-tuc/doi-song-so/bao-mat/viet-nam-doat-giai-nhat-cuoc-thi-bao-mat-uy-tin-nhat-chau-a-1534438.html</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Drupal revealed as 2008 open source CMS award winner]]></title>
-    <link href="http://blog.hoatle.info/2008/11/06/drupal-revealed-as-2008-open-source-cms-award-winner/"/>
-    <updated>2008-11-06T22:21:00+00:00</updated>
-    <id>http://blog.hoatle.info/2008/11/06/drupal-revealed-as-2008-open-source-cms-award-winner</id>
-    <content type="html"><![CDATA[<p>Packt’s annual Open Source Content Management System (CMS) Award reached its climax today with the announcement that Drupal has won the Overall category, collecting a first prize of $5,000. Three months after it was launched and a staggering 20,000 votes later, Drupal finished ahead of Joomla! and DotNetNuke to retain the Award it won in 2007.</p>
-
-<p>Released as an Open Source project by founder Dries Buytaert in 2001, Drupal has grown substantially and has been downloaded almost 1.5 million times in the last 12 months. It is currently being applied by companies such as Warner Brothers Music, MTV UK, and the New York Observer amongst others.</p>
-
-<p>&ldquo;These awards are a testament to the valuable contributions from dedicated Drupal community members around the globe&rdquo; said Buytaert in response to the news. &ldquo;Working together, the Drupal community is building the future of the dynamic web so that anyone can quickly build great social publishing websites&rdquo; he concluded.</p>
-
-<p>With votes coming from a panel of industry experts and visitors to Packt’s website, this year’s Awards proved to be the most popular and also the highest quality. The task of selecting a top three from the finalists was a difficult one for the judges due to their high standards and myriad features.</p>
-
-<p>Finishing in second place and receiving $3,000 was Joomla!, the youngest of the three finalists and a previous winner of the Overall Award. Judges were impressed with Joomla’s ease of installation and ability to get a website up-and-running in a short space of time. Particular praise was reserved for its sizeable and enthusiastic community, which has allowed the project to grow so quickly in such a short space of time.</p>
-
-<p>In third place and receiving $2,000 was DotNetNuke, the only CMS in the final that is written in VB.NET for the ASP.NET framework. DotNetNuke received positive feedback from judges who were impressed with its ease of development and security implementation features.</p>
-
-<p>Alongside the Overall Award, Packt ran categories for best Open Source PHP Content Management System and best Open Source CMS that isn’t written in PHP. The final category was the Most Promising Open Source CMS, which was won by SilverStripe. Packt handed out a total of $20,000 in prize money to the winning Content Management Systems.</p>
-
-<p>Winners in the other final categories include:</p>
-
-<ul>
-<li>Most Promising: <strong>SilverStripe</strong></li>
-<li>Best Open Source PHP: <strong>Drupal</strong></li>
-<li>Best non PHP Open Source CMS: <strong>Plone</strong></li>
-</ul>
-
-
-<p>The Awards were designed to recognize and reward Open Source CMS’s for their consistently high standards in what is an extremely competitive field. The result of this year’s Award confirms this quality and also suggests that there isn’t necessarily one CMS that is the best, more that there is the best one to fit an individual user’s needs and requirements.</p>
-
-<p>Full results of the 2008 Open Source CMS Award can be found at <a href="http://www.PacktPub.com/Award">http://www.PacktPub.com/Award</a></p>
 ]]></content>
   </entry>
   

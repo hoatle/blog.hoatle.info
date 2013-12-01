@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Tag: search-wiki | blog.hoatle.info]]></title>
+  <link href="http://blog.hoatle.info/tags/search-wiki/atom.xml" rel="self"/>
+  <link href="http://blog.hoatle.info/"/>
+  <updated>2013-12-01T18:20:44+00:00</updated>
+  <id>http://blog.hoatle.info/</id>
+  <author>
+    <name><![CDATA[hoatle]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Where is my Google SearchWiki???]]></title>
+    <link href="http://blog.hoatle.info/2008/11/23/where-is-my-google-searchwiki/"/>
+    <updated>2008-11-23T09:36:00+00:00</updated>
+    <id>http://blog.hoatle.info/2008/11/23/where-is-my-google-searchwiki</id>
+    <content type="html"><![CDATA[<p>Where is the Google SearchWiki that is a new feature encouraging people to have search more with new
+experience? Just 2 days after Google&rsquo;s announcement it&rsquo;s gone. Does it mean that SearchWiki is not
+very helpful and Google decided to take it out?</p>
+
+<p>Google says that this is a bug and is working on restoring SearchWiki now: “We’re really sorry that
+people can’t use SearchWiki at the moment &ndash; we’re working to fix the problem as quickly as we can.
+Please bear with us.”</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[SearchWiki của Google đâu rồi???]]></title>
+    <link href="http://blog.hoatle.info/2008/11/23/searchwiki-cua-google-dau-roi/"/>
+    <updated>2008-11-23T09:30:00+00:00</updated>
+    <id>http://blog.hoatle.info/2008/11/23/searchwiki-cua-google-dau-roi</id>
+    <content type="html"><![CDATA[<p>Tính năng xã hội mới có tính kích thích, tạo thêm trải nghiệm cho người dùng khi sử dụng bộ máy tìm
+kiểm của Google đâu rồi? Chỉ sau hai ngày thì tính năng này không còn hoạt động nữa. Phải chăng
+SearchWiki không thực sự hữu dụng và Google quyết định gỡ bỏ?</p>
+
+<p>Theo Google lý do SearchWiki không hoạt động nữa là do SearchWiki có lỗi và họ đang cố gắng khắc
+phục sự cố: &ldquo;Chúng tôi rất lấy làm tiếc khi người dùng hiện không thể sử dụng SearchWiki &ndash; chúng tôi
+đang cố gắng hết sức khắc phục. Hãy thông cảm cho chúng tôi.&rdquo;</p>
+]]></content>
+  </entry>
+  
+</feed>
