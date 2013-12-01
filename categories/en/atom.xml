@@ -4,7 +4,7 @@
   <title><![CDATA[Category: en | blog.hoatle.info]]></title>
   <link href="http://blog.hoatle.info/categories/en/atom.xml" rel="self"/>
   <link href="http://blog.hoatle.info/"/>
-  <updated>2013-12-01T15:39:22+00:00</updated>
+  <updated>2013-12-01T17:30:05+00:00</updated>
   <id>http://blog.hoatle.info/</id>
   <author>
     <name><![CDATA[hoatle]]></name>
@@ -96,6 +96,37 @@ to get HTTP errors to see such these interesting images :)).</p>
 <p>List of HTTP status codes: <a href="http://en.wikipedia.org/wiki/List_of_HTTP_status_codes">http://en.wikipedia.org/wiki/List_of_HTTP_status_codes</a></p>
 
 <p>Images for illustration: <a href="http://www.flickr.com/photos/apelad/sets/72157594388426362/detail">http://www.flickr.com/photos/apelad/sets/72157594388426362/detail</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Vietnam got the first prize in an Asian Security Contest]]></title>
+    <link href="http://blog.hoatle.info/2008/11/08/vietnam-got-the-first-prize-in-an-asian-security-contest/"/>
+    <updated>2008-11-08T12:52:00+00:00</updated>
+    <id>http://blog.hoatle.info/2008/11/08/vietnam-got-the-first-prize-in-an-asian-security-contest</id>
+    <content type="html"><![CDATA[<p>With 5,800 points, Bluemoon team won at the CtF (Capture the Flags) contest in a security
+conference – Hack In The Box (HITB) 2008 which took place at the end of November in Kuala Lumpur
+(Malaysia).</p>
+
+<!-- more -->
+
+
+<p>This year CtF contest had 7 teams from Korea, Singapore and Vietnam. Besides Bluemoon team, Mitdac
+team consisting of top rank security experts in Vietnam got the second prize with nearly 1,800
+points.</p>
+
+<p>In the CtF contest, all the teams are provided a server having security holes in daemon. The
+participants have to exploit these holes, break into other servers and defend their own server
+against other attacks.</p>
+
+<p>Known as the East Defcon, HITB CtF is a big event about security in Asia-Pacific and Middle East
+taking place every two year. The conference assembles many famous experts and is sponsored by big
+companies such as Oracle, Microsoft, Intel, F-Sercure.</p>
+
+<p>HITB 2008 focused on discussion and demonstrated methods of breaking into security systems such as
+biological identification, radio frequency identification and current wireless technology.</p>
+
+<p>Source: <a href="http://sohoa.vnexpress.net/tin-tuc/doi-song-so/bao-mat/viet-nam-doat-giai-nhat-cuoc-thi-bao-mat-uy-tin-nhat-chau-a-1534438.html">http://sohoa.vnexpress.net/tin-tuc/doi-song-so/bao-mat/viet-nam-doat-giai-nhat-cuoc-thi-bao-mat-uy-tin-nhat-chau-a-1534438.html</a></p>
 ]]></content>
   </entry>
   
