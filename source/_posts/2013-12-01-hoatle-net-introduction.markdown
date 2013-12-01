@@ -1,0 +1,29 @@
+---
+layout: post
+title: "hoatle.net - Introduction"
+author: hoatle
+date: 2008-11-06 22:02
+comments: true
+categories:
+    -
+tags:
+    - "en"
+cover:
+description:
+keywords:
+published: false
+---
+
+Hi everybody, welcome to my newly created weblog - hoatle.net! Let me introduce first :). Ah, about my domain name? It is very simple. My name is Hoat Le Van, so hoatle is the combination of my first (Hoat) and last name (Le). Moreover, hoatle is also my long-term username on the internet, just google to find out something about me, huh? After some weeks to develop this weblog, now it is open for me to share...uhm... so many things in life and in work :)! Some people want to know what is my weblog about and how to use it?
+
+<!-- more -->
+
+First of all, what is hoatle.net about? We should know a little history. I am really excited about writing many things that inspire me. My first weblog is from Y!' 360 service. You can check it out from address: http://360.yahoo.com/wild_tiger8607. By the way, tiger is my year of birth as the convention of some Asian countries like China, Vietnam, etc. Recently, so many bad things happened to me, which has made me a bit different, I know it. I want to work more and in fact, I have played less and spent any time as I could with my computer to learn and to apply it in real life projects. In my learning curve, I found out some interesting knowledge to share, but my current blog on Y! is not suitable for me to share many different technical things in the easy way. And I decided to design my own weblog that meet my desire to easily share knowledge.
+
+However, the development of designing this weblog got many changes in progress. Initially, I decided to make my own website designed from beginning as I did for some websites such as http://dichthuatpti.com; http://vinateximex.com.vn. You could see that these two first website that I built for customers are somehow simple because these sites are only from my beginning into ASP and PHP programming. Working with ASP was about more than 2 years ago, and with PHP was nearly 2 years ago. After two years with some knowledge of PHP and recently with MVC, I decided to build my own MVC system from PHP by combining some technologies like Smarty for Presentation, PEAR for Model, and I write my own Controller. I failed, of course, because it was overwhelming to me. After that, I decided to build my own weblog on Zend Framework. I spent about a month to code and experimented with it and have made a simple bilingual website. As you could see, to meet my initial requirement I had to work much harder to write some planning, to design database schema, and a lot much more. I failed, of course, because I had short time to develop it. At that time, I had a project from PTI translation company for a multilingual website. So instead of reinventing everything, open source is my solution. I can work and learn to use a CMS (content management system). Have known Drupal for long but worked less and I thought it was exciting but difficult to learn. So I decided to work harder, I completed the first phase of PTI project (http://ptitranslation.com.vn) (Currently, it has only one language) and D9 project (http://d9k50.net) (for my own university class to share learning resource, but currently it has poor management and I am going to reorganize it). And then after some weeks working on how to manage my sharing knowledge and sharing in life, now hoatle.net can work as my desire. It will evolve as my experience evolve and so do I.
+
+You have known something about history and development. What about some features and how to use hoatle.net? Some outstanding features are: menu system: I have worked hard to categorize content on this weblog after many times of modifications. The menu system are really clear and neat, huh? Sharing: Ok, my weblog is for sharing interesting knowledge and practice it with some small projects. After some small projects, I will combine it into a real project, so awesome :D; Learning: Because I share immediately what I have learned, just learn with me to help us progress more in the world of computer, especially programming; Bilingual system: I am studying in Ha Noi university of Technology and expected to become a translator or an interpreter, so maintaining this bilingual system practices me more. Besides, sharing knowledge to many international visitors and developers is also my intention. With a simple mission in mind is that: Just learning and working to share and sharing to learn and work, I will try my best to achieve it.
+
+Last but not least, how to use hoatle.net? To my friends: Check out blog menu to get my latest information. To developers: Move around any menu as you like, and check it out. I am sure there are many interesting things waiting for you ;). To customers: To get your belief in an open source solution, just give me your requirement about a web application and I will make it true with the least cost and in a really short time. You will get my 24/7 support when the contract is signed and support has no expire day. Is it so great to know that? To myself: improving writing skill and sharing culture.
+
+To summary, I have introduced about my weblog hoatle.net: what is it about and how you can use it. So feel free to move around the website to know more about me and my work, my projects, my sharing, my support to many customers. This weblog is just beginning to operate, I will regularly update the content as my projects and ideas get bigger and bigger. If you have got any question, please contact me with the contact form. Thank you for your reading!
