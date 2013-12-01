@@ -12,7 +12,7 @@ tags:
 cover:
 description:
 keywords:
-published: false
+published: true
 ---
 
 Chào mừng bạn đến với weblog mới thành lập - hoatle.net! Trước tiên tôi có đôi lời muốn giới thiệu. Về tên miền weblog của tôi? Tại sao lại là hoatle.net; Đơn giản thôi, tên tôi là Lê Văn Hoạt, do vậy hoatle chính là sự kết hợp của tên (Hoạt) và họ (Lê). Hơn nữa, hoatle cũng là tên được tôi sử dụng nhiều nhất trên Internet, bạn thử google với từ khoá "hoatle" sẽ biết thêm 1 số thông tin về tôi. Sau vài tuần phát triển weblog này, đến thời điểm này thì hoatle.net có thể đi chập chững những bước đi đầu tiên để tôi chia sẻ cùng mọi người về nhiều khía cạnh trong công việc cũng như trong cuộc sống. Để giúp mọi người hiểu rõ hơn về hoatle.net, tôi xin nói về nguồn gốc, quá trình phát triển và làm thế nào để sử dụng tốt nhất weblog này?

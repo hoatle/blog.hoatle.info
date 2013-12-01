@@ -12,7 +12,7 @@ tags:
 cover:
 description:
 keywords:
-published: false
+published: true
 ---
 
 Hi everybody, welcome to my newly created weblog - hoatle.net! Let me introduce first :). Ah, about my domain name? It is very simple. My name is Hoat Le Van, so hoatle is the combination of my first (Hoat) and last name (Le). Moreover, hoatle is also my long-term username on the internet, just google to find out something about me, huh? After some weeks to develop this weblog, now it is open for me to share...uhm... so many things in life and in work :)! Some people want to know what is my weblog about and how to use it?
