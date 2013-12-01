@@ -4,7 +4,7 @@
   <title><![CDATA[blog.hoatle.info]]></title>
   <link href="http://blog.hoatle.info/atom.xml" rel="self"/>
   <link href="http://blog.hoatle.info/"/>
-  <updated>2013-12-01T18:49:22+00:00</updated>
+  <updated>2013-12-01T18:53:02+00:00</updated>
   <id>http://blog.hoatle.info/</id>
   <author>
     <name><![CDATA[hoatle]]></name>
@@ -343,6 +343,9 @@ to get HTTP errors to see such these interesting images :)).</p>
 BrowserPlus and Gears are aimed at improving browsers&#8217; native abilities so Web applications can
 better match those running natively on a computer&rsquo;s operating system.</p>
 
+<!-- more -->
+
+
 <p><img class="center" src="http://l.yimg.com/a/i/us/bp/s/1.4/site/home-sprite.jpg" title="BrowserPlus" ></p>
 
 <p>As on BrowserPlus&#8217; blog: &ldquo;The big idea here is that we&rsquo;ll have the whole platform open sourced by
@@ -372,6 +375,9 @@ thức công bố BrowserPlus trở thành phần mềm nguồn mở. Cả Googl
 mục đích là tăng thêm tính năng cho trình duyệt để các ứng dụng web có thể chạy tốt hơn và thậm chí
 có thể chạy trong môi trường hệ điều hành mà không cần đến trình duyệt.</p>
 
+<!-- more -->
+
+
 <p><img class="center" src="http://l.yimg.com/a/i/us/bp/s/1.4/site/home-sprite.jpg" title="BrowserPlus" ></p>
 
 <p>Trên Blog của BrowserPlus có nói: &ldquo;Chúng tôi có ý tưởng đến giữa năm tới toàn bộ nền tảng sẽ là
@@ -399,6 +405,9 @@ lai.</p>
     <content type="html"><![CDATA[<p>This contest is only for 5 SE Asia countries: Singapore, Malaysia, the Phillipines, Thailand, and
 Vietnam. All developers from these 5 countries can take part in. Entries are limited to three per
 person.</p>
+
+<!-- more -->
+
 
 <p>The Open registration day is November 15, 2008 and the close registration day is January 10, 2009.</p>
 
@@ -447,6 +456,9 @@ this contest</p></li>
     <content type="html"><![CDATA[<p>Cuộc thi dành cho 5 nước thuộc khu vực Đông Nam Á (Singapore, Malaysia, Phillipines, Thái Lan và
 Việt Nam). Tất cả những nhà phát triển thuộc 5 nước kể trên đều có quyền tham gia bằng cách viết tối
 đa không qua 3 ứng dụng gửi đến cuộc thi để được thẩm định, đánh giá.</p>
+
+<!-- more -->
+
 
 <p>Cuộc thi bắt đầu từ 15/11/2008 đến 10/1/2009 là hết hạn nhận sản phẩm dự thi.</p>
 
@@ -500,6 +512,9 @@ câu mà chưa thấy ai trả lời :(</p></li>
     <id>http://blog.hoatle.info/2008/11/08/viet-nam-doat-giai-nhat-cuoc-thi-bao-mat-uy-tin-nhat-chau-a</id>
     <content type="html"><![CDATA[<p>Với số điểm 5.800, đội Bluemoon đã chiến thắng tại cuộc tranh tài CtF trong khuôn khổ Hội nghị bảo
 mật máy tính Hack In The Box (HITB) 2008, diễn ra cuối tháng 10 ở Kuala Lumpur (Malaysia).</p>
+
+<!-- more -->
+
 
 <p>Cuộc thi CtF (Capture the Flags – Cướp cờ) năm nay có 7 đội tham dự từ Hàn Quốc, Singapore và Việt
 Nam. Ngoài Blue Moon, đội Mitdac cũng gồm những chuyên gia bảo mật hàng đầu của Việt Nam đã đoạt
@@ -590,6 +605,9 @@ Nhận được giải này Buytaert phát biểu &ldquo;Những phần thưởn
     <id>http://blog.hoatle.info/2008/11/06/drupal-revealed-as-2008-open-source-cms-award-winner</id>
     <content type="html"><![CDATA[<p>Packt’s annual Open Source Content Management System (CMS) Award reached its climax today with the announcement that Drupal has won the Overall category, collecting a first prize of $5,000. Three months after it was launched and a staggering 20,000 votes later, Drupal finished ahead of Joomla! and DotNetNuke to retain the Award it won in 2007.</p>
 
+<!-- more -->
+
+
 <p>Released as an Open Source project by founder Dries Buytaert in 2001, Drupal has grown substantially and has been downloaded almost 1.5 million times in the last 12 months. It is currently being applied by companies such as Warner Brothers Music, MTV UK, and the New York Observer amongst others.</p>
 
 <p>&ldquo;These awards are a testament to the valuable contributions from dedicated Drupal community members around the globe&rdquo; said Buytaert in response to the news. &ldquo;Working together, the Drupal community is building the future of the dynamic web so that anyone can quickly build great social publishing websites&rdquo; he concluded.</p>
@@ -623,6 +641,9 @@ Nhận được giải này Buytaert phát biểu &ldquo;Những phần thưởn
     <updated>2008-11-06T22:04:00+00:00</updated>
     <id>http://blog.hoatle.info/2008/11/06/hoatle-net-gioi-thieu</id>
     <content type="html"><![CDATA[<p>Chào mừng bạn đến với weblog mới thành lập &ndash; hoatle.net! Trước tiên tôi có đôi lời muốn giới thiệu. Về tên miền weblog của tôi? Tại sao lại là hoatle.net; Đơn giản thôi, tên tôi là Lê Văn Hoạt, do vậy hoatle chính là sự kết hợp của tên (Hoạt) và họ (Lê). Hơn nữa, hoatle cũng là tên được tôi sử dụng nhiều nhất trên Internet, bạn thử google với từ khoá &ldquo;hoatle&rdquo; sẽ biết thêm 1 số thông tin về tôi. Sau vài tuần phát triển weblog này, đến thời điểm này thì hoatle.net có thể đi chập chững những bước đi đầu tiên để tôi chia sẻ cùng mọi người về nhiều khía cạnh trong công việc cũng như trong cuộc sống. Để giúp mọi người hiểu rõ hơn về hoatle.net, tôi xin nói về nguồn gốc, quá trình phát triển và làm thế nào để sử dụng tốt nhất weblog này?</p>
+
+<!-- more -->
+
 
 <p>Trước tiên, tôi muốn giới thiệu thêm về hoatle.net. Tôi thực sự rất thích viết về những vấn đề mình quan tâm, được tìm hiểu thông tin từ nhiều chiều và đưa ra quan điểm của mình. Blog đầu tiên tôi viết khá nhiều là Blog 360 của Yahoo! Bạn có thể ngó qua tại địa chỉ <a href="http://360.yahoo.com/wild_tiger8607.">http://360.yahoo.com/wild_tiger8607.</a> À, tôi xin nói luôn dần (tiger) chính là năm sinh của tôi, còn wild chính là để tôi mạnh mẽ hơn, không được hiền lành quá :P. Trong thời gian gần đây có quá nhiều sự việc không mong muốn đã xảy ra với tôi và cũng đã làm tôi thay đổi đôi chút. Tôi muốn làm việc nhiều hơn và thực tế tôi đã chơi ít đi và tận dụng bất cứ khi nào có thể để học và áp dụng những kinh nghiệm mới vào những dự án của mình. Trong quá trình học tập này, tôi có những kiến thức thú vị muốn được chia sẻ nhưng cách tổ chức Blog trên 360 của Yahoo! không thích hợp cho việc chia sẻ những kiến thức thiên về kỹ thuật này (hiển thị mã nguồn, định dạng hiển thị, cách tổ chức nội dung.v.v&hellip;). Do vậy tôi quyết định tự thiết kế cho mình weblog riêng để tôi có thể chia sẻ kiến thức được nhanh và hiệu quả nhất.</p>
 
