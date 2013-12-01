@@ -110,4 +110,5 @@ To me the most interesting one is: 411 Length Required :))
 Recommended links:
 
 List of HTTP status codes: http://en.wikipedia.org/wiki/List_of_HTTP_status_codes
+
 Images for illustration: http://www.flickr.com/photos/apelad/sets/72157594388426362/detail
