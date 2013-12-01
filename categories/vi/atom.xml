@@ -4,7 +4,7 @@
   <title><![CDATA[Category: vi | blog.hoatle.info]]></title>
   <link href="http://blog.hoatle.info/categories/vi/atom.xml" rel="self"/>
   <link href="http://blog.hoatle.info/"/>
-  <updated>2013-12-01T18:20:44+00:00</updated>
+  <updated>2013-12-01T18:42:50+00:00</updated>
   <id>http://blog.hoatle.info/</id>
   <author>
     <name><![CDATA[hoatle]]></name>
@@ -12,6 +12,66 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[OpenSocial Hackathon và BarCamp Hà Nội]]></title>
+    <link href="http://blog.hoatle.info/2008/11/25/opensocial-hackathon-va-barcamp-ha-noi/"/>
+    <updated>2008-11-25T02:38:00+00:00</updated>
+    <id>http://blog.hoatle.info/2008/11/25/opensocial-hackathon-va-barcamp-ha-noi</id>
+    <content type="html"><![CDATA[<p>Tin dành cho các bạn ở Hà Nội. Như mọi người đã biết, Google DevFest HCMC &ndash; The First Ever Google
+Hackathon Tour in Vietnam<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup> (ngày 4/11/2008) và BarCamp Saigon<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup> (November 5, 2008) đã được tổ
+chức ở thành phố Hồ Chí Minh và nhiều bạn ở Hà Nội không tham gia được (tất nhiên trong đó có tớ :(,
+dù gì thì những sự kiện như vậy không thể không tham gia).</p>
+
+<!-- more -->
+
+
+<h2>OpenSocial Hackathon ở Hà Nội</h2>
+
+<p>&ldquo;Sau khi tổ chức thành công Google Devfest<sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup> ở thành phố HCM hôm 4/11/2008 và rất nhiều bạn ở Hà
+Nội đã không thể tham dự, chúng tôi dự định tổ chức một Hackathon nho nhỏ tập trung vào hệ thống API
+của OpenSocial. Các kỹ sư phần mềm của eXo Platform<sup id="fnref:4"><a href="#fn:4" rel="footnote">4</a></sup> (cùng với đội ngũ Google Devfest khu vực Đông
+Nam Á) sẽ tới trao đổi với mọi người, một số ứng dựng OpenSocial API ở các dịch vụ mạng xã hội Việt
+Nam sẽ được demo. Một kỹ sư của Google khu vực Đông Nam Á sẽ tham gia. Ngày tổ chức dự kiến:
+13/12/2008.&rdquo; (Nguồn Jason).</p>
+
+<p>Lịch trình hôm 13/12/2008 tại OpenSocial Hackathon:</p>
+
+<ul>
+<li><p>10:30AM – 11:00AM : Đăng kí</p></li>
+<li><p>11:00AM – 12:00PM : Bài thuyết trình về openSocial</p></li>
+<li><p>12:00PM – 1:00PM : brainstorming + pizza</p></li>
+<li><p>1:00PM – 5:00PM : Viết các ứng dụng openSocial</p></li>
+<li><p>1:00PM – 2:00PM : Hướng dẫn viết gadget openSocial</p></li>
+<li><p>5:00PM – 6:00PM : Thuyết trình tổng kết kết quả làm việc buổi chiều</p></li>
+</ul>
+
+
+<p>Xem thêm: <a href="http://blog.exoplatform.org/2008/11/24/opensocial-hackathon-in-hanoi/">http://blog.exoplatform.org/2008/11/24/opensocial-hackathon-in-hanoi/</a></p>
+
+<p>Chỉ có 50 ghế dành cho ai đăng kí sớm nhất và được lựa chọn Đăng kí ngay.</p>
+
+<h2>BarCamp Hà Nội đang được chuẩn bị</h2>
+
+<p>Xem thêm <a href="http://wiki.barcamphanoi.org.">http://wiki.barcamphanoi.org.</a></p>
+
+<p>Tuyệt vời!</p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>http://jasonlog.supersized.org/archives/131-Google-DevFest-HCMC-The-First-Ever-Google-Hackathon-Tour-in-Vietnam.html<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<li id="fn:2">
+<p>http://www.barcampsaigon.org/<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
+<li id="fn:3">
+<p>http://code.google.com/events/apacdevfest/<a href="#fnref:3" rev="footnote">&#8617;</a></p></li>
+<li id="fn:4">
+<p>http://www.exoplatform.com/portal/public/en/<a href="#fnref:4" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[SearchWiki của Google đâu rồi???]]></title>
@@ -192,33 +252,6 @@ Account by SMS&rdquo; tớ cố gắng kết hợp số phone tất cả các c�
 câu mà chưa thấy ai trả lời :(</p></li>
 </ul>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Việt Nam đoạt giải nhất cuộc thi bảo mật uy tín nhất châu Á]]></title>
-    <link href="http://blog.hoatle.info/2008/11/08/viet-nam-doat-giai-nhat-cuoc-thi-bao-mat-uy-tin-nhat-chau-a/"/>
-    <updated>2008-11-08T19:16:00+00:00</updated>
-    <id>http://blog.hoatle.info/2008/11/08/viet-nam-doat-giai-nhat-cuoc-thi-bao-mat-uy-tin-nhat-chau-a</id>
-    <content type="html"><![CDATA[<p>Với số điểm 5.800, đội Bluemoon đã chiến thắng tại cuộc tranh tài CtF trong khuôn khổ Hội nghị bảo
-mật máy tính Hack In The Box (HITB) 2008, diễn ra cuối tháng 10 ở Kuala Lumpur (Malaysia).</p>
-
-<p>Cuộc thi CtF (Capture the Flags – Cướp cờ) năm nay có 7 đội tham dự từ Hàn Quốc, Singapore và Việt
-Nam. Ngoài Blue Moon, đội Mitdac cũng gồm những chuyên gia bảo mật hàng đầu của Việt Nam đã đoạt
-giải nhì với gần 1.800 điểm.</p>
-
-<p>Trong cuộc thi &ldquo;cướp cờ&rdquo;, các đội sẽ được cấp một máy chủ trên đó có các ứng dụng nền (daemon) chứa
-lỗi bảo mật. Người tham gia phải khai thác lỗ hổng, xâm nhập các máy chủ khác và bảo vệ server của
-mình trước những đợt tấn công.</p>
-
-<p>Được biết đến như là DefCon của phương Đông, HITB CtF là sự kiện lớn nhất về an toàn thông tin trong
-khu vực châu Á &ndash; Thái Bình Dương và Trung Đông, được tổ chức mỗi năm 2 lần. Hội nghị quy tụ nhiều
-nhân vật nổi tiếng và được các hãng lớn như Oracle, Microsoft, Intel, F-Secure&hellip; tài trợ.</p>
-
-<p>HITB 2008 tập trung thảo luận và trình diễn các phương pháp thâm nhập hệ thống bảo mật từ nhận dạng
-sinh học, nhận dạng bằng sóng radio tầm ngắn (RFID) cho đến các công nghệ không dây hiện hành.</p>
-
-<p>Nguồn: <a href="http://sohoa.vnexpress.net/tin-tuc/doi-song-so/bao-mat/viet-nam-doat-giai-nhat-cuoc-thi-bao-mat-uy-tin-nhat-chau-a-1534438.html">http://sohoa.vnexpress.net/tin-tuc/doi-song-so/bao-mat/viet-nam-doat-giai-nhat-cuoc-thi-bao-mat-uy-tin-nhat-chau-a-1534438.html</a></p>
 ]]></content>
   </entry>
   

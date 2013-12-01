@@ -4,7 +4,7 @@
   <title><![CDATA[blog.hoatle.info]]></title>
   <link href="http://blog.hoatle.info/atom.xml" rel="self"/>
   <link href="http://blog.hoatle.info/"/>
-  <updated>2013-12-01T18:20:44+00:00</updated>
+  <updated>2013-12-01T18:42:50+00:00</updated>
   <id>http://blog.hoatle.info/</id>
   <author>
     <name><![CDATA[hoatle]]></name>
@@ -12,6 +12,127 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[OpenSocial Hackathon và BarCamp Hà Nội]]></title>
+    <link href="http://blog.hoatle.info/2008/11/25/opensocial-hackathon-va-barcamp-ha-noi/"/>
+    <updated>2008-11-25T02:38:00+00:00</updated>
+    <id>http://blog.hoatle.info/2008/11/25/opensocial-hackathon-va-barcamp-ha-noi</id>
+    <content type="html"><![CDATA[<p>Tin dành cho các bạn ở Hà Nội. Như mọi người đã biết, Google DevFest HCMC &ndash; The First Ever Google
+Hackathon Tour in Vietnam<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup> (ngày 4/11/2008) và BarCamp Saigon<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup> (November 5, 2008) đã được tổ
+chức ở thành phố Hồ Chí Minh và nhiều bạn ở Hà Nội không tham gia được (tất nhiên trong đó có tớ :(,
+dù gì thì những sự kiện như vậy không thể không tham gia).</p>
+
+<!-- more -->
+
+
+<h2>OpenSocial Hackathon ở Hà Nội</h2>
+
+<p>&ldquo;Sau khi tổ chức thành công Google Devfest<sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup> ở thành phố HCM hôm 4/11/2008 và rất nhiều bạn ở Hà
+Nội đã không thể tham dự, chúng tôi dự định tổ chức một Hackathon nho nhỏ tập trung vào hệ thống API
+của OpenSocial. Các kỹ sư phần mềm của eXo Platform<sup id="fnref:4"><a href="#fn:4" rel="footnote">4</a></sup> (cùng với đội ngũ Google Devfest khu vực Đông
+Nam Á) sẽ tới trao đổi với mọi người, một số ứng dựng OpenSocial API ở các dịch vụ mạng xã hội Việt
+Nam sẽ được demo. Một kỹ sư của Google khu vực Đông Nam Á sẽ tham gia. Ngày tổ chức dự kiến:
+13/12/2008.&rdquo; (Nguồn Jason).</p>
+
+<p>Lịch trình hôm 13/12/2008 tại OpenSocial Hackathon:</p>
+
+<ul>
+<li><p>10:30AM – 11:00AM : Đăng kí</p></li>
+<li><p>11:00AM – 12:00PM : Bài thuyết trình về openSocial</p></li>
+<li><p>12:00PM – 1:00PM : brainstorming + pizza</p></li>
+<li><p>1:00PM – 5:00PM : Viết các ứng dụng openSocial</p></li>
+<li><p>1:00PM – 2:00PM : Hướng dẫn viết gadget openSocial</p></li>
+<li><p>5:00PM – 6:00PM : Thuyết trình tổng kết kết quả làm việc buổi chiều</p></li>
+</ul>
+
+
+<p>Xem thêm: <a href="http://blog.exoplatform.org/2008/11/24/opensocial-hackathon-in-hanoi/">http://blog.exoplatform.org/2008/11/24/opensocial-hackathon-in-hanoi/</a></p>
+
+<p>Chỉ có 50 ghế dành cho ai đăng kí sớm nhất và được lựa chọn Đăng kí ngay.</p>
+
+<h2>BarCamp Hà Nội đang được chuẩn bị</h2>
+
+<p>Xem thêm <a href="http://wiki.barcamphanoi.org.">http://wiki.barcamphanoi.org.</a></p>
+
+<p>Tuyệt vời!</p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>http://jasonlog.supersized.org/archives/131-Google-DevFest-HCMC-The-First-Ever-Google-Hackathon-Tour-in-Vietnam.html<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<li id="fn:2">
+<p>http://www.barcampsaigon.org/<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
+<li id="fn:3">
+<p>http://code.google.com/events/apacdevfest/<a href="#fnref:3" rev="footnote">&#8617;</a></p></li>
+<li id="fn:4">
+<p>http://www.exoplatform.com/portal/public/en/<a href="#fnref:4" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[OpenSocial Hackathon and BarCamp Hanoi]]></title>
+    <link href="http://blog.hoatle.info/2008/11/25/opensocial-hackathon-and-barcamp-hanoi/"/>
+    <updated>2008-11-25T02:04:00+00:00</updated>
+    <id>http://blog.hoatle.info/2008/11/25/opensocial-hackathon-and-barcamp-hanoi</id>
+    <content type="html"><![CDATA[<p>Good news to Hanoi developers! As we know, Google DevFest HCMC &ndash; The First Ever Google Hackathon
+Tour in Vietnam<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup> (November 4, 2008) did succeed, BarCamp Saigon<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup> (November 5, 2008) did succeed.
+However, these two events was held in Ho Chi Minh city, many developers from Hanoi missed it.</p>
+
+<p>Now you can join OpenSocial Hackathon and BarCamp Hanoi :).</p>
+
+<!-- more -->
+
+
+<h2>OpenSocial Hackathon in Hanoi</h2>
+
+<p>&ldquo;After the success of Google Devfest<sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup> in HCMC on November 4, 2008 and many talent developers in
+Hanoi missed the Event, we plan to hold a mini Hackathon in Hanoi with focus on OpenSocial API.
+Software engineers from eXo Platform<sup id="fnref:4"><a href="#fn:4" rel="footnote">4</a></sup> (going with Google Devfest team in Southeast Asia Tour) will
+interact with Hanoi based devs and geeks, some demos of OpenSocial API apps on Vietnamese social
+networking services should be showed. An engineer of Google Southeast Asia could join to assist the
+participants. The planned date is December 13, 2008&rdquo; (from Jason).</p>
+
+<p>Agenda on December 13, 2008:</p>
+
+<ul>
+<li><p>10:30AM – 11:00AM : Registration</p></li>
+<li><p>11:00AM – 12:00PM : openSocial Presentation</p></li>
+<li><p>12:00PM – 1:00PM : brainstorming + pizza</p></li>
+<li><p>1:00PM – 5:00PM : Coding your openSocial applications</p></li>
+<li><p>1:00PM – 2:00PM : guided walkthrough a first openSocial gadget</p></li>
+<li><p>5:00PM – 6:00PM : presentation of what have been done in the afternoon.</p></li>
+</ul>
+
+
+<p>More info: <a href="http://blog.exoplatform.org/2008/11/24/opensocial-hackathon-in-hanoi/">http://blog.exoplatform.org/2008/11/24/opensocial-hackathon-in-hanoi/</a></p>
+
+<p>Only 50 seats are available. Just register now.</p>
+
+<h2>BarCamp Hanoi is on the way of preparation</h2>
+
+<p>Get information and just don&rsquo;t miss it from <a href="http://wiki.barcamphanoi.org.">http://wiki.barcamphanoi.org.</a></p>
+
+<p>Really interesting and good news!</p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>http://jasonlog.supersized.org/archives/131-Google-DevFest-HCMC-The-First-Ever-Google-Hackathon-Tour-in-Vietnam.html<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<li id="fn:2">
+<p>http://www.barcampsaigon.org/<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
+<li id="fn:3">
+<p>http://code.google.com/events/apacdevfest/<a href="#fnref:3" rev="footnote">&#8617;</a></p></li>
+<li id="fn:4">
+<p>http://www.exoplatform.com/portal/public/en/<a href="#fnref:4" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Where is my Google SearchWiki???]]></title>
