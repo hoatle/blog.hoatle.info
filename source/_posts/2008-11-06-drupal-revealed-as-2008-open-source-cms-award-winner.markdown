@@ -19,6 +19,8 @@ published: true
 
 Packt’s annual Open Source Content Management System (CMS) Award reached its climax today with the announcement that Drupal has won the Overall category, collecting a first prize of $5,000. Three months after it was launched and a staggering 20,000 votes later, Drupal finished ahead of Joomla! and DotNetNuke to retain the Award it won in 2007.
 
+<!-- more -->
+
 Released as an Open Source project by founder Dries Buytaert in 2001, Drupal has grown substantially and has been downloaded almost 1.5 million times in the last 12 months. It is currently being applied by companies such as Warner Brothers Music, MTV UK, and the New York Observer amongst others.
 
 "These awards are a testament to the valuable contributions from dedicated Drupal community members around the globe" said Buytaert in response to the news. "Working together, the Drupal community is building the future of the dynamic web so that anyone can quickly build great social publishing websites" he concluded.

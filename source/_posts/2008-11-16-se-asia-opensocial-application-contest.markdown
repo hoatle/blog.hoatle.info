@@ -19,6 +19,8 @@ This contest is only for 5 SE Asia countries: Singapore, Malaysia, the Phillipin
 Vietnam. All developers from these 5 countries can take part in. Entries are limited to three per
 person.
 
+<!-- more -->
+
 The Open registration day is November 15, 2008 and the close registration day is January 10, 2009.
 
 Each entry will be judged by a panel of experts who are employees of Exo Platform, Friendster,

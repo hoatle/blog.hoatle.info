@@ -19,6 +19,8 @@ Cuộc thi dành cho 5 nước thuộc khu vực Đông Nam Á (Singapore, Malay
 Việt Nam). Tất cả những nhà phát triển thuộc 5 nước kể trên đều có quyền tham gia bằng cách viết tối
 đa không qua 3 ứng dụng gửi đến cuộc thi để được thẩm định, đánh giá.
 
+<!-- more -->
+
 Cuộc thi bắt đầu từ 15/11/2008 đến 10/1/2009 là hết hạn nhận sản phẩm dự thi.
 
 Các sản phẩm sẽ được đánh giá bởi hội đồng chuyên gia từ Exo Platform, Friendster, Globant, Google

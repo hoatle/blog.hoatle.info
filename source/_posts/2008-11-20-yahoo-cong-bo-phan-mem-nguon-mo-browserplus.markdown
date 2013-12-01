@@ -20,6 +20,8 @@ thức công bố BrowserPlus trở thành phần mềm nguồn mở. Cả Googl
 mục đích là tăng thêm tính năng cho trình duyệt để các ứng dụng web có thể chạy tốt hơn và thậm chí
 có thể chạy trong môi trường hệ điều hành mà không cần đến trình duyệt.
 
+<!-- more -->
+
 {% img center http://l.yimg.com/a/i/us/bp/s/1.4/site/home-sprite.jpg BrowserPlus %}
 
 Trên Blog của BrowserPlus có nói: "Chúng tôi có ý tưởng đến giữa năm tới toàn bộ nền tảng sẽ là

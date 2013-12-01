@@ -19,6 +19,8 @@ published: true
 Với số điểm 5.800, đội Bluemoon đã chiến thắng tại cuộc tranh tài CtF trong khuôn khổ Hội nghị bảo
 mật máy tính Hack In The Box (HITB) 2008, diễn ra cuối tháng 10 ở Kuala Lumpur (Malaysia).
 
+<!-- more -->
+
 Cuộc thi CtF (Capture the Flags – Cướp cờ) năm nay có 7 đội tham dự từ Hàn Quốc, Singapore và Việt
 Nam. Ngoài Blue Moon, đội Mitdac cũng gồm những chuyên gia bảo mật hàng đầu của Việt Nam đã đoạt
 giải nhì với gần 1.800 điểm.

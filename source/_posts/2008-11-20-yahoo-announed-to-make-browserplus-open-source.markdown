@@ -19,6 +19,8 @@ As Google did with Gears, on November 18, 2008 Yahoo! intended to make BrowserPl
 BrowserPlus and Gears are aimed at improving browsers' native abilities so Web applications can
 better match those running natively on a computer's operating system.
 
+<!-- more -->
+
 {% img center http://l.yimg.com/a/i/us/bp/s/1.4/site/home-sprite.jpg BrowserPlus %}
 
 As on BrowserPlus' blog: "The big idea here is that we'll have the whole platform open sourced by
