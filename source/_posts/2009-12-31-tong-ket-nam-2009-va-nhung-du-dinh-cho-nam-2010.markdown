@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Tổng kết năm 2009 and những dự định cho năm 2010"
+title: "Tổng kết năm 2009 và những dự định cho năm 2010"
 author: hoatle
 date: 2009-12-31 00:41
 comments: true
@@ -9,8 +9,8 @@ categories:
 tags:
     -
 cover:
-description: Tổng kết năm 2009 and những dự định cho năm 2010
-keywords: Tổng kết năm 2009 and những dự định cho năm 2010
+description: Tổng kết năm 2009 và những dự định cho năm 2010
+keywords: Tổng kết năm 2009  những dự định cho năm 2010
 published: true
 ---
 
