@@ -4,7 +4,7 @@
   <title><![CDATA[Category: en | blog.hoatle.info]]></title>
   <link href="http://blog.hoatle.info/categories/en/atom.xml" rel="self"/>
   <link href="http://blog.hoatle.info/"/>
-  <updated>2013-12-02T17:07:41+00:00</updated>
+  <updated>2013-12-02T17:21:25+00:00</updated>
   <id>http://blog.hoatle.info/</id>
   <author>
     <name><![CDATA[hoatle]]></name>
@@ -12,6 +12,30 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[extended deadline for Barcamp Hanoi 2009 logo design contest]]></title>
+    <link href="http://blog.hoatle.info/2009/02/26/extended-deadline-for-barcamp-hanoi-2009-logo-design-contest/"/>
+    <updated>2009-02-26T23:32:00+00:00</updated>
+    <id>http://blog.hoatle.info/2009/02/26/extended-deadline-for-barcamp-hanoi-2009-logo-design-contest</id>
+    <content type="html"><![CDATA[<p>The 1st submission to Barcamp Hanoi 2009 Logo Design Contest:</p>
+
+<p><img class="center <a" src="href="http://farm4.static.flickr.com/3541/3307608039_9a27531d47.jpg?v=0">http://farm4.static.flickr.com/3541/3307608039_9a27531d47.jpg?v=0</a>" title="The 1st submission to Barcamp Hanoi 2009 Logo Design Contest" ></p>
+
+<p>At present we are having some logo submitted for the contest and we know that the time seems so
+short for you all to complete your logo for submission.</p>
+
+<p>After great 2nd Barcamp Hanoi organizer meetup tonight, the Logo Design Contest submission deadline
+is extended to:</p>
+
+<p><code>Saturday, March 21st, 11:59 PM (GMT+7)</code></p>
+
+<p>So you will have more than 3 weeks from now to prepare. But don’t waste your time, start your work
+right now!</p>
+
+<p>Thanks for joining and we are looking for your great Logo for BarCamp Hanoi 2009.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[OSDE - great for OpenSocial developers]]></title>
@@ -224,36 +248,6 @@ to filter out out some people :( because of time + venue + other problems.</p>
 </ol>
 </div>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[music-engine Intro]]></title>
-    <link href="http://blog.hoatle.info/2008/12/16/music-engine-intro/"/>
-    <updated>2008-12-16T11:31:00+00:00</updated>
-    <id>http://blog.hoatle.info/2008/12/16/music-engine-intro</id>
-    <content type="html"><![CDATA[<p>Thinking so much about an OpenSocial apps and finally I decided to develop a music-engine application.</p>
-
-<p>What is a music-engine? My music-engine will crawl and index as much as possible any songs in the Internet and reorganize it into datastore in Google Apps.</p>
-
-<!-- more -->
-
-
-<p>Music-engine will be the service provider allows me to write OpenSocial apps for any container. Users can search, listen, create and save their own favorite playlists. They can send that playlist to their friends as gifts.</p>
-
-<p>Each user can have his own music-stream life. This is something like Twitter, but this just allows users to recommend any song they like.</p>
-
-<p>These are just some critical features I will try to implement.</p>
-
-<p>What&rsquo;s about copyright issue? Music-engine just crawles and indexes information, it doesn&rsquo;t store any music file on its own server. Every activity such as search, download or any other is from users.</p>
-
-<p>Just some ideas about this. I have completed the database schema and a little about music-engine crawler.</p>
-
-<p>As we know, Google Apps currently supports Python, so it will be coded in Python.</p>
-
-<p>I love PHP, and I have some experience to write a news crawler some months ago. Now I will improve it for music, not news.</p>
-
-<p>If anyone would like to code with me, please contact me. There are many things to do, this is just a project for fun :)</p>
 ]]></content>
   </entry>
   

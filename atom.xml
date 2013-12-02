@@ -4,7 +4,7 @@
   <title><![CDATA[blog.hoatle.info]]></title>
   <link href="http://blog.hoatle.info/atom.xml" rel="self"/>
   <link href="http://blog.hoatle.info/"/>
-  <updated>2013-12-02T17:07:41+00:00</updated>
+  <updated>2013-12-02T17:21:25+00:00</updated>
   <id>http://blog.hoatle.info/</id>
   <author>
     <name><![CDATA[hoatle]]></name>
@@ -12,6 +12,54 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[extended deadline for Barcamp Hanoi 2009 logo design contest]]></title>
+    <link href="http://blog.hoatle.info/2009/02/26/extended-deadline-for-barcamp-hanoi-2009-logo-design-contest/"/>
+    <updated>2009-02-26T23:32:00+00:00</updated>
+    <id>http://blog.hoatle.info/2009/02/26/extended-deadline-for-barcamp-hanoi-2009-logo-design-contest</id>
+    <content type="html"><![CDATA[<p>The 1st submission to Barcamp Hanoi 2009 Logo Design Contest:</p>
+
+<p><img class="center" src="http://farm4.static.flickr.com/3541/3307608039_9a27531d47.jpg?v=0" title="The 1st submission to Barcamp Hanoi 2009 Logo Design Contest" ></p>
+
+<p>At present we are having some logo submitted for the contest and we know that the time seems so
+short for you all to complete your logo for submission.</p>
+
+<p>After great 2nd Barcamp Hanoi organizer meetup tonight, the Logo Design Contest submission deadline
+is extended to:</p>
+
+<p><code>Saturday, March 21st, 11:59 PM (GMT+7)</code></p>
+
+<p>So you will have more than 3 weeks from now to prepare. But don’t waste your time, start your work
+right now!</p>
+
+<p>Thanks for joining and we are looking for your great Logo for BarCamp Hanoi 2009.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[lùi hạn tham dự Cuộc thi Thiết kế Logo Barcamp Hà Nội 2009]]></title>
+    <link href="http://blog.hoatle.info/2009/02/26/lui-han-tham-du-cuoc-thi-thiet-ke-logo-barcamp-ha-noi-2009/"/>
+    <updated>2009-02-26T23:17:00+00:00</updated>
+    <id>http://blog.hoatle.info/2009/02/26/lui-han-tham-du-cuoc-thi-thiet-ke-logo-barcamp-ha-noi-2009</id>
+    <content type="html"><![CDATA[<p>Logo đầu tiên gửi đến cuộc thi:</p>
+
+<p><img class="center" src="http://farm4.static.flickr.com/3541/3307608039_9a27531d47.jpg?v=0" title="Logo đầu tiên gửi đến cuộc thi" ></p>
+
+<p>Hiện tại chúng tôi đã nhận được những logo đầu tiên gửi đến để tham dự cuộc thi và chúng tôi cũng
+biết là thời gian hơi gấp rút để bạn có thể hoàn thành tác phẩm của mình đúng thời hạn.</p>
+
+<p>Sau cuộc họp lần 2 của ban tổ chức vừa rồi, hạn nộp logo dự thi sẽ được lùi lại đến:</p>
+
+<p><code>Thứ bảy ngày 21 tháng 3 năm 2009 , 11:59 PM (Giờ GMT+7)</code></p>
+
+<p>Vì vậy các bạn có hơn 3 tuần kể từ bây giờ để chuẩn bị. Nhưng đừng lãng phí thời gian, hãy bắt đầu
+công việc ngay từ bây giờ!</p>
+
+<p>Chúng tôi rất cám ơn bạn đã tham gia và đang chờ đợi những Logo ưng ý nhất của bạn dành cho
+BarCamp Hanoi 2009.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[OSDE - môi trường tuyệt vời cho các nhà phát triển ứng dụng OpenSocial]]></title>
@@ -829,176 +877,6 @@ SearchWiki không thực sự hữu dụng và Google quyết định gỡ bỏ?
 <p>Theo Google lý do SearchWiki không hoạt động nữa là do SearchWiki có lỗi và họ đang cố gắng khắc
 phục sự cố: &ldquo;Chúng tôi rất lấy làm tiếc khi người dùng hiện không thể sử dụng SearchWiki &ndash; chúng tôi
 đang cố gắng hết sức khắc phục. Hãy thông cảm cho chúng tôi.&rdquo;</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[http errors by images]]></title>
-    <link href="http://blog.hoatle.info/2008/11/22/http-errors-by-images/"/>
-    <updated>2008-11-22T09:12:00+00:00</updated>
-    <id>http://blog.hoatle.info/2008/11/22/http-errors-by-images</id>
-    <content type="html"><![CDATA[<p>There are many cases that HTTP errors occurs with tedious text like &ldquo;Access Denied&rdquo; or
-&ldquo;Page Not Found&rdquo;. If we add an image for illustration, it&rsquo;s more interesting. Even people will like
-to get HTTP errors to see such these interesting images :)).</p>
-
-<!-- more -->
-
-
-<h2>400 &ndash; Bad Request</h2>
-
-<p><img class="center" src="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/109/304192669_105139f8e0_m.jpg" width="400" title="- Bad Request" ></p>
-
-<h2>401 &ndash; Unauthorized</h2>
-
-<p><img class="center" src="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/122/304193001_7ed9b91756_m.jpg" width="401" title="- Unauthorized" ></p>
-
-<h2>402 &ndash; Payment Required</h2>
-
-<p><img class="center" src="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/106/304193323_3d98d9fcbe_m.jpg" width="402" title="- Payment Required" ></p>
-
-<h2>403 &ndash; Forbidden</h2>
-
-<p><img class="center" src="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/117/304193677_7ac63a179e_m.jpg" width="403" title="- Forbidden" ></p>
-
-<h2>404 &ndash; Not Found</h2>
-
-<p><img class="center" src="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/105/304194006_922af2210e_m.jpg" width="404" title="- Not Found" ></p>
-
-<h2>405 &ndash; Method Not Allowed</h2>
-
-<p><img class="center" src="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/112/304194299_2fc0718bb5_m.jpg" width="405" title="- Method Not Allowed" ></p>
-
-<h2>406 &ndash; Not Acceptable</h2>
-
-<p><img class="center" src="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/116/304194659_eca0264c29_m.jpg" width="406" title="- Not Acceptable" ></p>
-
-<h2>408 &ndash; Request Timeout</h2>
-
-<p><img class="center" src="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/120/304195027_092906cf44_m.jpg" width="408" title="- Request Timeout" ></p>
-
-<h2>409 &ndash; Conflict</h2>
-
-<p><img class="center" src="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/115/304195427_f15002a254_m.jpg" width="409" title="- Conflict" ></p>
-
-<h2>410 &ndash; Gone</h2>
-
-<p><img class="center" src="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/99/304195684_7ed943c933_m.jpg" width="410" title="- Gone" ></p>
-
-<h2>411 &ndash; Length Required</h2>
-
-<p><img class="center" src="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/109/304195993_bcc87426eb_m.jpg" width="411" title="- Length Required" ></p>
-
-<h2>413 &ndash; Request Entity Too Large</h2>
-
-<p><img class="center" src="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/101/304196358_0afd41ba2e_m.jpg" width="413" title="- Request Entity Too Large" ></p>
-
-<h2>414 &ndash; Requested URL Too Long</h2>
-
-<p><img class="center" src="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/113/304196775_0b461475f7_m.jpg" width="414" title="- Requested URL Too Long" ></p>
-
-<h2>415 &ndash; Unsuported Media Type</h2>
-
-<p><img class="center" src="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/120/304197126_079c77762b_m.jpg" width="415" title="- Unsupported Media Type" ></p>
-
-<h2>416 &ndash; Requested Range Not Satisfied</h2>
-
-<p><img class="center" src="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/111/304197454_7d2319e1d6_m.jpg" width="416" title="- Requested Range Not Satisfied" ></p>
-
-<h2>417 &ndash; Expectation Failed</h2>
-
-<p><img class="center" src="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/106/304197810_cbd6d2ff5e_m.jpg" width="417" title="- Expectation Failed" ></p>
-
-<p>To me the most interesting one is: 411 Length Required :))</p>
-
-<p>Recommended links:</p>
-
-<p>List of HTTP status codes: <a href="http://en.wikipedia.org/wiki/List_of_HTTP_status_codes">http://en.wikipedia.org/wiki/List_of_HTTP_status_codes</a></p>
-
-<p>Images for illustration: <a href="http://www.flickr.com/photos/apelad/sets/72157594388426362/detail">http://www.flickr.com/photos/apelad/sets/72157594388426362/detail</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[xử lý một số lỗi HTTP bằng hình ảnh minh hoạ]]></title>
-    <link href="http://blog.hoatle.info/2008/11/22/xu-ly-mot-so-loi-http-bang-hinh-anh-minh-hoa/"/>
-    <updated>2008-11-22T09:05:00+00:00</updated>
-    <id>http://blog.hoatle.info/2008/11/22/xu-ly-mot-so-loi-http-bang-hinh-anh-minh-hoa</id>
-    <content type="html"><![CDATA[<p>Các trang xử lý lỗi HTTP thường ra một thông báo là đoạn text vô hồn kiểu như &ldquo;Access denied&rdquo; hoặc &ldquo;Page Not Found&rdquo;. Thử thêm một số hình ảnh minh hoạ này có lẽ sẽ tạo cảm giác vui nhộn hơn cho người dùng, có khi họ lại thích gặp những lỗi HTTP để xem những hình ảnh này :)).</p>
-
-<!-- more -->
-
-
-<h2>400 &ndash; Bad Request</h2>
-
-<p><img class="center" src="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/109/304192669_105139f8e0_m.jpg" width="400" title="- Bad Request" ></p>
-
-<h2>401 &ndash; Unauthorized</h2>
-
-<p><img class="center" src="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/122/304193001_7ed9b91756_m.jpg" width="401" title="- Unauthorized" ></p>
-
-<h2>402 &ndash; Payment Required</h2>
-
-<p><img class="center" src="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/106/304193323_3d98d9fcbe_m.jpg" width="402" title="- Payment Required" ></p>
-
-<h2>403 &ndash; Forbidden</h2>
-
-<p><img class="center" src="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/117/304193677_7ac63a179e_m.jpg" width="403" title="- Forbidden" ></p>
-
-<h2>404 &ndash; Not Found</h2>
-
-<p><img class="center" src="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/105/304194006_922af2210e_m.jpg" width="404" title="- Not Found" ></p>
-
-<h2>405 &ndash; Method Not Allowed</h2>
-
-<p><img class="center" src="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/112/304194299_2fc0718bb5_m.jpg" width="405" title="- Method Not Allowed" ></p>
-
-<h2>406 &ndash; Not Acceptable</h2>
-
-<p><img class="center" src="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/116/304194659_eca0264c29_m.jpg" width="406" title="- Not Acceptable" ></p>
-
-<h2>408 &ndash; Request Timeout</h2>
-
-<p><img class="center" src="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/120/304195027_092906cf44_m.jpg" width="408" title="- Request Timeout" ></p>
-
-<h2>409 &ndash; Conflict</h2>
-
-<p><img class="center" src="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/115/304195427_f15002a254_m.jpg" width="409" title="- Conflict" ></p>
-
-<h2>410 &ndash; Gone</h2>
-
-<p><img class="center" src="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/99/304195684_7ed943c933_m.jpg" width="410" title="- Gone" ></p>
-
-<h2>411 &ndash; Length Required</h2>
-
-<p><img class="center" src="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/109/304195993_bcc87426eb_m.jpg" width="411" title="- Length Required" ></p>
-
-<h2>413 &ndash; Request Entity Too Large</h2>
-
-<p><img class="center" src="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/101/304196358_0afd41ba2e_m.jpg" width="413" title="- Request Entity Too Large" ></p>
-
-<h2>414 &ndash; Requested URL Too Long</h2>
-
-<p><img class="center" src="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/113/304196775_0b461475f7_m.jpg" width="414" title="- Requested URL Too Long" ></p>
-
-<h2>415 &ndash; Unsuported Media Type</h2>
-
-<p><img class="center" src="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/120/304197126_079c77762b_m.jpg" width="415" title="- Unsupported Media Type" ></p>
-
-<h2>416 &ndash; Requested Range Not Satisfied</h2>
-
-<p><img class="center" src="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/111/304197454_7d2319e1d6_m.jpg" width="416" title="- Requested Range Not Satisfied" ></p>
-
-<h2>417 &ndash; Expectation Failed</h2>
-
-<p><img class="center" src="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/106/304197810_cbd6d2ff5e_m.jpg" width="417" title="- Expectation Failed" ></p>
-
-<p>Hay nhất là hình minh hoạ lỗi 411 Length Required =))</p>
-
-<p>Xem thêm:</p>
-
-<p>Danh sách mã lỗi <a href="HTTP:">HTTP:</a> <a href="http://en.wikipedia.org/wiki/List_of_HTTP_status_codes">http://en.wikipedia.org/wiki/List_of_HTTP_status_codes</a></p>
-
-<p>Hình ảnh minh hoạ: <a href="http://www.flickr.com/photos/apelad/sets/72157594388426362/detail">http://www.flickr.com/photos/apelad/sets/72157594388426362/detail</a></p>
 ]]></content>
   </entry>
   
