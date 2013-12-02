@@ -58,6 +58,7 @@ References:
 - Sample logos http://barcamp.org/LogoGallery
 
 - Barcamp Saigon 2008 Logo http://www.barcampsaigon.org/dokuwiki/doku.php?id=2008_org_logo
+
 - Barcamp Logos on Google Image search http://images.google.com/images?q=Barcamp%20logo&oe=utf-8&rls=com.ubuntu:en-US:unofficial&client=firefox-a&um=1&ie=UTF-8&sa=N&hl=en&tab=wi
 
 **How it works**
@@ -85,7 +86,7 @@ resolution/vector graphic versions of your work.
 - As part of the submission, participants must be willing to give up all their rights to the
 copyright and donate it to the community.
 
-- Tag your photo with the phrase “BCHN 2009 Contest“. This will allow us to search for and pull your
+- Tag your photo with the phrase “BCHN 2009 LContest“. This will allow us to search for and pull your
 photo into a public image gallery.
 
 - Join the contest-specific Flickr group Barcamp Hanoi 2009 Logo Design Contest and add your image
