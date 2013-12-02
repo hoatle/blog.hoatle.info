@@ -4,7 +4,7 @@
   <title><![CDATA[Category: en | blog.hoatle.info]]></title>
   <link href="http://blog.hoatle.info/categories/en/atom.xml" rel="self"/>
   <link href="http://blog.hoatle.info/"/>
-  <updated>2013-12-01T18:53:02+00:00</updated>
+  <updated>2013-12-02T06:55:05+00:00</updated>
   <id>http://blog.hoatle.info/</id>
   <author>
     <name><![CDATA[hoatle]]></name>
@@ -12,6 +12,73 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[OpenSocial Hackathon in Hanoi]]></title>
+    <link href="http://blog.hoatle.info/2008/12/13/opensocial-hackathon-in-hanoi/"/>
+    <updated>2008-12-13T23:39:00+00:00</updated>
+    <id>http://blog.hoatle.info/2008/12/13/opensocial-hackathon-in-hanoi</id>
+    <content type="html"><![CDATA[<p>Today is one of the most active day of mine :). With the opensocial hackathon in Hanoi, I have
+chance to meet some interesting people.</p>
+
+<!-- more -->
+
+
+<p>My morning started in 9 A.M (OMG!!! But it&rsquo;s my normal day; I don&rsquo;t know why but I&rsquo;d really like to
+work at late night. Yesterday, I stopped working at about 4 A.M. It&rsquo;s hard to define my work :).
+Just do everything with computer: blogging, building some requested websites from customers,
+experimenting new technology trend, improve programming skill, oh many more. Just my habit :).</p>
+
+<p>It took me about half an hour to get to eXo Platform office. Coming a bit early (about 10h 20'),
+I just saw 2 or 3 geeks sitting there.</p>
+
+<p><strong>Early time</strong></p>
+
+<p><img class="center <a" src="href="http://farm4.static.flickr.com/3208/3127289114_6c42ab2824.jpg?v=0">http://farm4.static.flickr.com/3208/3127289114_6c42ab2824.jpg?v=0</a>" title="Early time" ></p>
+
+<p>11h everyone came. It&rsquo;s just about more than 20 geeks &ndash; this number is less than my expectation ;). I thought there must have been about 50 geeks ;).</p>
+
+<p><strong>Everyone came</strong></p>
+
+<p><img class="center <a" src="href="http://farm4.static.flickr.com/3290/3127289274_56552c8884.jpg?v=0">http://farm4.static.flickr.com/3290/3127289274_56552c8884.jpg?v=0</a>" title="Everyone came" ></p>
+
+<p>I met many geeks from many companies, except me, I&rsquo;m currently not working for any company :), just finding! I don&rsquo;t remember all, but just list some here: eXo Platform (of course, Jereme Joslin, 3 other guys and I have much talk with two of them), Tinh Van Media (<a href="http://xalo.vn;">http://xalo.vn;</a> two 3th-year students from College of Technology), Moore Corporation (<a href="http://nghenhac.info,">http://nghenhac.info,</a> <a href="http://anhso.net">http://anhso.net</a>), VinaLive (<a href="http://phununet.com;">http://phununet.com;</a> 3-4 guys), <a href="http://tamtay.vn">http://tamtay.vn</a> (one guy), guys from <a href="http://teevn.com.">http://teevn.com.</a> Ah, Jason &ndash; now I know him ;), and a guy from <a href="http://newhanoian.xemzi.com/.">http://newhanoian.xemzi.com/.</a> There are more guys but currently I can not remember all.</p>
+
+<p><strong>Where am I? :)</strong></p>
+
+<p><img class="center <a" src="href="http://farm4.static.flickr.com/3196/3127290146_951883aa5b.jpg?v=0">http://farm4.static.flickr.com/3196/3127290146_951883aa5b.jpg?v=0</a>" title="Where am I? :)" ></p>
+
+<p>Jeremi had a very clear presentation about OpenSocial, but I think it&rsquo;s just introduction, everything he said I have known before. How strange it is when some guys coming here have no idea from OpenSocial??? I don&rsquo;t know why. I thought this event is really interesting to exchange idea and information, and to hack but some guys don&rsquo;t have any idea to code an opensocial gadget :(.</p>
+
+<p>Jemeri&rsquo;s presentation took about 1 hour, although there is some technical problems with newhanoian gadget, but it&rsquo;s clear and I really like his openness and clear voice. He took some pics and I will post them here when having it.</p>
+
+<p>It&rsquo;s time for lunch!!! No pizza as proposed in agenda :). But it&rsquo;s really good with bread, meat, vegetables, juices&hellip; Thank for your lunch, eXo, Jason, Google :).</p>
+
+<p><strong>Preparing for lunch [full of food but no such pic captured]</strong></p>
+
+<p><img class="center <a" src="href="http://farm4.static.flickr.com/3211/3126459089_a0703a11de.jpg?v=0">http://farm4.static.flickr.com/3211/3126459089_a0703a11de.jpg?v=0</a>" title="Preparing for lunch [full of food but no such pic captured]" ></p>
+
+<p>After lunch we have some introduction: who you are, what you are working, your ideas..blah blah. Just everything you would like to talk, to share.</p>
+
+<p>Coming back to hacking time. Just learn to code following a gadget example: place searching. It&rsquo;s fun, but I knew some guys did not complete or like it. Some guys said they have no idea about javascript so it&rsquo;s really hard for them to follow.</p>
+
+<p><strong>Hacking time</strong></p>
+
+<p><img class="center <a" src="href="http://farm4.static.flickr.com/3088/3127289804_a93ff9ee3a.jpg?v=0">http://farm4.static.flickr.com/3088/3127289804_a93ff9ee3a.jpg?v=0</a>" title="Hacking time" ></p>
+
+<p>After the gadget example, we have an idea sharing section to talk with people about your idea of an gadget (social app). How strange to me when just me sharing it :(. What about others'???</p>
+
+<p>A strange and repetitive question: &ndash; How to config my server to host opensocial app??? It&rsquo;s a really big question to answer. You have to meet some social standards, implementing opensocial api, any may other things. Currently, I think it&rsquo;s really hard for so-called Vietnamese social network to implement OpenSocial api.</p>
+
+<p>It&rsquo;s a little sad to me when it ended too early, about 4 P.M &ndash; 2 hours earlier than expected. Why? Because it seems that some guys would like to code, some guys don&rsquo;t, perhaps they didn&rsquo;t have any idea to code an gadget??</p>
+
+<p>One interesting thing, as usually every developer will get a T-shirt. But here we can get 2 T-shirt. A black one from Google D3vF3st, a white one from <a href="http://teevn.com">http://teevn.com</a> :). So interesting!!! But unlucky me, I got 2 L-size ones. I could not find M-size one :(. If only I could be more bigger&hellip;</p>
+
+<p>Thank you, Jeremi for your friendly hand-shake ;), your openness; thank you all guys for coming. I really like and love it :)</p>
+
+<p>See more pics here from Jeremi: <a href="http://flickr.com/photos/jeremi/sets/72157611434836951/">http://flickr.com/photos/jeremi/sets/72157611434836951/</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[OpenSocial Hackathon and BarCamp Hanoi]]></title>
@@ -203,57 +270,6 @@ said on a BrowserPlus frequently-asked-questions page. (<a href="http://browserp
 
 <p>Technology is changing so fast, who knows what is the tomorrow browser look like? When combining
 Google Gears and Yahoo! BrowserPlus will actully make browsers a &ldquo;web OS&rdquo;.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[SE Asia OpenSocial Application Contest]]></title>
-    <link href="http://blog.hoatle.info/2008/11/16/se-asia-opensocial-application-contest/"/>
-    <updated>2008-11-16T15:14:00+00:00</updated>
-    <id>http://blog.hoatle.info/2008/11/16/se-asia-opensocial-application-contest</id>
-    <content type="html"><![CDATA[<p>This contest is only for 5 SE Asia countries: Singapore, Malaysia, the Phillipines, Thailand, and
-Vietnam. All developers from these 5 countries can take part in. Entries are limited to three per
-person.</p>
-
-<!-- more -->
-
-
-<p>The Open registration day is November 15, 2008 and the close registration day is January 10, 2009.</p>
-
-<p>Each entry will be judged by a panel of experts who are employees of Exo Platform, Friendster,
-Globant, Google Inc, and hi5. Entries will be evaluated on:</p>
-
-<ul>
-<li>Creativity and user appeal</li>
-<li>Internationalization (Message Bundles)</li>
-<li>Use of other Google APIs</li>
-<li>Cross-platform operability</li>
-<li>Use of App Engine for storing user data and hosting files</li>
-</ul>
-
-
-<p>What about prize? :D</p>
-
-<p>The top five entrants with the highest overall scores in each participating country will be awarded
-an Apple iPod Touch (valued at US$230). In addition, the entrant with the highest overall score in
-each participating country will also be awarded a Nintendo Wii (valued at US$270).</p>
-
-<ul>
-<li>Oh, nearly 2 months left to find ideas and implement an application ;)</li>
-</ul>
-
-
-<p>Useful links:
-&ndash; <a href="http://code.google.com">http://code.google.com</a> &ndash; developer network; find opensocial section</p>
-
-<ul>
-<li><p><a href="http://code.google.com/appengine/">http://code.google.com/appengine/</a> -App Engine Registration. What happens to Vietnamese developers?
-We can&rsquo;t registry because of the verification step: &ldquo;Verify Your Account by SMS&rdquo;?</p></li>
-<li><p><a href="http://code.google.com/events/apacdevfest/contest/index.html">http://code.google.com/events/apacdevfest/contest/index.html</a> &ndash; contest site</p></li>
-<li><p><a href="http://groups.google.com/group/seasia-social-gadget-contest?hl=en">http://groups.google.com/group/seasia-social-gadget-contest?hl=en</a> &ndash; Questions and answers about
-this contest</p></li>
-</ul>
-
 ]]></content>
   </entry>
   
