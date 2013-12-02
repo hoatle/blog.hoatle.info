@@ -4,7 +4,7 @@
   <title><![CDATA[blog.hoatle.info]]></title>
   <link href="http://blog.hoatle.info/atom.xml" rel="self"/>
   <link href="http://blog.hoatle.info/"/>
-  <updated>2013-12-02T07:58:05+00:00</updated>
+  <updated>2013-12-02T08:18:11+00:00</updated>
   <id>http://blog.hoatle.info/</id>
   <author>
     <name><![CDATA[hoatle]]></name>
@@ -12,6 +12,80 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[ngày làm việc đầu tiên ở eXo Platform SEA]]></title>
+    <link href="http://blog.hoatle.info/2009/02/17/ngay-lam-viec-dau-tien-o-exo-platform-sea/"/>
+    <updated>2009-02-17T03:11:00+00:00</updated>
+    <id>http://blog.hoatle.info/2009/02/17/ngay-lam-viec-dau-tien-o-exo-platform-sea</id>
+    <content type="html"><![CDATA[<p>Hôm nay là ngày làm việc đầu tiên cho eXo Platform SEA, làm việc ở đây hơi bị ổn :). Từ tết đến giờ mới lại viết blog, một phần vì bận, 1 phần vì chuyển mạng qua fpt nhưng lại không được vì max thuê bao, lại quay lại dùng mạng của vietel, chậm kinh khủng, 1 máy down film cái là mạng không chạy được luôn => lại bị hạn chế down film :(. Giờ mọi thứ gần như trở lại bình thường thì hoạt động viết blog sẽ trở lại bình thường. Sắp tới có lẽ viết nhiều về Java + các sản phẩm của eXo vì làm việc nhiều với nó mà :).</p>
+
+<!-- more -->
+
+
+<p>Được làm việc ở eXo<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup> cũng là may mắn, có bao giờ (dám) nghĩ là sẽ là việc ở đây đâu vì ở eXo không tuyển part-time mà hầu như các công ty cũng không tuyển part-time đâu. May mắn được biết và có một số trao đổi với Jeremi<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup> từ sau đợt Opensocial Hackathon Hà Nội<sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup>. Sau hackathon, tớ có liên lạc với Jeremi và hẹn một buổi cafe ở eXo xem Jeremi có giúp gì được tớ không. Tớ cũng chỉ nghĩ là tới gặp nói chuyện làm quen, nhưng sau đó Jeremi có hỏi về việc học, về kinh nghiệm, gợi ý cho tớ làm technical document writer cho eXo. Quá tốt, tớ cũng cần đi làm + sang kì tới thực tập ở Bách Khoa rồi, đi thực tập phải làm gì liên quan đến tiếng Anh => vị trí này là ổn rồi, kì tới cứ thế mà tiếp tục làm chứ chả lo phải đi liên hệ thực tập nữa :)). Tuy được Jeremi gợi ý + giúp như vậy nhưng cũng chỉ là bước đầu chuẩn bị thôi. Sau đó là nộp CV, có bài test tiếng Anh nhẹ nhàng, tiếp theo là phỏng vấn 2 lượt, lượt thứ nhất với 3 anh để kiểm tra kiến thức về Java (chưa nhớ được tên anh này), kiến thức về OpenSocial (anh Tùng) và kỹ năng viết tài liệu (anh Công). Phỏng vấn lượt 2 tiếp theo là với Brice Revenant<sup id="fnref:4"><a href="#fn:4" rel="footnote">4</a></sup> &ndash; giám đốc eXo Platform SEA hồi trước tết. Về quê nghỉ tết rồi thì nhận được email cần test thêm: gửi tài liệu mẫu hướng dẫn về Community Management cho eXo Portal. Tết bận, tranh thủ viết lúc đêm, tối hôm sau ra hàng cafe internet gửi luôn :). Tết về nhà bán hàng bận, đúng chỉ có đêm mới được sờ đến máy tính :)). Cũng may mắn là mọi thứ đều ổn, rất là vui khi làm việc ở đây :).</p>
+
+<p>Năm đen đủi cũng qua rồi, năm ngoái thật sự mệt mỏi, mất đồ, bị lừa, khó khăn :(. Bị lừa khi giúp bạn tìm việc, bị lừa qua bọn môi giới nhà đất, 1 tháng chuyển nhà đến 3-4 lần ý :( [hận + ghét nhất là bọn môi giới), xe máy thì bị mất nữa (phải mất 1 năm làm việc mình mới có thể kiếm lại những gì đã mất :(, chắc cuối năm nay ra trường lại mua 1 cái khác). Sống ở Hà Nội điên loạn, nguy hiểm [thành phố vì hoà bình ư? Điên loạn, nguy hiểm trong hoà bình thì đúng hơn :))]. Kì 2 đại học cũng mất luôn con cào cào mới đi được 3 tháng :(. Nhưng tất cả đã qua, giờ là thời điểm của năm mới may mắn: đầu năm thì ứng dụng music-engine của tớ đạt giải nhì trong cuộc thi viết ứng dụng OpenSocial khi vực Đông Nam Á<sup id="fnref:5"><a href="#fn:5" rel="footnote">5</a></sup> &ndash; ứng dụng không phải là lớn nhưng sẽ là bàn đạp để tớ tiếp tục phát triển nó :). Có một số đề nghị tham gia các team, nhưng mà phải từ chối vì đã nhận lời làm ở eXo rồi. Đấy, lúc tìm việc mãi không ra, đến khi tìm được rồi lại thế đấy :)). Nói chung là kiểu này chả sợ thất nghiệp, kể cả trong thời kì suy thoái kinh tế thế giới thế này :). Barcamp Hà Nội 2 vẫn đang được chuẩn bị, eXo sẽ là một trong những nhà tài trợ chính. Có vẻ như quá trình chuẩn bị cho Barcamp Hà Nội 2 rất chậm, thông tin rất ít, mà không thấy có organizer nào nữa ngoài @xoài &ndash; Ninh Nguyen :(. Tớ sẽ trao đổi thêm với Brice, nếu được tạo điều kiện về thời gian sẽ cố gắng tham gia tổ chức cho Barcamp, còn không thì cũng sẽ bằng cách này hay cách khác tìm người cùng tổ chức, lên kế hoạch&hellip; Sau đó tớ cũng dự định sẽ có có 1 section, nhưng chưa biết về cái gì đây :D. Sang năm sẽ là một năm chuyển đổi lớn, có nhiều thời gian hơn sau khi tốt nghiệp ở trường + học xong ở HN-Aptech. Mệt thêm năm nay nữa thôi: Sáng học ở trường (5/7) + Chiều đi làm (5/7) + Tối học ở HN-Aptech(4/7). Học xong về ăn cơm + ngủ khoảng 3-4 tiếng. Sau đó dậy làm đủ các mọi việc: làm bài + duyệt web + viết blog&hellip;</p>
+
+<p>Mấy hôm đầu chưa phải làm gì, được training để hiểu các sản phẩm, cách dùng&hellip; Mai training tiếp về WebOS sau đó là có 1 bài test kiểm tra chất lượng :). Mọi người ở đây đều cởi mở + tốt nữa. Được biết thêm 1 số anh chị nữa: anh Tùng (eXo Social project leader) và anh Trọng (Portal team leader) từ Hackathon, anh Công (tester) từ buổi phỏng vấn, chị Nga (document writer) và chị Hằng (training cho tớ + 1 anh nữa mới đến).
+Đội hình đội ngũ ở đây [chưa cập nhật nên chưa thấy cái mặt tớ :))] <a href="http://wiki.exoplatform.org/xwiki/bin/view/Main/Team.">http://wiki.exoplatform.org/xwiki/bin/view/Main/Team.</a></p>
+
+<p>Hôm nay buổi đầut tiên cũng có trao đổi với Brice về công việc, tớ có thể switch đến vị trí developer hoặc các vị trí khác nếu có khả năng :), còn ít nhất là nên làm 2 tháng viết docs để tìm hiểu các sản phẩm trước đã.
+Jeremi làm việc cho eXo gần 2 năm, chuẩn bị mở công ty riêng ở Trung Quốc với 1 số bạn ở Thái Lan. Jeremi tốt + giỏi + cao-to-đẹp-zai; bạn girl nào cần giới thiệu thì tớ cũng không giới thiệu đâu vì Jeremi có bạn gái là người mẫu rồi thì phải :).</p>
+
+<p>Một năm bận rộn + đầy hứa hẹn, Yeah :)</p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>http://exoplatform.com<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<li id="fn:2">
+<p>http://jeremi.info<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
+<li id="fn:3">
+<p>http://blog.hoatle.info/2008/12/14/opensocial-hackathon-ha-noi/<a href="#fnref:3" rev="footnote">&#8617;</a></p></li>
+<li id="fn:4">
+<p>http://www.linkedin.com/pub/dir/brice/revenant<a href="#fnref:4" rev="footnote">&#8617;</a></p></li>
+<li id="fn:5">
+<p>http://blog.hoatle.info/2008/11/15/cuoc-thi-viet-ung-dung-opensocial-khu-vuc-dong-nam-a/<a href="#fnref:5" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[my first working day at eXo Platform SEA]]></title>
+    <link href="http://blog.hoatle.info/2009/02/17/my-first-working-day-at-exo-platform-sea/"/>
+    <updated>2009-02-17T02:06:00+00:00</updated>
+    <id>http://blog.hoatle.info/2009/02/17/my-first-working-day-at-exo-platform-sea</id>
+    <content type="html"><![CDATA[<p>Today is my first working day at eXo Platform SEA, a nice start working day :). Hey, so long no post from my blog sice Tet holiday, now I will blog more often.</p>
+
+<!-- more -->
+
+
+<p>I&rsquo;m the lucky one to have chance working at eXo<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup> , I&rsquo;ve never thought about it before knowing and meeting Jeremi<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup> since Opensocial Hackathon in Hanoi<sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup>. After the hackathon, Jeremi and I had some discussion, he just introduced me to apply for a position at eXo &ndash; a position where my English learning at HUT and computer learning at HN-Aptech meets, so the best position is document writer. I have some good points of writing English, I will write technical documents for eXo, nice and thank Jeremi so much! Though, this is just the very first step to join eXo. I had English test, interview with 3 guys to check general Java knowledge, openSocial knowledge (Tung) and document writing skill (Cong) and then continue my interview with Brice Revenant<sup id="fnref:4"><a href="#fn:4" rel="footnote">4</a></sup> &ndash; manager at eXo Platform SEA before our Tet holiday. I had another more test for writing a sample of user guide for comminity management when I was home. Lucky me, everything was nice and today I&rsquo;m very pleased to have my first working day and now blogging about it :).</p>
+
+<p>The unlucky year passed by, last year I lost many things and had so many hardships: I was cheated when helping my friend finding a job, cheated to get address for renting, my motorbike was stolen (I will work hard to buy another by the end of this year), so living in Hanoi is really really dangerous [dangerous in peaceful :))], so I should be more and more and more careful. My bike was stolen at the second term at HUT, too :(. Now the new time for new year: my OpenSocial App took second prize at SE Asia OpenSocial Application contest, however, it is still in developement, hope to release it soon. Got some job offers which is very nice at the time of the world economic meltdown :D. Barcamp Hanoi 2 is being prepared, eXo will be one of the sponsers. I hope that I will have more time to wake everything up, Barcamp Hanoi 2 now seems slow in progress, I&rsquo;m preparing to have a session for Barcamp, too :). Next year will be my next big one after university graduation, more time for work, for meetup :).</p>
+
+<p>Today I had some training to have basic ideas about Portal, how to use and organize it, cool ;). Tomorrow I will have training about WebOS and after that a test will come to check for understanding. Everyone here is nice! I just know some more guys: Tung (eXo Social project leader) and Trong (Portal team leader) from Hackathon, Cong (tester) from the interview, Nga (document writer) and Hang (give me and another guy training) &ndash; today. You can see more staffs here: <a href="http://wiki.exoplatform.org/xwiki/bin/view/Main/Team.">http://wiki.exoplatform.org/xwiki/bin/view/Main/Team.</a></p>
+
+<p>Love this busy and promising year :)</p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>http://exoplatform.com/<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<li id="fn:2">
+<p>http://jeremi.info<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
+<li id="fn:3">
+<p>http://blog.hoatle.info/2008/12/13/opensocial-hackathon-in-hanoi/<a href="#fnref:3" rev="footnote">&#8617;</a></p></li>
+<li id="fn:4">
+<p>http://www.linkedin.com/pub/dir/brice/revenant<a href="#fnref:4" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[music-engine indexer testing]]></title>
@@ -807,75 +881,6 @@ companies such as Oracle, Microsoft, Intel, F-Sercure.</p>
 biological identification, radio frequency identification and current wireless technology.</p>
 
 <p>Source: <a href="http://sohoa.vnexpress.net/tin-tuc/doi-song-so/bao-mat/viet-nam-doat-giai-nhat-cuoc-thi-bao-mat-uy-tin-nhat-chau-a-1534438.html">http://sohoa.vnexpress.net/tin-tuc/doi-song-so/bao-mat/viet-nam-doat-giai-nhat-cuoc-thi-bao-mat-uy-tin-nhat-chau-a-1534438.html</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Drupal giành giải CMS mã nguồn mở 2008]]></title>
-    <link href="http://blog.hoatle.info/2008/11/06/drupal-gianh-giai-cms-ma-nguon-mo-2008/"/>
-    <updated>2008-11-06T22:48:00+00:00</updated>
-    <id>http://blog.hoatle.info/2008/11/06/drupal-gianh-giai-cms-ma-nguon-mo-2008</id>
-    <content type="html"><![CDATA[<p>Hôm nay cuộc thi hệ quản trị nội dung (CMS) nguồn mở thường niên do nhà xuất bản Packt tổ chức đã lên đến đỉnh điểm khi Packt thông báo Drupal đã giành được giải Overall (Tổng thể) với giải thưởng trị giá 5.000 đô-la. Sau 3 tháng, Drupal nhận được 20.000 phiếu bình chọn và về đích trước Joomla! Và DotNetNuke để giữ nguyên danh hiệu đã giành được năm 2007.</p>
-
-<!-- more -->
-
-
-<p>Dự án mã nguồn mở này được nhà sáng lập – Dries Buytaert công bố vào năm 2001 và Drupal đã nhanh chóng lớn mạnh, được download khoảng 1,5 triệu lần trong vòng 12 tháng vừa qua. Hiện Drupal các công ty như Warner Brothers Music, MTV UK, trang tin New York Observer và nhiều công ty sử dụng.
-Nhận được giải này Buytaert phát biểu &ldquo;Những phần thưởng này có được chính là nhờ những đóng góp rất lớn từ cộng đồng thành viên Drupal trên toàn thế giới&rdquo;. Buytaert kết luận: &ldquo;Cộng đồng Drupal đang nỗ lực làm việc để xây dựng tương lai cho web động để từ đó bất cứ ai cũng có thể xây dựng những website xuất bản nội dung lớn&rdquo;.</p>
-
-<p>Với các lá phiếu từ các chuyên gia cùng khách ghé thăm website của nhà xuất bản Packt, các giải thưởng năm nay chứng tỏ sự phổ biến cũng như chất lượng cao của giải. Việc chọn ra top 3 hệ thống trong vòng chung kết thực sự là một nhiệm vụ khó khăn cho hội đồng đánh giá vì các hệ thống này đều đạt chuẩn cao và có vô số tính năng.</p>
-
-<p>Đứng thứ hai và nhận được giải thưởng 3.000 đô-la là Joomla! – cái tên trẻ nhất (được thành lập năm 2003) trong top 3 hệ thống và trước đây cũng đã giành giải Overall. Hội đồng đánh giá rất có ấn tượng với cách cài đặt dễ dàng và khả năng tạo website hoạt động ngay chỉ trong thời gian rất ngắn của Joomla. Được cộng đồng đông đảo và đầy nhiệt huyết đóng góp xây dựng chính là yếu tố khiến dự án lớn mạnh nhanh chóng trong một khoảng thời gian ngắn đến như vậy.</p>
-
-<p>Đứng ở vị trí thứ 3 và nhận được giải thưởng 2.000 đô-la là DotNetNuke &ndash; hệ thống CMS duy nhất được viết bằng VB.NET cho ASP.NET framework. DotNetNuke nhận được phải hồi tích cực từ hội đồng đánh giá khi họ rất ấn tượng với cách phát triển dễ dàng và các tính năng bảo mật.</p>
-
-<p>Cùng với giải Overall, nhà xuất bản Packt cũng có các giải cho CMS nguồn mở PHP tốt nhất và CMS nguồn mở tốt nhất không viết bằng PHP. Và giải cuối cùng chính là CMS nguồn mở triển vọng dành cho SilverStripe. Packts trao tổng số tiền khoảng 20.000 đô-la cho các hệ quản trị nội dung đạt giải.</p>
-
-<p>Giải thưởng khác gồm:
-&ndash; Hứa hẹn nhất: SilverStripe
-&ndash; PHP nguồn mở tốt nhất: Drupal
-&ndash; CMS nguồn mở không viết bằng PHP tốt nhất: Plone.</p>
-
-<p>Các giải thưởng này được đưa ra để phát hiện và trao giải cho các hệ thống CMS nguồn mở với những chuẩn nhất quán trong môi trường đầy tính cạnh tranh. Kết quả của giải thưởng năm nay nhấn mạnh đến chất lượng này và cũng nói rằng không nhất thiết một CMS nào phải là tốt nhất mà CMS đó tốt nhất khi phù hợp với nhu cầu và đòi hỏi của từng người dùng cụ thể.</p>
-
-<p>Để xem toàn bộ kết quả của Giải CMS nguồn mở 2008, mời bạn theo đường dẫn sau: <a href="http://www.PacktPub.com/Award">http://www.PacktPub.com/Award</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Drupal revealed as 2008 open source CMS award winner]]></title>
-    <link href="http://blog.hoatle.info/2008/11/06/drupal-revealed-as-2008-open-source-cms-award-winner/"/>
-    <updated>2008-11-06T22:21:00+00:00</updated>
-    <id>http://blog.hoatle.info/2008/11/06/drupal-revealed-as-2008-open-source-cms-award-winner</id>
-    <content type="html"><![CDATA[<p>Packt’s annual Open Source Content Management System (CMS) Award reached its climax today with the announcement that Drupal has won the Overall category, collecting a first prize of $5,000. Three months after it was launched and a staggering 20,000 votes later, Drupal finished ahead of Joomla! and DotNetNuke to retain the Award it won in 2007.</p>
-
-<!-- more -->
-
-
-<p>Released as an Open Source project by founder Dries Buytaert in 2001, Drupal has grown substantially and has been downloaded almost 1.5 million times in the last 12 months. It is currently being applied by companies such as Warner Brothers Music, MTV UK, and the New York Observer amongst others.</p>
-
-<p>&ldquo;These awards are a testament to the valuable contributions from dedicated Drupal community members around the globe&rdquo; said Buytaert in response to the news. &ldquo;Working together, the Drupal community is building the future of the dynamic web so that anyone can quickly build great social publishing websites&rdquo; he concluded.</p>
-
-<p>With votes coming from a panel of industry experts and visitors to Packt’s website, this year’s Awards proved to be the most popular and also the highest quality. The task of selecting a top three from the finalists was a difficult one for the judges due to their high standards and myriad features.</p>
-
-<p>Finishing in second place and receiving $3,000 was Joomla!, the youngest of the three finalists and a previous winner of the Overall Award. Judges were impressed with Joomla’s ease of installation and ability to get a website up-and-running in a short space of time. Particular praise was reserved for its sizeable and enthusiastic community, which has allowed the project to grow so quickly in such a short space of time.</p>
-
-<p>In third place and receiving $2,000 was DotNetNuke, the only CMS in the final that is written in VB.NET for the ASP.NET framework. DotNetNuke received positive feedback from judges who were impressed with its ease of development and security implementation features.</p>
-
-<p>Alongside the Overall Award, Packt ran categories for best Open Source PHP Content Management System and best Open Source CMS that isn’t written in PHP. The final category was the Most Promising Open Source CMS, which was won by SilverStripe. Packt handed out a total of $20,000 in prize money to the winning Content Management Systems.</p>
-
-<p>Winners in the other final categories include:</p>
-
-<ul>
-<li>Most Promising: <strong>SilverStripe</strong></li>
-<li>Best Open Source PHP: <strong>Drupal</strong></li>
-<li>Best non PHP Open Source CMS: <strong>Plone</strong></li>
-</ul>
-
-
-<p>The Awards were designed to recognize and reward Open Source CMS’s for their consistently high standards in what is an extremely competitive field. The result of this year’s Award confirms this quality and also suggests that there isn’t necessarily one CMS that is the best, more that there is the best one to fit an individual user’s needs and requirements.</p>
-
-<p>Full results of the 2008 Open Source CMS Award can be found at <a href="http://www.PacktPub.com/Award">http://www.PacktPub.com/Award</a></p>
 ]]></content>
   </entry>
   

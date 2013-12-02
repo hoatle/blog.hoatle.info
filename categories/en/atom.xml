@@ -4,7 +4,7 @@
   <title><![CDATA[Category: en | blog.hoatle.info]]></title>
   <link href="http://blog.hoatle.info/categories/en/atom.xml" rel="self"/>
   <link href="http://blog.hoatle.info/"/>
-  <updated>2013-12-02T07:58:05+00:00</updated>
+  <updated>2013-12-02T08:18:11+00:00</updated>
   <id>http://blog.hoatle.info/</id>
   <author>
     <name><![CDATA[hoatle]]></name>
@@ -12,6 +12,40 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[my first working day at eXo Platform SEA]]></title>
+    <link href="http://blog.hoatle.info/2009/02/17/my-first-working-day-at-exo-platform-sea/"/>
+    <updated>2009-02-17T02:06:00+00:00</updated>
+    <id>http://blog.hoatle.info/2009/02/17/my-first-working-day-at-exo-platform-sea</id>
+    <content type="html"><![CDATA[<p>Today is my first working day at eXo Platform SEA, a nice start working day :). Hey, so long no post from my blog sice Tet holiday, now I will blog more often.</p>
+
+<!-- more -->
+
+
+<p>I&rsquo;m the lucky one to have chance working at eXo<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup> , I&rsquo;ve never thought about it before knowing and meeting Jeremi<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup> since Opensocial Hackathon in Hanoi<sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup>. After the hackathon, Jeremi and I had some discussion, he just introduced me to apply for a position at eXo &ndash; a position where my English learning at HUT and computer learning at HN-Aptech meets, so the best position is document writer. I have some good points of writing English, I will write technical documents for eXo, nice and thank Jeremi so much! Though, this is just the very first step to join eXo. I had English test, interview with 3 guys to check general Java knowledge, openSocial knowledge (Tung) and document writing skill (Cong) and then continue my interview with Brice Revenant<sup id="fnref:4"><a href="#fn:4" rel="footnote">4</a></sup> &ndash; manager at eXo Platform SEA before our Tet holiday. I had another more test for writing a sample of user guide for comminity management when I was home. Lucky me, everything was nice and today I&rsquo;m very pleased to have my first working day and now blogging about it :).</p>
+
+<p>The unlucky year passed by, last year I lost many things and had so many hardships: I was cheated when helping my friend finding a job, cheated to get address for renting, my motorbike was stolen (I will work hard to buy another by the end of this year), so living in Hanoi is really really dangerous [dangerous in peaceful :))], so I should be more and more and more careful. My bike was stolen at the second term at HUT, too :(. Now the new time for new year: my OpenSocial App took second prize at SE Asia OpenSocial Application contest, however, it is still in developement, hope to release it soon. Got some job offers which is very nice at the time of the world economic meltdown :D. Barcamp Hanoi 2 is being prepared, eXo will be one of the sponsers. I hope that I will have more time to wake everything up, Barcamp Hanoi 2 now seems slow in progress, I&rsquo;m preparing to have a session for Barcamp, too :). Next year will be my next big one after university graduation, more time for work, for meetup :).</p>
+
+<p>Today I had some training to have basic ideas about Portal, how to use and organize it, cool ;). Tomorrow I will have training about WebOS and after that a test will come to check for understanding. Everyone here is nice! I just know some more guys: Tung (eXo Social project leader) and Trong (Portal team leader) from Hackathon, Cong (tester) from the interview, Nga (document writer) and Hang (give me and another guy training) &ndash; today. You can see more staffs here: <a href="http://wiki.exoplatform.org/xwiki/bin/view/Main/Team.">http://wiki.exoplatform.org/xwiki/bin/view/Main/Team.</a></p>
+
+<p>Love this busy and promising year :)</p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>http://exoplatform.com/<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<li id="fn:2">
+<p>http://jeremi.info<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
+<li id="fn:3">
+<p>http://blog.hoatle.info/2008/12/13/opensocial-hackathon-in-hanoi/<a href="#fnref:3" rev="footnote">&#8617;</a></p></li>
+<li id="fn:4">
+<p>http://www.linkedin.com/pub/dir/brice/revenant<a href="#fnref:4" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[music-engine Intro]]></title>
@@ -183,92 +217,6 @@ very helpful and Google decided to take it out?</p>
 <p>Google says that this is a bug and is working on restoring SearchWiki now: “We’re really sorry that
 people can’t use SearchWiki at the moment &ndash; we’re working to fix the problem as quickly as we can.
 Please bear with us.”</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[http errors by images]]></title>
-    <link href="http://blog.hoatle.info/2008/11/22/http-errors-by-images/"/>
-    <updated>2008-11-22T09:12:00+00:00</updated>
-    <id>http://blog.hoatle.info/2008/11/22/http-errors-by-images</id>
-    <content type="html"><![CDATA[<p>There are many cases that HTTP errors occurs with tedious text like &ldquo;Access Denied&rdquo; or
-&ldquo;Page Not Found&rdquo;. If we add an image for illustration, it&rsquo;s more interesting. Even people will like
-to get HTTP errors to see such these interesting images :)).</p>
-
-<!-- more -->
-
-
-<h2>400 &ndash; Bad Request</h2>
-
-<p><img class="center <a" src="href="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/109/304192669_105139f8e0_m.jpg">http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/109/304192669_105139f8e0_m.jpg</a>" width="400" title="&ndash; Bad Request" ></p>
-
-<h2>401 &ndash; Unauthorized</h2>
-
-<p><img class="center <a" src="href="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/122/304193001_7ed9b91756_m.jpg">http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/122/304193001_7ed9b91756_m.jpg</a>" width="401" title="&ndash; Unauthorized" ></p>
-
-<h2>402 &ndash; Payment Required</h2>
-
-<p><img class="center <a" src="href="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/106/304193323_3d98d9fcbe_m.jpg">http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/106/304193323_3d98d9fcbe_m.jpg</a>" width="402" title="&ndash; Payment Required" ></p>
-
-<h2>403 &ndash; Forbidden</h2>
-
-<p><img class="center <a" src="href="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/117/304193677_7ac63a179e_m.jpg">http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/117/304193677_7ac63a179e_m.jpg</a>" width="403" title="&ndash; Forbidden" ></p>
-
-<h2>404 &ndash; Not Found</h2>
-
-<p><img class="center <a" src="href="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/105/304194006_922af2210e_m.jpg">http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/105/304194006_922af2210e_m.jpg</a>" width="404" title="&ndash; Not Found" ></p>
-
-<h2>405 &ndash; Method Not Allowed</h2>
-
-<p><img class="center <a" src="href="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/112/304194299_2fc0718bb5_m.jpg">http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/112/304194299_2fc0718bb5_m.jpg</a>" width="405" title="&ndash; Method Not Allowed" ></p>
-
-<h2>406 &ndash; Not Acceptable</h2>
-
-<p><img class="center <a" src="href="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/116/304194659_eca0264c29_m.jpg">http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/116/304194659_eca0264c29_m.jpg</a>" width="406" title="&ndash; Not Acceptable" ></p>
-
-<h2>408 &ndash; Request Timeout</h2>
-
-<p><img class="center <a" src="href="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/120/304195027_092906cf44_m.jpg">http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/120/304195027_092906cf44_m.jpg</a>" width="408" title="&ndash; Request Timeout" ></p>
-
-<h2>409 &ndash; Conflict</h2>
-
-<p><img class="center <a" src="href="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/115/304195427_f15002a254_m.jpg">http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/115/304195427_f15002a254_m.jpg</a>" width="409" title="&ndash; Conflict" ></p>
-
-<h2>410 &ndash; Gone</h2>
-
-<p><img class="center <a" src="href="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/99/304195684_7ed943c933_m.jpg">http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/99/304195684_7ed943c933_m.jpg</a>" width="410" title="&ndash; Gone" ></p>
-
-<h2>411 &ndash; Length Required</h2>
-
-<p><img class="center <a" src="href="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/109/304195993_bcc87426eb_m.jpg">http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/109/304195993_bcc87426eb_m.jpg</a>" width="411" title="&ndash; Length Required" ></p>
-
-<h2>413 &ndash; Request Entity Too Large</h2>
-
-<p><img class="center <a" src="href="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/101/304196358_0afd41ba2e_m.jpg">http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/101/304196358_0afd41ba2e_m.jpg</a>" width="413" title="&ndash; Request Entity Too Large" ></p>
-
-<h2>414 &ndash; Requested URL Too Long</h2>
-
-<p><img class="center <a" src="href="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/113/304196775_0b461475f7_m.jpg">http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/113/304196775_0b461475f7_m.jpg</a>" width="414" title="&ndash; Requested URL Too Long" ></p>
-
-<h2>415 &ndash; Unsuported Media Type</h2>
-
-<p><img class="center <a" src="href="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/120/304197126_079c77762b_m.jpg">http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/120/304197126_079c77762b_m.jpg</a>" width="415" title="&ndash; Unsupported Media Type" ></p>
-
-<h2>416 &ndash; Requested Range Not Satisfied</h2>
-
-<p><img class="center <a" src="href="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/111/304197454_7d2319e1d6_m.jpg">http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/111/304197454_7d2319e1d6_m.jpg</a>" width="416" title="&ndash; Requested Range Not Satisfied" ></p>
-
-<h2>417 &ndash; Expectation Failed</h2>
-
-<p><img class="center <a" src="href="http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/106/304197810_cbd6d2ff5e_m.jpg">http://wayback.archive.org/web/20110124143736im_/http://farm1.static.flickr.com/106/304197810_cbd6d2ff5e_m.jpg</a>" width="417" title="&ndash; Expectation Failed" ></p>
-
-<p>To me the most interesting one is: 411 Length Required :))</p>
-
-<p>Recommended links:</p>
-
-<p>List of HTTP status codes: <a href="http://en.wikipedia.org/wiki/List_of_HTTP_status_codes">http://en.wikipedia.org/wiki/List_of_HTTP_status_codes</a></p>
-
-<p>Images for illustration: <a href="http://www.flickr.com/photos/apelad/sets/72157594388426362/detail">http://www.flickr.com/photos/apelad/sets/72157594388426362/detail</a></p>
 ]]></content>
   </entry>
   
