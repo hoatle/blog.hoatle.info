@@ -1,0 +1,821 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Gán nhiều hàm xử lý sự kiện vào một phần tử trong JavaScript - blog.hoatle.info</title>
+  
+  <meta name="author" content="hoatle">
+
+  
+  <meta name="description" content="Gán nhiều hàm xử lý sự kiện vào một phần tử trong JavaScript">
+  <meta name="keywords" content="Gán nhiều hàm xử lý sự kiện vào một phần tử trong JavaScript">
+
+  
+
+  
+
+  <meta property="og:url" content="http://blog.hoatle.info/2010/01/09/gan-nhieu-ham-xu-ly-su-kien-vao-mot-phan-tu-trong-javascript/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Gán nhiều hàm xử lý sự kiện vào một phần tử trong JavaScript - blog.hoatle.info" />
+  <meta property="og:description" content="Gán nhiều hàm xử lý sự kiện vào một phần tử trong JavaScript" />
+
+  <meta property="og:image" content="http://blog.hoatle.info/images/default-cover.png" />
+
+
+
+
+
+
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@hoatle" />
+  <meta name="twitter:creator" content="@hoatle" />
+  <meta name="twitter:title" content="Gán nhiều hàm xử lý sự kiện vào một phần tử trong JavaScript - blog.hoatle.info" />
+  <meta name="twitter:description" content="Gán nhiều hàm xử lý sự kiện vào một phần tử trong JavaScript" />
+
+  <meta name="twitter:image:src" content="http://blog.hoatle.info/images/default-cover.png" />
+
+  <meta name="twitter:domain" content="http://blog.hoatle.info" />
+
+
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="canonical" href="http://blog.hoatle.info/2010/01/09/gan-nhieu-ham-xu-ly-su-kien-vao-mot-phan-tu-trong-javascript/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="blog.hoatle.info" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-6303084-3']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">blog.hoatle.info</a></h1>
+  
+    <h2>just a value creator.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:blog.hoatle.info" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Home</a></li>
+  <li><a href="/categories/en">English</a></li>
+  <li><a href="/categories/vi">Tiếng Việt</a></li>
+  <li><a href="/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article itemscope itemtype="http://schema.org/Article" class="hentry" role="article">
+  
+  <header>
+    
+      <h1 itemprop="name" class="entry-title">Gán Nhiều Hàm Xử Lý Sự Kiện Vào Một Phần Tử Trong JavaScript</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time itemprop="datePublished" content="2010-01-09T02:06:00+00:00" datetime="2010-01-09T02:06:00+00:00" pubdate data-updated="true">Jan 9<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+<div itemprop="articleBody" class="entry-content"><p>Chiều nay đang lơ tơ mơ vì vừa ngủ trưa xong (bình thường không ngủ trưa thì thôi chứ cứ ngủ trưa
+xong là lơ tơ mơ, chỉ muốn ngủ hết chiều cho sướng :d) thì có bạn hỏi trên group phpvietnam như
+thế này:</p>
+
+<p><strong>&ldquo;Em có một input có thuộc tính onclick=&#8221;doSomeFunction();&rdquo; bây giờ muốn thêm
+một hàm nữa ví dụ như onclick=&ldquo;doSomeFunction(); doSomeFunction2();&rdquo;. Công
+việc này có làm bằng Javascript được không ah? Em cám ơn mọi người.&ldquo;</strong></p>
+
+<p><em>Nguồn</em>: <a href="http://groups.google.com/group/phpvietnam/browse_thread/thread/c7a8688875a320c3">http://groups.google.com/group/phpvietnam/browse_thread/thread/c7a8688875a320c3</a></p>
+
+<!-- more -->
+
+
+<p>Trả lời bạn ý xong là hết cả buồn ngủ :P, tiện thể tối về viết lại kinh nghiệm cho cái blog đỡ
+tủi thân :P. Khi xử lý sự kiện trong JavaScript có 4 mô hình đăng kí sự kiện được phát triển qua
+thời gian. Tớ cũng nói thêm về cách sử dụng và xử lý ngữ cảnh (context) với từ khóa <code>this</code> trong các
+hàm xử lý. Trong hàm xử lý phải làm sao đạt được 2 mục đích: truyền tham số vào hàm xử lý phải là
+<code>event object</code> và từ khóa <code>this</code> trong hàm xử lý sự kiện đó phải là phần tử đã được đăng kí sự kiện.</p>
+
+<p><strong>1. Inline Event Registration Model (Mô hình cổ xưa và quen thuộc nhất)</strong></p>
+
+<p>Từ những ngày đầu khi có JavaScript và xử lý sự kiện thì chỉ có 1 cách duy nhất để gán hàm xử lý sự
+kiện cho một phần tử và hiện nay nhiều người vẫn làm theo cách này. Đây là cách cổ xưa và nguyên
+thủy nhất:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">onclick=</span><span class="s">&quot;doSomething();&quot;</span><span class="nt">&gt;</span>link<span class="nt">&lt;/a&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Mọi người đã quá quen với cách làm như trên, đặc biệt là từ khi viết những dòng code JavaScript đầu
+tiên. Viết như vậy không có gì sai cả mà nó còn tiện, nhanh, dễ hiểu và ngày xưa đến nay người ta
+vẫn làm thế đấy thôi :P. Tuy nhiên, khi JavaScript phát triển hơn thì cách tiếp cận khác đi chút vì
+có nhiều vấn đề nảy sinh như: làm như trên không tách biệt cấu trúc (structure &ndash; html) và hành vi
+(behavior &ndash; JavaScript), làm cho code rối tinh rối mù lên, nhất là khi bạn phải lấy dữ liệu AJAX về
+rồi apply template vào thì rất mệt.</p>
+
+<p>Ta có hàm xử lý sự kiện <code>doSomething</code> như sau:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">function</span> <span class="nx">doSomething</span><span class="p">(</span><span class="nx">evt</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">alert</span><span class="p">(</span><span class="nx">arguments</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span> <span class="c1">// arguments[0] the same as evt</span>
+</span><span class='line'>  <span class="nx">alert</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Với trường hợp này thì <code>evt</code> là <code>undefined</code> và <code>this</code> chính là <code>window object</code>. Giờ làm thế nào để
+<code>evt</code> là <code>event object</code> và <code>this</code> là element thì làm theo cách sau:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">onclick=</span><span class="s">&quot;doSomething(event);&quot;</span><span class="nt">&gt;</span>link<span class="nt">&lt;/a&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Như này là đã truyền được <code>event</code> vào event handler rồi nhé. Theo tớ suy luận và thấy thì khi
+element được <code>click</code> thì nó sẽ sinh ra sự kiện <code>onclick</code> như sau:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="c1">//[Native Code]</span>
+</span><span class='line'><span class="nx">onclick</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="c1">//event handler được gọi theo cách này</span>
+</span><span class='line'>  <span class="nx">doSomething</span><span class="p">(</span><span class="nx">event</span><span class="p">);</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Nhớ là phải để <code>event</code> là tham số của <code>doSomething(event)</code> chứ ko được dùng tên nào khác. Nếu dùng
+tên <code>evt</code> chẳng hạn thì sẽ xảy ra <code>exeption</code> do:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="p">[</span><span class="nx">Native</span> <span class="nx">Code</span><span class="p">]</span>
+</span><span class='line'><span class="nx">onclick</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="c1">//Gọi event handler mà có đối số là evt</span>
+</span><span class='line'>  <span class="nx">doSomething</span><span class="p">(</span><span class="nx">evt</span><span class="p">);</span> <span class="c1">//Xảy ra exception ở đây vì evt là undefined.</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Đây là native code nên nó không cho <code>evt</code> là <code>undefined (null)</code> chứ trong các hàm bình thường thì
+truyền tham số là <code>undefined (null)</code> thì không vấn đề gì, ko có exception gì hết :D.</p>
+
+<p>Chú ý: đoạn code trên được test với chrome thì ko thấy lỗi mà vẫn chạy ầm ầm chứ IE, Firefox, Opera
+đều xảy ra lỗi hết. Không biết nên chê hay khen bạn chrome đây :d.</p>
+
+<p>Vậy là đến đây lấy được <code>event object</code> rồi, từ <code>event object</code> này lấy được rất nhiều thông tin khác
+nhau như tên sự kiện, vị trí con trỏ chuột.v.v&hellip; (<code>evt.type</code>; <code>evt.charCode</code>&hellip;)</p>
+
+<p>Giờ đến việc xử lý từ khóa <code>this</code> phải là element chứ không phải là <code>window object</code> làm như sau:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">onclick=</span><span class="s">&quot;doSomething.call(this, event)&quot;</span><span class="nt">&gt;</span>link<span class="nt">&lt;/a&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Khi đó trong Native Code sẽ là:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">onclick</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="c1">//this ở đây là element</span>
+</span><span class='line'>  <span class="nx">doSomething</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">event</span><span class="p">);</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Trên chính là đoạn code hoàn chỉnh khi muốn lấy <code>this</code> và <code>event object</code>. Tớ nói kỹ ở đây thôi,
+mấy đoạn sau sẽ không nói lại mấy cái này nữa.</p>
+
+<p><strong>2. Traditional Event Registration Model</strong></p>
+
+<p>Đây cũng là cách khá nhiều người làm khi bắt đầu muốn tách biệt giữa cấu trúc và hành vi trên trang
+web. Trong code JavaScript sẽ đăng kí hàm xử lý sự kiện còn html thì chỉ là html mà thôi.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">id=</span><span class="s">&quot;mylink&quot;</span><span class="nt">&gt;</span>link<span class="nt">&lt;/a&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Sau đó trong JavaScript đợi dom load hết thì cho đoạn code sau được thực thi:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">linkEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;myLink&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="nx">linkEl</span><span class="p">.</span><span class="nx">onclick</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">doSomething</span><span class="p">();</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Đây là cách truyền thống được dùng cũng không phải là ít và hiện nay nó tương thích trên tất cả các
+trình duyệt lớn nên ko có gì đáng ngại cả :). Trong mô hình này thì <code>event object</code> sẽ được truyền
+luôn vào hàm xử lý sự kiện, còn <code>this</code> trong hàm xử lý sự kiện cũng là element luôn :D.</p>
+
+<p>Có thể làm thế này khi trong hàm <code>doSomething</code> muốn có <code>event object</code> và <code>this</code> là phần tử sinh ra
+sự kiện.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">linkEl</span><span class="p">.</span><span class="nx">onclick</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">evt</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">doSomething</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="nx">evt</span><span class="p">);</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Trong trường hợp <code>doSomething</code> nhận thêm vài tham số thì nên viết như này:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">function</span> <span class="nx">doSomething</span><span class="p">(</span><span class="nx">evt</span><span class="p">,</span> <span class="nx">param1</span><span class="p">,</span> <span class="nx">param2</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'><span class="c1">//code implementation</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="nx">linkEl</span><span class="p">.</span><span class="nx">onclick</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">evt</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="kd">var</span> <span class="nx">param1</span><span class="p">,</span> <span class="nx">param2</span><span class="p">;</span>
+</span><span class='line'>  <span class="nx">doSomething</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">evt</span><span class="p">,</span> <span class="nx">param1</span><span class="p">,</span> <span class="nx">param2</span><span class="p">);</span>
+</span><span class='line'>  <span class="c1">// Giống với: doSomething.apply(this, [evt, param1, param2]);</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Tiếp đến là mô hình thứ 3 và 4 trong xử lý sự kiện. W3C model và Microsoft (IE) model. Sau đó kết
+hợp hai mô hình 3 và 4 này được giải pháp khá hoàn chỉnh và có thể sử dụng ngon lành đối với mọi
+trình duyệt lớn :).</p>
+
+<p><strong>3. W3C Event Registration Model</strong></p>
+
+<p>Theo mô hình chuẩn của bạn W3C thì đây là cách đăng kí sự kiện cho một element, có thể đăng kí
+cùng lúc nhiều hàm xử lý cho 1 element:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">element</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="nx">eventType</span><span class="p">,</span> <span class="nx">listener</span><span class="p">,</span> <span class="nx">useCapture</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><code>eventType</code> ở đây có thể là: click, mouseover, mouseout.v.v&hellip;</p>
+
+<p><code>listener</code> chính là hàm xử lý sự kiện được thực thi khi có sự kiện <code>eventType</code> xảy ra.</p>
+
+<p><code>useCapture</code> bạn nên để là <code>false</code> để thống nhất với trình duyệt IE, cái này liên quan tới event
+phase mà tớ sẽ nói sau vào một bài viết khác.</p>
+
+<p>Giờ có thể sử dụng như sau:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">id=</span><span class="s">&quot;mylink&quot;</span><span class="nt">&gt;</span>link<span class="nt">&lt;/a&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="c1">//javascript, chỉ chạy trên các trình duyệt Firefox, Opera, Chrome</span>
+</span><span class='line'><span class="c1">// ko chạy được trên IE</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">linkEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;myLink&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="nx">linkEl</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">alert</span><span class="p">(</span><span class="nx">arguments</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span> <span class="c1">//event object</span>
+</span><span class='line'>    <span class="nx">alert</span><span class="p">(</span><span class="k">this</span><span class="p">);</span> <span class="c1">//linkEl</span>
+</span><span class='line'><span class="p">},</span> <span class="kc">false</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Rất may là <code>event object</code> lại được truyền và <code>this</code> trỏ luôn đến element nên có thể gọi
+<code>doSomething</code> luôn:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">linkEl</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">evt</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">doSomething</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">evt</span><span class="p">);</span>
+</span><span class='line'><span class="p">},</span> <span class="kc">false</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Với cách này bạn có thể add bao nhiêu hàm xử lý sự kiện tùy ý, khi có 1 sự kiện xảy ra thì các hàm
+xử lý sự kiện đã đăng kí sẽ được thực thi và theo W3C đưa ra thì các hàm này thực thi có thể không
+theo thứ tự đăng kí và hiện tại bạn không thể gọi phương thức nào của element để kiểm tra xem sự
+kiện nào đó có bao nhiêu hàm xử lý sự kiện đã được đăng kí.</p>
+
+<p>Nhưng muốn bỏ một hàm xử lý đăng kí sự kiện thì làm thế nào? Có luôn:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">element</span><span class="p">.</span><span class="nx">removeEventListener</span><span class="p">(</span><span class="nx">eventType</span><span class="p">,</span> <span class="nx">listener</span><span class="p">,</span> <span class="nx">useCapture</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Cái này rất hiếm khi dùng. Khi muốn <code>remove</code> được một <code>listener</code> nào thì <code>listener</code> đó phải có tên.
+Cách <code>add</code> của tớ ở trên kia dùng <code>anonymouse function</code> thì không thể <code>remove</code> được. Muốn <code>remove</code>
+được thì phải làm theo cách này:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">myListener</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">alert</span><span class="p">(</span><span class="nx">arguments</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+</span><span class='line'>  <span class="nx">alert</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+</span><span class='line'> <span class="c1">//cho chạy một lần đầu rồi remove listener đi luôn</span>
+</span><span class='line'>  <span class="k">this</span><span class="p">.</span><span class="nx">removeEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="nx">myListener</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="nx">linkEl</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="nx">myListener</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Đấy là theo W3C, còn Microsoft lại làm theo cách khác.</p>
+
+<p><strong>4. Microsoft Event Registration Model</strong></p>
+
+<p>Bạn IE thì lại chơi kiểu khác, bạn ý không dùng <code>addEventListener</code> mà lại dùng:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">element</span><span class="p">.</span><span class="nx">attachEvent</span><span class="p">(</span><span class="nx">onEventType</span><span class="p">,</span> <span class="nx">handler</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Ví dụ:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">linkEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;myLink&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="c1">//Chỉ chạy trên IE</span>
+</span><span class='line'><span class="nx">linkEl</span><span class="p">.</span><span class="nx">attachEvent</span><span class="p">(</span><span class="s1">&#39;onclick&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">alert</span><span class="p">(</span><span class="nx">arguments</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span> <span class="c1">//event object</span>
+</span><span class='line'>  <span class="nx">alert</span><span class="p">(</span><span class="k">this</span><span class="p">);</span> <span class="c1">//linkEl</span>
+</span><span class='line'><span class="p">})</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Muốn remove một handler (listener) thì dùng <code>detachEvent</code> cũng làm tương tự giống mô hình W3C ở trên:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">myListener</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">evt</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">alert</span><span class="p">(</span><span class="nx">evt</span><span class="p">);</span>
+</span><span class='line'>  <span class="nx">alert</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+</span><span class='line'>  <span class="k">this</span><span class="p">.</span><span class="nx">detachEvent</span><span class="p">(</span><span class="s1">&#39;onclick&#39;</span><span class="p">,</span> <span class="nx">myListener</span><span class="p">);</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Chú ý vì IE không có 2 event phase là <code>capture</code> và <code>bubble</code> mà chỉ có <code>bubble</code> phase nên khi sử dụng
+với mô hình của W3C thì luôn dùng <code>false</code> với <code>useCapture</code> cho an toàn, nếu hiểu kỹ sự khác biệt của
+2 phase này và có mục đích thì mới nên dùng <code>true</code>.</p>
+
+<p><strong>5. Cuối cùng là cách kết hợp mô hình W3C với M$ (IE) thì ta có thể thiết kế và sử api đơn giản như sau:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">addEventListener</span><span class="p">(</span><span class="nx">element</span><span class="p">,</span> <span class="nx">eventType</span><span class="p">,</span> <span class="nx">listener</span><span class="p">,</span> <span class="nx">useCapture</span><span class="p">);</span>
+</span><span class='line'><span class="nx">removeEventListener</span><span class="p">(</span><span class="nx">element</span><span class="p">,</span> <span class="nx">eventType</span><span class="p">,</span> <span class="nx">listener</span><span class="p">,</span> <span class="nx">useCapture</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Phải luôn giữ <code>event object</code> được truyền vào tham số của listener và từ khóa this trong listener
+phải trỏ đến element. Code như sau:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="cm">/**</span>
+</span><span class='line'><span class="cm"> * Cross browser add event listener method. For &#39;evt&#39; pass a string value with the leading &quot;on&quot; omitted</span>
+</span><span class='line'><span class="cm"> * e.g. addEventListener(window,&#39;load&#39;,myFunctionNameWithoutParenthesis,false);</span>
+</span><span class='line'><span class="cm"> * @param    obj object to attach event</span>
+</span><span class='line'><span class="cm"> * @param    evt event name: click, mouseover, focus, blur...</span>
+</span><span class='line'><span class="cm"> * @param    func    function name</span>
+</span><span class='line'><span class="cm"> * @param    useCapture    true or false; if false =&gt; use bubbling</span>
+</span><span class='line'><span class="cm"> * @static</span>
+</span><span class='line'><span class="cm"> * @see        http://phrogz.net/JS/AttachEvent_js.txt</span>
+</span><span class='line'><span class="cm"> */</span>
+</span><span class='line'> <span class="kd">function</span> <span class="nx">addEventListener</span><span class="p">(</span><span class="nx">obj</span><span class="p">,</span> <span class="nx">evt</span><span class="p">,</span> <span class="nx">fnc</span><span class="p">,</span> <span class="nx">useCapture</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="nx">obj</span> <span class="o">===</span> <span class="kc">null</span> <span class="o">||</span> <span class="nx">evt</span> <span class="o">===</span> <span class="kc">null</span> <span class="o">||</span> <span class="nx">fnc</span> <span class="o">===</span>  <span class="kc">null</span> <span class="o">||</span> <span class="nx">useCapture</span> <span class="o">===</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>       <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;all params are required for addEventListener&#39;</span><span class="p">);</span>
+</span><span class='line'>        <span class="k">return</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">useCapture</span><span class="p">)</span> <span class="nx">useCapture</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="nx">obj</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">){</span>
+</span><span class='line'>        <span class="nx">obj</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="nx">evt</span><span class="p">,</span> <span class="nx">fnc</span><span class="p">,</span> <span class="nx">useCapture</span><span class="p">);</span>
+</span><span class='line'>    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">obj</span><span class="p">.</span><span class="nx">attachEvent</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">obj</span><span class="p">.</span><span class="nx">attachEvent</span><span class="p">(</span><span class="s1">&#39;on&#39;</span><span class="o">+</span><span class="nx">evt</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">evt</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>            <span class="nx">fnc</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">obj</span><span class="p">,</span> <span class="nx">evt</span><span class="p">);</span>
+</span><span class='line'>        <span class="p">});</span>
+</span><span class='line'>    <span class="p">}</span> <span class="k">else</span><span class="p">{</span>
+</span><span class='line'>        <span class="nx">myAttachEvent</span><span class="p">(</span><span class="nx">obj</span><span class="p">,</span> <span class="nx">evt</span><span class="p">,</span> <span class="nx">fnc</span><span class="p">);</span>
+</span><span class='line'>        <span class="nx">obj</span><span class="p">[</span><span class="s1">&#39;on&#39;</span><span class="o">+</span><span class="nx">evt</span><span class="p">]</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="nx">myFireEvent</span><span class="p">(</span><span class="nx">obj</span><span class="p">,</span><span class="nx">evt</span><span class="p">)</span> <span class="p">};</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>    <span class="c1">//The following are for browsers like NS4 or IE5Mac which don&#39;t support either</span>
+</span><span class='line'>    <span class="c1">//attachEvent or addEventListener</span>
+</span><span class='line'>    <span class="kd">var</span> <span class="nx">myAttachEvent</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">obj</span><span class="p">,</span> <span class="nx">evt</span><span class="p">,</span> <span class="nx">fnc</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">obj</span><span class="p">.</span><span class="nx">myEvents</span><span class="p">)</span> <span class="nx">obj</span><span class="p">.</span><span class="nx">myEvents</span><span class="o">=</span><span class="p">{};</span>
+</span><span class='line'>        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">obj</span><span class="p">.</span><span class="nx">myEvents</span><span class="p">[</span><span class="nx">evt</span><span class="p">])</span> <span class="nx">obj</span><span class="p">.</span><span class="nx">myEvents</span><span class="p">[</span><span class="nx">evt</span><span class="p">]</span><span class="o">=</span><span class="p">[];</span>
+</span><span class='line'>        <span class="kd">var</span> <span class="nx">evts</span> <span class="o">=</span> <span class="nx">obj</span><span class="p">.</span><span class="nx">myEvents</span><span class="p">[</span><span class="nx">evt</span><span class="p">];</span>
+</span><span class='line'>        <span class="nx">evts</span><span class="p">[</span><span class="nx">evts</span><span class="p">.</span><span class="nx">length</span><span class="p">]</span> <span class="o">=</span> <span class="nx">fnc</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>    <span class="kd">var</span> <span class="nx">myFireEvent</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">obj</span><span class="p">,</span> <span class="nx">evt</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">obj</span> <span class="o">||</span> <span class="o">!</span><span class="nx">obj</span><span class="p">.</span><span class="nx">myEvents</span> <span class="o">||</span> <span class="o">!</span><span class="nx">obj</span><span class="p">.</span><span class="nx">myEvents</span><span class="p">[</span><span class="nx">evt</span><span class="p">])</span> <span class="k">return</span><span class="p">;</span>
+</span><span class='line'>        <span class="kd">var</span> <span class="nx">evts</span> <span class="o">=</span> <span class="nx">obj</span><span class="p">.</span><span class="nx">myEvents</span><span class="p">[</span><span class="nx">evt</span><span class="p">];</span>
+</span><span class='line'>        <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="nx">len</span><span class="o">=</span><span class="nx">evts</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="nx">i</span><span class="o">&lt;</span><span class="nx">len</span><span class="p">;</span><span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="nx">evts</span><span class="p">[</span><span class="nx">i</span><span class="p">]();</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="cm">/**</span>
+</span><span class='line'><span class="cm"> * removes event listener.</span>
+</span><span class='line'><span class="cm"> * @param    obj element</span>
+</span><span class='line'><span class="cm"> * @param    evt event name, &#39;click&#39;, &#39;blur&#39;. &#39;focus&#39;...</span>
+</span><span class='line'><span class="cm"> * @func    function name to be removed if found</span>
+</span><span class='line'><span class="cm"> * @useCapture true or false; false -&gt; bubbling event phase</span>
+</span><span class='line'><span class="cm"> * @static</span>
+</span><span class='line'><span class="cm"> * //TODO make sure method cross-browsered</span>
+</span><span class='line'><span class="cm"> */</span>
+</span><span class='line'> <span class="kd">function</span> <span class="nx">removeEventListener</span><span class="p">(</span><span class="nx">obj</span><span class="p">,</span> <span class="nx">evt</span><span class="p">,</span> <span class="nx">func</span><span class="p">,</span> <span class="nx">useCapture</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="nx">obj</span><span class="p">.</span><span class="nx">removeEventListener</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">obj</span><span class="p">.</span><span class="nx">removeEventListener</span><span class="p">(</span><span class="nx">evt</span><span class="p">,</span> <span class="nx">func</span><span class="p">,</span> <span class="nx">useCapture</span><span class="p">);</span>
+</span><span class='line'>    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">obj</span><span class="p">.</span><span class="nx">detachEvent</span><span class="p">)</span> <span class="p">{</span><span class="c1">//IE</span>
+</span><span class='line'>        <span class="nx">obj</span><span class="p">.</span><span class="nx">detachEvent</span><span class="p">(</span><span class="s1">&#39;on&#39;</span><span class="o">+</span><span class="nx">evt</span><span class="p">,</span> <span class="nx">func</span><span class="p">);</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Khi đó cách sử dụng đơn giản như sau:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'>  <span class="kd">var</span> <span class="nx">linkEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;myLink&#39;</span><span class="p">);</span>
+</span><span class='line'>  <span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">evt</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">doSomething</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">evt</span><span class="p">);</span>
+</span><span class='line'>  <span class="p">},</span> <span class="kc">false</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Hy vọng tớ sẽ sớm viết thêm về event phase sau, chúc bạn code vui :D.</p>
+</div>
+
+
+  <footer>
+    
+      <div class="revision">
+    <hr/>
+    <p><strong>Latest Change Log:</strong></p>
+    <ul><li><strong>Mon Dec 2 18:35:49 2013</strong><br/>gán nhiều hàm xử lý sự kiện vào một phần tử trong JavaScript
+</li></ul><a href=https://github.com/hoatle/blog.hoatle.info/commits/HEAD/source/_posts/2010-01-09-gan-nhieu-ham-xu-ly-su-kien-vao-mot-phan-tu-trong-javascript.markdown target=_blank>View all changes on Github</a>
+    <hr/>
+</div>
+
+    
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name" class="fn">hoatle</span></span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time itemprop="datePublished" content="2010-01-09T02:06:00+00:00" datetime="2010-01-09T02:06:00+00:00" pubdate data-updated="true">Jan 9<span>th</span>, 2010</time>
+      
+
+<span class="categories">posted in
+  
+    <a class='category' href='/categories/vi/'>vi</a>
+  
+</span>
+
+
+      
+
+<span class="tags">tagged with
+  
+    <a class='tag' href='/tags/javascript/'>JavaScript</a>
+  
+</span>
+
+
+    </p>
+    
+      
+        
+            
+            
+        
+
+
+
+
+
+
+        
+    
+
+
+
+
+
+<div class="cc-license">
+    <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">
+        <img alt="Creative Commons Attribution-ShareAlike 3.0 Unported License" src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" />
+    </a><br />
+    This work is licensed under a
+    <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.
+</div>
+
+    
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://blog.hoatle.info/2010/01/09/gan-nhieu-ham-xu-ly-su-kien-vao-mot-phan-tu-trong-javascript/" data-via="hoatle" data-counturl="http://blog.hoatle.info/2010/01/09/gan-nhieu-ham-xu-ly-su-kien-vao-mot-phan-tu-trong-javascript/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-href="http://blog.hoatle.info/2010/01/09/gan-nhieu-ham-xu-ly-su-kien-vao-mot-phan-tu-trong-javascript/" data-send="true" data-width="450"
+         data-show-faces="false">
+     </div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/2009/12/31/tong-ket-nam-2009-va-nhung-du-dinh-cho-nam-2010/" title="Previous Post: Tổng kết năm 2009 và những dự định cho năm 2010">&laquo; Tổng kết năm 2009 và những dự định cho năm 2010</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/2010/01/09/gan-nhieu-ham-xu-ly-su-kien-vao-mot-phan-tu-trong-javascript/">Gán Nhiều Hàm Xử Lý Sự Kiện Vào Một Phần Tử Trong JavaScript</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2009/12/31/tong-ket-nam-2009-va-nhung-du-dinh-cho-nam-2010/">Tổng Kết Năm 2009 và Những Dự định Cho Năm 2010</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2009/12/31/end-of-2009-and-whats-next-for-2010/">End of 2009 and What's Next for 2010?</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2009/04/01/lam-viec-cho-exo-platform-hay-google-day/">Làm Việc Cho eXo Platform Hay Google đây?</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2009/04/01/working-for-exo-platform-or-google/">Working for eXo Platform or Google?</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>On Delicious</h1>
+  <div id="delicious"></div>
+  <script type="text/javascript" src="http://feeds.delicious.com/v2/json/hoatle?count=5&amp;sort=date&amp;callback=renderDeliciousLinks"></script>
+  <p><a href="http://delicious.com/hoatle">See all bookmarks &raquo;</a></p>
+</section>
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - hoatle -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'hoatle-blog';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://blog.hoatle.info/2010/01/09/gan-nhieu-ham-xu-ly-su-kien-vao-mot-phan-tu-trong-javascript/';
+        var disqus_url = 'http://blog.hoatle.info/2010/01/09/gan-nhieu-ham-xu-ly-su-kien-vao-mot-phan-tu-trong-javascript/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=625149054184531";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
