@@ -2,7 +2,7 @@
 layout: post
 title: "Barcamp Hanoi 2 will come soon :)"
 author: hoatle
-date: 2013-12-02 08:11
+date: 2009-02-20 08:11
 comments: true
 categories:
     - "en"
@@ -18,6 +18,8 @@ Hi everyone,
 
 To tell the truth, I'm a little envious of some HCM city (Saigon) geeks' activities, especially about Barcamp Saigon 1 and their #H3 :(. What about in Hanoi? Just correct me if I'm wrong but it seem there
 hasn't been any such interesting events in Hanoi. Here I just want to mention and introduce Barcamp Hanoi 2. You can just google some keyworks orderly to get info: barcamp to have general ideas about what is barcamp, barcampsaigon to know what Saigon geeks did to complete the task of organizing barcamp saigon 1. Then the last keywork is barcamphanoi to know more about Barcamp Hanoi organization status :). And then I will call for organizers + volunteers + participants + some more other things :)
+
+<!-- more -->
 
 Firstly, about Barcamp Hanoi 2. Why 2? Good question :P, do you know that Barcamp Hanoi 1 was first organized in Vietnam, esp. in Hanoi :). Just check this: http://blog.exoplatform.org/2007/12/28/barcamp-hanoi/ So, Barcamp Hanoi 1 was organized by eXo employees (esp. by jeremi) just in internal eXo Platform SEA employees. And Now we (Hanoi geeks, bloggers, volunteers...) are organizing Barcamp Hanoi 2.
 
@@ -44,6 +46,7 @@ to filter out out some people :( because of time + venue + other problems.
     + Twitter to follow: http://twitter.com/barcamphanoi
 
 Links:
+
 - Google group for organizers: http://groups.google.com.vn/group/barcamphanoi?hl=en (English)
 
 Hey, it's time for us to join Barcamp Hanoi 2. What you are waiting for? Spread the world about this event is a resprectedly helpful action.
@@ -51,9 +54,13 @@ Hey, it's time for us to join Barcamp Hanoi 2. What you are waiting for? Spread 
 Just ping some of us here to get more info:
 
 1. Hoat Le (http://hoatle.net)
+
 email: hoatlevan at gmail dot com
+
 yahoo: wild_tiger8607
+
 skype: hoatlevan
+
 twitter: http://twitter.com/hoatle
 
 Thanks for reading :)
