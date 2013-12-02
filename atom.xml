@@ -4,7 +4,7 @@
   <title><![CDATA[blog.hoatle.info]]></title>
   <link href="http://blog.hoatle.info/atom.xml" rel="self"/>
   <link href="http://blog.hoatle.info/"/>
-  <updated>2013-12-02T17:37:16+00:00</updated>
+  <updated>2013-12-02T17:49:04+00:00</updated>
   <id>http://blog.hoatle.info/</id>
   <author>
     <name><![CDATA[hoatle]]></name>
@@ -12,6 +12,103 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Tổng kết năm 2009 and những dự định cho năm 2010]]></title>
+    <link href="http://blog.hoatle.info/2009/12/31/tong-ket-nam-2009-and-nhung-du-dinh-cho-nam-2010/"/>
+    <updated>2009-12-31T00:41:00+00:00</updated>
+    <id>http://blog.hoatle.info/2009/12/31/tong-ket-nam-2009-and-nhung-du-dinh-cho-nam-2010</id>
+    <content type="html"><![CDATA[<p>Hic, lâu lắm rồi ko viết blog, cũng vì lười, cũng vì bận nữa. Nhưng bắt đầu từ bây giờ, lại khoái
+viết lại rồi, có nhiều thứ chia sẻ hơn, dù bận gì thì bận cũng sẽ phải cố viết đều đặn hơn. 8 tháng
+không động đến blog, giờ ngồi mãi mới nặn ra được vài chữ. Mà tiếng Anh thì kém hẳn, bí từ kinh
+khủng mà đấy là còn chưa thi xong tốt nghiệp :SS. Trong bài viết này sẽ điểm lại một số điểm nổi
+bật của năm qua mà đáng lẽ những điểm này sẽ là một bài blog cơ :(.</p>
+
+<!-- more -->
+
+
+<ul>
+<li><p>Tháng 2: Giữa tháng 2 bắt đầu vào làm part-time ở eXo Platform. Đầu tiên là Document Writer, sau
+đó thì tham gia eXo Social team, vào làm lơ tơ mơ, nhưng giờ cũng đỡ hơn rồi :d.</p></li>
+<li><p>Tháng 4: Cùng tổ chức Barcamp Hanoi 2009 với @xoai, @forty4vn, @dac2205 và bạn của @xoai bên RMIT.
+Đây là lần đầu tiên tớ tham gia tổ chức một sự kiện như thế, được gặp gỡ, giao lưu với những người
+có kinh nghiệm thật là thích :d. Ở Barcamp Hanoi, tớ nói về &ldquo;OpenSocial&rdquo;. OpenSocial được sử dụng ở
+hầu hết các mạng xã hội lớn (trừ facebook ko theo chuẩn này), hiện nay như tớ được biết thì ở Việt
+Nam có tamtay.vn và me.zing.vn đang phát triển theo chuẩn này. Còn bên eXo Social cũng đang phát
+triển sản phẩm theo chuẩn này.</p></li>
+<li><p>Tháng 11: Cùng anh @tuanchip (eXo CS team leader), anh Nam (CS team), chị Thủy (phòng marketing và
+truyền thông), anh Việt (trưởng phòng nhân sự) giới thiệu OpenSocial và eXo Platform ở 3 trung tâm
+lập trình FPT-Aptech, mục đích là giới thiệu công nghệ, tìm kiếm nhân sự, giới thiệu công ty để
+các bạn định hướng về công nghệ để sau này nếu muốn làm việc ở eXo thì nên biết và tìm hiểu những
+gì là cần thiết.</p></li>
+<li><p>Tháng 12:</p>
+
+<ul>
+<li><p>Lần đầu tiên vào Xì-Gòn tham dự Barcamp Saigon. Vui phết, tớ vào đấy 3 ngày, thanks anh
+@jishanvn đã cho ở nhờ 3 ngày :D. Ở đấy tớ nói về &ldquo;Advanced JavaScript Techniques&rdquo;.</p></li>
+<li><p>Lần thứ 2 tham gia Hanoi PHP Day, lần trước thì đến nghe thôi chứ ko nói, lần này thì nói về
+&ldquo;Advanced JavaScript Techniques&rdquo;, tớ chuẩn bị chủ đề này cho cả Barcamp Saigon và Hanoi PHP Day
+mà :d, tuy nhiên 2 bài nói thì không giống nhau hoàn toàn đâu ;).</p></li>
+</ul>
+</li>
+</ul>
+
+
+<p>Đấy là một số điểm nổi bật của năm 2009, sang năm mới 2010 hy vọng sẽ tham gia được nhiều sự kiện
+thú vị nữa, được giao lưu anh em nhiều hơn. Sang tháng 1 hy vọng thi tốt nghiệp suôn sẻ để được tự
+do bay nhảy :d.</p>
+
+<ul>
+<li><p>Đầu năm hy vọng có 1 buổi offline một số anh em IT để nhậu + chém gió (Hanoi Hacker Happy Hour).</p></li>
+<li><p>Hy vọng lại có Barcamp Hanoi tiếp, eXo sẽ tài trợ tiếp luôn :d.</p></li>
+<li><p>Sau khi tốt nghiệp sẽ âm thầm phát triển 1 cái gì đó :D.</p></li>
+<li><p>&hellip;</p></li>
+</ul>
+
+
+<p>Đầu tư khá nhiều sức vào project để bảo vệ ở Hanoi Aptech (cùng @huydung) nhưng cuối cùng đuối :((,
+sau đấy chưa lấy lại được tinh thần để làm tiếp :|.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[End of 2009 and what's next for 2010?]]></title>
+    <link href="http://blog.hoatle.info/2009/12/31/end-of-2009-and-whats-next-for-2010/"/>
+    <updated>2009-12-31T00:37:00+00:00</updated>
+    <id>http://blog.hoatle.info/2009/12/31/end-of-2009-and-whats-next-for-2010</id>
+    <content type="html"><![CDATA[<p>Ok, this is the end day of the year 2009 and now from I wanna blog again :d. I have many things to
+write and I will try to spend some time for it. It&rsquo;s nearly 8 months since my last blog post, so in
+this post, I just wanna remind some of my remarkable time and event.</p>
+
+<!-- more -->
+
+
+<ul>
+<li><p>February: Joined eXo Platform SEA and worked as document writer, then join eXo Social team as
+a Java Developer.</p></li>
+<li><p>April: Co-organized Barcamp Hanoi 2009 (with @xoai, @forty4vn, @dac2205, @xoai&rsquo;s friend :d). It
+was my first time to organize such an event, keeping in touch with interesting persons,
+having meet-ups. I talked about &ldquo;OpenSocial&rdquo; there.</p></li>
+<li><p>November: 3 days talking about &ldquo;OpenSocial and eXo Platform&rdquo; with @tuanchip (eXo CS team leader),
+Nam (CS team), Thuy (Marketing and Communication department), Viet (HR manager) at 3 FPT-APTECH
+centers.</p></li>
+<li><p>December:</p>
+
+<ul>
+<li><p>My first time to Sai Gon (Ho Chi Minh city) to attend Barcamp Saigon. Special thanks to
+@jishanvn :D. I talked about &ldquo;Advanced JavaScript techniques&rdquo; there.</p></li>
+<li><p>My second time to attend Hanoi PHP Day, this time I talked about &ldquo;Advanced JavaScript
+Techniques&rdquo; as I spent much time for writing javascript code these days.</p></li>
+</ul>
+</li>
+</ul>
+
+
+<p>For the year of 2010, hope that I can join many other interesting events, broaden my knowledge more
+when I finish my school day at the end of next January. I&rsquo;m looking forward to a promising year,
+the year of 2010 :d.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Làm việc cho eXo Platform hay Google đây?]]></title>
@@ -810,127 +907,6 @@ I just saw 2 or 3 geeks sitting there.</p>
 <p>Thank you, Jeremi for your friendly hand-shake ;), your openness; thank you all guys for coming. I really like and love it :)</p>
 
 <p>See more pics here from Jeremi: <a href="http://flickr.com/photos/jeremi/sets/72157611434836951/">http://flickr.com/photos/jeremi/sets/72157611434836951/</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[OpenSocial Hackathon và BarCamp Hà Nội]]></title>
-    <link href="http://blog.hoatle.info/2008/11/25/opensocial-hackathon-va-barcamp-ha-noi/"/>
-    <updated>2008-11-25T02:38:00+00:00</updated>
-    <id>http://blog.hoatle.info/2008/11/25/opensocial-hackathon-va-barcamp-ha-noi</id>
-    <content type="html"><![CDATA[<p>Tin dành cho các bạn ở Hà Nội. Như mọi người đã biết, Google DevFest HCMC &ndash; The First Ever Google
-Hackathon Tour in Vietnam<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup> (ngày 4/11/2008) và BarCamp Saigon<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup> (November 5, 2008) đã được tổ
-chức ở thành phố Hồ Chí Minh và nhiều bạn ở Hà Nội không tham gia được (tất nhiên trong đó có tớ :(,
-dù gì thì những sự kiện như vậy không thể không tham gia).</p>
-
-<!-- more -->
-
-
-<h2>OpenSocial Hackathon ở Hà Nội</h2>
-
-<p>&ldquo;Sau khi tổ chức thành công Google Devfest<sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup> ở thành phố HCM hôm 4/11/2008 và rất nhiều bạn ở Hà
-Nội đã không thể tham dự, chúng tôi dự định tổ chức một Hackathon nho nhỏ tập trung vào hệ thống API
-của OpenSocial. Các kỹ sư phần mềm của eXo Platform<sup id="fnref:4"><a href="#fn:4" rel="footnote">4</a></sup> (cùng với đội ngũ Google Devfest khu vực Đông
-Nam Á) sẽ tới trao đổi với mọi người, một số ứng dựng OpenSocial API ở các dịch vụ mạng xã hội Việt
-Nam sẽ được demo. Một kỹ sư của Google khu vực Đông Nam Á sẽ tham gia. Ngày tổ chức dự kiến:
-13/12/2008.&rdquo; (Nguồn Jason).</p>
-
-<p>Lịch trình hôm 13/12/2008 tại OpenSocial Hackathon:</p>
-
-<ul>
-<li><p>10:30AM – 11:00AM : Đăng kí</p></li>
-<li><p>11:00AM – 12:00PM : Bài thuyết trình về openSocial</p></li>
-<li><p>12:00PM – 1:00PM : brainstorming + pizza</p></li>
-<li><p>1:00PM – 5:00PM : Viết các ứng dụng openSocial</p></li>
-<li><p>1:00PM – 2:00PM : Hướng dẫn viết gadget openSocial</p></li>
-<li><p>5:00PM – 6:00PM : Thuyết trình tổng kết kết quả làm việc buổi chiều</p></li>
-</ul>
-
-
-<p>Xem thêm: <a href="http://blog.exoplatform.org/2008/11/24/opensocial-hackathon-in-hanoi/">http://blog.exoplatform.org/2008/11/24/opensocial-hackathon-in-hanoi/</a></p>
-
-<p>Chỉ có 50 ghế dành cho ai đăng kí sớm nhất và được lựa chọn Đăng kí ngay.</p>
-
-<h2>BarCamp Hà Nội đang được chuẩn bị</h2>
-
-<p>Xem thêm <a href="http://wiki.barcamphanoi.org.">http://wiki.barcamphanoi.org.</a></p>
-
-<p>Tuyệt vời!</p>
-<div class="footnotes">
-<hr/>
-<ol>
-<li id="fn:1">
-<p>http://jasonlog.supersized.org/archives/131-Google-DevFest-HCMC-The-First-Ever-Google-Hackathon-Tour-in-Vietnam.html<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
-<li id="fn:2">
-<p>http://www.barcampsaigon.org/<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
-<li id="fn:3">
-<p>http://code.google.com/events/apacdevfest/<a href="#fnref:3" rev="footnote">&#8617;</a></p></li>
-<li id="fn:4">
-<p>http://www.exoplatform.com/portal/public/en/<a href="#fnref:4" rev="footnote">&#8617;</a></p></li>
-</ol>
-</div>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[OpenSocial Hackathon and BarCamp Hanoi]]></title>
-    <link href="http://blog.hoatle.info/2008/11/25/opensocial-hackathon-and-barcamp-hanoi/"/>
-    <updated>2008-11-25T02:04:00+00:00</updated>
-    <id>http://blog.hoatle.info/2008/11/25/opensocial-hackathon-and-barcamp-hanoi</id>
-    <content type="html"><![CDATA[<p>Good news to Hanoi developers! As we know, Google DevFest HCMC &ndash; The First Ever Google Hackathon
-Tour in Vietnam<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup> (November 4, 2008) did succeed, BarCamp Saigon<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup> (November 5, 2008) did succeed.
-However, these two events was held in Ho Chi Minh city, many developers from Hanoi missed it.</p>
-
-<p>Now you can join OpenSocial Hackathon and BarCamp Hanoi :).</p>
-
-<!-- more -->
-
-
-<h2>OpenSocial Hackathon in Hanoi</h2>
-
-<p>&ldquo;After the success of Google Devfest<sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup> in HCMC on November 4, 2008 and many talent developers in
-Hanoi missed the Event, we plan to hold a mini Hackathon in Hanoi with focus on OpenSocial API.
-Software engineers from eXo Platform<sup id="fnref:4"><a href="#fn:4" rel="footnote">4</a></sup> (going with Google Devfest team in Southeast Asia Tour) will
-interact with Hanoi based devs and geeks, some demos of OpenSocial API apps on Vietnamese social
-networking services should be showed. An engineer of Google Southeast Asia could join to assist the
-participants. The planned date is December 13, 2008&rdquo; (from Jason).</p>
-
-<p>Agenda on December 13, 2008:</p>
-
-<ul>
-<li><p>10:30AM – 11:00AM : Registration</p></li>
-<li><p>11:00AM – 12:00PM : openSocial Presentation</p></li>
-<li><p>12:00PM – 1:00PM : brainstorming + pizza</p></li>
-<li><p>1:00PM – 5:00PM : Coding your openSocial applications</p></li>
-<li><p>1:00PM – 2:00PM : guided walkthrough a first openSocial gadget</p></li>
-<li><p>5:00PM – 6:00PM : presentation of what have been done in the afternoon.</p></li>
-</ul>
-
-
-<p>More info: <a href="http://blog.exoplatform.org/2008/11/24/opensocial-hackathon-in-hanoi/">http://blog.exoplatform.org/2008/11/24/opensocial-hackathon-in-hanoi/</a></p>
-
-<p>Only 50 seats are available. Just register now.</p>
-
-<h2>BarCamp Hanoi is on the way of preparation</h2>
-
-<p>Get information and just don&rsquo;t miss it from <a href="http://wiki.barcamphanoi.org.">http://wiki.barcamphanoi.org.</a></p>
-
-<p>Really interesting and good news!</p>
-<div class="footnotes">
-<hr/>
-<ol>
-<li id="fn:1">
-<p>http://jasonlog.supersized.org/archives/131-Google-DevFest-HCMC-The-First-Ever-Google-Hackathon-Tour-in-Vietnam.html<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
-<li id="fn:2">
-<p>http://www.barcampsaigon.org/<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
-<li id="fn:3">
-<p>http://code.google.com/events/apacdevfest/<a href="#fnref:3" rev="footnote">&#8617;</a></p></li>
-<li id="fn:4">
-<p>http://www.exoplatform.com/portal/public/en/<a href="#fnref:4" rev="footnote">&#8617;</a></p></li>
-</ol>
-</div>
-
 ]]></content>
   </entry>
   
