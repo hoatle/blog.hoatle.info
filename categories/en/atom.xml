@@ -4,7 +4,7 @@
   <title><![CDATA[Category: en | blog.hoatle.info]]></title>
   <link href="http://blog.hoatle.info/categories/en/atom.xml" rel="self"/>
   <link href="http://blog.hoatle.info/"/>
-  <updated>2013-12-02T13:39:58+00:00</updated>
+  <updated>2013-12-02T17:07:41+00:00</updated>
   <id>http://blog.hoatle.info/</id>
   <author>
     <name><![CDATA[hoatle]]></name>
@@ -12,6 +12,25 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[OSDE - great for OpenSocial developers]]></title>
+    <link href="http://blog.hoatle.info/2009/02/22/osde-great-for-opensocial-developers/"/>
+    <updated>2009-02-22T22:53:00+00:00</updated>
+    <id>http://blog.hoatle.info/2009/02/22/osde-great-for-opensocial-developers</id>
+    <content type="html"><![CDATA[<p>This afternoon I just hit with this project: OSDE &ndash; OpenSocial Developement Environment and loved it
+at first sight :). This project is awesome for OpenSocial developers to work on their own
+environment. I remembered on the first days of developing app, registered all opensocial containers,
+make friends [for test :)] and then test the app. Somehow boring steps and not the pro way of app
+development. What if you can not have internet connnection but you still want to test you opensocial
+app. OSDE &ndash; OpenSocial Developement Environment is our solution. This is a great module for
+Eclipse :).</p>
+
+<p>Click on this link and let&rsquo;s create great apps: <a href="http://www.eisbahn.jp/trac/osde/">http://www.eisbahn.jp/trac/osde/</a></p>
+
+<p>Everything there is good enough to code, much more easier to have your app in development stage :)</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Barcamp Hanoi 2009 logo design contest]]></title>
@@ -235,73 +254,6 @@ to filter out out some people :( because of time + venue + other problems.</p>
 <p>I love PHP, and I have some experience to write a news crawler some months ago. Now I will improve it for music, not news.</p>
 
 <p>If anyone would like to code with me, please contact me. There are many things to do, this is just a project for fun :)</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[OpenSocial Hackathon in Hanoi]]></title>
-    <link href="http://blog.hoatle.info/2008/12/13/opensocial-hackathon-in-hanoi/"/>
-    <updated>2008-12-13T23:39:00+00:00</updated>
-    <id>http://blog.hoatle.info/2008/12/13/opensocial-hackathon-in-hanoi</id>
-    <content type="html"><![CDATA[<p>Today is one of the most active day of mine :). With the opensocial hackathon in Hanoi, I have
-chance to meet some interesting people.</p>
-
-<!-- more -->
-
-
-<p>My morning started in 9 A.M (OMG!!! But it&rsquo;s my normal day; I don&rsquo;t know why but I&rsquo;d really like to
-work at late night. Yesterday, I stopped working at about 4 A.M. It&rsquo;s hard to define my work :).
-Just do everything with computer: blogging, building some requested websites from customers,
-experimenting new technology trend, improve programming skill, oh many more. Just my habit :).</p>
-
-<p>It took me about half an hour to get to eXo Platform office. Coming a bit early (about 10h 20'),
-I just saw 2 or 3 geeks sitting there.</p>
-
-<p><strong>Early time</strong></p>
-
-<p><img class="center <a" src="href="http://farm4.static.flickr.com/3208/3127289114_6c42ab2824.jpg?v=0">http://farm4.static.flickr.com/3208/3127289114_6c42ab2824.jpg?v=0</a>" title="Early time" ></p>
-
-<p>11h everyone came. It&rsquo;s just about more than 20 geeks &ndash; this number is less than my expectation ;). I thought there must have been about 50 geeks ;).</p>
-
-<p><strong>Everyone came</strong></p>
-
-<p><img class="center <a" src="href="http://farm4.static.flickr.com/3290/3127289274_56552c8884.jpg?v=0">http://farm4.static.flickr.com/3290/3127289274_56552c8884.jpg?v=0</a>" title="Everyone came" ></p>
-
-<p>I met many geeks from many companies, except me, I&rsquo;m currently not working for any company :), just finding! I don&rsquo;t remember all, but just list some here: eXo Platform (of course, Jereme Joslin, 3 other guys and I have much talk with two of them), Tinh Van Media (<a href="http://xalo.vn;">http://xalo.vn;</a> two 3th-year students from College of Technology), Moore Corporation (<a href="http://nghenhac.info,">http://nghenhac.info,</a> <a href="http://anhso.net">http://anhso.net</a>), VinaLive (<a href="http://phununet.com;">http://phununet.com;</a> 3-4 guys), <a href="http://tamtay.vn">http://tamtay.vn</a> (one guy), guys from <a href="http://teevn.com.">http://teevn.com.</a> Ah, Jason &ndash; now I know him ;), and a guy from <a href="http://newhanoian.xemzi.com/.">http://newhanoian.xemzi.com/.</a> There are more guys but currently I can not remember all.</p>
-
-<p><strong>Where am I? :)</strong></p>
-
-<p><img class="center <a" src="href="http://farm4.static.flickr.com/3196/3127290146_951883aa5b.jpg?v=0">http://farm4.static.flickr.com/3196/3127290146_951883aa5b.jpg?v=0</a>" title="Where am I? :)" ></p>
-
-<p>Jeremi had a very clear presentation about OpenSocial, but I think it&rsquo;s just introduction, everything he said I have known before. How strange it is when some guys coming here have no idea from OpenSocial??? I don&rsquo;t know why. I thought this event is really interesting to exchange idea and information, and to hack but some guys don&rsquo;t have any idea to code an opensocial gadget :(.</p>
-
-<p>Jemeri&rsquo;s presentation took about 1 hour, although there is some technical problems with newhanoian gadget, but it&rsquo;s clear and I really like his openness and clear voice. He took some pics and I will post them here when having it.</p>
-
-<p>It&rsquo;s time for lunch!!! No pizza as proposed in agenda :). But it&rsquo;s really good with bread, meat, vegetables, juices&hellip; Thank for your lunch, eXo, Jason, Google :).</p>
-
-<p><strong>Preparing for lunch [full of food but no such pic captured]</strong></p>
-
-<p><img class="center <a" src="href="http://farm4.static.flickr.com/3211/3126459089_a0703a11de.jpg?v=0">http://farm4.static.flickr.com/3211/3126459089_a0703a11de.jpg?v=0</a>" title="Preparing for lunch [full of food but no such pic captured]" ></p>
-
-<p>After lunch we have some introduction: who you are, what you are working, your ideas..blah blah. Just everything you would like to talk, to share.</p>
-
-<p>Coming back to hacking time. Just learn to code following a gadget example: place searching. It&rsquo;s fun, but I knew some guys did not complete or like it. Some guys said they have no idea about javascript so it&rsquo;s really hard for them to follow.</p>
-
-<p><strong>Hacking time</strong></p>
-
-<p><img class="center <a" src="href="http://farm4.static.flickr.com/3088/3127289804_a93ff9ee3a.jpg?v=0">http://farm4.static.flickr.com/3088/3127289804_a93ff9ee3a.jpg?v=0</a>" title="Hacking time" ></p>
-
-<p>After the gadget example, we have an idea sharing section to talk with people about your idea of an gadget (social app). How strange to me when just me sharing it :(. What about others'???</p>
-
-<p>A strange and repetitive question: &ndash; How to config my server to host opensocial app??? It&rsquo;s a really big question to answer. You have to meet some social standards, implementing opensocial api, any may other things. Currently, I think it&rsquo;s really hard for so-called Vietnamese social network to implement OpenSocial api.</p>
-
-<p>It&rsquo;s a little sad to me when it ended too early, about 4 P.M &ndash; 2 hours earlier than expected. Why? Because it seems that some guys would like to code, some guys don&rsquo;t, perhaps they didn&rsquo;t have any idea to code an gadget??</p>
-
-<p>One interesting thing, as usually every developer will get a T-shirt. But here we can get 2 T-shirt. A black one from Google D3vF3st, a white one from <a href="http://teevn.com">http://teevn.com</a> :). So interesting!!! But unlucky me, I got 2 L-size ones. I could not find M-size one :(. If only I could be more bigger&hellip;</p>
-
-<p>Thank you, Jeremi for your friendly hand-shake ;), your openness; thank you all guys for coming. I really like and love it :)</p>
-
-<p>See more pics here from Jeremi: <a href="http://flickr.com/photos/jeremi/sets/72157611434836951/">http://flickr.com/photos/jeremi/sets/72157611434836951/</a></p>
 ]]></content>
   </entry>
   
