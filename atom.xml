@@ -4,7 +4,7 @@
   <title><![CDATA[blog.hoatle.info]]></title>
   <link href="http://blog.hoatle.info/atom.xml" rel="self"/>
   <link href="http://blog.hoatle.info/"/>
-  <updated>2013-12-02T06:55:05+00:00</updated>
+  <updated>2013-12-02T07:34:05+00:00</updated>
   <id>http://blog.hoatle.info/</id>
   <author>
     <name><![CDATA[hoatle]]></name>
@@ -12,6 +12,66 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[giới thiệu cái music-engine nào]]></title>
+    <link href="http://blog.hoatle.info/2008/12/16/gioi-thieu-cai-music-engine-nao/"/>
+    <updated>2008-12-16T12:13:00+00:00</updated>
+    <id>http://blog.hoatle.info/2008/12/16/gioi-thieu-cai-music-engine-nao</id>
+    <content type="html"><![CDATA[<p>Cũng suy nghĩ khá nhiều để viết 1 cái ứng dụng OpenSocial và cuối cùng tớ đi đến quyết định viết cái ứng dụng music-engine này.</p>
+
+<!-- more -->
+
+
+<p>Music-engine nghĩa là thế nào? Music-engine của tớ sẽ đi tìm càng nhiều thông tin về các ca khúc càng tốt (tên, ca sĩ, nhạc sĩ, link nhạc&hellip;) và sắp xếp lại vào cơ sở dữ liệu trên Google Apps.</p>
+
+<p>Music-engine sẽ cung cấp dịch vụ cho các ứng dụng OpenSocial của tớ. Người dùng có thể tìm kiếm, nghe, download, tạo và lưu playlist ưa thích. Ngoài ra, với tính năng của mạng xã hội, người dùng còn có thể gửi tặng ca khúc, playlist yêu thích cho bạn bè.</p>
+
+<p>Mỗi người dùng sẽ có riêng 1 kênh (có thể tự động) cập nhật những bài hát họ đang nghe. Giống như Twitter trả lời câu hỏi &ldquo;bạn đang làm gì?&rdquo; thì với Music-Engine thì bạn sẽ trả lời câu hỏi &ldquo;Bạn đang nghe gì?&rdquo;</p>
+
+<p>Vẫn còn một số tính năng quan trọng nữa nhưng có lẽ để sau, phải hoàn thành sớm sớm còn đăng kí SE Asia Contest chứ ;))</p>
+
+<p>Về vấn đề bản quyền? Music-engine sẽ chỉ tìm và lưu trữ thông tin chứ không lưu nhạc trên server (có muốn cũng chả được). Một số trang tìm kiếm có kiểu cache, tức là lưu file nhạc về máy chủ của mình. Việc này có phải là sao chép bất hợp pháp? Còn đối với Music-Engine, mọi hoạt động của người dùng như tìm kiếm, download hay các hoạt động khác thì đều từ phía người dùng, Music-Engine không có bất kì mối liên hệ nào cả :D.</p>
+
+<p>Chỉ là một số ý tưởng để chia sẻ. Tớ đã hoàn thành cơ bản xong mô hình cơ sở dữ liệu cũng như thử nghiệm crawl xong 1 trang nhạc.</p>
+
+<p>Vì Google Apps hiện tại chỉ hỗ trợ Python, thế nên hầu như sẽ code bằng Python trên server.</p>
+
+<p>Vì tớ làm việc với PHP khá lâu và cũng có kinh nghiệm viết một cái news crawler mấy tháng trước. Bây giờ sẽ cải thiện cho nó thành music-crawler, không phải là news nữa.</p>
+
+<p>Bạn nào thích code cùng thì cứ liên hệ. Còn nhiều thứ phải làm quá, dù gì thì đây cũng là dự án làm cho vui :).</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[music-engine Intro]]></title>
+    <link href="http://blog.hoatle.info/2008/12/16/music-engine-intro/"/>
+    <updated>2008-12-16T11:31:00+00:00</updated>
+    <id>http://blog.hoatle.info/2008/12/16/music-engine-intro</id>
+    <content type="html"><![CDATA[<p>Thinking so much about an OpenSocial apps and finally I decided to develop a music-engine application.</p>
+
+<p>What is a music-engine? My music-engine will crawl and index as much as possible any songs in the Internet and reorganize it into datastore in Google Apps.</p>
+
+<!-- more -->
+
+
+<p>Music-engine will be the service provider allows me to write OpenSocial apps for any container. Users can search, listen, create and save their own favorite playlists. They can send that playlist to their friends as gifts.</p>
+
+<p>Each user can have his own music-stream life. This is something like Twitter, but this just allows users to recommend any song they like.</p>
+
+<p>These are just some critical features I will try to implement.</p>
+
+<p>What&rsquo;s about copyright issue? Music-engine just crawles and indexes information, it doesn&rsquo;t store any music file on its own server. Every activity such as search, download or any other is from users.</p>
+
+<p>Just some ideas about this. I have completed the database schema and a little about music-engine crawler.</p>
+
+<p>As we know, Google Apps currently supports Python, so it will be coded in Python.</p>
+
+<p>I love PHP, and I have some experience to write a news crawler some months ago. Now I will improve it for music, not news.</p>
+
+<p>If anyone would like to code with me, please contact me. There are many things to do, this is just a project for fun :)</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[OpenSocial Hackathon Hà Nội]]></title>

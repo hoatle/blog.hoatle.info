@@ -4,7 +4,7 @@
   <title><![CDATA[Category: en | blog.hoatle.info]]></title>
   <link href="http://blog.hoatle.info/categories/en/atom.xml" rel="self"/>
   <link href="http://blog.hoatle.info/"/>
-  <updated>2013-12-02T06:55:05+00:00</updated>
+  <updated>2013-12-02T07:34:05+00:00</updated>
   <id>http://blog.hoatle.info/</id>
   <author>
     <name><![CDATA[hoatle]]></name>
@@ -12,6 +12,36 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[music-engine Intro]]></title>
+    <link href="http://blog.hoatle.info/2008/12/16/music-engine-intro/"/>
+    <updated>2008-12-16T11:31:00+00:00</updated>
+    <id>http://blog.hoatle.info/2008/12/16/music-engine-intro</id>
+    <content type="html"><![CDATA[<p>Thinking so much about an OpenSocial apps and finally I decided to develop a music-engine application.</p>
+
+<p>What is a music-engine? My music-engine will crawl and index as much as possible any songs in the Internet and reorganize it into datastore in Google Apps.</p>
+
+<!-- more -->
+
+
+<p>Music-engine will be the service provider allows me to write OpenSocial apps for any container. Users can search, listen, create and save their own favorite playlists. They can send that playlist to their friends as gifts.</p>
+
+<p>Each user can have his own music-stream life. This is something like Twitter, but this just allows users to recommend any song they like.</p>
+
+<p>These are just some critical features I will try to implement.</p>
+
+<p>What&rsquo;s about copyright issue? Music-engine just crawles and indexes information, it doesn&rsquo;t store any music file on its own server. Every activity such as search, download or any other is from users.</p>
+
+<p>Just some ideas about this. I have completed the database schema and a little about music-engine crawler.</p>
+
+<p>As we know, Google Apps currently supports Python, so it will be coded in Python.</p>
+
+<p>I love PHP, and I have some experience to write a news crawler some months ago. Now I will improve it for music, not news.</p>
+
+<p>If anyone would like to code with me, please contact me. There are many things to do, this is just a project for fun :)</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[OpenSocial Hackathon in Hanoi]]></title>
@@ -239,37 +269,6 @@ to get HTTP errors to see such these interesting images :)).</p>
 <p>List of HTTP status codes: <a href="http://en.wikipedia.org/wiki/List_of_HTTP_status_codes">http://en.wikipedia.org/wiki/List_of_HTTP_status_codes</a></p>
 
 <p>Images for illustration: <a href="http://www.flickr.com/photos/apelad/sets/72157594388426362/detail">http://www.flickr.com/photos/apelad/sets/72157594388426362/detail</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Yahoo! announed to make BrowserPlus open-source!]]></title>
-    <link href="http://blog.hoatle.info/2008/11/20/yahoo-announed-to-make-browserplus-open-source/"/>
-    <updated>2008-11-20T01:11:00+00:00</updated>
-    <id>http://blog.hoatle.info/2008/11/20/yahoo-announed-to-make-browserplus-open-source</id>
-    <content type="html"><![CDATA[<p>As Google did with Gears, on November 18, 2008 Yahoo! intended to make BrowserPlus open source.
-BrowserPlus and Gears are aimed at improving browsers' native abilities so Web applications can
-better match those running natively on a computer&rsquo;s operating system.</p>
-
-<!-- more -->
-
-
-<p><img class="center <a" src="href="http://l.yimg.com/a/i/us/bp/s/1.4/site/home-sprite.jpg">http://l.yimg.com/a/i/us/bp/s/1.4/site/home-sprite.jpg</a>" title="BrowserPlus" ></p>
-
-<p>As on BrowserPlus' blog: &ldquo;The big idea here is that we&rsquo;ll have the whole platform open sourced by
-mid-next year, and as soon as possible we&rsquo;ll have many of the services we&rsquo;ve written open sourced,
-as well as the APIs needed to write new services. Our goal is to empower the community to contribute
-actual patches and new services &ndash; code to compliment the feedback. As we move forward, we hope that
-this platform will contribute to the open web by enabling rapid innovation and giving us all a
-chance to weigh in on what exactly the web of tomorrow should look like.&rdquo;
-(<a href="http://browserplus.yahoo.com">http://browserplus.yahoo.com</a>)</p>
-
-<p>&ldquo;BrowserPlus is a technology designed to &lsquo;extend the Web,&rsquo; so that developers can build more
-exciting Web applications and so end users can get more done inside their Web browsers,&rdquo; Yahoo
-said on a BrowserPlus frequently-asked-questions page. (<a href="http://browserplus.yahoo.com/faq/">http://browserplus.yahoo.com/faq/</a>)</p>
-
-<p>Technology is changing so fast, who knows what is the tomorrow browser look like? When combining
-Google Gears and Yahoo! BrowserPlus will actully make browsers a &ldquo;web OS&rdquo;.</p>
 ]]></content>
   </entry>
   
