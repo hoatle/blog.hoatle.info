@@ -4,7 +4,7 @@
   <title><![CDATA[Tag: JavaScript | blog.hoatle.info]]></title>
   <link href="http://blog.hoatle.info/tags/javascript/atom.xml" rel="self"/>
   <link href="http://blog.hoatle.info/"/>
-  <updated>2013-12-02T18:45:02+00:00</updated>
+  <updated>2013-12-02T18:46:26+00:00</updated>
   <id>http://blog.hoatle.info/</id>
   <author>
     <name><![CDATA[hoatle]]></name>
@@ -369,6 +369,362 @@ var myFireEvent = function(obj, evt) {
 ```</p>
 
 <p>Hy vọng tớ sẽ sớm viết thêm về event phase sau, chúc bạn code vui :D.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Multiple event handlers for an element in JavaScript]]></title>
+    <link href="http://blog.hoatle.info/2010/01/09/multiple-event-handlers-for-an-element-in-javascript/"/>
+    <updated>2010-01-09T01:55:00+00:00</updated>
+    <id>http://blog.hoatle.info/2010/01/09/multiple-event-handlers-for-an-element-in-javascript</id>
+    <content type="html"><![CDATA[<p>This afternoon I caught a question posted in phpvietnam group:</p>
+
+<p><strong>&ldquo;I have an input element with the property onclick="doSomeFunction();&rdquo;. Now I want to add another
+function, ie onclick=&ldquo;doSomeFunction(); doSomeFunction2();&rdquo;, can I do this with JavaScript? Thanks
+in advance!&ldquo; (translated)</strong></p>
+
+<p><em>Source (in Vietnamese)</em>:
+<a href="http://groups.google.com/group/phpvietnam/browse_thread/thread/c7a8688875a320c3">http://groups.google.com/group/phpvietnam/browse_thread/thread/c7a8688875a320c3</a></p>
+
+<!-- more -->
+
+
+<p>After answering his question, I just want to share my experience when working with JavaScript event
+handler. I will show you 4 event registration models for the time beings of its use; the way to use
+context and this keyword in function handler. My approach is that the event object will be passed
+as 1st parameter to the function handler and this has to refer to the element triggering that event.</p>
+
+<p><strong>1. Inline Event Registration Model</strong></p>
+
+<p>From the first days of JavaScript, there is only one way of registering event handler and nowadays
+this approach is still being used. Here we call the primitive approach:</p>
+
+<p><code>html
+&lt;a href="#" onclick="doSomething();"&gt;link&lt;/a&gt;
+</code></p>
+
+<p>People are so familiar with this event registration model, especially from the days of writing the
+first lines of JavaScript code. There is nothing wrong with this kind of model, even it&rsquo;s
+convenient, fast, easy to understand and people are still using this way :P. However, when
+JavaScript evolves, the event registration approach changes because some problems arise: this
+approach does not separate structure (html) and behaviour (JavaScript); this makes code more
+complex, not very flexible to edit html. Just imagine when creating dom on the fly and constructing
+new html fragment code to insert to html document? This approach does not seem fit well in this case.</p>
+
+<p>Now working with event object and this keyword. We have the event handler function:</p>
+
+<p><code>javascript
+function doSomething(evt) {
+  alert(arguments[0]); // arguments[0] the same as evt
+  alert(this);
+}
+</code></p>
+
+<p>In this case, when the link element is clicked, the <code>doSomething</code> handler function will be called
+and <code>evt</code> will get <code>undefined (null)</code> value and <code>this</code> will refer to <code>window</code> object. This is not my
+intention, I want the event has to be event object and this has to refer to the link element. So I
+have to modify the code a little bit:</p>
+
+<p><code>html
+&lt;a href="#" onclick="doSomething(event);"&gt;link&lt;/a&gt;
+</code></p>
+
+<p>With above code, the event object is passed to <code>doSomething</code> handler function. In my assumption,
+when link element is clicked, the <code>onclick</code> event is triggered from the browser native code:</p>
+
+<p><code>javascript
+//[Native Code]
+onclick(event) {
+  //event handler is called
+  doSomething(event);
+}
+</code></p>
+
+<p>Remember that we pass <code>event</code> as parameter to <code>doSomething</code> function but not any other name. If we
+pass <code>evt</code> for example, the exception occurs:</p>
+
+<p><code>javascript
+[Native Code]
+onclick(event) {
+  //call event handler and pass evt as parameter
+  doSomething(evt); //exception occured because evt is undefined (null).
+}
+</code></p>
+
+<p>Because this is the browser native code, it does not allow to use <code>undefined (null)</code> value there.
+However, we can pass any <code>undefined</code> or <code>null</code> parameter to any our JavaScript functions as normal,
+there is no exception in this case. Note that the above code is tested with chrome and it just
+works (?). No exception at all but not the case for IE, Firefox, Opera, Safari. Well, in this case
+I don&rsquo;t know if google chrome is good or bad?</p>
+
+<p>By using the event parameter passed to <code>doSomething</code> function, now we can get the event object to
+get many useful properties there. For example, event type, cursor location, charCode, etc.,</p>
+
+<p>Now we have to make sure <code>this</code> in <code>doSomething</code> function has to refer to link element, not
+<code>window</code> object with the following code:</p>
+
+<p><code>html
+&lt;a href="#" onclick="doSomething.call(this, event)"&gt;link&lt;/a&gt;
+</code></p>
+
+<p>From the browser native code will trigger the <code>onclick</code> event as follows:</p>
+
+<p><code>javascript
+onclick(event) {
+  //this is the triggred element
+  doSomething.call(this, event);
+}
+</code></p>
+
+<p>The above inline event registration code now works as my intention. I just explain in details in
+this part only.</p>
+
+<p><strong>2. Traditional Event Registration Model</strong></p>
+
+<p>This is the model many developers use to separate structure and behaviour in the html document.
+Html contains html only, and in JavaScript traditional event registration model will be used:</p>
+
+<p><code>html
+&lt;a href="#" id="mylink"&gt;link&lt;/a&gt;
+</code></p>
+
+<p>Make sure after the dom is loaded, this code will execute:</p>
+
+<p><code>javascript
+var linkEl = document.getElementById('myLink');
+linkEl.onclick = function() {
+  doSomething();
+}
+</code></p>
+
+<p>This way of event registration is compatible with all major browsers. In this model, event object
+is passed as the only parameter to the handler function and <code>this</code> in the handler function block
+refer to linkEl.</p>
+
+<p>Code this way to make sure <code>doSomething</code> function still has access to event object and <code>this</code> refers
+to element triggering the event.</p>
+
+<p><code>javascript
+linkEl.onclick = function(evt) {
+  doSomething.call(this,evt);
+}
+</code></p>
+
+<p>In case the <code>doSomething</code> function has more than 1 arguments:</p>
+
+<p>```javascript
+function doSomething(evt, param1, param2) {
+//code implementation
+}</p>
+
+<p>linkEl.onclick = function(evt) {
+  var param1, param2;
+  doSomething.call(this, evt, param1, param2);
+  // same as: doSomething.apply(this, [evt, param1, param2]);
+}
+```</p>
+
+<p>And then we come up with 3rd and 4th event registration model: W3C model and Microsof (IE) model.
+By combining these 2 models, we got the solution for event registration compatible with all major
+browsers:</p>
+
+<p><strong>3. W3C Event Registration Model</strong></p>
+
+<p>This is the specification of W3C to register event listener (handler). By using it, we can register
+as many listeners as possible.</p>
+
+<p><code>javascript
+element.addEventListener(eventType, listener, useCapture);
+</code></p>
+
+<p><code>eventType</code>: click, mouseover, mouseout, etc.,</p>
+
+<p><code>listener</code>: event handler function, it will be called when the element triggered eventType event.</p>
+
+<p><code>useCapture</code>: you should always pass false to make it compatible with IE. This relates to event
+phases which I will make another blog post about.</p>
+
+<p>We can apply as:</p>
+
+<p><code>html
+&lt;a href="#" id="mylink"&gt;link&lt;/a&gt;
+</code></p>
+
+<p>```javascript
+//javascript, run only on Firefox, Opera, Chrome, Safari
+// can not run on IE
+var linkEl = document.getElementById(&lsquo;myLink&rsquo;);
+linkEl.addEventListener(&lsquo;click&rsquo;, function() {</p>
+
+<pre><code>alert(arguments[0]); //event object
+alert(this); //linkEl
+</code></pre>
+
+<p>}, false);
+event object is passed as parameter and this refers to linkEl in event handler:</p>
+
+<p>linkEl.addEventListener(&lsquo;click&rsquo;, function(evt) {</p>
+
+<pre><code>doSomething.call(this, evt);
+</code></pre>
+
+<p>}, false);
+```</p>
+
+<p>By using this approach, you can add as many listeners as possible. When an eventType triggered, all
+registered listeners will be executed. Note that W3C DOM specification does not require that the
+first listener registered will be executed first, these listeners can be executed by random. And
+till now, there is no way to check how many listeners registered in an element.</p>
+
+<p><em>How about removing an event listener?</em></p>
+
+<p><code>javascript
+element.removeEventListener(eventType, listener, useCapture);
+</code></p>
+
+<p>I rarely use <code>removeEventListener</code>. You can not remove an anonymous function. From the above code,
+I use anonymous function as listener, as the result, I can not find the way to remove it. Assigning
+it a name and the problem solved:</p>
+
+<p><code>javascript
+var myListener = function() {
+  alert(arguments[0]);
+  alert(this);
+ //first run and then remove listener, no event triggered from now anymore
+  this.removeEventListener('click', myListener, false);
+}
+linkEl.addEventListener('click', myListener, false);
+</code></p>
+
+<p>This is the W3C way and M$ follows an other way.</p>
+
+<p><strong>4. Microsoft Event Registration Model</strong></p>
+
+<p>IE does not use <code>addEventListener</code> but <code>attachEvent</code>:</p>
+
+<p>```javascript</p>
+
+<pre><code>element.attachEvent(onEventType, handler);
+</code></pre>
+
+<p>```</p>
+
+<p>For example:</p>
+
+<p><code>javascript
+var linkEl = document.getElementById('myLink');
+//run on IE only
+linkEl.attachEvent('onclick', function() {
+  alert(arguments[0]); //event object
+  alert(this); //linkEl
+})
+</code></p>
+
+<p>Wanna remove a handler (listener)? Use <code>detachEvent</code>:</p>
+
+<p><code>javascript
+var myListener = function(evt) {
+  alert(evt);
+  alert(this);
+  this.detachEvent('onclick', myListener);
+}
+</code></p>
+
+<p>Note that IE does not have 2 event phases (capture and bubble) but bubble phase only. So when using
+W3C, you should always use <code>false</code> for <code>useCapture</code> for safety purpose :d. If you fully understand
+these 2 event phases, you can pass true for <code>useCapture</code> but intentionally.</p>
+
+<p><strong>5. At last, combine these 2 models for simple and compatible api:</strong></p>
+
+<p><code>javascript
+//api design
+addEventListener(element, eventType, listener, useCapture);
+removeEventListener(element, eventType, listener, useCapture);
+</code></p>
+
+<p>My intention is that event object has to be passed as 1st parameter to listener and this has to
+refer to the element in the block code. Here we come the solution:</p>
+
+<p>```javascript
+/<em>*
+ * Cross browser add event listener method. For &lsquo;evt&rsquo; pass a string value with the leading &ldquo;on&rdquo; omitted
+ * e.g. addEventListener(window,&lsquo;load&rsquo;,myFunctionNameWithoutParenthesis,false);
+ * @param    obj object to attach event
+ * @param    evt event name: click, mouseover, focus, blur&hellip;
+ * @param    func    function name
+ * @param    useCapture    true or false; if false => use bubbling
+ * @static
+ * @see        <a href="http://phrogz.net/JS/AttachEvent_js.txt">http://phrogz.net/JS/AttachEvent_js.txt</a>
+ </em>/
+function addEventListener(obj, evt, fnc, useCapture) {</p>
+
+<pre><code>if (obj === null || evt === null || fnc ===  null || useCapture === null) {
+   alert('all params are required for addEventListener');
+    return;
+}
+if (!useCapture) useCapture = false;
+if (obj.addEventListener){
+    obj.addEventListener(evt, fnc, useCapture);
+} else if (obj.attachEvent) {
+    obj.attachEvent('on'+evt, function(evt) {
+        fnc.call(obj, evt);
+    });
+} else{
+    myAttachEvent(obj, evt, fnc);
+    obj['on'+evt] = function() { myFireEvent(obj,evt) };
+}
+
+//The following are for browsers like NS4 or IE5Mac which don't support either
+//attachEvent or addEventListener
+var myAttachEvent = function(obj, evt, fnc) {
+    if (!obj.myEvents) obj.myEvents={};
+    if (!obj.myEvents[evt]) obj.myEvents[evt]=[];
+    var evts = obj.myEvents[evt];
+    evts[evts.length] = fnc;
+}
+
+var myFireEvent = function(obj, evt) {
+    if (!obj || !obj.myEvents || !obj.myEvents[evt]) return;
+    var evts = obj.myEvents[evt];
+    for (var i=0,len=evts.length;i&lt;len;i++) evts[i]();
+}
+</code></pre>
+
+<p>}</p>
+
+<p>/<em>*
+ * removes event listener.
+ * @param    obj element
+ * @param    evt event name, &lsquo;click&rsquo;, &lsquo;blur&rsquo;. &lsquo;focus&rsquo;&hellip;
+ * @func    function name to be removed if found
+ * @static
+ * //TODO make sure method cross-browsered
+ </em>/
+function removeEventListener(obj, evt, func, useCapture) {</p>
+
+<pre><code>if (obj.removeEventListener) {
+    obj.removeEventListener(evt, func, useCapture);
+} else if (obj.detachEvent) {//IE
+    obj.detachEvent('on'+evt, func);
+}
+</code></pre>
+
+<p>}
+```</p>
+
+<p>Use this api as simple as:</p>
+
+<p>```javascript
+  var linkEl = document.getElementById(&lsquo;myLink&rsquo;);
+  addEventListener(linkEl, &lsquo;click&rsquo;, function(evt) {</p>
+
+<pre><code>doSomething.call(this, evt);
+</code></pre>
+
+<p>  }, false);
+```</p>
+
+<p>Hope that you find this post interesting, I will blog about 2 event phases soon. Happy coding :D</p>
 ]]></content>
   </entry>
   

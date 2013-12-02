@@ -4,7 +4,7 @@
   <title><![CDATA[blog.hoatle.info]]></title>
   <link href="http://blog.hoatle.info/atom.xml" rel="self"/>
   <link href="http://blog.hoatle.info/"/>
-  <updated>2013-12-02T18:45:02+00:00</updated>
+  <updated>2013-12-02T18:46:26+00:00</updated>
   <id>http://blog.hoatle.info/</id>
   <author>
     <name><![CDATA[hoatle]]></name>
@@ -484,6 +484,485 @@ phải trỏ đến element. Code như sau:</p>
 
 
 <p>Hy vọng tớ sẽ sớm viết thêm về event phase sau, chúc bạn code vui :D.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Multiple event handlers for an element in JavaScript]]></title>
+    <link href="http://blog.hoatle.info/2010/01/09/multiple-event-handlers-for-an-element-in-javascript/"/>
+    <updated>2010-01-09T01:55:00+00:00</updated>
+    <id>http://blog.hoatle.info/2010/01/09/multiple-event-handlers-for-an-element-in-javascript</id>
+    <content type="html"><![CDATA[<p>This afternoon I caught a question posted in phpvietnam group:</p>
+
+<p><strong>&ldquo;I have an input element with the property onclick=&#8221;doSomeFunction();&rdquo;. Now I want to add another
+function, ie onclick=&ldquo;doSomeFunction(); doSomeFunction2();&rdquo;, can I do this with JavaScript? Thanks
+in advance!&ldquo; (translated)</strong></p>
+
+<p><em>Source (in Vietnamese)</em>:
+<a href="http://groups.google.com/group/phpvietnam/browse_thread/thread/c7a8688875a320c3">http://groups.google.com/group/phpvietnam/browse_thread/thread/c7a8688875a320c3</a></p>
+
+<!-- more -->
+
+
+<p>After answering his question, I just want to share my experience when working with JavaScript event
+handler. I will show you 4 event registration models for the time beings of its use; the way to use
+context and this keyword in function handler. My approach is that the event object will be passed
+as 1st parameter to the function handler and this has to refer to the element triggering that event.</p>
+
+<p><strong>1. Inline Event Registration Model</strong></p>
+
+<p>From the first days of JavaScript, there is only one way of registering event handler and nowadays
+this approach is still being used. Here we call the primitive approach:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">onclick=</span><span class="s">&quot;doSomething();&quot;</span><span class="nt">&gt;</span>link<span class="nt">&lt;/a&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>People are so familiar with this event registration model, especially from the days of writing the
+first lines of JavaScript code. There is nothing wrong with this kind of model, even it&rsquo;s
+convenient, fast, easy to understand and people are still using this way :P. However, when
+JavaScript evolves, the event registration approach changes because some problems arise: this
+approach does not separate structure (html) and behaviour (JavaScript); this makes code more
+complex, not very flexible to edit html. Just imagine when creating dom on the fly and constructing
+new html fragment code to insert to html document? This approach does not seem fit well in this case.</p>
+
+<p>Now working with event object and this keyword. We have the event handler function:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">function</span> <span class="nx">doSomething</span><span class="p">(</span><span class="nx">evt</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">alert</span><span class="p">(</span><span class="nx">arguments</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span> <span class="c1">// arguments[0] the same as evt</span>
+</span><span class='line'>  <span class="nx">alert</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>In this case, when the link element is clicked, the <code>doSomething</code> handler function will be called
+and <code>evt</code> will get <code>undefined (null)</code> value and <code>this</code> will refer to <code>window</code> object. This is not my
+intention, I want the event has to be event object and this has to refer to the link element. So I
+have to modify the code a little bit:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">onclick=</span><span class="s">&quot;doSomething(event);&quot;</span><span class="nt">&gt;</span>link<span class="nt">&lt;/a&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>With above code, the event object is passed to <code>doSomething</code> handler function. In my assumption,
+when link element is clicked, the <code>onclick</code> event is triggered from the browser native code:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="c1">//[Native Code]</span>
+</span><span class='line'><span class="nx">onclick</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="c1">//event handler is called</span>
+</span><span class='line'>  <span class="nx">doSomething</span><span class="p">(</span><span class="nx">event</span><span class="p">);</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Remember that we pass <code>event</code> as parameter to <code>doSomething</code> function but not any other name. If we
+pass <code>evt</code> for example, the exception occurs:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="p">[</span><span class="nx">Native</span> <span class="nx">Code</span><span class="p">]</span>
+</span><span class='line'><span class="nx">onclick</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="c1">//call event handler and pass evt as parameter</span>
+</span><span class='line'>  <span class="nx">doSomething</span><span class="p">(</span><span class="nx">evt</span><span class="p">);</span> <span class="c1">//exception occured because evt is undefined (null).</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Because this is the browser native code, it does not allow to use <code>undefined (null)</code> value there.
+However, we can pass any <code>undefined</code> or <code>null</code> parameter to any our JavaScript functions as normal,
+there is no exception in this case. Note that the above code is tested with chrome and it just
+works (?). No exception at all but not the case for IE, Firefox, Opera, Safari. Well, in this case
+I don&rsquo;t know if google chrome is good or bad?</p>
+
+<p>By using the event parameter passed to <code>doSomething</code> function, now we can get the event object to
+get many useful properties there. For example, event type, cursor location, charCode, etc.,</p>
+
+<p>Now we have to make sure <code>this</code> in <code>doSomething</code> function has to refer to link element, not
+<code>window</code> object with the following code:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">onclick=</span><span class="s">&quot;doSomething.call(this, event)&quot;</span><span class="nt">&gt;</span>link<span class="nt">&lt;/a&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>From the browser native code will trigger the <code>onclick</code> event as follows:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">onclick</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="c1">//this is the triggred element</span>
+</span><span class='line'>  <span class="nx">doSomething</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">event</span><span class="p">);</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The above inline event registration code now works as my intention. I just explain in details in
+this part only.</p>
+
+<p><strong>2. Traditional Event Registration Model</strong></p>
+
+<p>This is the model many developers use to separate structure and behaviour in the html document.
+Html contains html only, and in JavaScript traditional event registration model will be used:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">id=</span><span class="s">&quot;mylink&quot;</span><span class="nt">&gt;</span>link<span class="nt">&lt;/a&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Make sure after the dom is loaded, this code will execute:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">linkEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;myLink&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="nx">linkEl</span><span class="p">.</span><span class="nx">onclick</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">doSomething</span><span class="p">();</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This way of event registration is compatible with all major browsers. In this model, event object
+is passed as the only parameter to the handler function and <code>this</code> in the handler function block
+refer to linkEl.</p>
+
+<p>Code this way to make sure <code>doSomething</code> function still has access to event object and <code>this</code> refers
+to element triggering the event.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">linkEl</span><span class="p">.</span><span class="nx">onclick</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">evt</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">doSomething</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="nx">evt</span><span class="p">);</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>In case the <code>doSomething</code> function has more than 1 arguments:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">function</span> <span class="nx">doSomething</span><span class="p">(</span><span class="nx">evt</span><span class="p">,</span> <span class="nx">param1</span><span class="p">,</span> <span class="nx">param2</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'><span class="c1">//code implementation</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">linkEl</span><span class="p">.</span><span class="nx">onclick</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">evt</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="kd">var</span> <span class="nx">param1</span><span class="p">,</span> <span class="nx">param2</span><span class="p">;</span>
+</span><span class='line'>  <span class="nx">doSomething</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">evt</span><span class="p">,</span> <span class="nx">param1</span><span class="p">,</span> <span class="nx">param2</span><span class="p">);</span>
+</span><span class='line'>  <span class="c1">// same as: doSomething.apply(this, [evt, param1, param2]);</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>And then we come up with 3rd and 4th event registration model: W3C model and Microsof (IE) model.
+By combining these 2 models, we got the solution for event registration compatible with all major
+browsers:</p>
+
+<p><strong>3. W3C Event Registration Model</strong></p>
+
+<p>This is the specification of W3C to register event listener (handler). By using it, we can register
+as many listeners as possible.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">element</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="nx">eventType</span><span class="p">,</span> <span class="nx">listener</span><span class="p">,</span> <span class="nx">useCapture</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><code>eventType</code>: click, mouseover, mouseout, etc.,</p>
+
+<p><code>listener</code>: event handler function, it will be called when the element triggered eventType event.</p>
+
+<p><code>useCapture</code>: you should always pass false to make it compatible with IE. This relates to event
+phases which I will make another blog post about.</p>
+
+<p>We can apply as:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">id=</span><span class="s">&quot;mylink&quot;</span><span class="nt">&gt;</span>link<span class="nt">&lt;/a&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="c1">//javascript, run only on Firefox, Opera, Chrome, Safari</span>
+</span><span class='line'><span class="c1">// can not run on IE</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">linkEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;myLink&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="nx">linkEl</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">alert</span><span class="p">(</span><span class="nx">arguments</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span> <span class="c1">//event object</span>
+</span><span class='line'>    <span class="nx">alert</span><span class="p">(</span><span class="k">this</span><span class="p">);</span> <span class="c1">//linkEl</span>
+</span><span class='line'><span class="p">},</span> <span class="kc">false</span><span class="p">);</span>
+</span><span class='line'><span class="nx">event</span> <span class="nx">object</span> <span class="nx">is</span> <span class="nx">passed</span> <span class="nx">as</span> <span class="nx">parameter</span> <span class="nx">and</span> <span class="k">this</span> <span class="nx">refers</span> <span class="nx">to</span> <span class="nx">linkEl</span> <span class="k">in</span> <span class="nx">event</span> <span class="nx">handler</span><span class="o">:</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="nx">linkEl</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">evt</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">doSomething</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">evt</span><span class="p">);</span>
+</span><span class='line'><span class="p">},</span> <span class="kc">false</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>By using this approach, you can add as many listeners as possible. When an eventType triggered, all
+registered listeners will be executed. Note that W3C DOM specification does not require that the
+first listener registered will be executed first, these listeners can be executed by random. And
+till now, there is no way to check how many listeners registered in an element.</p>
+
+<p><em>How about removing an event listener?</em></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">element</span><span class="p">.</span><span class="nx">removeEventListener</span><span class="p">(</span><span class="nx">eventType</span><span class="p">,</span> <span class="nx">listener</span><span class="p">,</span> <span class="nx">useCapture</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>I rarely use <code>removeEventListener</code>. You can not remove an anonymous function. From the above code,
+I use anonymous function as listener, as the result, I can not find the way to remove it. Assigning
+it a name and the problem solved:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">myListener</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">alert</span><span class="p">(</span><span class="nx">arguments</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+</span><span class='line'>  <span class="nx">alert</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+</span><span class='line'> <span class="c1">//first run and then remove listener, no event triggered from now anymore</span>
+</span><span class='line'>  <span class="k">this</span><span class="p">.</span><span class="nx">removeEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="nx">myListener</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="nx">linkEl</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="nx">myListener</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This is the W3C way and M$ follows an other way.</p>
+
+<p><strong>4. Microsoft Event Registration Model</strong></p>
+
+<p>IE does not use <code>addEventListener</code> but <code>attachEvent</code>:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">element</span><span class="p">.</span><span class="nx">attachEvent</span><span class="p">(</span><span class="nx">onEventType</span><span class="p">,</span> <span class="nx">handler</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>For example:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">linkEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;myLink&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="c1">//run on IE only</span>
+</span><span class='line'><span class="nx">linkEl</span><span class="p">.</span><span class="nx">attachEvent</span><span class="p">(</span><span class="s1">&#39;onclick&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">alert</span><span class="p">(</span><span class="nx">arguments</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span> <span class="c1">//event object</span>
+</span><span class='line'>  <span class="nx">alert</span><span class="p">(</span><span class="k">this</span><span class="p">);</span> <span class="c1">//linkEl</span>
+</span><span class='line'><span class="p">})</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Wanna remove a handler (listener)? Use <code>detachEvent</code>:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">myListener</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">evt</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">alert</span><span class="p">(</span><span class="nx">evt</span><span class="p">);</span>
+</span><span class='line'>  <span class="nx">alert</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+</span><span class='line'>  <span class="k">this</span><span class="p">.</span><span class="nx">detachEvent</span><span class="p">(</span><span class="s1">&#39;onclick&#39;</span><span class="p">,</span> <span class="nx">myListener</span><span class="p">);</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Note that IE does not have 2 event phases (capture and bubble) but bubble phase only. So when using
+W3C, you should always use <code>false</code> for <code>useCapture</code> for safety purpose :d. If you fully understand
+these 2 event phases, you can pass true for <code>useCapture</code> but intentionally.</p>
+
+<p><strong>5. At last, combine these 2 models for simple and compatible api:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="c1">//api design</span>
+</span><span class='line'><span class="nx">addEventListener</span><span class="p">(</span><span class="nx">element</span><span class="p">,</span> <span class="nx">eventType</span><span class="p">,</span> <span class="nx">listener</span><span class="p">,</span> <span class="nx">useCapture</span><span class="p">);</span>
+</span><span class='line'><span class="nx">removeEventListener</span><span class="p">(</span><span class="nx">element</span><span class="p">,</span> <span class="nx">eventType</span><span class="p">,</span> <span class="nx">listener</span><span class="p">,</span> <span class="nx">useCapture</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>My intention is that event object has to be passed as 1st parameter to listener and this has to
+refer to the element in the block code. Here we come the solution:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="cm">/**</span>
+</span><span class='line'><span class="cm"> * Cross browser add event listener method. For &#39;evt&#39; pass a string value with the leading &quot;on&quot; omitted</span>
+</span><span class='line'><span class="cm"> * e.g. addEventListener(window,&#39;load&#39;,myFunctionNameWithoutParenthesis,false);</span>
+</span><span class='line'><span class="cm"> * @param    obj object to attach event</span>
+</span><span class='line'><span class="cm"> * @param    evt event name: click, mouseover, focus, blur...</span>
+</span><span class='line'><span class="cm"> * @param    func    function name</span>
+</span><span class='line'><span class="cm"> * @param    useCapture    true or false; if false =&gt; use bubbling</span>
+</span><span class='line'><span class="cm"> * @static</span>
+</span><span class='line'><span class="cm"> * @see        http://phrogz.net/JS/AttachEvent_js.txt</span>
+</span><span class='line'><span class="cm"> */</span>
+</span><span class='line'><span class="kd">function</span> <span class="nx">addEventListener</span><span class="p">(</span><span class="nx">obj</span><span class="p">,</span> <span class="nx">evt</span><span class="p">,</span> <span class="nx">fnc</span><span class="p">,</span> <span class="nx">useCapture</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="nx">obj</span> <span class="o">===</span> <span class="kc">null</span> <span class="o">||</span> <span class="nx">evt</span> <span class="o">===</span> <span class="kc">null</span> <span class="o">||</span> <span class="nx">fnc</span> <span class="o">===</span>  <span class="kc">null</span> <span class="o">||</span> <span class="nx">useCapture</span> <span class="o">===</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>       <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;all params are required for addEventListener&#39;</span><span class="p">);</span>
+</span><span class='line'>        <span class="k">return</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">useCapture</span><span class="p">)</span> <span class="nx">useCapture</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="nx">obj</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">){</span>
+</span><span class='line'>        <span class="nx">obj</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="nx">evt</span><span class="p">,</span> <span class="nx">fnc</span><span class="p">,</span> <span class="nx">useCapture</span><span class="p">);</span>
+</span><span class='line'>    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">obj</span><span class="p">.</span><span class="nx">attachEvent</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">obj</span><span class="p">.</span><span class="nx">attachEvent</span><span class="p">(</span><span class="s1">&#39;on&#39;</span><span class="o">+</span><span class="nx">evt</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">evt</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>            <span class="nx">fnc</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">obj</span><span class="p">,</span> <span class="nx">evt</span><span class="p">);</span>
+</span><span class='line'>        <span class="p">});</span>
+</span><span class='line'>    <span class="p">}</span> <span class="k">else</span><span class="p">{</span>
+</span><span class='line'>        <span class="nx">myAttachEvent</span><span class="p">(</span><span class="nx">obj</span><span class="p">,</span> <span class="nx">evt</span><span class="p">,</span> <span class="nx">fnc</span><span class="p">);</span>
+</span><span class='line'>        <span class="nx">obj</span><span class="p">[</span><span class="s1">&#39;on&#39;</span><span class="o">+</span><span class="nx">evt</span><span class="p">]</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="nx">myFireEvent</span><span class="p">(</span><span class="nx">obj</span><span class="p">,</span><span class="nx">evt</span><span class="p">)</span> <span class="p">};</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="c1">//The following are for browsers like NS4 or IE5Mac which don&#39;t support either</span>
+</span><span class='line'>    <span class="c1">//attachEvent or addEventListener</span>
+</span><span class='line'>    <span class="kd">var</span> <span class="nx">myAttachEvent</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">obj</span><span class="p">,</span> <span class="nx">evt</span><span class="p">,</span> <span class="nx">fnc</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">obj</span><span class="p">.</span><span class="nx">myEvents</span><span class="p">)</span> <span class="nx">obj</span><span class="p">.</span><span class="nx">myEvents</span><span class="o">=</span><span class="p">{};</span>
+</span><span class='line'>        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">obj</span><span class="p">.</span><span class="nx">myEvents</span><span class="p">[</span><span class="nx">evt</span><span class="p">])</span> <span class="nx">obj</span><span class="p">.</span><span class="nx">myEvents</span><span class="p">[</span><span class="nx">evt</span><span class="p">]</span><span class="o">=</span><span class="p">[];</span>
+</span><span class='line'>        <span class="kd">var</span> <span class="nx">evts</span> <span class="o">=</span> <span class="nx">obj</span><span class="p">.</span><span class="nx">myEvents</span><span class="p">[</span><span class="nx">evt</span><span class="p">];</span>
+</span><span class='line'>        <span class="nx">evts</span><span class="p">[</span><span class="nx">evts</span><span class="p">.</span><span class="nx">length</span><span class="p">]</span> <span class="o">=</span> <span class="nx">fnc</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="kd">var</span> <span class="nx">myFireEvent</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">obj</span><span class="p">,</span> <span class="nx">evt</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">obj</span> <span class="o">||</span> <span class="o">!</span><span class="nx">obj</span><span class="p">.</span><span class="nx">myEvents</span> <span class="o">||</span> <span class="o">!</span><span class="nx">obj</span><span class="p">.</span><span class="nx">myEvents</span><span class="p">[</span><span class="nx">evt</span><span class="p">])</span> <span class="k">return</span><span class="p">;</span>
+</span><span class='line'>        <span class="kd">var</span> <span class="nx">evts</span> <span class="o">=</span> <span class="nx">obj</span><span class="p">.</span><span class="nx">myEvents</span><span class="p">[</span><span class="nx">evt</span><span class="p">];</span>
+</span><span class='line'>        <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="nx">len</span><span class="o">=</span><span class="nx">evts</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="nx">i</span><span class="o">&lt;</span><span class="nx">len</span><span class="p">;</span><span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="nx">evts</span><span class="p">[</span><span class="nx">i</span><span class="p">]();</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="cm">/**</span>
+</span><span class='line'><span class="cm"> * removes event listener.</span>
+</span><span class='line'><span class="cm"> * @param    obj element</span>
+</span><span class='line'><span class="cm"> * @param    evt event name, &#39;click&#39;, &#39;blur&#39;. &#39;focus&#39;...</span>
+</span><span class='line'><span class="cm"> * @func    function name to be removed if found</span>
+</span><span class='line'><span class="cm"> * @static</span>
+</span><span class='line'><span class="cm"> * //TODO make sure method cross-browsered</span>
+</span><span class='line'><span class="cm"> */</span>
+</span><span class='line'><span class="kd">function</span> <span class="nx">removeEventListener</span><span class="p">(</span><span class="nx">obj</span><span class="p">,</span> <span class="nx">evt</span><span class="p">,</span> <span class="nx">func</span><span class="p">,</span> <span class="nx">useCapture</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="nx">obj</span><span class="p">.</span><span class="nx">removeEventListener</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">obj</span><span class="p">.</span><span class="nx">removeEventListener</span><span class="p">(</span><span class="nx">evt</span><span class="p">,</span> <span class="nx">func</span><span class="p">,</span> <span class="nx">useCapture</span><span class="p">);</span>
+</span><span class='line'>    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">obj</span><span class="p">.</span><span class="nx">detachEvent</span><span class="p">)</span> <span class="p">{</span><span class="c1">//IE</span>
+</span><span class='line'>        <span class="nx">obj</span><span class="p">.</span><span class="nx">detachEvent</span><span class="p">(</span><span class="s1">&#39;on&#39;</span><span class="o">+</span><span class="nx">evt</span><span class="p">,</span> <span class="nx">func</span><span class="p">);</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Use this api as simple as:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'>  <span class="kd">var</span> <span class="nx">linkEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;myLink&#39;</span><span class="p">);</span>
+</span><span class='line'>  <span class="nx">addEventListener</span><span class="p">(</span><span class="nx">linkEl</span><span class="p">,</span> <span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">evt</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">doSomething</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">evt</span><span class="p">);</span>
+</span><span class='line'>  <span class="p">},</span> <span class="kc">false</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Hope that you find this post interesting, I will blog about 2 event phases soon. Happy coding :D</p>
 ]]></content>
   </entry>
   
@@ -1223,97 +1702,6 @@ Jeremi làm việc cho eXo gần 2 năm, chuẩn bị mở công ty riêng ở T
 <p>I love PHP, and I have some experience to write a news crawler some months ago. Now I will improve it for music, not news.</p>
 
 <p>If anyone would like to code with me, please contact me. There are many things to do, this is just a project for fun :)</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[OpenSocial Hackathon Hà Nội]]></title>
-    <link href="http://blog.hoatle.info/2008/12/14/opensocial-hackathon-ha-noi/"/>
-    <updated>2008-12-14T00:51:00+00:00</updated>
-    <id>http://blog.hoatle.info/2008/12/14/opensocial-hackathon-ha-noi</id>
-    <content type="html"><![CDATA[<p>Hôm nay khá là bận rộn :). Vừa ở eXo Platform về thì đi chơi ngay với mấy đứa bạn cùng lớp, lâu lắm rồi thì phải :(. Nhiều chuyện quá làm mình không thích đi chơi nhiều như ngày trước nữa.</p>
-
-<p>Hôm nay tham gia OpenSocial Hackathon, được gặp một số bạn khá thú vị :).</p>
-
-<!-- more -->
-
-
-<p>Hôm nay bình minh của tớ bắt đầu lúc 9h. Cũng thường thôi :D, nếu mà không phải đi học hay đi thi vào buổi sáng thì đấy là lịch thường ngày của tớ. Không biết sao nhưng thực sự tớ rất thích làm việc qua đêm, bao giờ chán hoặc buồn ngủ mới thôi. Hôm qua đi ngủ lúc 4h. Cũng khó mà hiểu hết những việc tớ làm :). Chỉ làm những việc tớ thích với máy tính: viết blog, xây dựng website theo yêu cầu của khách &ndash; chỉ là những website nho nhỏ cho doanh nghiệp giới thiệu sản phẩm, giới thiệu công ty, đăng tin tức, nghịch lung tung với một số xu hướng công nghệ, như viết opensocial app chẳng hạn, nâng cao khả năng lập trình = cách code nhiều hơn, nghĩ nhiều hơn, còn nhiều nữa. Thích thì học thì làm, chỉ là thói quen.</p>
-
-<p>Mất gần nửa tiếng mới đến được văn phòng eXo Platform ở tầng 7 số 11 Thái Hà (chính xác hơn là ngõ 11 Thái Hà). Có vẻ đến hơi sớm thì phải (lúc đó tầm 10 giờ 20&#8217;), đến mới thấy có 2 hoặc 3 anh gì đó (trừ những người bên eXo).</p>
-
-<p><strong>Lúc sớm</strong></p>
-
-<p><img class="center" src="http://farm4.static.flickr.com/3208/3127289114_6c42ab2824.jpg?v=0" title="Lúc sớm" ></p>
-
-<p>11 giờ là mọi người có vẻ đã đến đông đủ. Chỉ có khoảng hơn 20 người &ndash; con số khá khiêm tốn so với dự tính. Tớ cứ nghĩ là phải tầm 50 người cơ ;). Chỉ sợ đăng kí chậm không có chỗ, hóa ra tớ là người đăng kí thứ 3 trong danh sách :)</p>
-
-<p><strong>Mọi người đến đông [chắc chưa đủ :D]</strong></p>
-
-<p><img class="center" src="http://farm4.static.flickr.com/3290/3127289274_56552c8884.jpg?v=0" title="Mọi người đến đông [chắc chưa đủ :D]" ></p>
-
-<p>Ở đấy gặp bao nhiêu là người ở nhiều công ty khác nhau, trừ tớ, tớ hiện chưa làm cho công ty nào cả :), vẫn đang đi tìm, có vẻ nhiều công ty không có part-time job thì phải. Tớ không nhớ hết được tất cả mọi người, chỉ xin liệt kê một số công ty: eXo Platform (tất nhiên là có Jeremi Joslin, 3 người nữa mà tớ đã trao đổi khá nhiều với 2 anh ở eXo), Tinh Van Media (2 bạn sinh viên năm 3 của trường ĐH Công Nghệ Quốc Gia, mới đầu tớ gọi 2 cậu này = anh, sau thì đổi ngược lại khi biết tuổi nhau :))), Moore Corporation (<a href="http://nghenhac.info;">http://nghenhac.info;</a> <a href="http://anhso.net">http://anhso.net</a> &ndash; có 1 người), VinaLive (<a href="http://phununet.com">http://phununet.com</a> &ndash; mạng xã hội dành riêng cho phụ nữ; 3-4 người thì phải); 1 người bên Tầm Tay (<a href="http://tamtay.vn">http://tamtay.vn</a>). 2 người đến từ <a href="http://teevn.com.">http://teevn.com.</a> Àh, cả Jason nữa, cuối cùng thì cũng được biết mặt anh này :). Một anh Tây của <a href="http://newhanoian.xemzi.com.">http://newhanoian.xemzi.com.</a> Còn một số người khác nữa nhưng tớ không nhớ hết được.</p>
-
-<p><strong>Đố biết tớ đâu? :)</strong></p>
-
-<p><img class="center" src="http://farm4.static.flickr.com/3196/3127290146_951883aa5b.jpg?v=0" title="Đố biết tớ đâu? :)" ></p>
-
-<p>Jeremi có một bài thuyết trình khá rõ về OpenSocial, nhưng tớ nghĩ đây chỉ là giới thiệu cơ bản,
-hầu như những gì Jeremi nói thì cũng đã tìm hiểu trước rồi. Nhưng lạ là một số người hình như đến
-tham gia mà chưa biết gì về OpenSocial hay sao ý hoặc là rất mơ hồ về nó thì phải??? Tớ không biết
-sao nữa. Tớ cứ nghĩ là đây thực sự là sự kiện rất thú vị để trao đổi kiến thức, thông tin và còn
-hack nữa chứ :), nhưng mà một số người đến đây chỉ để xem hay sao ý, dường như không có ý tưởng để
-viết một cái opensocial gadget thì phải, hoặc là không muốn chia sẻ???</p>
-
-<p>Bài thuyết trình kéo dài khoảng một giờ đồng hồ. Mặc dù phần demo có một số vấn đề với newhanoian
-gadget nhưng bài thuyết trình rất rõ ràng. Thực sự rất thích sự cởi mở và giọng nói tiếng Anh chậm,
-rõ (Jeremi là người Pháp). Sẽ post một số ảnh ở đây khi Jeremi gửi ảnh cho tớ, vừa gửi email rồi.</p>
-
-<p>Sau đấy là đến giờ ăn trưa!!! Không có pizza như trong agenda :), nhưng mà có bánh mì, thịt, rau,
-hoa quả&hellip; ngon. Cảm ơn eXo, Jason, Google về bữa trưa :).</p>
-
-<p><strong>Chuẩn bị cho bữa trưa [Đầy thức ăn nhưng mà không có cái ảnh nào như thế :)]</strong></p>
-
-<p><img class="center" src="http://farm4.static.flickr.com/3211/3126459089_a0703a11de.jpg?v=0" title="Chuẩn bị cho bữa trưa [Đầy thức ăn nhưng mà không có cái ảnh nào như thế :)]" ></p>
-
-<p>Ăn trưa xong mọi người giới thiệu về mình: bạn là ai, bạn đang làm gì, ý tưởng của bạn..blah blah.
-Mọi thứ bạn muốn nói và muốn chia sẻ.</p>
-
-<p>Tiếp theo là đến lúc hack. Đầu tiên là học cách viết gadget bằng cách code theo một gadget mẫu:
-place searching trên newhanoian. Khá hay, đơn giản nhưng tớ biết một số người có vẻ chưa hoàn thành
-hoặc không thích lắm thì phải. Một số người nói là không sử dụng javascript, chính vì thế mà rất khó
-để code cùng mọi người.</p>
-
-<p><strong>Đến lúc hack :)</strong></p>
-
-<p><img class="center" src="http://farm4.static.flickr.com/3088/3127289804_a93ff9ee3a.jpg?v=0" title="Đến lúc hack :)" ></p>
-
-<p>Sau khi code gadget mẫu, mọi người có phần chia sẻ ý tưởng và tìm người cùng code một gadget theo ý
-tưởng đó. Lạ là có mỗi tớ lên chia sẻ ý tưởng của mình :(.</p>
-
-<p>Có một câu hỏi khá lạ (lùng) và lặp đi lặp lại: &ndash; Làm sao để mạng xã hội của tôi có thể trở thành
-một opensocial container? Cách config thế nào? Thực sự đây là một câu hỏi lớn. Để có thể trở thành
-một opensocial container, mạng xã hội đó phải đáp ứng một số chuẩn của mạng xã hội, phải implement
-hệ thống opensocial api và còn nhiều thứ khác nữa. Thực sự theo tớ nghĩ rất khó để &ldquo;cái-gọi-là&rdquo;
-mạng xã hội ở Việt Nam có thể implement mọi thứ để trở thành một container cho các opensocial app
-khi những người quản lý của các mạng này hỏi những câu hỏi như thế? Nếu có thời gian tìm hiểu chắc
-sẽ không hỏi câu này đâu :)).</p>
-
-<p>Cũng hơi buồn tí khi mà thời gian kết thúc khá sớm, khoảng 4h chiều &ndash; sớm hơn 2 giờ so với dự kiến.
-Đây cũng là điều dễ hiểu thôi vì dường như một số người muốn code nhưng một số người thì không hoặc
-là chưa sẵn sàng.</p>
-
-<p>Một chi tiết khá thú vị. Thông thường những sự kiện như này thì mọi người sẽ được phát một chiếc
-T-shirt đặc trưng, nhưng lần này mỗi người được 2 cái cơ ;)). Theo tớ để ý thì có khá nhiều T-shirt,
-thừa hơi bị nhiều so với dự tính. Không có cảnh xô đẩy (thì phải) như D3vF3st ở t.p Hồ Chí Minh.
-Mỗi người một chiếc màu đen truyền thống, một chiếc màu trắng của bên <a href="http://teevn.com.">http://teevn.com.</a> Nhưng rất
-không may là tớ nhận được 2 chiếc đều cỡ L. Tìm mãi mà chả thấy cỡ M đâu cả. Giá mà mình to hơn 1 tí
-thì tốt, đỡ phải kén chọn ;))&hellip;</p>
-
-<p>Thực sự cảm ơn Jeremi vì cái bắt tay ;), vì sự cởi mở. Cảm on mọi người đã đến. Tớ thực sự thích
-OpenSocial Hackathon Hanoi :)</p>
-
-<p>Xem thêm ảnh: <a href="http://flickr.com/photos/jeremi/sets/72157611434836951/">http://flickr.com/photos/jeremi/sets/72157611434836951/</a></p>
 ]]></content>
   </entry>
   
