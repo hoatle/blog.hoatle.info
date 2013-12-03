@@ -4,7 +4,7 @@
   <title><![CDATA[Tag: JavaScript | blog.hoatle.info]]></title>
   <link href="http://blog.hoatle.info/tags/javascript/atom.xml" rel="self"/>
   <link href="http://blog.hoatle.info/"/>
-  <updated>2013-12-03T07:15:03+00:00</updated>
+  <updated>2013-12-03T07:19:12+00:00</updated>
   <id>http://blog.hoatle.info/</id>
   <author>
     <name><![CDATA[hoatle]]></name>
@@ -766,6 +766,9 @@ hướng đối tượng như các ngôn ngữ lập trình lớn – hoàn toà
 hơn, động hơn. JavaScript có vai trò rất lớn trong các trình duyệt web hiện đại cũng như công nghệ
 web 2.0. Và rồi JavaScript sẽ đi đến đâu? Trong bài viết này tôi xin giải đáp ngắn gọn một số câu
 hỏi trên.</p>
+
+<!-- more -->
+
 
 <p>Thứ nhất, JavaScript không phải là Java :) và chẳng có mối liên hệ nào với Java cả, có chăng là cả
 2 cái tên đều có &ldquo;Java&rdquo;. JavaScript chỉ được dùng trong các trình duyệt, đầu tiên có tên là
