@@ -2,7 +2,7 @@
 layout: post
 title: "May 18, 2007 - Guide to Project I (P.1)"
 author: hoatle
-date: 2005-05-18 01:13
+date: 2007-05-18 01:13
 comments: true
 categories:
     - "vi"
