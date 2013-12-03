@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Tag: MySQL | blog.hoatle.info]]></title>
+  <link href="http://blog.hoatle.info/tags/mysql/atom.xml" rel="self"/>
+  <link href="http://blog.hoatle.info/"/>
+  <updated>2013-12-03T07:05:39+00:00</updated>
+  <id>http://blog.hoatle.info/</id>
+  <author>
+    <name><![CDATA[hoatle]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Các công cụ cho MySQL]]></title>
+    <link href="http://blog.hoatle.info/2008/11/08/cac-cong-cu-cho-mysql/"/>
+    <updated>2008-11-08T15:44:00+00:00</updated>
+    <id>http://blog.hoatle.info/2008/11/08/cac-cong-cu-cho-mysql</id>
+    <content type="html"><![CDATA[<ul>
+<li><p>Trước đây MySQL thường chỉ được sử dụng hầu như với các lệnh trong Shell, không có giao diện đồ
+hoạ (GUI). Đây có thể là điểm khá bất tiện so với MSSQL hỗ trợ đầy đủ các công cụ để làm với với
+database.</p></li>
+<li><p>Làm thế nào để bạn có thể thực thi 1 câu lệnh SQL với MySQL, chẳng lẽ lại viết một file PHP với
+connect, select rồi query rồi in kết quả, thật là bất tiện và nhàm chán.</p></li>
+<li><p>Giờ thì đã khác, MySQL đã hỗ trợ công cụ đồ hoạ người dùng. Với bộ công cụ này, truy vấn MySQL
+sẽ nhẹ nhàng hơn.</p></li>
+<li><p>Bạn có thể theo đường dẫn sau download bộ công cụ này: <a href="http://dev.mysql.com/downloads/gui-tools/5.0.html">http://dev.mysql.com/downloads/gui-tools/5.0.html</a></p></li>
+<li><p>Một công cụ cũng khá quan trọng nữa là MySQL Workbench (hiện mới có phiên bản cài đặt trên Windows)</p></li>
+<li><p>Đây là công cụ hay được dùng nhiều nhất: MySQL Query Browser</p></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>
