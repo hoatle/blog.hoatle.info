@@ -1,0 +1,739 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Tạo giao diện tab đơn giản với CSS và jQuery - blog.hoatle.info</title>
+  
+  <meta name="author" content="hoatle">
+
+  
+  <meta name="description" content="Tạo giao diện tab đơn giản với CSS và jQuery">
+  
+
+  
+
+  
+
+  <meta property="og:url" content="http://blog.hoatle.info/2008/12/20/tao-giao-dien-tab-don-gian-voi-css-va-jquery/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Tạo giao diện tab đơn giản với CSS và jQuery - blog.hoatle.info" />
+  <meta property="og:description" content="Tạo giao diện tab đơn giản với CSS và jQuery" />
+
+  <meta property="og:image" content="http://blog.hoatle.info/images/default-cover.png" />
+
+
+
+
+
+
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@hoatle" />
+  <meta name="twitter:creator" content="@hoatle" />
+  <meta name="twitter:title" content="Tạo giao diện tab đơn giản với CSS và jQuery - blog.hoatle.info" />
+  <meta name="twitter:description" content="Tạo giao diện tab đơn giản với CSS và jQuery" />
+
+  <meta name="twitter:image:src" content="http://blog.hoatle.info/images/default-cover.png" />
+
+  <meta name="twitter:domain" content="http://blog.hoatle.info" />
+
+
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="canonical" href="http://blog.hoatle.info/2008/12/20/tao-giao-dien-tab-don-gian-voi-css-va-jquery/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="blog.hoatle.info" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-6303084-3']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">blog.hoatle.info</a></h1>
+  
+    <h2>just a value creator.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:blog.hoatle.info" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Home</a></li>
+  <li><a href="/categories/en">English</a></li>
+  <li><a href="/categories/vi">Tiếng Việt</a></li>
+  <li><a href="/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article itemscope itemtype="http://schema.org/Article" class="hentry" role="article">
+  
+  <header>
+    
+      <h1 itemprop="name" class="entry-title">Tạo Giao Diện Tab đơn Giản Với CSS và jQuery</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time itemprop="datePublished" content="2008-12-20T19:55:00+00:00" datetime="2008-12-20T19:55:00+00:00" pubdate data-updated="true">Dec 20<span>th</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+<div itemprop="articleBody" class="entry-content"><p>Đang phải làm việc với layout + giao diện, được dịp xem lại một số web interface. Gói interface này
+là những interface được sử dụng nhiều như Tab Interface, Header Interface&hellip; Tiện đây, tớ giới thiệu
+làm một cái Tab Interface, có thể sử dụng lại được. Tab Interface này sử dụng HTML + CSS + JQuery.
+Xem demo tại đây: <a href="http://labs.hoatle.net/resource/design/tab-interface/">http://labs.hoatle.net/resource/design/tab-interface/</a></p>
+
+<!-- more -->
+
+
+<p>Đoạn code HTML cho cái Tab Interface:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;tab-wrapper&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;ul</span> <span class="na">id=</span><span class="s">&quot;tab-menu&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;tab-menu-active&quot;</span><span class="nt">&gt;</span>Tab 1<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Tab 2<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Tab 3<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;/ul&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;tab-content&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;p&gt;</span>If one examines subpatriarchialist material theory, one is faced with a choice: either accept the presemioticist paradigm of reality or conclude that the task of the artist is deconstruction, given that reality is equal to art. It could be said that the subject is contextualised into a Batailleist &#39;powerful communication&#39; that includes language as a totality. Marx uses the term &#39;precapitalist semiotic theory&#39; to denote the bridge between narrativity and society.<span class="nt">&lt;/p&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;p&gt;</span>Any number of desituationisms concerning Sartreist absurdity may be discovered. In a sense, the textual paradigm of consensus states that reality has significance. Baudrillard uses the term &#39;surrealism&#39; to denote the absurdity, and subsequent rubicon, of substructuralist class. It could be said that la Tournier[4] holds that the works of Pynchon are modernistic. The premise of the textual paradigm of consensus states that the significance of the observer is social comment. However, in Gravity&#39;s Rainbow, Pynchon examines textual materialism; in The Crying of Lot 49 he denies subcultural discourse.<span class="nt">&lt;/p&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;/div&gt;</span>
+</span><span class='line'><span class="nt">&lt;/div&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Dùng CSS để style cho đoạn HTML trên:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+<span class='line-number'>64</span>
+</pre></td><td class='code'><pre><code class='css'><span class='line'><span class="c">/**</span>
+</span><span class='line'><span class="c"> * $Id$</span>
+</span><span class='line'><span class="c"> * author: hoatle</span>
+</span><span class='line'><span class="c"> * website: hoatle.net</span>
+</span><span class='line'><span class="c"> * file: tab-interface.css</span>
+</span><span class='line'><span class="c"> * style for tab-interface</span>
+</span><span class='line'><span class="c"> */</span>
+</span><span class='line'><span class="nf">#tab-wrapper</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">margin</span><span class="o">:</span> <span class="m">0</span> <span class="k">auto</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">border</span><span class="o">:</span> <span class="m">0.1em</span> <span class="k">dotted</span> <span class="nb">red</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">padding</span><span class="o">:</span> <span class="m">1em</span> <span class="m">0</span> <span class="m">0</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="nf">#tab-menu</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">border-bottom</span><span class="o">:</span> <span class="m">0.1em</span> <span class="k">solid</span> <span class="m">#ababab</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">color</span><span class="o">:</span> <span class="m">#000000</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">margin</span><span class="o">:</span> <span class="m">1em</span> <span class="m">0</span> <span class="m">0</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">padding</span><span class="o">:</span> <span class="m">0</span> <span class="m">0</span> <span class="m">0</span> <span class="m">1em</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="nf">#tab-menu</span> <span class="nt">li</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">display</span><span class="o">:</span> <span class="k">inline</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">list-style-type</span><span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">overflow</span><span class="o">:</span> <span class="k">hidden</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="nf">#tab-menu</span> <span class="nt">li</span> <span class="nt">a</span> <span class="p">{</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="nf">#tab-menu</span> <span class="nt">a</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">color</span><span class="o">:</span> <span class="m">#676767</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">background</span><span class="o">:</span> <span class="m">#dcdcdc</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">font</span><span class="o">:</span> <span class="k">bold</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">font-size</span><span class="o">:</span> <span class="m">1.4em</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">border</span><span class="o">:</span> <span class="m">0.1em</span> <span class="k">solid</span> <span class="m">#ababab</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">padding</span><span class="o">:</span> <span class="m">0.2em</span> <span class="m">0.5em</span> <span class="m">0</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">text-decoration</span><span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="nf">#tab-menu</span> <span class="nt">a</span><span class="nc">.tab-menu-active</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">background-color</span><span class="o">:</span> <span class="m">#fefefe</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">border-bottom</span><span class="o">:</span> <span class="m">0.3em</span> <span class="k">solid</span> <span class="m">#ffffff</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">color</span><span class="o">:</span> <span class="m">#3a3a3a</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="nf">#tab-menu</span> <span class="nt">a</span><span class="nc">.tab-menu-hover</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">background-color</span><span class="o">:</span> <span class="m">#f0f0f0</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="c">/*</span>
+</span><span class='line'><span class="c">#tab-menu a:active {</span>
+</span><span class='line'><span class="c">    background-color: #ffffff;</span>
+</span><span class='line'><span class="c">    color: #3a3a3a;</span>
+</span><span class='line'><span class="c">    border-bottom: none;</span>
+</span><span class='line'><span class="c">}</span>
+</span><span class='line'><span class="c">#tab-menu a:hover {</span>
+</span><span class='line'><span class="c">    background-color: #f0f0f0;</span>
+</span><span class='line'><span class="c">}</span>
+</span><span class='line'><span class="c">*/</span>
+</span><span class='line'><span class="nf">#tab-menu</span> <span class="nt">a</span><span class="nd">:visited</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">color</span><span class="o">:</span> <span class="m">#666666</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="nf">#tab-content</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">background-color</span><span class="o">:</span> <span class="m">#ffffff</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">text-align</span><span class="o">:</span> <span class="k">justify</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">padding</span><span class="o">:</span> <span class="m">1em</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">border</span><span class="o">:</span> <span class="m">0.1em</span>  <span class="k">solid</span> <span class="m">#ababab</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">border-top</span><span class="o">:</span> <span class="m">0.2em</span> <span class="k">solid</span> <span class="m">#ababab</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">z-index</span><span class="o">:</span> <span class="m">1</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Để ý có đoạn comment sau đây vì khi dùng JQuery thì đoạn event trên không cần thiết nữa (bị lặp
+thì đúng hơn). Nếu không dùng đến JQuery thì uncomment đoạn này:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='css'><span class='line'><span class="nf">#tab-menu</span> <span class="nt">a</span><span class="nd">:active</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">background-color</span><span class="o">:</span> <span class="m">#ffffff</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">color</span><span class="o">:</span> <span class="m">#3a3a3a</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">border-bottom</span><span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="nf">#tab-menu</span> <span class="nt">a</span><span class="nd">:hover</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">background-color</span><span class="o">:</span> <span class="m">#f0f0f0</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Cuối cùng là JavaScript cho sau đây, vì lâu lắm nên đoạn này bị bừa bộn + thể nào cũng có đoạn code
+dở hơi?</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+<span class='line-number'>64</span>
+<span class='line-number'>65</span>
+<span class='line-number'>66</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="cm">/**</span>
+</span><span class='line'><span class="cm"> * $Id$</span>
+</span><span class='line'><span class="cm"> * author: hoatle</span>
+</span><span class='line'><span class="cm"> * website: hoatle.net</span>
+</span><span class='line'><span class="cm"> * file: tab-interface.js</span>
+</span><span class='line'><span class="cm"> * This js file will control the tab-interface behavior</span>
+</span><span class='line'><span class="cm"> */</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#tab-menu:first&#39;</span><span class="p">).</span><span class="nx">css</span><span class="p">(</span><span class="s1">&#39;padding-left&#39;</span><span class="p">,</span> <span class="s1">&#39;0&#39;</span><span class="p">).</span><span class="nx">append</span><span class="p">(</span><span class="s1">&#39;&lt;li&gt;&lt;a href=#&gt;Tab More&lt;/a&gt;&lt;/li&gt;&#39;</span><span class="p">);</span> <span class="c1">//On the fly :)</span>
+</span><span class='line'>    <span class="kd">var</span> <span class="nx">nav_height</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#nav&#39;</span><span class="p">).</span><span class="nx">css</span><span class="p">(</span><span class="s1">&#39;height&#39;</span><span class="p">);</span>
+</span><span class='line'>    <span class="c1">//alert(&#39;nav_height: &#39;+nav_height);</span>
+</span><span class='line'>    <span class="kd">var</span> <span class="nx">content_height</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#content&#39;</span><span class="p">).</span><span class="nx">css</span><span class="p">(</span><span class="s1">&#39;height&#39;</span><span class="p">);</span>
+</span><span class='line'>    <span class="c1">//alert(&#39;content_height: &#39;+content_height);</span>
+</span><span class='line'>    <span class="kd">var</span> <span class="nx">common_height</span> <span class="o">=</span>  <span class="nx">nav_height</span> <span class="o">&gt;</span> <span class="nx">content_height</span><span class="o">?</span> <span class="nx">nav_height</span> <span class="o">:</span> <span class="nx">content_height</span><span class="p">;</span>
+</span><span class='line'>    <span class="c1">//alert(common_height);</span>
+</span><span class='line'>    <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#nav&#39;</span><span class="p">).</span><span class="nx">css</span><span class="p">(</span><span class="s1">&#39;height&#39;</span><span class="p">,</span> <span class="nx">common_height</span><span class="p">);</span>
+</span><span class='line'>    <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#content&#39;</span><span class="p">).</span><span class="nx">css</span><span class="p">(</span><span class="s1">&#39;height&#39;</span><span class="p">,</span> <span class="nx">common_height</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>    <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#main-nav ul li a&#39;</span><span class="p">)</span>
+</span><span class='line'>        <span class="p">.</span><span class="nx">click</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>            <span class="nx">event</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
+</span><span class='line'>            <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#main-nav ul li a&#39;</span><span class="p">).</span><span class="nx">removeClass</span><span class="p">(</span><span class="s1">&#39;main-nav-active&#39;</span><span class="p">)</span>
+</span><span class='line'>            <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">)</span>
+</span><span class='line'>            <span class="p">.</span><span class="nx">removeClass</span><span class="p">(</span><span class="s1">&#39;main-nav-hover&#39;</span><span class="p">)</span>
+</span><span class='line'>            <span class="p">.</span><span class="nx">addClass</span><span class="p">(</span><span class="s1">&#39;main-nav-active&#39;</span><span class="p">);</span>
+</span><span class='line'>            <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#tab-content&#39;</span><span class="p">).</span><span class="nx">hide</span><span class="p">();</span>
+</span><span class='line'>            <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#tab-menu li a&#39;</span><span class="p">).</span><span class="nx">fadeOut</span><span class="p">(</span><span class="s1">&#39;slow&#39;</span><span class="p">).</span><span class="nx">fadeIn</span><span class="p">(</span><span class="s1">&#39;slow&#39;</span><span class="p">);</span>
+</span><span class='line'>            <span class="c1">//$(&#39;#main-content&#39;).fadeOut(&#39;slow&#39;).fadeIn(&#39;slow&#39;);</span>
+</span><span class='line'>            <span class="nx">delay</span><span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#tab-content&#39;</span><span class="p">),</span> <span class="mi">1500</span><span class="p">);</span>
+</span><span class='line'>            <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#secondary-content&#39;</span><span class="p">).</span><span class="nx">hide</span><span class="p">(</span><span class="s1">&#39;slow&#39;</span><span class="p">);</span>
+</span><span class='line'>        <span class="p">})</span>
+</span><span class='line'>        <span class="p">.</span><span class="nx">hover</span><span class="p">(</span>
+</span><span class='line'>            <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>                <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">addClass</span><span class="p">(</span><span class="s1">&#39;main-nav-hover&#39;</span><span class="p">);</span>
+</span><span class='line'>            <span class="p">},</span>
+</span><span class='line'>            <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>                <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">removeClass</span><span class="p">(</span><span class="s1">&#39;main-nav-hover&#39;</span><span class="p">);</span>
+</span><span class='line'>            <span class="p">}</span>
+</span><span class='line'>        <span class="p">);</span>
+</span><span class='line'>    <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#tab-menu li a&#39;</span><span class="p">)</span>
+</span><span class='line'>        <span class="p">.</span><span class="nx">click</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>            <span class="nx">event</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
+</span><span class='line'>            <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#tab-menu li a&#39;</span><span class="p">).</span><span class="nx">removeClass</span><span class="p">(</span><span class="s1">&#39;tab-menu-active&#39;</span><span class="p">);</span>
+</span><span class='line'>            <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">removeClass</span><span class="p">(</span><span class="s1">&#39;tab-menu-hover&#39;</span><span class="p">);</span>
+</span><span class='line'>            <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">addClass</span><span class="p">(</span><span class="s1">&#39;tab-menu-active&#39;</span><span class="p">);</span>
+</span><span class='line'>            <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#tab-content&#39;</span><span class="p">).</span><span class="nx">fadeOut</span><span class="p">(</span><span class="s1">&#39;slow&#39;</span><span class="p">).</span><span class="nx">fadeIn</span><span class="p">(</span><span class="s1">&#39;slow&#39;</span><span class="p">);</span>
+</span><span class='line'>        <span class="p">})</span>
+</span><span class='line'>        <span class="p">.</span><span class="nx">hover</span><span class="p">(</span>
+</span><span class='line'>            <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>                <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">hasClass</span><span class="p">(</span><span class="s1">&#39;tab-menu-active&#39;</span><span class="p">))</span> <span class="p">{</span>
+</span><span class='line'>                    <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">addClass</span><span class="p">(</span><span class="s1">&#39;tab-menu-hover&#39;</span><span class="p">);</span>
+</span><span class='line'>                <span class="p">}</span>
+</span><span class='line'>            <span class="p">},</span>
+</span><span class='line'>            <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>                <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">removeClass</span><span class="p">(</span><span class="s1">&#39;tab-menu-hover&#39;</span><span class="p">);</span>
+</span><span class='line'>        <span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'><span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">function</span> <span class="nx">delay</span><span class="p">(</span><span class="nx">obj</span><span class="p">,</span> <span class="nx">time</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nb">window</span><span class="p">.</span><span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">obj</span><span class="p">.</span><span class="nx">fadeIn</span><span class="p">(</span><span class="s1">&#39;slow&#39;</span><span class="p">);</span>
+</span><span class='line'>    <span class="p">},</span> <span class="nx">time</span><span class="p">);</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Vậy là xong. Tạo 1 trang html rồi rồi include 2 file: tab-interface.css và tab-interface.js vào
+phần header [Nhớ include cả file thư viện Jquery.js], phần body thì chứa đoạn code HTML đã nói ở
+trên:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="cp">&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;</span>
+</span><span class='line'><span class="nt">&lt;html</span> <span class="na">xmlns=</span><span class="s">&quot;http://www.w3.org/1999/xhtml&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'><span class="nt">&lt;head&gt;</span>
+</span><span class='line'><span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">&quot;Content-Type&quot;</span> <span class="na">content=</span><span class="s">&quot;text/html; charset=utf-8&quot;</span> <span class="nt">/&gt;</span>
+</span><span class='line'><span class="nt">&lt;title&gt;</span>Simple Tab Interface - JQuery - hoatle.net<span class="nt">&lt;/title&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">type=</span><span class="s">&quot;text/css&quot;</span> <span class="na">href=</span><span class="s">&quot;tab-interface.css&quot;</span> <span class="na">media=</span><span class="s">&quot;screen&quot;</span> <span class="nt">/&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src=</span><span class="s">&quot;jquery.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src=</span><span class="s">&quot;tab-interface.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+</span><span class='line'><span class="nt">&lt;/head&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nt">&lt;body&gt;</span>
+</span><span class='line'><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;tab-wrapper&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;ul</span> <span class="na">id=</span><span class="s">&quot;tab-menu&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;tab-menu-active&quot;</span><span class="nt">&gt;</span>Tab 1<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Tab 2<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Tab 3<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;/ul&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;tab-content&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;p&gt;</span>If one examines subpatriarchialist material theory, one is faced with a choice: either accept the presemioticist paradigm of reality or conclude that the task of the artist is deconstruction, given that reality is equal to art. It could be said that the subject is contextualised into a Batailleist &#39;powerful communication&#39; that includes language as a totality. Marx uses the term &#39;precapitalist semiotic theory&#39; to denote the bridge between narrativity and society.<span class="nt">&lt;/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="nt">&lt;p&gt;</span>Any number of desituationisms concerning Sartreist absurdity may be discovered. In a sense, the textual paradigm of consensus states that reality has significance. Baudrillard uses the term &#39;surrealism&#39; to denote the absurdity, and subsequent rubicon, of substructuralist class. It could be said that la Tournier[4] holds that the works of Pynchon are modernistic. The premise of the textual paradigm of consensus states that the significance of the observer is social comment. However, in Gravity&#39;s Rainbow, Pynchon examines textual materialism; in The Crying of Lot 49 he denies subcultural discourse.<span class="nt">&lt;/p&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;/div&gt;</span>
+</span><span class='line'><span class="nt">&lt;/div&gt;</span>
+</span><span class='line'><span class="nt">&lt;/body&gt;</span>
+</span><span class='line'><span class="nt">&lt;/html&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Tab Interface cơ bản là vậy. Có thể từ HTML structure như vậy làm cái Tab Interface dạng ngang
+(giống như trong trang Home ở Twitter) chứ không dọc thế này. Mọi thứ đều được làm đơn giản, tớ
+thích sự đơn giản :).</p>
+</div>
+
+
+  <footer>
+    
+      <div class="revision">
+    <hr/>
+    <p><strong>Latest Change Log:</strong></p>
+    <ul><li><strong>Tue Dec 3 05:31:25 2013</strong><br/>Tạo giao diện tab đơn giản với CSS và jQuery
+</li></ul><a href=https://github.com/hoatle/blog.hoatle.info/commits/HEAD/source/_posts/2008-12-20-tao-giao-dien-tab-don-gian-voi-css-va-jquery.markdown target=_blank>View all changes on Github</a>
+    <hr/>
+</div>
+
+    
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name" class="fn">hoatle</span></span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time itemprop="datePublished" content="2008-12-20T19:55:00+00:00" datetime="2008-12-20T19:55:00+00:00" pubdate data-updated="true">Dec 20<span>th</span>, 2008</time>
+      
+
+<span class="categories">posted in
+  
+    <a class='category' href='/categories/vi/'>vi</a>
+  
+</span>
+
+
+      
+
+
+    </p>
+    
+      
+        
+            
+            
+        
+
+
+
+
+
+
+        
+    
+
+
+
+
+
+<div class="cc-license">
+    <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">
+        <img alt="Creative Commons Attribution-ShareAlike 3.0 Unported License" src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" />
+    </a><br />
+    This work is licensed under a
+    <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.
+</div>
+
+    
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://blog.hoatle.info/2008/12/20/tao-giao-dien-tab-don-gian-voi-css-va-jquery/" data-via="hoatle" data-counturl="http://blog.hoatle.info/2008/12/20/tao-giao-dien-tab-don-gian-voi-css-va-jquery/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-href="http://blog.hoatle.info/2008/12/20/tao-giao-dien-tab-don-gian-voi-css-va-jquery/" data-send="true" data-width="450"
+         data-show-faces="false">
+     </div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/2008/12/19/thiet-ke-mot-trang-kiem-tra-thuat-ngu-don-gian/" title="Previous Post: Thiết kế một trang kiểm tra thuật ngữ đơn giản">&laquo; Thiết kế một trang kiểm tra thuật ngữ đơn giản</a>
+      
+      
+        <a class="basic-alignment right" href="/2008/12/21/thiet-ke-bo-dem-trang-site-counter-don-gian/" title="Next Post: Thiết kế bộ đếm trang (site-counter) đơn giản">Thiết kế bộ đếm trang (site-counter) đơn giản &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/2010/01/16/them-doi-so-vao-message-bundle-trong-opensocial/">Thêm đối Số Vào Message Bundle Trong OpenSocial</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2010/01/16/dynamic-arguments-binding-with-opensocial-message-bundle/">Dynamic Arguments Binding With OpenSocial Message Bundle</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2010/01/09/gan-nhieu-ham-xu-ly-su-kien-vao-mot-phan-tu-trong-javascript/">Gán Nhiều Hàm Xử Lý Sự Kiện Vào Một Phần Tử Trong JavaScript</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2010/01/09/multiple-event-handlers-for-an-element-in-javascript/">Multiple Event Handlers for an Element in JavaScript</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2009/12/31/tong-ket-nam-2009-va-nhung-du-dinh-cho-nam-2010/">Tổng Kết Năm 2009 và Những Dự định Cho Năm 2010</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>On Delicious</h1>
+  <div id="delicious"></div>
+  <script type="text/javascript" src="http://feeds.delicious.com/v2/json/hoatle?count=5&amp;sort=date&amp;callback=renderDeliciousLinks"></script>
+  <p><a href="http://delicious.com/hoatle">See all bookmarks &raquo;</a></p>
+</section>
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - hoatle -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'hoatle-blog';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://blog.hoatle.info/2008/12/20/tao-giao-dien-tab-don-gian-voi-css-va-jquery/';
+        var disqus_url = 'http://blog.hoatle.info/2008/12/20/tao-giao-dien-tab-don-gian-voi-css-va-jquery/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=625149054184531";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

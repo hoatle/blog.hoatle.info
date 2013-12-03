@@ -4,7 +4,7 @@
   <title><![CDATA[blog.hoatle.info]]></title>
   <link href="http://blog.hoatle.info/atom.xml" rel="self"/>
   <link href="http://blog.hoatle.info/"/>
-  <updated>2013-12-02T18:46:26+00:00</updated>
+  <updated>2013-12-03T06:26:53+00:00</updated>
   <id>http://blog.hoatle.info/</id>
   <author>
     <name><![CDATA[hoatle]]></name>
@@ -12,6 +12,690 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Thêm đối số vào message bundle trong OpenSocial]]></title>
+    <link href="http://blog.hoatle.info/2010/01/16/them-doi-so-vao-message-bundle-trong-opensocial/"/>
+    <updated>2010-01-16T21:18:00+00:00</updated>
+    <id>http://blog.hoatle.info/2010/01/16/them-doi-so-vao-message-bundle-trong-opensocial</id>
+    <content type="html"><![CDATA[<h2>Bài toán</h2>
+
+<ul>
+<li>Khi làm việc với message bundle trong OpenSocial để dùng nhiều ngôn ngữ trong ứng dụng tùy thuộc
+vào ngôn ngữ người dùng
+(<a href="http://wiki.opensocial.org/index.php?title=Localizing_OpenSocial_applications">localization</a>) đôi
+khi bạn cần phải thêm đối số động vào chuỗi hiển thị.</li>
+</ul>
+
+
+<p>Ví dụ có chuỗi chào như này: Hello {user} trong đó user sẽ được thay bằng username tương ứng của
+người dùng. Nhưng với OpenSocial api hiện tại thì không làm thế nào để thêm đối số vào được mà chỉ
+có thể lấy được message tương ứng theo key cung cấp.</p>
+
+<ul>
+<li>Do vậy đây là cách làm của tớ: viết một thêm 1 class <code>eXo.social.Locale.getMsg(key)</code> và class này
+cung cấp api cũng tương tự như với class <code>Prefs</code> để lấy <code>lang</code>, <code>country</code>, <code>msg</code> (class <code>Prefs</code> còn
+cung cấp nhiều api khác nữa): prefs.getMsg(key). Class <code>eXo.social.Locale</code> cung cấp thêm phương thức
+<code>eXo.social.Locale.getMsg(key, [val1, val2,...]);</code> để thêm đối số vào &ldquo;message bundle&rdquo;.</li>
+</ul>
+
+
+<!-- more -->
+
+
+<h2>Giải pháp</h2>
+
+<ul>
+<li>Viết class <code>eXo.social.Locale</code>:</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+<span class='line-number'>64</span>
+<span class='line-number'>65</span>
+<span class='line-number'>66</span>
+<span class='line-number'>67</span>
+<span class='line-number'>68</span>
+<span class='line-number'>69</span>
+<span class='line-number'>70</span>
+<span class='line-number'>71</span>
+<span class='line-number'>72</span>
+<span class='line-number'>73</span>
+<span class='line-number'>74</span>
+<span class='line-number'>75</span>
+<span class='line-number'>76</span>
+<span class='line-number'>77</span>
+<span class='line-number'>78</span>
+<span class='line-number'>79</span>
+<span class='line-number'>80</span>
+<span class='line-number'>81</span>
+<span class='line-number'>82</span>
+<span class='line-number'>83</span>
+<span class='line-number'>84</span>
+<span class='line-number'>85</span>
+<span class='line-number'>86</span>
+<span class='line-number'>87</span>
+<span class='line-number'>88</span>
+<span class='line-number'>89</span>
+<span class='line-number'>90</span>
+<span class='line-number'>91</span>
+<span class='line-number'>92</span>
+<span class='line-number'>93</span>
+<span class='line-number'>94</span>
+<span class='line-number'>95</span>
+<span class='line-number'>96</span>
+<span class='line-number'>97</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="cm">/**</span>
+</span><span class='line'><span class="cm"> * Locale.js</span>
+</span><span class='line'><span class="cm"> * Utility for Locale, dynamic binding message bundle with arguments</span>
+</span><span class='line'><span class="cm"> * Usage:</span>
+</span><span class='line'><span class="cm"> * eXo.social.Locale.getLang(); the same as prefs.getLang();</span>
+</span><span class='line'><span class="cm"> * eXo.social.Locale.getCountry(); the same as prefs.getCountry();</span>
+</span><span class='line'><span class="cm"> * eXo.social.Locale.getMsg(key); the same as prefs.getMsg(key);</span>
+</span><span class='line'><span class="cm"> * eXo.social.Locale.getMsg(key, args); dynamic binding argument to message bundle</span>
+</span><span class='line'><span class="cm"> * @author  hoatle</span>
+</span><span class='line'><span class="cm"> * @since   October 27, 2009</span>
+</span><span class='line'><span class="cm"> * @copyright   eXo Platform</span>
+</span><span class='line'><span class="cm"> */</span>
+</span><span class='line'>
+</span><span class='line'><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="c1">//prefs object to get lang, country, message bundle</span>
+</span><span class='line'>    <span class="kd">var</span> <span class="nx">prefs</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="cm">/**</span>
+</span><span class='line'><span class="cm">     * private function to lazily initialize prefs object</span>
+</span><span class='line'><span class="cm">     */</span>
+</span><span class='line'>    <span class="kd">function</span> <span class="nx">getPrefs</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">prefs</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>            <span class="nx">prefs</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">gadgets</span><span class="p">.</span><span class="nx">Prefs</span><span class="p">();</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>        <span class="k">return</span> <span class="nx">prefs</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>    <span class="cm">/**</span>
+</span><span class='line'><span class="cm">     * Class definition</span>
+</span><span class='line'><span class="cm">     */</span>
+</span><span class='line'>    <span class="kd">var</span> <span class="nx">Locale</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>    <span class="cm">/**</span>
+</span><span class='line'><span class="cm">     * gets current lang</span>
+</span><span class='line'><span class="cm">     * @static</span>
+</span><span class='line'><span class="cm">     */</span>
+</span><span class='line'>    <span class="nx">Locale</span><span class="p">.</span><span class="nx">getLang</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">prefs</span> <span class="o">=</span> <span class="nx">getPrefs</span><span class="p">();</span>
+</span><span class='line'>        <span class="k">return</span> <span class="nx">prefs</span><span class="p">.</span><span class="nx">getLang</span><span class="p">();</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>    <span class="cm">/**</span>
+</span><span class='line'><span class="cm">     * gets current country</span>
+</span><span class='line'><span class="cm">     * @static</span>
+</span><span class='line'><span class="cm">     */</span>
+</span><span class='line'>    <span class="nx">Locale</span><span class="p">.</span><span class="nx">getCountry</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">prefs</span> <span class="o">=</span> <span class="nx">getPrefs</span><span class="p">();</span>
+</span><span class='line'>        <span class="k">return</span> <span class="nx">prefs</span><span class="p">.</span><span class="nx">getCountry</span><span class="p">();</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>    <span class="cm">/**</span>
+</span><span class='line'><span class="cm">     * alternative for prefs.getMsg(key)</span>
+</span><span class='line'><span class="cm">     * uses to getMsg with provided key and substitute args</span>
+</span><span class='line'><span class="cm">     *</span>
+</span><span class='line'><span class="cm">     * eg: Test for {0}, {1}</span>
+</span><span class='line'><span class="cm">     * If args does not match num of {\d}, warning and try to replace by corresponding index.</span>
+</span><span class='line'><span class="cm">     * {0} should be replaced by args[0], etc.,</span>
+</span><span class='line'><span class="cm">     * If args not provided, functions as prefs.getMsg(key)</span>
+</span><span class='line'><span class="cm">     * @param   key String</span>
+</span><span class='line'><span class="cm">     * @param   opt_args Array</span>
+</span><span class='line'><span class="cm">     * @static</span>
+</span><span class='line'><span class="cm">     */</span>
+</span><span class='line'>    <span class="nx">Locale</span><span class="p">.</span><span class="nx">getMsg</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">key</span><span class="p">,</span> <span class="nx">opt_args</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">prefs</span> <span class="o">=</span> <span class="nx">getPrefs</span><span class="p">();</span>
+</span><span class='line'>        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">key</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>            <span class="nx">debug</span><span class="p">.</span><span class="nx">warn</span><span class="p">(</span><span class="s1">&#39;key is null!&#39;</span><span class="p">);</span>
+</span><span class='line'>            <span class="k">return</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>        <span class="kd">var</span> <span class="nx">msg</span> <span class="o">=</span> <span class="nx">prefs</span><span class="p">.</span><span class="nx">getMsg</span><span class="p">(</span><span class="nx">key</span><span class="p">);</span>
+</span><span class='line'>        <span class="k">if</span> <span class="p">(</span><span class="nx">msg</span> <span class="o">===</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>            <span class="nx">debug</span><span class="p">.</span><span class="nx">warn</span><span class="p">(</span><span class="s1">&#39;Can not find resource bundle with key = &#39;</span> <span class="o">+</span> <span class="nx">key</span><span class="p">);</span>
+</span><span class='line'>            <span class="k">return</span> <span class="nx">msg</span><span class="p">;</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">opt_args</span><span class="p">)</span> <span class="k">return</span> <span class="nx">msg</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="c1">//checks if number of {\d} in msg matches opt_args.length</span>
+</span><span class='line'>        <span class="kd">var</span> <span class="nx">regex</span> <span class="o">=</span> <span class="sr">/{\d+}/g</span><span class="p">;</span>
+</span><span class='line'>        <span class="kd">var</span> <span class="nx">matches</span> <span class="o">=</span> <span class="nx">msg</span><span class="p">.</span><span class="nx">match</span><span class="p">(</span><span class="nx">regex</span><span class="p">);</span>
+</span><span class='line'>        <span class="k">if</span> <span class="p">(</span><span class="nx">matches</span><span class="p">.</span><span class="nx">length</span> <span class="o">!==</span> <span class="nx">opt_args</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>            <span class="nx">debug</span><span class="p">.</span><span class="nx">warn</span><span class="p">(</span><span class="s2">&quot;required &quot;</span> <span class="o">+</span> <span class="nx">matches</span><span class="p">.</span><span class="nx">length</span> <span class="o">+</span> <span class="s2">&quot; args, provided: &quot;</span> <span class="o">+</span> <span class="nx">opt_args</span><span class="p">.</span><span class="nx">length</span><span class="p">);</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>        <span class="c1">//substitutes by index: {0} in msg should be replaced by opt_args[0] and so on</span>
+</span><span class='line'>        <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">l</span> <span class="o">=</span> <span class="nx">matches</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">l</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>            <span class="kd">var</span> <span class="nx">index</span> <span class="o">=</span> <span class="nx">matches</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">match</span><span class="p">(</span><span class="sr">/\d+/g</span><span class="p">)[</span><span class="mi">0</span><span class="p">];</span>
+</span><span class='line'>            <span class="c1">//TODO should improve performance</span>
+</span><span class='line'>            <span class="kd">var</span> <span class="nx">strToReplace</span> <span class="o">=</span> <span class="nx">opt_args</span><span class="p">[</span><span class="nx">index</span><span class="p">];</span>
+</span><span class='line'>            <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">strToReplace</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>                <span class="nx">debug</span><span class="p">.</span><span class="nx">warn</span><span class="p">(</span><span class="s1">&#39;matches[&#39;</span> <span class="o">+</span> <span class="nx">i</span> <span class="o">+</span> <span class="s1">&#39;]: &#39;</span> <span class="o">+</span> <span class="nx">matches</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39; but no opt_args[&#39;</span> <span class="o">+</span> <span class="nx">index</span> <span class="o">+</span> <span class="s1">&#39;]&#39;</span><span class="p">);</span>
+</span><span class='line'>            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span><span class='line'>                <span class="nx">msg</span> <span class="o">=</span> <span class="nx">msg</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="nx">matches</span><span class="p">[</span><span class="nx">i</span><span class="p">],</span> <span class="nx">opt_args</span><span class="p">[</span><span class="nx">index</span><span class="p">]);</span>
+</span><span class='line'>            <span class="p">}</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>        <span class="k">return</span> <span class="nx">msg</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>    <span class="c1">//Expose</span>
+</span><span class='line'>    <span class="nb">window</span><span class="p">.</span><span class="nx">eXo</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">eXo</span> <span class="o">||</span> <span class="p">{};</span>
+</span><span class='line'>    <span class="nb">window</span><span class="p">.</span><span class="nx">eXo</span><span class="p">.</span><span class="nx">social</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">eXo</span><span class="p">.</span><span class="nx">social</span> <span class="o">||</span> <span class="p">{};</span>
+</span><span class='line'>    <span class="nb">window</span><span class="p">.</span><span class="nx">eXo</span><span class="p">.</span><span class="nx">social</span><span class="p">.</span><span class="nx">Locale</span> <span class="o">=</span> <span class="nx">Locale</span><span class="p">;</span>
+</span><span class='line'><span class="p">})();</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Trong class trên không có gì đáng nói ngoài cách dùng regular expression để thay thế chuỗi với
+pattern là <code>{0}, {1}, {2}</code> và lấy các index trong <code>{}</code> để thay bằng <code>opt_args[index]</code> tương ứng.
+Bạn có thể xem thêm vài viết của <a href="http://twitter.com/sanglt">@sanglt</a>:
+<a href="http://www.sanglt.com/content/su-dung-regular-expression-trong-javascript">Sử dụng regular expression trong JavaScript</a>.</p>
+
+<ul>
+<li>Chú ý: Class <code>eXo.social.Locale</code> dùng debug được @cowboy viết, đây là cách debug/log tuyệt vời và
+tớ rất thích. Giờ trong tất cả các dự án hay ứng dụng nào tớ cũng dùng, sau này nhìn vào console là
+biết lỗi gì ở đâu ngay, chứ dùng alert thì đúng là cực hình. Các bạn cũng nên sử dụng cách debug/log
+này :).</li>
+</ul>
+
+
+<p>Download ứng dụng ví dụ đơn giản với cách thêm đối số vào &ldquo;message bundle&rdquo; tại
+<a href="http://github.com/hoatle/opensocial/downloads">http://github.com/hoatle/opensocial/downloads</a></p>
+
+<p>Mã nguồn tớ để ở đây: <a href="http://github.com/hoatle/opensocial/tree/master/message-bundle">http://github.com/hoatle/opensocial/tree/master/message-bundle</a></p>
+
+<p>Đây là file ứng dụng xml:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+</pre></td><td class='code'><pre><code class='xml'><span class='line'><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+</span><span class='line'><span class="nt">&lt;Module&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;ModulePrefs</span> <span class="na">title=</span><span class="s">&quot;Arguments Binding Message Bundle&quot;</span>
+</span><span class='line'>                 <span class="na">description=</span><span class="s">&quot;Simple-App for arguments binding with message bundle&quot;</span>
+</span><span class='line'>                 <span class="na">author_email=</span><span class="s">&quot;hoatlevan@gmail.com&quot;</span>
+</span><span class='line'>                 <span class="na">author_affiliation=</span><span class="s">&quot;eXo Platform&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;Locale</span> <span class="na">messages=</span><span class="s">&quot;locale/ALL_ALL.xml&quot;</span> <span class="nt">/&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;Locale</span> <span class="na">lang=</span><span class="s">&quot;en&quot;</span> <span class="na">messages=</span><span class="s">&quot;locale/en_ALL.xml&quot;</span> <span class="nt">/&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;Locale</span> <span class="na">lang=</span><span class="s">&quot;vi&quot;</span> <span class="na">messages=</span><span class="s">&quot;locale/vi_ALL.xml&quot;</span> <span class="nt">/&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;Require</span> <span class="na">feature=</span><span class="s">&quot;opensocial-0.8&quot;</span> <span class="nt">/&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;/ModulePrefs&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;Content</span> <span class="na">type=</span><span class="s">&quot;html&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>    <span class="cp">&lt;![CDATA[</span>
+</span><span class='line'><span class="cp">        &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;style/style.css&quot; /&gt;</span>
+</span><span class='line'><span class="cp">        &lt;script type=&quot;text/javascript&quot; src=&quot;script/debug.js&quot;&gt;&lt;/script&gt;</span>
+</span><span class='line'><span class="cp">        &lt;script type=&quot;text/javascript&quot; src=&quot;script/eXo/social/Locale.js&quot;&gt;&lt;/script&gt;</span>
+</span><span class='line'><span class="cp">        &lt;script type=&quot;text/javascript&quot; src=&quot;script/app.js&quot;&gt;&lt;/script&gt;</span>
+</span><span class='line'><span class="cp">        &lt;p&gt;Resource bundle rendered by server: &lt;strong&gt;__MSG_hello_world__&lt;/strong&gt;&lt;/p&gt;</span>
+</span><span class='line'><span class="cp">        &lt;p&gt;Resource bundle rendered by JavaScript:&lt;/p&gt;</span>
+</span><span class='line'><span class="cp">        &lt;div id=&quot;helloMsg&quot;&gt;&lt;/div&gt;</span>
+</span><span class='line'><span class="cp">        &lt;div id=&quot;helloMsgArgs&quot;&gt;&lt;/div&gt;</span>
+</span><span class='line'><span class="cp">    ]]&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;/Content&gt;</span>
+</span><span class='line'><span class="nt">&lt;/Module&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Có thể thấy ở trên <code>__MSG_hello_world__</code> sẽ được thay thế bằng message bundle tương ứng với key là
+&ldquo;hello_world&rdquo; (tớ để tất cả các file message bundle trong thư mục <code>locale</code>).</p>
+
+<p>Để sử dụng class <code>eXo.social.Locale</code>, chúng ta có file app.js:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">function</span> <span class="nx">run</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="kd">var</span> <span class="nx">prefs</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">gadgets</span><span class="p">.</span><span class="nx">Prefs</span><span class="p">(),</span>
+</span><span class='line'>        <span class="nx">helloWorld</span> <span class="o">=</span> <span class="nx">prefs</span><span class="p">.</span><span class="nx">getMsg</span><span class="p">(</span><span class="s1">&#39;hello_world&#39;</span><span class="p">);</span>
+</span><span class='line'>    <span class="nx">alert</span><span class="p">(</span><span class="nx">helloWorld</span><span class="p">);</span> <span class="c1">//&quot;Hello world!&quot; if current language is English</span>
+</span><span class='line'>                       <span class="c1">//&quot;Chào thế giới!&quot; if current language is Vietnamese</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="c1">//eXo.social.Locale usage</span>
+</span><span class='line'>    <span class="kd">var</span> <span class="nx">Locale</span> <span class="o">=</span> <span class="nx">eXo</span><span class="p">.</span><span class="nx">social</span><span class="p">.</span><span class="nx">Locale</span><span class="p">;</span>
+</span><span class='line'>    <span class="kd">var</span> <span class="nx">helloMsgEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;helloMsg&#39;</span><span class="p">),</span>
+</span><span class='line'>        <span class="nx">helloMsgArgsEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;helloMsgArgs&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="nx">helloMsgEl</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">Locale</span><span class="p">.</span><span class="nx">getMsg</span><span class="p">(</span><span class="s1">&#39;hello_world&#39;</span><span class="p">);</span>
+</span><span class='line'>    <span class="nx">helloMsgArgsEl</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">Locale</span><span class="p">.</span><span class="nx">getMsg</span><span class="p">(</span><span class="s1">&#39;hello_user_to_place&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;hoatle&#39;</span><span class="p">,</span> <span class="s1">&#39;Vietnam&#39;</span><span class="p">]);</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">gadgets</span><span class="p">.</span><span class="nx">util</span><span class="p">.</span><span class="nx">registerOnLoadHandler</span><span class="p">(</span><span class="nx">run</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Bạn có thể chạy ứng dụng này ở bất kì OpenSocial container nào. Chúc bạn code vui :D.</p>
+
+<p>Lưu ý: Có thể sử dụng OpenSocial templates để thêm đối số vào message bundle nhưng hiện nay hầu hết
+các container chưa hỗ trợ hết.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Dynamic arguments binding with OpenSocial message bundle]]></title>
+    <link href="http://blog.hoatle.info/2010/01/16/dynamic-arguments-binding-with-opensocial-message-bundle/"/>
+    <updated>2010-01-16T19:44:00+00:00</updated>
+    <id>http://blog.hoatle.info/2010/01/16/dynamic-arguments-binding-with-opensocial-message-bundle</id>
+    <content type="html"><![CDATA[<h2>Problem</h2>
+
+<ul>
+<li><p>Working with OpenSocial message bundle for localization, sometimes it&rsquo;s necessary to bind dynamic
+arguments to the message. For example, we have greeting message like this: <code>Hello {user}</code> in which
+user will be replaced by user&rsquo;s name. But currently with OpenSocial api, we can&rsquo;t. We just can get
+message bundle by the key without passing any arguments for substitution.</p></li>
+<li><p>So this is my approach: using <code>eXo.social.Locale.getMsg(key)</code> the same as <code>prefs.getMsg(key)</code> and
+<code>eXo.social.Locale.getMsg(key, [val1, val2,...]);</code> for dynamic arguments binding with message bundle.</p></li>
+</ul>
+
+
+<!-- more -->
+
+
+<h2>Solution</h2>
+
+<ul>
+<li>Create <code>eXo.social.Locale class:</code></li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+<span class='line-number'>64</span>
+<span class='line-number'>65</span>
+<span class='line-number'>66</span>
+<span class='line-number'>67</span>
+<span class='line-number'>68</span>
+<span class='line-number'>69</span>
+<span class='line-number'>70</span>
+<span class='line-number'>71</span>
+<span class='line-number'>72</span>
+<span class='line-number'>73</span>
+<span class='line-number'>74</span>
+<span class='line-number'>75</span>
+<span class='line-number'>76</span>
+<span class='line-number'>77</span>
+<span class='line-number'>78</span>
+<span class='line-number'>79</span>
+<span class='line-number'>80</span>
+<span class='line-number'>81</span>
+<span class='line-number'>82</span>
+<span class='line-number'>83</span>
+<span class='line-number'>84</span>
+<span class='line-number'>85</span>
+<span class='line-number'>86</span>
+<span class='line-number'>87</span>
+<span class='line-number'>88</span>
+<span class='line-number'>89</span>
+<span class='line-number'>90</span>
+<span class='line-number'>91</span>
+<span class='line-number'>92</span>
+<span class='line-number'>93</span>
+<span class='line-number'>94</span>
+<span class='line-number'>95</span>
+<span class='line-number'>96</span>
+<span class='line-number'>97</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="cm">/**</span>
+</span><span class='line'><span class="cm"> * Locale.js</span>
+</span><span class='line'><span class="cm"> * Utility for Locale, dynamic binding message bundle with arguments</span>
+</span><span class='line'><span class="cm"> * Usage:</span>
+</span><span class='line'><span class="cm"> * eXo.social.Locale.getLang(); the same as prefs.getLang();</span>
+</span><span class='line'><span class="cm"> * eXo.social.Locale.getCountry(); the same as prefs.getCountry();</span>
+</span><span class='line'><span class="cm"> * eXo.social.Locale.getMsg(key); the same as prefs.getMsg(key);</span>
+</span><span class='line'><span class="cm"> * eXo.social.Locale.getMsg(key, args); dynamic binding argument to message bundle</span>
+</span><span class='line'><span class="cm"> * @author  hoatle</span>
+</span><span class='line'><span class="cm"> * @since   October 27, 2009</span>
+</span><span class='line'><span class="cm"> * @copyright   eXo Platform</span>
+</span><span class='line'><span class="cm"> */</span>
+</span><span class='line'>
+</span><span class='line'><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="c1">//prefs object to get lang, country, message bundle</span>
+</span><span class='line'>    <span class="kd">var</span> <span class="nx">prefs</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="cm">/**</span>
+</span><span class='line'><span class="cm">     * private function to lazily initialize prefs object</span>
+</span><span class='line'><span class="cm">     */</span>
+</span><span class='line'>    <span class="kd">function</span> <span class="nx">getPrefs</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">prefs</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>            <span class="nx">prefs</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">gadgets</span><span class="p">.</span><span class="nx">Prefs</span><span class="p">();</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>        <span class="k">return</span> <span class="nx">prefs</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>    <span class="cm">/**</span>
+</span><span class='line'><span class="cm">     * Class definition</span>
+</span><span class='line'><span class="cm">     */</span>
+</span><span class='line'>    <span class="kd">var</span> <span class="nx">Locale</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>    <span class="cm">/**</span>
+</span><span class='line'><span class="cm">     * gets current lang</span>
+</span><span class='line'><span class="cm">     * @static</span>
+</span><span class='line'><span class="cm">     */</span>
+</span><span class='line'>    <span class="nx">Locale</span><span class="p">.</span><span class="nx">getLang</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">prefs</span> <span class="o">=</span> <span class="nx">getPrefs</span><span class="p">();</span>
+</span><span class='line'>        <span class="k">return</span> <span class="nx">prefs</span><span class="p">.</span><span class="nx">getLang</span><span class="p">();</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>    <span class="cm">/**</span>
+</span><span class='line'><span class="cm">     * gets current country</span>
+</span><span class='line'><span class="cm">     * @static</span>
+</span><span class='line'><span class="cm">     */</span>
+</span><span class='line'>    <span class="nx">Locale</span><span class="p">.</span><span class="nx">getCountry</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">prefs</span> <span class="o">=</span> <span class="nx">getPrefs</span><span class="p">();</span>
+</span><span class='line'>        <span class="k">return</span> <span class="nx">prefs</span><span class="p">.</span><span class="nx">getCountry</span><span class="p">();</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>    <span class="cm">/**</span>
+</span><span class='line'><span class="cm">     * alternative for prefs.getMsg(key)</span>
+</span><span class='line'><span class="cm">     * uses to getMsg with provided key and substitute args</span>
+</span><span class='line'><span class="cm">     *</span>
+</span><span class='line'><span class="cm">     * eg: Test for {0}, {1}</span>
+</span><span class='line'><span class="cm">     * If args does not match num of {\d}, warning and try to replace by corresponding index.</span>
+</span><span class='line'><span class="cm">     * {0} should be replaced by args[0], etc.,</span>
+</span><span class='line'><span class="cm">     * If args not provided, functions as prefs.getMsg(key)</span>
+</span><span class='line'><span class="cm">     * @param   key String</span>
+</span><span class='line'><span class="cm">     * @param   opt_args Array</span>
+</span><span class='line'><span class="cm">     * @static</span>
+</span><span class='line'><span class="cm">     */</span>
+</span><span class='line'>    <span class="nx">Locale</span><span class="p">.</span><span class="nx">getMsg</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">key</span><span class="p">,</span> <span class="nx">opt_args</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">prefs</span> <span class="o">=</span> <span class="nx">getPrefs</span><span class="p">();</span>
+</span><span class='line'>        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">key</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>            <span class="nx">debug</span><span class="p">.</span><span class="nx">warn</span><span class="p">(</span><span class="s1">&#39;key is null!&#39;</span><span class="p">);</span>
+</span><span class='line'>            <span class="k">return</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>        <span class="kd">var</span> <span class="nx">msg</span> <span class="o">=</span> <span class="nx">prefs</span><span class="p">.</span><span class="nx">getMsg</span><span class="p">(</span><span class="nx">key</span><span class="p">);</span>
+</span><span class='line'>        <span class="k">if</span> <span class="p">(</span><span class="nx">msg</span> <span class="o">===</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>            <span class="nx">debug</span><span class="p">.</span><span class="nx">warn</span><span class="p">(</span><span class="s1">&#39;Can not find resource bundle with key = &#39;</span> <span class="o">+</span> <span class="nx">key</span><span class="p">);</span>
+</span><span class='line'>            <span class="k">return</span> <span class="nx">msg</span><span class="p">;</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">opt_args</span><span class="p">)</span> <span class="k">return</span> <span class="nx">msg</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="c1">//checks if number of {\d} in msg matches opt_args.length</span>
+</span><span class='line'>        <span class="kd">var</span> <span class="nx">regex</span> <span class="o">=</span> <span class="sr">/{\d+}/g</span><span class="p">;</span>
+</span><span class='line'>        <span class="kd">var</span> <span class="nx">matches</span> <span class="o">=</span> <span class="nx">msg</span><span class="p">.</span><span class="nx">match</span><span class="p">(</span><span class="nx">regex</span><span class="p">);</span>
+</span><span class='line'>        <span class="k">if</span> <span class="p">(</span><span class="nx">matches</span><span class="p">.</span><span class="nx">length</span> <span class="o">!==</span> <span class="nx">opt_args</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>            <span class="nx">debug</span><span class="p">.</span><span class="nx">warn</span><span class="p">(</span><span class="s2">&quot;required &quot;</span> <span class="o">+</span> <span class="nx">matches</span><span class="p">.</span><span class="nx">length</span> <span class="o">+</span> <span class="s2">&quot; args, provided: &quot;</span> <span class="o">+</span> <span class="nx">opt_args</span><span class="p">.</span><span class="nx">length</span><span class="p">);</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>        <span class="c1">//substitutes by index: {0} in msg should be replaced by opt_args[0] and so on</span>
+</span><span class='line'>        <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">l</span> <span class="o">=</span> <span class="nx">matches</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">l</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>            <span class="kd">var</span> <span class="nx">index</span> <span class="o">=</span> <span class="nx">matches</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">match</span><span class="p">(</span><span class="sr">/\d+/g</span><span class="p">)[</span><span class="mi">0</span><span class="p">];</span>
+</span><span class='line'>            <span class="c1">//TODO should improve performance</span>
+</span><span class='line'>            <span class="kd">var</span> <span class="nx">strToReplace</span> <span class="o">=</span> <span class="nx">opt_args</span><span class="p">[</span><span class="nx">index</span><span class="p">];</span>
+</span><span class='line'>            <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">strToReplace</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>                <span class="nx">debug</span><span class="p">.</span><span class="nx">warn</span><span class="p">(</span><span class="s1">&#39;matches[&#39;</span> <span class="o">+</span> <span class="nx">i</span> <span class="o">+</span> <span class="s1">&#39;]: &#39;</span> <span class="o">+</span> <span class="nx">matches</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39; but no opt_args[&#39;</span> <span class="o">+</span> <span class="nx">index</span> <span class="o">+</span> <span class="s1">&#39;]&#39;</span><span class="p">);</span>
+</span><span class='line'>            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span><span class='line'>                <span class="nx">msg</span> <span class="o">=</span> <span class="nx">msg</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="nx">matches</span><span class="p">[</span><span class="nx">i</span><span class="p">],</span> <span class="nx">opt_args</span><span class="p">[</span><span class="nx">index</span><span class="p">]);</span>
+</span><span class='line'>            <span class="p">}</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>        <span class="k">return</span> <span class="nx">msg</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>    <span class="c1">//Expose</span>
+</span><span class='line'>    <span class="nb">window</span><span class="p">.</span><span class="nx">eXo</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">eXo</span> <span class="o">||</span> <span class="p">{};</span>
+</span><span class='line'>    <span class="nb">window</span><span class="p">.</span><span class="nx">eXo</span><span class="p">.</span><span class="nx">social</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">eXo</span><span class="p">.</span><span class="nx">social</span> <span class="o">||</span> <span class="p">{};</span>
+</span><span class='line'>    <span class="nb">window</span><span class="p">.</span><span class="nx">eXo</span><span class="p">.</span><span class="nx">social</span><span class="p">.</span><span class="nx">Locale</span> <span class="o">=</span> <span class="nx">Locale</span><span class="p">;</span>
+</span><span class='line'><span class="p">})();</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Note: The <code>eXo.social.Locale</code> class uses <code>debug</code>, thanks @cowboy for his excellent JavaScript
+log/debug. I love it &lt;3. All my projects and apps use it, you should also use this way of debug/log
+instead of alert :).</p>
+
+<p>Download sample app for testing at <a href="http://github.com/hoatle/opensocial/downloads">http://github.com/hoatle/opensocial/downloads</a></p>
+
+<p>Source code available at: <a href="http://github.com/hoatle/opensocial/tree/master/message-bundle">http://github.com/hoatle/opensocial/tree/master/message-bundle</a></p>
+
+<p>The xml app file:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+</pre></td><td class='code'><pre><code class='xml'><span class='line'><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+</span><span class='line'><span class="nt">&lt;Module&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;ModulePrefs</span> <span class="na">title=</span><span class="s">&quot;Arguments Binding Message Bundle&quot;</span>
+</span><span class='line'>                 <span class="na">description=</span><span class="s">&quot;Simple-App for arguments binding with message bundle&quot;</span>
+</span><span class='line'>                 <span class="na">author_email=</span><span class="s">&quot;hoatlevan@gmail.com&quot;</span>
+</span><span class='line'>                 <span class="na">author_affiliation=</span><span class="s">&quot;eXo Platform&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;Locale</span> <span class="na">messages=</span><span class="s">&quot;locale/ALL_ALL.xml&quot;</span> <span class="nt">/&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;Locale</span> <span class="na">lang=</span><span class="s">&quot;en&quot;</span> <span class="na">messages=</span><span class="s">&quot;locale/en_ALL.xml&quot;</span> <span class="nt">/&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;Locale</span> <span class="na">lang=</span><span class="s">&quot;vi&quot;</span> <span class="na">messages=</span><span class="s">&quot;locale/vi_ALL.xml&quot;</span> <span class="nt">/&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;Require</span> <span class="na">feature=</span><span class="s">&quot;opensocial-0.8&quot;</span> <span class="nt">/&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;/ModulePrefs&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;Content</span> <span class="na">type=</span><span class="s">&quot;html&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>    <span class="cp">&lt;![CDATA[</span>
+</span><span class='line'><span class="cp">        &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;style/style.css&quot; /&gt;</span>
+</span><span class='line'><span class="cp">        &lt;script type=&quot;text/javascript&quot; src=&quot;script/debug.js&quot;&gt;&lt;/script&gt;</span>
+</span><span class='line'><span class="cp">        &lt;script type=&quot;text/javascript&quot; src=&quot;script/eXo/social/Locale.js&quot;&gt;&lt;/script&gt;</span>
+</span><span class='line'><span class="cp">        &lt;script type=&quot;text/javascript&quot; src=&quot;script/app.js&quot;&gt;&lt;/script&gt;</span>
+</span><span class='line'><span class="cp">        &lt;p&gt;Resource bundle rendered by server: &lt;strong&gt;__MSG_hello_world__&lt;/strong&gt;&lt;/p&gt;</span>
+</span><span class='line'><span class="cp">        &lt;p&gt;Resource bundle rendered by JavaScript:&lt;/p&gt;</span>
+</span><span class='line'><span class="cp">        &lt;div id=&quot;helloMsg&quot;&gt;&lt;/div&gt;</span>
+</span><span class='line'><span class="cp">        &lt;div id=&quot;helloMsgArgs&quot;&gt;&lt;/div&gt;</span>
+</span><span class='line'><span class="cp">    ]]&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;/Content&gt;</span>
+</span><span class='line'><span class="nt">&lt;/Module&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>In the app code above, <code>__MSG_hello_world__</code> will be substituted by server with found message bundle
+with key &ldquo;hello_world&rdquo; defined in message bundles files. (in <code>/locale</code> folder).</p>
+
+<p>To test <code>eXo.social.Locale</code> class, we have the <code>app.js</code>:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">function</span> <span class="nx">run</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="kd">var</span> <span class="nx">prefs</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">gadgets</span><span class="p">.</span><span class="nx">Prefs</span><span class="p">(),</span>
+</span><span class='line'>        <span class="nx">helloWorld</span> <span class="o">=</span> <span class="nx">prefs</span><span class="p">.</span><span class="nx">getMsg</span><span class="p">(</span><span class="s1">&#39;hello_world&#39;</span><span class="p">);</span>
+</span><span class='line'>    <span class="nx">alert</span><span class="p">(</span><span class="nx">helloWorld</span><span class="p">);</span> <span class="c1">//&quot;Hello world!&quot; if current language is English</span>
+</span><span class='line'>                       <span class="c1">//&quot;Chào thế giới!&quot; if current language is Vietnamese</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="c1">//eXo.social.Locale usage</span>
+</span><span class='line'>    <span class="kd">var</span> <span class="nx">Locale</span> <span class="o">=</span> <span class="nx">eXo</span><span class="p">.</span><span class="nx">social</span><span class="p">.</span><span class="nx">Locale</span><span class="p">;</span>
+</span><span class='line'>    <span class="kd">var</span> <span class="nx">helloMsgEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;helloMsg&#39;</span><span class="p">),</span>
+</span><span class='line'>        <span class="nx">helloMsgArgsEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;helloMsgArgs&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="nx">helloMsgEl</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">Locale</span><span class="p">.</span><span class="nx">getMsg</span><span class="p">(</span><span class="s1">&#39;hello_world&#39;</span><span class="p">);</span>
+</span><span class='line'>    <span class="nx">helloMsgArgsEl</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">Locale</span><span class="p">.</span><span class="nx">getMsg</span><span class="p">(</span><span class="s1">&#39;hello_user_to_place&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;hoatle&#39;</span><span class="p">,</span> <span class="s1">&#39;Vietnam&#39;</span><span class="p">]);</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">gadgets</span><span class="p">.</span><span class="nx">util</span><span class="p">.</span><span class="nx">registerOnLoadHandler</span><span class="p">(</span><span class="nx">run</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>You can test this sample app from any OpenSocial container. Happy coding :D.</p>
+
+<p>P/S: We can use OpenSocial template for arguments binding with message bundle but it&rsquo;s currently
+not fully supported by all containers.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Gán nhiều hàm xử lý sự kiện vào một phần tử trong JavaScript]]></title>
@@ -1620,88 +2304,1418 @@ Jeremi làm việc cho eXo gần 2 năm, chuẩn bị mở công ty riêng ở T
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[music-engine indexer testing]]></title>
-    <link href="http://blog.hoatle.info/2008/12/17/music-engine-indexer-testing/"/>
-    <updated>2008-12-17T00:34:00+00:00</updated>
-    <id>http://blog.hoatle.info/2008/12/17/music-engine-indexer-testing</id>
-    <content type="html"><![CDATA[<p>Just the time for test Indexer, input is a link to play a song, output is info of that song. Currently, I am testing some other music sites and coding for music-engine on the server-side.</p>
-
-<p>You can test the Indexer at: <a href="http://musicengine.byethost13.com/">http://musicengine.byethost13.com/</a></p>
-
-<p>Free host :).</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[testing indexer]]></title>
-    <link href="http://blog.hoatle.info/2008/12/17/testing-indexer/"/>
-    <updated>2008-12-17T00:31:00+00:00</updated>
-    <id>http://blog.hoatle.info/2008/12/17/testing-indexer</id>
-    <content type="html"><![CDATA[<p>Test Indexer, input là link play 1 bài hát, output là info của bài hát đó. Hiện đang test dần 1 số trang nhạc, vừa code Indexer vừa code bên server cho music-engine.</p>
-
-<p>Bạn có thể test thử cái Indexer tại địa chỉ: <a href="http://musicengine.byethost13.com/">http://musicengine.byethost13.com/</a></p>
-
-<p>Host free :).</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[giới thiệu cái music-engine nào]]></title>
-    <link href="http://blog.hoatle.info/2008/12/16/gioi-thieu-cai-music-engine-nao/"/>
-    <updated>2008-12-16T12:13:00+00:00</updated>
-    <id>http://blog.hoatle.info/2008/12/16/gioi-thieu-cai-music-engine-nao</id>
-    <content type="html"><![CDATA[<p>Cũng suy nghĩ khá nhiều để viết 1 cái ứng dụng OpenSocial và cuối cùng tớ đi đến quyết định viết cái ứng dụng music-engine này.</p>
+    <title type="html"><![CDATA[Thiết kế bộ đếm trang (site-counter) đơn giản]]></title>
+    <link href="http://blog.hoatle.info/2008/12/21/thiet-ke-bo-dem-trang-site-counter-don-gian/"/>
+    <updated>2008-12-21T05:38:00+00:00</updated>
+    <id>http://blog.hoatle.info/2008/12/21/thiet-ke-bo-dem-trang-site-counter-don-gian</id>
+    <content type="html"><![CDATA[<p>Lại thêm một thứ đơn giản nữa :). Bộ đếm trang trước đây và cả bây giờ vẫn rất phổ biến. Có một số
+nhà cung cấp miễn phí bộ đếm cho bạn, chỉ việc đăng kí một tài khoản + nhúng đoạn code site-counter
+vào trang của bạn là xong :). Có bạn lại không thích như thế, muốn tự mình viết một cái site-counter
+riêng :). Bài viết này sẽ hướng dẫn + chia sẻ 1 bộ đếm trang đơn giản bằng PHP + MySQL.</p>
 
 <!-- more -->
 
 
-<p>Music-engine nghĩa là thế nào? Music-engine của tớ sẽ đi tìm càng nhiều thông tin về các ca khúc càng tốt (tên, ca sĩ, nhạc sĩ, link nhạc&hellip;) và sắp xếp lại vào cơ sở dữ liệu trên Google Apps.</p>
+<p>Vì bảng dữ liệu khá nhỏ nên có thể sử dụng SQLite làm cơ sở dữ liệu, nhưng hiện giờ cái site-counter
+này của tớ chỉ đang hỗ trợ MySQL.</p>
 
-<p>Music-engine sẽ cung cấp dịch vụ cho các ứng dụng OpenSocial của tớ. Người dùng có thể tìm kiếm, nghe, download, tạo và lưu playlist ưa thích. Ngoài ra, với tính năng của mạng xã hội, người dùng còn có thể gửi tặng ca khúc, playlist yêu thích cho bạn bè.</p>
+<p>Demo: <a href="http://d9k50.net/test/term7.">http://d9k50.net/test/term7.</a> Bạn để ý thấy bộ đếm trang nằm ở góc phải phía dưới ngoài cùng,
+có thống kê một số thông số nhất định về tình hình truy cập website. Bạn có thể dùng bộ đếm trang
+này để theo dõi, tuy nhiên thống kê chỉ có tính chất tương đối vì chả có cái gì là tuyệt đối
+(mà nói chung thì thống kê chẳng bao giờ đúng :D).</p>
 
-<p>Mỗi người dùng sẽ có riêng 1 kênh (có thể tự động) cập nhật những bài hát họ đang nghe. Giống như Twitter trả lời câu hỏi &ldquo;bạn đang làm gì?&rdquo; thì với Music-Engine thì bạn sẽ trả lời câu hỏi &ldquo;Bạn đang nghe gì?&rdquo;</p>
+<p><strong>1. Cấu trúc file</strong></p>
 
-<p>Vẫn còn một số tính năng quan trọng nữa nhưng có lẽ để sau, phải hoàn thành sớm sớm còn đăng kí SE Asia Contest chứ ;))</p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>- config.php // Thông số cài đặt cơ sở dữ liệu: hostname, username, password và dabasename
+</span><span class='line'>- install.php // Chạy "1 lần rồi thôi" khi lần đấu bạn cài đặt bộ đếm trang này, sau đó nên xoá luôn đi
+</span><span class='line'>- site-counter-block.php // Include file này vào bất kỳ chỗ nào trong site của bạn để hiển thị thống kê
+</span><span class='line'>- site-counter-block.tpl.php // Đây là file template
+</span><span class='line'>- site-counter-include.php // Nên Include file này vào header để session hoạt động tốt
+</span><span class='line'>- SiteCounter.class.php // SiteCounter class - quan trọng nhất
+</span><span class='line'>- site-counter-block.css // Để tùy chỉnh style cho site-counter khi hiển thị
+</span><span class='line'>- site-counter-test.php // Để test</span></code></pre></td></tr></table></div></figure>
 
-<p>Về vấn đề bản quyền? Music-engine sẽ chỉ tìm và lưu trữ thông tin chứ không lưu nhạc trên server (có muốn cũng chả được). Một số trang tìm kiếm có kiểu cache, tức là lưu file nhạc về máy chủ của mình. Việc này có phải là sao chép bất hợp pháp? Còn đối với Music-Engine, mọi hoạt động của người dùng như tìm kiếm, download hay các hoạt động khác thì đều từ phía người dùng, Music-Engine không có bất kì mối liên hệ nào cả :D.</p>
 
-<p>Chỉ là một số ý tưởng để chia sẻ. Tớ đã hoàn thành cơ bản xong mô hình cơ sở dữ liệu cũng như thử nghiệm crawl xong 1 trang nhạc.</p>
+<p>Đấy là các file thiết yếu nhất, còn lại những phụ kiện phụ khác như: CHANGELOG.txt, INSTALL.txt,
+LICENSE.txt, README.txt, TODO.txt nữa. Ở đây chỉ bàn đến mấy file quan trọng trên thôi.</p>
 
-<p>Vì Google Apps hiện tại chỉ hỗ trợ Python, thế nên hầu như sẽ code bằng Python trên server.</p>
+<p><em>2. Lần lượt phân tích từng file</em></p>
 
-<p>Vì tớ làm việc với PHP khá lâu và cũng có kinh nghiệm viết một cái news crawler mấy tháng trước. Bây giờ sẽ cải thiện cho nó thành music-crawler, không phải là news nữa.</p>
+<p>2.1 <code>config.php</code></p>
 
-<p>Bạn nào thích code cùng thì cứ liên hệ. Còn nhiều thứ phải làm quá, dù gì thì đây cũng là dự án làm cho vui :).</p>
+<p>Lưu cấu hình về hostname, username, password và databasename để site-counter chạy được. Khi cài đặt
+thì điều đầu tiên là bạn phải điền các thông số vào trong file này.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="o">&lt;?</span><span class="nx">php</span>
+</span><span class='line'><span class="c1">// $Id$</span>
+</span><span class='line'><span class="sd">/**</span>
+</span><span class='line'><span class="sd"> * Config file for SiteCounter to work</span>
+</span><span class='line'><span class="sd"> *</span>
+</span><span class='line'><span class="sd"> * Edit to match your database, replace your_host by your host name...</span>
+</span><span class='line'><span class="sd"> * your_host is the host of your database</span>
+</span><span class='line'><span class="sd"> * your_username is the MySQL account of your database</span>
+</span><span class='line'><span class="sd"> * your_password is the password for that account</span>
+</span><span class='line'><span class="sd"> * your_database is the database name</span>
+</span><span class='line'><span class="sd"> */</span>
+</span><span class='line'>
+</span><span class='line'><span class="nb">define</span><span class="p">(</span><span class="s1">&#39;HOST&#39;</span><span class="p">,</span> <span class="s1">&#39;your_host&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="nb">define</span><span class="p">(</span><span class="s1">&#39;USERNAME&#39;</span><span class="p">,</span> <span class="s1">&#39;your_username&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="nb">define</span><span class="p">(</span><span class="s1">&#39;PASSWD&#39;</span><span class="p">,</span> <span class="s1">&#39;your_password&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="nb">define</span><span class="p">(</span><span class="s1">&#39;DBNAME&#39;</span><span class="p">,</span> <span class="s1">&#39;your_databasename&#39;</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>2.2 <code>install.php</code></p>
+
+<p>&ldquo;Chạy 1 lần rồi thôi&rdquo; để tạo bảng. Sau khi báo tạo bảng thành công thì bạn nên xóa file này đi
+luôn.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="o">&lt;?</span><span class="nx">php</span>
+</span><span class='line'><span class="c1">// $Id$</span>
+</span><span class='line'><span class="sd">/**</span>
+</span><span class='line'><span class="sd"> * @file</span>
+</span><span class='line'><span class="sd"> * Install file</span>
+</span><span class='line'><span class="sd"> *</span>
+</span><span class='line'><span class="sd"> * This enables to create table site_counter in your database to track visitor&#39;s information</span>
+</span><span class='line'><span class="sd"> */</span>
+</span><span class='line'><span class="k">require_once</span> <span class="s1">&#39;config.php&#39;</span><span class="p">;</span> <span class="c1">// Configuration file</span>
+</span><span class='line'><span class="nv">$query</span> <span class="o">=</span> <span class="s2">&quot;CREATE TABLE site_counter (</span>
+</span><span class='line'><span class="s2">   `ip` varchar(20) NOT NULL,</span>
+</span><span class='line'><span class="s2">   `timestamp` int(11) NOT NULL,</span>
+</span><span class='line'><span class="s2">   `visits` int(4) DEFAULT &#39;1&#39;</span>
+</span><span class='line'><span class="s2">);&quot;</span><span class="p">;</span> <span class="c1">// Query to create table.</span>
+</span><span class='line'><span class="nb">mysql_connect</span><span class="p">(</span><span class="nx">HOST</span><span class="p">,</span> <span class="nx">USERNAME</span><span class="p">,</span> <span class="nx">PASSWD</span><span class="p">)</span> <span class="k">or</span> <span class="k">die</span><span class="p">(</span><span class="s1">&#39;Could not connect to the host!&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="nb">mysql_select_db</span><span class="p">(</span><span class="nx">DBNAME</span><span class="p">)</span> <span class="k">or</span> <span class="k">die</span><span class="p">(</span><span class="s1">&#39;Could not select database!&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="nb">mysql_query</span><span class="p">(</span><span class="nv">$query</span><span class="p">)</span> <span class="k">or</span> <span class="k">die</span><span class="p">(</span><span class="s1">&#39;Could not create table!&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="k">echo</span> <span class="s1">&#39;Successful create table for site-counter! Please delete this install.php file by now.&#39;</span><span class="p">;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Ở đây sau khi chạy thành công sẽ tạo được bảng <code>site_counter</code> với 1 số trường sau: <code>ip (distinct)</code>,
+<code>timestamp</code>, <code>visits</code>. Nếu chưa có <code>ip</code> trong bảng thì <code>insert</code>, nếu có rồi và là <code>session</code> mới thì
+<code>update</code> tăng <code>visits</code> lên 1. Chỉ thế thôi.</p>
+
+<p>2.3 <code>SiteCounter.php</code></p>
+
+<p>Quan trọng bậc nhất và là cái đáng bàn nhiều nhất. Tuy nhiên khi nhìn vào source code là bạn có thể
+biết được cách hoạt động của nó luôn.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+<span class='line-number'>64</span>
+<span class='line-number'>65</span>
+<span class='line-number'>66</span>
+<span class='line-number'>67</span>
+<span class='line-number'>68</span>
+<span class='line-number'>69</span>
+<span class='line-number'>70</span>
+<span class='line-number'>71</span>
+<span class='line-number'>72</span>
+<span class='line-number'>73</span>
+<span class='line-number'>74</span>
+<span class='line-number'>75</span>
+<span class='line-number'>76</span>
+<span class='line-number'>77</span>
+<span class='line-number'>78</span>
+<span class='line-number'>79</span>
+<span class='line-number'>80</span>
+<span class='line-number'>81</span>
+<span class='line-number'>82</span>
+<span class='line-number'>83</span>
+<span class='line-number'>84</span>
+<span class='line-number'>85</span>
+<span class='line-number'>86</span>
+<span class='line-number'>87</span>
+<span class='line-number'>88</span>
+<span class='line-number'>89</span>
+<span class='line-number'>90</span>
+<span class='line-number'>91</span>
+<span class='line-number'>92</span>
+<span class='line-number'>93</span>
+<span class='line-number'>94</span>
+<span class='line-number'>95</span>
+<span class='line-number'>96</span>
+<span class='line-number'>97</span>
+<span class='line-number'>98</span>
+<span class='line-number'>99</span>
+<span class='line-number'>100</span>
+<span class='line-number'>101</span>
+<span class='line-number'>102</span>
+<span class='line-number'>103</span>
+<span class='line-number'>104</span>
+<span class='line-number'>105</span>
+<span class='line-number'>106</span>
+<span class='line-number'>107</span>
+<span class='line-number'>108</span>
+<span class='line-number'>109</span>
+<span class='line-number'>110</span>
+<span class='line-number'>111</span>
+<span class='line-number'>112</span>
+<span class='line-number'>113</span>
+<span class='line-number'>114</span>
+<span class='line-number'>115</span>
+<span class='line-number'>116</span>
+<span class='line-number'>117</span>
+<span class='line-number'>118</span>
+<span class='line-number'>119</span>
+<span class='line-number'>120</span>
+<span class='line-number'>121</span>
+<span class='line-number'>122</span>
+<span class='line-number'>123</span>
+<span class='line-number'>124</span>
+<span class='line-number'>125</span>
+<span class='line-number'>126</span>
+<span class='line-number'>127</span>
+<span class='line-number'>128</span>
+<span class='line-number'>129</span>
+<span class='line-number'>130</span>
+<span class='line-number'>131</span>
+<span class='line-number'>132</span>
+<span class='line-number'>133</span>
+<span class='line-number'>134</span>
+<span class='line-number'>135</span>
+<span class='line-number'>136</span>
+<span class='line-number'>137</span>
+<span class='line-number'>138</span>
+<span class='line-number'>139</span>
+<span class='line-number'>140</span>
+<span class='line-number'>141</span>
+<span class='line-number'>142</span>
+<span class='line-number'>143</span>
+<span class='line-number'>144</span>
+<span class='line-number'>145</span>
+<span class='line-number'>146</span>
+<span class='line-number'>147</span>
+<span class='line-number'>148</span>
+<span class='line-number'>149</span>
+<span class='line-number'>150</span>
+<span class='line-number'>151</span>
+<span class='line-number'>152</span>
+<span class='line-number'>153</span>
+<span class='line-number'>154</span>
+<span class='line-number'>155</span>
+<span class='line-number'>156</span>
+<span class='line-number'>157</span>
+<span class='line-number'>158</span>
+<span class='line-number'>159</span>
+<span class='line-number'>160</span>
+<span class='line-number'>161</span>
+<span class='line-number'>162</span>
+<span class='line-number'>163</span>
+<span class='line-number'>164</span>
+<span class='line-number'>165</span>
+<span class='line-number'>166</span>
+<span class='line-number'>167</span>
+<span class='line-number'>168</span>
+<span class='line-number'>169</span>
+<span class='line-number'>170</span>
+<span class='line-number'>171</span>
+<span class='line-number'>172</span>
+<span class='line-number'>173</span>
+<span class='line-number'>174</span>
+<span class='line-number'>175</span>
+<span class='line-number'>176</span>
+<span class='line-number'>177</span>
+<span class='line-number'>178</span>
+<span class='line-number'>179</span>
+<span class='line-number'>180</span>
+<span class='line-number'>181</span>
+<span class='line-number'>182</span>
+<span class='line-number'>183</span>
+<span class='line-number'>184</span>
+<span class='line-number'>185</span>
+<span class='line-number'>186</span>
+<span class='line-number'>187</span>
+<span class='line-number'>188</span>
+<span class='line-number'>189</span>
+<span class='line-number'>190</span>
+<span class='line-number'>191</span>
+<span class='line-number'>192</span>
+<span class='line-number'>193</span>
+<span class='line-number'>194</span>
+<span class='line-number'>195</span>
+<span class='line-number'>196</span>
+<span class='line-number'>197</span>
+<span class='line-number'>198</span>
+<span class='line-number'>199</span>
+<span class='line-number'>200</span>
+<span class='line-number'>201</span>
+<span class='line-number'>202</span>
+<span class='line-number'>203</span>
+<span class='line-number'>204</span>
+<span class='line-number'>205</span>
+<span class='line-number'>206</span>
+<span class='line-number'>207</span>
+<span class='line-number'>208</span>
+<span class='line-number'>209</span>
+<span class='line-number'>210</span>
+<span class='line-number'>211</span>
+<span class='line-number'>212</span>
+<span class='line-number'>213</span>
+<span class='line-number'>214</span>
+<span class='line-number'>215</span>
+<span class='line-number'>216</span>
+<span class='line-number'>217</span>
+<span class='line-number'>218</span>
+<span class='line-number'>219</span>
+<span class='line-number'>220</span>
+<span class='line-number'>221</span>
+<span class='line-number'>222</span>
+<span class='line-number'>223</span>
+<span class='line-number'>224</span>
+<span class='line-number'>225</span>
+<span class='line-number'>226</span>
+<span class='line-number'>227</span>
+<span class='line-number'>228</span>
+<span class='line-number'>229</span>
+<span class='line-number'>230</span>
+<span class='line-number'>231</span>
+<span class='line-number'>232</span>
+<span class='line-number'>233</span>
+<span class='line-number'>234</span>
+<span class='line-number'>235</span>
+<span class='line-number'>236</span>
+<span class='line-number'>237</span>
+<span class='line-number'>238</span>
+<span class='line-number'>239</span>
+<span class='line-number'>240</span>
+<span class='line-number'>241</span>
+<span class='line-number'>242</span>
+<span class='line-number'>243</span>
+<span class='line-number'>244</span>
+<span class='line-number'>245</span>
+<span class='line-number'>246</span>
+<span class='line-number'>247</span>
+<span class='line-number'>248</span>
+<span class='line-number'>249</span>
+<span class='line-number'>250</span>
+<span class='line-number'>251</span>
+<span class='line-number'>252</span>
+<span class='line-number'>253</span>
+<span class='line-number'>254</span>
+<span class='line-number'>255</span>
+<span class='line-number'>256</span>
+<span class='line-number'>257</span>
+<span class='line-number'>258</span>
+<span class='line-number'>259</span>
+<span class='line-number'>260</span>
+<span class='line-number'>261</span>
+<span class='line-number'>262</span>
+<span class='line-number'>263</span>
+<span class='line-number'>264</span>
+<span class='line-number'>265</span>
+<span class='line-number'>266</span>
+<span class='line-number'>267</span>
+<span class='line-number'>268</span>
+<span class='line-number'>269</span>
+<span class='line-number'>270</span>
+<span class='line-number'>271</span>
+<span class='line-number'>272</span>
+<span class='line-number'>273</span>
+<span class='line-number'>274</span>
+<span class='line-number'>275</span>
+<span class='line-number'>276</span>
+<span class='line-number'>277</span>
+<span class='line-number'>278</span>
+<span class='line-number'>279</span>
+<span class='line-number'>280</span>
+<span class='line-number'>281</span>
+<span class='line-number'>282</span>
+<span class='line-number'>283</span>
+<span class='line-number'>284</span>
+<span class='line-number'>285</span>
+<span class='line-number'>286</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="o">&lt;?</span><span class="nx">php</span>
+</span><span class='line'><span class="c1">// $Id$</span>
+</span><span class='line'><span class="sd">/**</span>
+</span><span class='line'><span class="sd"> * start session handler to avoid repetitive request info (visits) update for each session</span>
+</span><span class='line'><span class="sd"> *</span>
+</span><span class='line'><span class="sd"> * Is there any other better solution???</span>
+</span><span class='line'><span class="sd"> */</span>
+</span><span class='line'><span class="nb">session_start</span><span class="p">();</span>
+</span><span class='line'>
+</span><span class='line'><span class="sd">/**</span>
+</span><span class='line'><span class="sd"> * SiteCounter class to track and update basic site&#39;s info</span>
+</span><span class='line'><span class="sd"> *</span>
+</span><span class='line'><span class="sd"> * This is a Singleton Class to track and update basic site&#39;s info</span>
+</span><span class='line'><span class="sd"> * such as: IP, Visits, Total hits, Online, Unique visitors</span>
+</span><span class='line'><span class="sd"> *</span>
+</span><span class='line'><span class="sd"> * @copyright  hoatle (hoatle.net)</span>
+</span><span class='line'><span class="sd"> * @author     hoatle</span>
+</span><span class='line'><span class="sd"> * @license    http://opensource.org/licenses/gpl-license.php GNU Public License</span>
+</span><span class='line'><span class="sd"> * @version    1.0</span>
+</span><span class='line'><span class="sd"> * @link       http://hoatle.net/Project-Site-Counter</span>
+</span><span class='line'><span class="sd"> * @since      Class available since Release 1.0</span>
+</span><span class='line'><span class="sd"> */</span>
+</span><span class='line'><span class="k">class</span> <span class="nc">SiteCounter</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="sd">/**</span>
+</span><span class='line'><span class="sd">     * static property to hold singleton instance</span>
+</span><span class='line'><span class="sd">     * @access private</span>
+</span><span class='line'><span class="sd">     * @static</span>
+</span><span class='line'><span class="sd">     * @var SiteCounter</span>
+</span><span class='line'><span class="sd">     */</span>
+</span><span class='line'>    <span class="k">private</span> <span class="k">static</span> <span class="nv">$instance</span> <span class="o">=</span> <span class="k">false</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="sd">/**</span>
+</span><span class='line'><span class="sd">     * constant duration (in minutes) to get total online users</span>
+</span><span class='line'><span class="sd">     */</span>
+</span><span class='line'>    <span class="k">const</span> <span class="no">DURATION</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="sd">/**</span>
+</span><span class='line'><span class="sd">     * ip addressquery</span>
+</span><span class='line'><span class="sd">     * @access private</span>
+</span><span class='line'><span class="sd">     * @var string</span>
+</span><span class='line'><span class="sd">     */</span>
+</span><span class='line'>    <span class="k">private</span> <span class="nv">$ip</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="sd">/**</span>
+</span><span class='line'><span class="sd">     * number of visitis to your site from  this IP address</span>
+</span><span class='line'><span class="sd">     * @access private</span>
+</span><span class='line'><span class="sd">     * @var integer</span>
+</span><span class='line'><span class="sd">     */</span>
+</span><span class='line'>    <span class="k">private</span> <span class="nv">$visits</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="sd">/**</span>
+</span><span class='line'><span class="sd">     * number of online visitors</span>
+</span><span class='line'><span class="sd">     * @access private</span>
+</span><span class='line'><span class="sd">     * @var integer</span>
+</span><span class='line'><span class="sd">     */</span>
+</span><span class='line'>    <span class="k">private</span> <span class="nv">$online</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="sd">/**</span>
+</span><span class='line'><span class="sd">     * number of total hits since your connter&#39;s first operation</span>
+</span><span class='line'><span class="sd">     * @access private</span>
+</span><span class='line'><span class="sd">     * @var integer</span>
+</span><span class='line'><span class="sd">     */</span>
+</span><span class='line'>    <span class="k">private</span> <span class="nv">$totalHits</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="sd">/**</span>
+</span><span class='line'><span class="sd">     * number of unique visitors (ip address) since your counter&#39;s first operation</span>
+</span><span class='line'><span class="sd">     * @access private</span>
+</span><span class='line'><span class="sd">     * @var integer</span>
+</span><span class='line'><span class="sd">     */</span>
+</span><span class='line'>    <span class="k">private</span> <span class="nv">$unique</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="sd">/**</span>
+</span><span class='line'><span class="sd">     * database connection id to access</span>
+</span><span class='line'><span class="sd">     * @access private</span>
+</span><span class='line'><span class="sd">     * @static</span>
+</span><span class='line'><span class="sd">     * @var resource</span>
+</span><span class='line'><span class="sd">     */</span>
+</span><span class='line'>    <span class="k">private</span> <span class="k">static</span> <span class="nv">$dbConnectionId</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="sd">/**</span>
+</span><span class='line'><span class="sd">     * SiteCounter::__construct()</span>
+</span><span class='line'><span class="sd">     *</span>
+</span><span class='line'><span class="sd">     * private so only getInstance() method can instantiate</span>
+</span><span class='line'><span class="sd">     * @access private</span>
+</span><span class='line'><span class="sd">     * @return void</span>
+</span><span class='line'><span class="sd">     */</span>
+</span><span class='line'>    <span class="k">private</span> <span class="k">function</span> <span class="nf">__construct</span><span class="p">()</span>
+</span><span class='line'>    <span class="p">{</span>
+</span><span class='line'>        <span class="c1">// Get the IP address</span>
+</span><span class='line'>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">ip</span> <span class="o">=</span> <span class="nv">$_SERVER</span><span class="p">[</span><span class="s1">&#39;REMOTE_ADDR&#39;</span><span class="p">];</span>
+</span><span class='line'>        <span class="c1">// Get Info from request and insert to the database</span>
+</span><span class='line'>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_updateRequestInfo</span><span class="p">();</span>
+</span><span class='line'>        <span class="c1">// Get Info from database and update Counter instance</span>
+</span><span class='line'>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_updateCounterInfo</span><span class="p">();</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="sd">/**</span>
+</span><span class='line'><span class="sd">     * SiteCounter::_updateRequestInfo()</span>
+</span><span class='line'><span class="sd">     *</span>
+</span><span class='line'><span class="sd">     * Get request info and update database</span>
+</span><span class='line'><span class="sd">     * @access private</span>
+</span><span class='line'><span class="sd">     * @return void</span>
+</span><span class='line'><span class="sd">     */</span>
+</span><span class='line'>    <span class="k">private</span> <span class="k">function</span> <span class="nf">_updateRequestInfo</span><span class="p">()</span>
+</span><span class='line'>    <span class="p">{</span>
+</span><span class='line'>        <span class="c1">// Get current timestamp</span>
+</span><span class='line'>        <span class="nv">$time</span> <span class="o">=</span> <span class="nb">time</span><span class="p">();</span>
+</span><span class='line'>        <span class="nv">$query</span> <span class="o">=</span> <span class="s2">&quot;SELECT * FROM site_counter &quot;</span>
+</span><span class='line'>               <span class="o">.</span> <span class="s2">&quot;WHERE `ip` = &#39;</span><span class="si">$this-&gt;ip</span><span class="s2">&#39;&quot;</span><span class="p">;</span>
+</span><span class='line'>        <span class="nv">$res</span> <span class="o">=</span> <span class="nb">mysql_query</span><span class="p">(</span><span class="nv">$query</span><span class="p">,</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_getDbConnection</span><span class="p">());</span>
+</span><span class='line'>        <span class="nv">$row</span> <span class="o">=</span> <span class="nb">mysql_fetch_object</span><span class="p">(</span><span class="nv">$res</span><span class="p">);</span>
+</span><span class='line'>        <span class="c1">// Check ip existence in the table</span>
+</span><span class='line'>        <span class="k">if</span> <span class="p">(</span><span class="nv">$row</span><span class="o">-&gt;</span><span class="na">ip</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>          <span class="c1">// If ip exists, update visits</span>
+</span><span class='line'>          <span class="nv">$visits</span> <span class="o">=</span> <span class="nv">$row</span><span class="o">-&gt;</span><span class="na">visits</span><span class="p">;</span> <span class="c1">// current on database</span>
+</span><span class='line'>          <span class="c1">// increase $visits on each session only</span>
+</span><span class='line'>          <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">&#39;visitsIncreased&#39;</span><span class="p">])</span> <span class="p">{</span>
+</span><span class='line'>              <span class="nv">$visits</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
+</span><span class='line'>              <span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">&#39;visitsIncreased&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="k">true</span><span class="p">;</span>
+</span><span class='line'>          <span class="p">}</span>
+</span><span class='line'>          <span class="nv">$query</span> <span class="o">=</span> <span class="s2">&quot;UPDATE site_counter &quot;</span>
+</span><span class='line'>                 <span class="o">.</span> <span class="s2">&quot;SET `timestamp` = </span><span class="si">$time</span><span class="s2">, `visits` = </span><span class="si">$visits</span><span class="s2"> &quot;</span>
+</span><span class='line'>                 <span class="o">.</span> <span class="s2">&quot;WHERE `ip` = &#39;</span><span class="si">$this-&gt;ip</span><span class="s2">&#39;&quot;</span><span class="p">;</span>
+</span><span class='line'>        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span><span class='line'>          <span class="c1">// Else, insert into database</span>
+</span><span class='line'>          <span class="nv">$query</span> <span class="o">=</span> <span class="s2">&quot;INSERT site_counter(`ip`, `timestamp`, `visits`) &quot;</span>
+</span><span class='line'>                 <span class="o">.</span> <span class="s2">&quot;VALUES (&#39;</span><span class="si">$this-&gt;ip</span><span class="s2">&#39;, </span><span class="si">$time</span><span class="s2">, 1)&quot;</span><span class="p">;</span>
+</span><span class='line'>          <span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">&#39;visitsIncreased&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="k">true</span><span class="p">;</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>        <span class="nb">mysql_query</span><span class="p">(</span><span class="nv">$query</span><span class="p">,</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_getDbConnection</span><span class="p">())</span> <span class="k">or</span> <span class="k">die</span> <span class="p">(</span><span class="s1">&#39;Could not query database!&#39;</span><span class="p">);</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="sd">/**</span>
+</span><span class='line'><span class="sd">     * SiteCounter::_updateCounterInfo()</span>
+</span><span class='line'><span class="sd">     *</span>
+</span><span class='line'><span class="sd">     * Get database info and update Counter&#39;s attributes</span>
+</span><span class='line'><span class="sd">     * @access private</span>
+</span><span class='line'><span class="sd">     * @return void</span>
+</span><span class='line'><span class="sd">     */</span>
+</span><span class='line'>    <span class="k">private</span> <span class="k">function</span> <span class="nf">_updateCounterInfo</span><span class="p">()</span>
+</span><span class='line'>    <span class="p">{</span>
+</span><span class='line'>        <span class="c1">// Get online visitors</span>
+</span><span class='line'>        <span class="c1">// limit time</span>
+</span><span class='line'>        <span class="nv">$limitTime</span> <span class="o">=</span> <span class="nb">time</span><span class="p">()</span> <span class="o">-</span> <span class="p">(</span><span class="nx">self</span><span class="o">::</span><span class="na">DURATION</span> <span class="o">*</span> <span class="mi">60</span><span class="p">);</span> <span class="c1">// Count in senconds</span>
+</span><span class='line'>        <span class="nv">$query</span> <span class="o">=</span> <span class="s2">&quot;SELECT COUNT(*) `online` FROM site_counter &quot;</span>
+</span><span class='line'>               <span class="o">.</span> <span class="s2">&quot;WHERE `timestamp` &gt; </span><span class="si">$limitTime</span><span class="s2">&quot;</span><span class="p">;</span>
+</span><span class='line'>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">online</span> <span class="o">=</span> <span class="nb">mysql_fetch_object</span><span class="p">(</span><span class="nb">mysql_query</span><span class="p">(</span><span class="nv">$query</span><span class="p">,</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_getDbConnection</span><span class="p">()))</span><span class="o">-&gt;</span><span class="na">online</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="c1">// Get visits</span>
+</span><span class='line'>        <span class="nv">$query</span> <span class="o">=</span> <span class="s2">&quot;SELECT `visits` FROM site_counter &quot;</span>
+</span><span class='line'>               <span class="o">.</span> <span class="s2">&quot;WHERE `ip` = &#39;</span><span class="si">$this-&gt;ip</span><span class="s2">&#39;&quot;</span><span class="p">;</span>
+</span><span class='line'>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">visits</span> <span class="o">=</span> <span class="nb">mysql_fetch_object</span><span class="p">(</span><span class="nb">mysql_query</span><span class="p">(</span><span class="nv">$query</span><span class="p">,</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_getDbConnection</span><span class="p">()))</span><span class="o">-&gt;</span><span class="na">visits</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="c1">// Get total hits</span>
+</span><span class='line'>        <span class="nv">$query</span> <span class="o">=</span> <span class="s2">&quot;SELECT SUM(`visits`) `totalHits` &quot;</span>
+</span><span class='line'>               <span class="o">.</span> <span class="s2">&quot;FROM site_counter&quot;</span><span class="p">;</span>
+</span><span class='line'>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">totalHits</span> <span class="o">=</span> <span class="nb">mysql_fetch_object</span><span class="p">(</span><span class="nb">mysql_query</span><span class="p">(</span><span class="nv">$query</span><span class="p">,</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_getDbConnection</span><span class="p">()))</span><span class="o">-&gt;</span><span class="na">totalHits</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="c1">// Get the number of unique visitors</span>
+</span><span class='line'>        <span class="nv">$query</span> <span class="o">=</span> <span class="s2">&quot;SELECT COUNT(*) `unique` FROM site_counter&quot;</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">unique</span> <span class="o">=</span> <span class="nb">mysql_fetch_object</span><span class="p">(</span><span class="nb">mysql_query</span><span class="p">(</span><span class="nv">$query</span><span class="p">,</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_getDbConnection</span><span class="p">()))</span><span class="o">-&gt;</span><span class="na">unique</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="sd">/**</span>
+</span><span class='line'><span class="sd">     * SiteCounter::_getDbConnection()</span>
+</span><span class='line'><span class="sd">     *</span>
+</span><span class='line'><span class="sd">     * Get database connection resource, this is a singleton pattern. This method get config constant</span>
+</span><span class='line'><span class="sd">     * from config.php file: HOST, USERNAME, PASSWD, DBNAME</span>
+</span><span class='line'><span class="sd">     * @access private</span>
+</span><span class='line'><span class="sd">     * @return resource $dbConnectionId</span>
+</span><span class='line'><span class="sd">     */</span>
+</span><span class='line'>    <span class="k">private</span> <span class="k">function</span> <span class="nf">_getDbConnection</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>       <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">self</span><span class="o">::</span><span class="nv">$dbConnectionId</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>           <span class="nx">self</span><span class="o">::</span><span class="nv">$dbConnectionId</span> <span class="o">=</span> <span class="nb">mysql_connect</span><span class="p">(</span><span class="nx">HOST</span><span class="p">,</span> <span class="nx">USERNAME</span><span class="p">,</span> <span class="nx">PASSWD</span><span class="p">)</span> <span class="k">or</span> <span class="k">die</span><span class="p">(</span><span class="s1">&#39;Error connect to host: &#39;</span> <span class="o">.</span> <span class="nx">HOST</span><span class="p">);</span>
+</span><span class='line'>           <span class="nb">mysql_select_db</span><span class="p">(</span><span class="nx">DBNAME</span><span class="p">,</span> <span class="nx">self</span><span class="o">::</span><span class="nv">$dbConnectionId</span><span class="p">)</span> <span class="k">or</span> <span class="k">die</span><span class="p">(</span><span class="s1">&#39;Error connect to database: &#39;</span> <span class="o">.</span> <span class="nx">DBNAME</span><span class="p">);</span>
+</span><span class='line'>       <span class="p">}</span>
+</span><span class='line'>       <span class="k">return</span> <span class="nx">self</span><span class="o">::</span><span class="nv">$dbConnectionId</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="sd">/**</span>
+</span><span class='line'><span class="sd">     * SiteCounter::getInstance()</span>
+</span><span class='line'><span class="sd">     *</span>
+</span><span class='line'><span class="sd">     * factory method to return the singleton instance</span>
+</span><span class='line'><span class="sd">     * @access public</span>
+</span><span class='line'><span class="sd">     * @static</span>
+</span><span class='line'><span class="sd">     * @return Counter $instance</span>
+</span><span class='line'><span class="sd">     */</span>
+</span><span class='line'>    <span class="k">public</span> <span class="k">static</span> <span class="k">function</span> <span class="nf">getInstance</span><span class="p">()</span>
+</span><span class='line'>    <span class="p">{</span>
+</span><span class='line'>        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">self</span><span class="o">::</span><span class="nv">$instance</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>            <span class="c1">// If no instance, just create one</span>
+</span><span class='line'>            <span class="nx">self</span><span class="o">::</span><span class="nv">$instance</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">SiteCounter</span><span class="p">();</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>        <span class="k">return</span> <span class="nx">self</span><span class="o">::</span><span class="nv">$instance</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="sd">/**</span>
+</span><span class='line'><span class="sd">     * SiteCounter::__clone()</span>
+</span><span class='line'><span class="sd">     *</span>
+</span><span class='line'><span class="sd">     * Prevent from object clonning</span>
+</span><span class='line'><span class="sd">     * @access public</span>
+</span><span class='line'><span class="sd">     * @return Exception</span>
+</span><span class='line'><span class="sd">     */</span>
+</span><span class='line'>    <span class="k">final</span> <span class="k">public</span> <span class="k">function</span> <span class="nf">__clone</span><span class="p">()</span>
+</span><span class='line'>    <span class="p">{</span>
+</span><span class='line'>        <span class="k">return</span> <span class="k">new</span> <span class="nx">Exception</span><span class="p">(</span><span class="s1">&#39;This Counter object can not be cloned!&#39;</span><span class="p">);</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="cm">/*</span>
+</span><span class='line'><span class="cm">     * Getter method</span>
+</span><span class='line'><span class="cm">     *</span>
+</span><span class='line'><span class="cm">     * This magic getter method will return Counter&#39;s attributes if any</span>
+</span><span class='line'><span class="cm">     * @acess public</span>
+</span><span class='line'><span class="cm">     * @return mixed</span>
+</span><span class='line'><span class="cm">     */</span>
+</span><span class='line'>    <span class="k">public</span> <span class="k">function</span> <span class="nf">__get</span><span class="p">(</span><span class="nv">$property</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nv">$methodName</span> <span class="o">=</span> <span class="s2">&quot;get</span><span class="si">{</span><span class="nv">$property</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">;</span>
+</span><span class='line'>        <span class="k">if</span> <span class="p">(</span><span class="nb">method_exists</span><span class="p">(</span><span class="nv">$this</span><span class="p">,</span> <span class="nv">$methodName</span><span class="p">))</span> <span class="p">{</span>
+</span><span class='line'>            <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="nv">$methodName</span><span class="p">();</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="sd">/**</span>
+</span><span class='line'><span class="sd">     * SiteCounter::getIp()</span>
+</span><span class='line'><span class="sd">     *</span>
+</span><span class='line'><span class="sd">     * Get Ip address from the current request</span>
+</span><span class='line'><span class="sd">     * @access public</span>
+</span><span class='line'><span class="sd">     * @return string $ip</span>
+</span><span class='line'><span class="sd">     */</span>
+</span><span class='line'>    <span class="k">public</span> <span class="k">function</span> <span class="nf">getIp</span><span class="p">()</span>
+</span><span class='line'>    <span class="p">{</span>
+</span><span class='line'>        <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">ip</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="sd">/**</span>
+</span><span class='line'><span class="sd">     * SiteCounter::getVisits()</span>
+</span><span class='line'><span class="sd">     *</span>
+</span><span class='line'><span class="sd">     * Get number of visits from the current request</span>
+</span><span class='line'><span class="sd">     * @access public</span>
+</span><span class='line'><span class="sd">     * @return integer $visits</span>
+</span><span class='line'><span class="sd">     */</span>
+</span><span class='line'>    <span class="k">public</span> <span class="k">function</span> <span class="nf">getVisits</span><span class="p">()</span>
+</span><span class='line'>    <span class="p">{</span>
+</span><span class='line'>        <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">visits</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="sd">/**</span>
+</span><span class='line'><span class="sd">     * SiteCounter::getOnline()</span>
+</span><span class='line'><span class="sd">     *</span>
+</span><span class='line'><span class="sd">     * Get number of online user at the time of request</span>
+</span><span class='line'><span class="sd">     * @access public</span>
+</span><span class='line'><span class="sd">     * @return integer $online</span>
+</span><span class='line'><span class="sd">     */</span>
+</span><span class='line'>    <span class="k">public</span> <span class="k">function</span> <span class="nf">getOnline</span><span class="p">()</span>
+</span><span class='line'>    <span class="p">{</span>
+</span><span class='line'>        <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">online</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="sd">/**</span>
+</span><span class='line'><span class="sd">     * SiteCounter::getTotalHits()</span>
+</span><span class='line'><span class="sd">     *</span>
+</span><span class='line'><span class="sd">     * Get total hits from the day of site-counter&#39;s operation</span>
+</span><span class='line'><span class="sd">     * @access public</span>
+</span><span class='line'><span class="sd">     * @return integer $totalHits</span>
+</span><span class='line'><span class="sd">     */</span>
+</span><span class='line'>    <span class="k">public</span> <span class="k">function</span> <span class="nf">getTotalHits</span><span class="p">()</span>
+</span><span class='line'>    <span class="p">{</span>
+</span><span class='line'>        <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">totalHits</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="sd">/**</span>
+</span><span class='line'><span class="sd">     * SiteCounter::getUnique()</span>
+</span><span class='line'><span class="sd">     *</span>
+</span><span class='line'><span class="sd">     * Get the total number of unique visitor (ip address)</span>
+</span><span class='line'><span class="sd">     * @access public</span>
+</span><span class='line'><span class="sd">     * @return integer $unique</span>
+</span><span class='line'><span class="sd">     */</span>
+</span><span class='line'>    <span class="k">public</span> <span class="k">function</span> <span class="nf">getUnique</span><span class="p">()</span>
+</span><span class='line'>    <span class="p">{</span>
+</span><span class='line'>        <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">unique</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Ý tưởng cho class SiteCounter: Singleton vì có thể được gọi 2 lần trong 1 file, nhưng chỉ được phép
+có 1 instance trong 1 lần request. Đầu tiên là lấy ip của người dùng. Bước 1 là cập nhật cơ sở dữ
+liệu (<code>_updateRequestInfo</code>): kiểm tra ip có tồn tại hay chưa, nếu chưa thì thêm 1 record vào bảng,
+nếu rồi thì update visits tăng lên 1. Bước 2 là cập nhật đối tượng SiteCounter để sau đó lấy thông
+tin về $ip, $visits, $online, $totalHits, $unique thông qua đối tượng được khởi tạo từ class
+SiteCounter. Ví dụ:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="nv">$counter</span> <span class="o">=</span> <span class="nx">SiteCounter</span><span class="o">::</span><span class="na">getInstance</span><span class="p">();</span>
+</span><span class='line'><span class="nv">$counter</span><span class="o">-&gt;</span><span class="na">getIp</span><span class="p">();</span> <span class="c1">// = $counter-&gt;Ip;</span>
+</span><span class='line'><span class="nv">$counter</span><span class="o">-&gt;</span><span class="na">Online</span><span class="p">;</span> <span class="c1">// = $counter-&gt;getOnline();</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Có thể thấy có 2 cách lấy thuộc tính như vậy là do magic method <strong>get() được implement. Khi bạn truy
+cập thuộc tính của 1 object mà không public thì hàm </strong>get() này sẽ được gọi và tham số được truyền
+vào chính là property bạn gọi thông qua object. Tất nhiên là bạn cũng phải implement các hàm Getter
+trước rồi đã, đây coi như chỉ là helper method mà thôi.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="cm">/*</span>
+</span><span class='line'><span class="cm"> * Getter method</span>
+</span><span class='line'><span class="cm"> *</span>
+</span><span class='line'><span class="cm"> * This magic getter method will return Counter&#39;s attributes if any</span>
+</span><span class='line'><span class="cm"> * @acess public</span>
+</span><span class='line'><span class="cm"> * @return mixed</span>
+</span><span class='line'><span class="cm"> */</span>
+</span><span class='line'><span class="k">public</span> <span class="k">function</span> <span class="nf">__get</span><span class="p">(</span><span class="nv">$property</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nv">$methodName</span> <span class="o">=</span> <span class="s2">&quot;get</span><span class="si">{</span><span class="nv">$property</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="nb">method_exists</span><span class="p">(</span><span class="nv">$this</span><span class="p">,</span> <span class="nv">$methodName</span><span class="p">))</span> <span class="p">{</span>
+</span><span class='line'>        <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="nv">$methodName</span><span class="p">();</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>2.4 Bây giờ đến phần sử dụng class SiteCounter trên.</p>
+
+<p>Đầu tiên là sẽ có 2 file được include vào trang theo dõi của bạn: site-counter-include.php và
+site-counter-block.php để hiển thị. site-counter-include.php luôn phải được include vào header của
+trang vì sử dụng session, nếu include sau 1 vài file thì rất có thể session sẽ không được tạo vì
+header đã được gửi lại cho phía client => Warning.</p>
+
+<p>File site-counter-include.php</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="o">&lt;?</span><span class="nx">php</span>
+</span><span class='line'><span class="c1">// $Id$</span>
+</span><span class='line'><span class="sd">/**</span>
+</span><span class='line'><span class="sd"> * @file tracking visitor&#39;s information</span>
+</span><span class='line'><span class="sd"> *</span>
+</span><span class='line'><span class="sd"> * To track every visitor&#39;s information on every request to any page on your website,</span>
+</span><span class='line'><span class="sd"> * include this file on your header or footer part or any that that is represented on</span>
+</span><span class='line'><span class="sd"> * every page of your site.</span>
+</span><span class='line'><span class="sd"> */</span>
+</span><span class='line'><span class="k">require_once</span> <span class="s1">&#39;config.php&#39;</span><span class="p">;</span>
+</span><span class='line'><span class="k">require_once</span> <span class="s1">&#39;SiteCounter.class.php&#39;</span><span class="p">;</span>
+</span><span class='line'><span class="nv">$counter</span> <span class="o">=</span> <span class="nx">SiteCounter</span><span class="o">::</span><span class="na">getInstance</span><span class="p">();</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>File site-conter-block.php, site-counter-block.tpl.php và site-counter-block.css để hiển thị:</p>
+
+<p>File site-counter-block.php</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="o">&lt;?</span><span class="nx">php</span>
+</span><span class='line'><span class="c1">// $Id$</span>
+</span><span class='line'><span class="sd">/**</span>
+</span><span class='line'><span class="sd"> * @file display visitor&#39;s information</span>
+</span><span class='line'><span class="sd"> *</span>
+</span><span class='line'><span class="sd"> * To display visitor&#39;s information, include this file on any part of your page.</span>
+</span><span class='line'><span class="sd"> * Refer to README.txt on HOW TO USE part for more information.</span>
+</span><span class='line'><span class="sd"> */</span>
+</span><span class='line'><span class="nv">$counter</span> <span class="o">=</span> <span class="nx">SiteCounter</span><span class="o">::</span><span class="na">getInstance</span><span class="p">();</span>
+</span><span class='line'><span class="c1">// Get information</span>
+</span><span class='line'><span class="nv">$ip</span>        <span class="o">=</span> <span class="nv">$counter</span><span class="o">-&gt;</span><span class="na">Ip</span><span class="p">;</span>
+</span><span class='line'><span class="nv">$online</span>    <span class="o">=</span> <span class="nv">$counter</span><span class="o">-&gt;</span><span class="na">Online</span><span class="p">;</span>
+</span><span class='line'><span class="nv">$visits</span>    <span class="o">=</span> <span class="nv">$counter</span><span class="o">-&gt;</span><span class="na">Visits</span><span class="p">;</span>
+</span><span class='line'><span class="nv">$totalHits</span> <span class="o">=</span> <span class="nv">$counter</span><span class="o">-&gt;</span><span class="na">TotalHits</span><span class="p">;</span>
+</span><span class='line'><span class="nv">$unique</span>    <span class="o">=</span> <span class="nv">$counter</span><span class="o">-&gt;</span><span class="na">Unique</span><span class="p">;</span>
+</span><span class='line'><span class="c1">// display it</span>
+</span><span class='line'><span class="k">include_once</span> <span class="err">&#39;</span><span class="nx">site</span><span class="o">-</span><span class="nx">counter</span><span class="o">-</span><span class="nx">block</span><span class="o">.</span><span class="nx">tpl</span><span class="o">.</span><span class="nx">php</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>File site-counter-block.tpl.php:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="o">&lt;?</span><span class="nx">php</span>
+</span><span class='line'><span class="c1">// $Id$</span>
+</span><span class='line'><span class="sd">/**</span>
+</span><span class='line'><span class="sd"> * @file template file to display site-counter information</span>
+</span><span class='line'><span class="sd"> * Availabe variables:</span>
+</span><span class='line'><span class="sd"> * - $ip</span>
+</span><span class='line'><span class="sd"> * - $visits</span>
+</span><span class='line'><span class="sd"> * - $online</span>
+</span><span class='line'><span class="sd"> * - $totalHits</span>
+</span><span class='line'><span class="sd"> * - $unique</span>
+</span><span class='line'><span class="sd"> */</span>
+</span><span class='line'><span class="cp">?&gt;</span><span class="x"></span>
+</span><span class='line'><span class="x">&lt;div id=&quot;site-counter&quot;&gt;&lt;fieldset&gt;&lt;legend&gt;Site-Counter&lt;/legend&gt;</span>
+</span><span class='line'><span class="x">&lt;div&gt;Your IP: &lt;span id=&quot;ip&quot;&gt;</span><span class="cp">&lt;?php</span> <span class="k">print</span> <span class="nv">$ip</span><span class="p">;</span><span class="cp">?&gt;</span><span class="x">&lt;/span&gt;&lt;/div&gt;</span>
+</span><span class='line'><span class="x">&lt;div&gt;Your visits: &lt;span id=&quot;visits&quot;&gt;</span><span class="cp">&lt;?php</span> <span class="k">print</span> <span class="nv">$visits</span><span class="p">;</span><span class="cp">?&gt;</span><span class="x">&lt;/span&gt;&lt;/div&gt;</span>
+</span><span class='line'><span class="x">&lt;div&gt;Online: &lt;span id=&quot;online&quot;&gt;</span><span class="cp">&lt;?php</span> <span class="k">print</span> <span class="nv">$online</span><span class="p">;</span><span class="cp">?&gt;</span><span class="x">&lt;/span&gt;&lt;/div&gt;</span>
+</span><span class='line'><span class="x">&lt;div&gt;Total Hits: &lt;span id=&quot;total-hits&quot;&gt;</span><span class="cp">&lt;?php</span> <span class="k">print</span> <span class="nv">$totalHits</span><span class="p">;</span><span class="cp">?&gt;</span><span class="x">&lt;/span&gt;&lt;/div&gt;</span>
+</span><span class='line'><span class="x">&lt;div&gt;Unique visitors: &lt;span id=&quot;unique&quot;&gt;</span><span class="cp">&lt;?php</span> <span class="k">print</span> <span class="nv">$unique</span><span class="p">;</span> <span class="cp">?&gt;</span><span class="x">&lt;/span&gt;&lt;/div&gt;</span>
+</span><span class='line'><span class="x">&lt;/fieldset&gt;</span>
+</span><span class='line'><span class="x">&lt;/div&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>File site-counter-block.css:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+</pre></td><td class='code'><pre><code class='css'><span class='line'><span class="c">/**</span>
+</span><span class='line'><span class="c"> * $Id$</span>
+</span><span class='line'><span class="c"> * Styles site-counter</span>
+</span><span class='line'><span class="c"> * author: hoatle</span>
+</span><span class='line'><span class="c"> * website: hoatle.net</span>
+</span><span class='line'><span class="c"> */</span>
+</span><span class='line'>
+</span><span class='line'> <span class="nf">#site-counter</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">width</span><span class="o">:</span> <span class="m">220px</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">font-size</span><span class="o">:</span> <span class="m">12px</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">color</span><span class="o">:</span> <span class="nb">gray</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">text-align</span><span class="o">:</span> <span class="k">left</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">background-color</span><span class="o">:</span> <span class="nb">white</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">border</span><span class="o">:</span> <span class="m">1px</span> <span class="nb">black</span> <span class="k">dotted</span><span class="p">;</span>
+</span><span class='line'>    <span class="n">filter</span><span class="o">:</span> <span class="n">alpha</span><span class="p">(</span><span class="k">opacity</span><span class="o">=</span><span class="m">90</span><span class="p">);</span>
+</span><span class='line'>    <span class="o">-</span><span class="n">moz</span><span class="o">-</span><span class="k">opacity</span><span class="o">:</span> <span class="m">0</span><span class="o">.</span><span class="m">09</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">opacity</span><span class="o">:</span> <span class="m">0</span><span class="o">.</span><span class="m">90</span><span class="p">;</span>
+</span><span class='line'>    <span class="o">-</span><span class="n">khtml</span><span class="o">-</span><span class="k">opacity</span><span class="o">:</span> <span class="m">0</span><span class="o">.</span><span class="m">90</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">margin</span><span class="o">:</span> <span class="m">2em</span> <span class="m">0</span> <span class="m">0</span><span class="p">;</span>
+</span><span class='line'> <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'> <span class="nf">#site-counter</span> <span class="nt">div</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">text-align</span><span class="o">:</span> <span class="k">left</span><span class="p">;</span>
+</span><span class='line'> <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'> <span class="nf">#site-counter</span> <span class="nt">div</span> <span class="nf">#ip</span> <span class="p">{</span>
+</span><span class='line'>
+</span><span class='line'> <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'> <span class="nf">#site-counter</span> <span class="nt">div</span> <span class="nf">#visits</span> <span class="p">{</span>
+</span><span class='line'>
+</span><span class='line'> <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'> <span class="nf">#site-counter</span> <span class="nt">div</span> <span class="nf">#online</span> <span class="p">{</span>
+</span><span class='line'>
+</span><span class='line'> <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'> <span class="nf">#site-couner</span> <span class="nt">div</span> <span class="nf">#total-hits</span> <span class="p">{</span>
+</span><span class='line'>
+</span><span class='line'> <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'> <span class="nf">#site-counter</span> <span class="nt">p</span> <span class="nf">#unique</span> <span class="p">{</span>
+</span><span class='line'>
+</span><span class='line'> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>2.5 Xong</p>
+
+<p>Cuối cùng là test nó với trang site-counter-test.php.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="cp">&lt;?php</span>
+</span><span class='line'><span class="cp">// $Id$</span>
+</span><span class='line'><span class="cp">include_once &#39;site-counter-include.php&#39;;</span>
+</span><span class='line'><span class="cp">?&gt;</span>
+</span><span class='line'><span class="cp">&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;</span>
+</span><span class='line'><span class="nt">&lt;html</span> <span class="na">xmlns=</span><span class="s">&quot;http://www.w3.org/1999/xhtml&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'><span class="nt">&lt;head&gt;</span>
+</span><span class='line'><span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">&quot;Content-Type&quot;</span> <span class="na">content=</span><span class="s">&quot;text/html; charset=utf-8&quot;</span> <span class="nt">/&gt;</span>
+</span><span class='line'><span class="nt">&lt;title&gt;</span>Site-Counter Test Page<span class="nt">&lt;/title&gt;</span>
+</span><span class='line'><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href=</span><span class="s">&quot;site-counter-block.css&quot;</span> <span class="na">type=</span><span class="s">&quot;text/css&quot;</span> <span class="na">media=</span><span class="s">&quot;screen&quot;</span> <span class="nt">/&gt;</span>
+</span><span class='line'><span class="nt">&lt;/head&gt;</span>
+</span><span class='line'><span class="nt">&lt;body&gt;</span>
+</span><span class='line'><span class="cp">&lt;?php include_once &#39;site-counter-block.php&#39;; ?&gt;</span>
+</span><span class='line'><span class="nt">&lt;/body&gt;</span>
+</span><span class='line'><span class="nt">&lt;/html&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Chúc vui :).</p>
 ]]></content>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[music-engine Intro]]></title>
-    <link href="http://blog.hoatle.info/2008/12/16/music-engine-intro/"/>
-    <updated>2008-12-16T11:31:00+00:00</updated>
-    <id>http://blog.hoatle.info/2008/12/16/music-engine-intro</id>
-    <content type="html"><![CDATA[<p>Thinking so much about an OpenSocial apps and finally I decided to develop a music-engine application.</p>
-
-<p>What is a music-engine? My music-engine will crawl and index as much as possible any songs in the Internet and reorganize it into datastore in Google Apps.</p>
+    <title type="html"><![CDATA[Tạo giao diện tab đơn giản với CSS và jQuery]]></title>
+    <link href="http://blog.hoatle.info/2008/12/20/tao-giao-dien-tab-don-gian-voi-css-va-jquery/"/>
+    <updated>2008-12-20T19:55:00+00:00</updated>
+    <id>http://blog.hoatle.info/2008/12/20/tao-giao-dien-tab-don-gian-voi-css-va-jquery</id>
+    <content type="html"><![CDATA[<p>Đang phải làm việc với layout + giao diện, được dịp xem lại một số web interface. Gói interface này
+là những interface được sử dụng nhiều như Tab Interface, Header Interface&hellip; Tiện đây, tớ giới thiệu
+làm một cái Tab Interface, có thể sử dụng lại được. Tab Interface này sử dụng HTML + CSS + JQuery.
+Xem demo tại đây: <a href="http://labs.hoatle.net/resource/design/tab-interface/">http://labs.hoatle.net/resource/design/tab-interface/</a></p>
 
 <!-- more -->
 
 
-<p>Music-engine will be the service provider allows me to write OpenSocial apps for any container. Users can search, listen, create and save their own favorite playlists. They can send that playlist to their friends as gifts.</p>
+<p>Đoạn code HTML cho cái Tab Interface:</p>
 
-<p>Each user can have his own music-stream life. This is something like Twitter, but this just allows users to recommend any song they like.</p>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;tab-wrapper&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;ul</span> <span class="na">id=</span><span class="s">&quot;tab-menu&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;tab-menu-active&quot;</span><span class="nt">&gt;</span>Tab 1<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Tab 2<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Tab 3<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;/ul&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;tab-content&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;p&gt;</span>If one examines subpatriarchialist material theory, one is faced with a choice: either accept the presemioticist paradigm of reality or conclude that the task of the artist is deconstruction, given that reality is equal to art. It could be said that the subject is contextualised into a Batailleist &#39;powerful communication&#39; that includes language as a totality. Marx uses the term &#39;precapitalist semiotic theory&#39; to denote the bridge between narrativity and society.<span class="nt">&lt;/p&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;p&gt;</span>Any number of desituationisms concerning Sartreist absurdity may be discovered. In a sense, the textual paradigm of consensus states that reality has significance. Baudrillard uses the term &#39;surrealism&#39; to denote the absurdity, and subsequent rubicon, of substructuralist class. It could be said that la Tournier[4] holds that the works of Pynchon are modernistic. The premise of the textual paradigm of consensus states that the significance of the observer is social comment. However, in Gravity&#39;s Rainbow, Pynchon examines textual materialism; in The Crying of Lot 49 he denies subcultural discourse.<span class="nt">&lt;/p&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;/div&gt;</span>
+</span><span class='line'><span class="nt">&lt;/div&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
 
-<p>These are just some critical features I will try to implement.</p>
 
-<p>What&rsquo;s about copyright issue? Music-engine just crawles and indexes information, it doesn&rsquo;t store any music file on its own server. Every activity such as search, download or any other is from users.</p>
+<p>Dùng CSS để style cho đoạn HTML trên:</p>
 
-<p>Just some ideas about this. I have completed the database schema and a little about music-engine crawler.</p>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+<span class='line-number'>64</span>
+</pre></td><td class='code'><pre><code class='css'><span class='line'><span class="c">/**</span>
+</span><span class='line'><span class="c"> * $Id$</span>
+</span><span class='line'><span class="c"> * author: hoatle</span>
+</span><span class='line'><span class="c"> * website: hoatle.net</span>
+</span><span class='line'><span class="c"> * file: tab-interface.css</span>
+</span><span class='line'><span class="c"> * style for tab-interface</span>
+</span><span class='line'><span class="c"> */</span>
+</span><span class='line'><span class="nf">#tab-wrapper</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">margin</span><span class="o">:</span> <span class="m">0</span> <span class="k">auto</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">border</span><span class="o">:</span> <span class="m">0.1em</span> <span class="k">dotted</span> <span class="nb">red</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">padding</span><span class="o">:</span> <span class="m">1em</span> <span class="m">0</span> <span class="m">0</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="nf">#tab-menu</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">border-bottom</span><span class="o">:</span> <span class="m">0.1em</span> <span class="k">solid</span> <span class="m">#ababab</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">color</span><span class="o">:</span> <span class="m">#000000</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">margin</span><span class="o">:</span> <span class="m">1em</span> <span class="m">0</span> <span class="m">0</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">padding</span><span class="o">:</span> <span class="m">0</span> <span class="m">0</span> <span class="m">0</span> <span class="m">1em</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="nf">#tab-menu</span> <span class="nt">li</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">display</span><span class="o">:</span> <span class="k">inline</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">list-style-type</span><span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">overflow</span><span class="o">:</span> <span class="k">hidden</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="nf">#tab-menu</span> <span class="nt">li</span> <span class="nt">a</span> <span class="p">{</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="nf">#tab-menu</span> <span class="nt">a</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">color</span><span class="o">:</span> <span class="m">#676767</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">background</span><span class="o">:</span> <span class="m">#dcdcdc</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">font</span><span class="o">:</span> <span class="k">bold</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">font-size</span><span class="o">:</span> <span class="m">1.4em</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">border</span><span class="o">:</span> <span class="m">0.1em</span> <span class="k">solid</span> <span class="m">#ababab</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">padding</span><span class="o">:</span> <span class="m">0.2em</span> <span class="m">0.5em</span> <span class="m">0</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">text-decoration</span><span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="nf">#tab-menu</span> <span class="nt">a</span><span class="nc">.tab-menu-active</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">background-color</span><span class="o">:</span> <span class="m">#fefefe</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">border-bottom</span><span class="o">:</span> <span class="m">0.3em</span> <span class="k">solid</span> <span class="m">#ffffff</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">color</span><span class="o">:</span> <span class="m">#3a3a3a</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="nf">#tab-menu</span> <span class="nt">a</span><span class="nc">.tab-menu-hover</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">background-color</span><span class="o">:</span> <span class="m">#f0f0f0</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="c">/*</span>
+</span><span class='line'><span class="c">#tab-menu a:active {</span>
+</span><span class='line'><span class="c">    background-color: #ffffff;</span>
+</span><span class='line'><span class="c">    color: #3a3a3a;</span>
+</span><span class='line'><span class="c">    border-bottom: none;</span>
+</span><span class='line'><span class="c">}</span>
+</span><span class='line'><span class="c">#tab-menu a:hover {</span>
+</span><span class='line'><span class="c">    background-color: #f0f0f0;</span>
+</span><span class='line'><span class="c">}</span>
+</span><span class='line'><span class="c">*/</span>
+</span><span class='line'><span class="nf">#tab-menu</span> <span class="nt">a</span><span class="nd">:visited</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">color</span><span class="o">:</span> <span class="m">#666666</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="nf">#tab-content</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">background-color</span><span class="o">:</span> <span class="m">#ffffff</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">text-align</span><span class="o">:</span> <span class="k">justify</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">padding</span><span class="o">:</span> <span class="m">1em</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">border</span><span class="o">:</span> <span class="m">0.1em</span>  <span class="k">solid</span> <span class="m">#ababab</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">border-top</span><span class="o">:</span> <span class="m">0.2em</span> <span class="k">solid</span> <span class="m">#ababab</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">z-index</span><span class="o">:</span> <span class="m">1</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
 
-<p>As we know, Google Apps currently supports Python, so it will be coded in Python.</p>
 
-<p>I love PHP, and I have some experience to write a news crawler some months ago. Now I will improve it for music, not news.</p>
+<p>Để ý có đoạn comment sau đây vì khi dùng JQuery thì đoạn event trên không cần thiết nữa (bị lặp
+thì đúng hơn). Nếu không dùng đến JQuery thì uncomment đoạn này:</p>
 
-<p>If anyone would like to code with me, please contact me. There are many things to do, this is just a project for fun :)</p>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='css'><span class='line'><span class="nf">#tab-menu</span> <span class="nt">a</span><span class="nd">:active</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">background-color</span><span class="o">:</span> <span class="m">#ffffff</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">color</span><span class="o">:</span> <span class="m">#3a3a3a</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">border-bottom</span><span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="nf">#tab-menu</span> <span class="nt">a</span><span class="nd">:hover</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">background-color</span><span class="o">:</span> <span class="m">#f0f0f0</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Cuối cùng là JavaScript cho sau đây, vì lâu lắm nên đoạn này bị bừa bộn + thể nào cũng có đoạn code
+dở hơi?</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+<span class='line-number'>64</span>
+<span class='line-number'>65</span>
+<span class='line-number'>66</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="cm">/**</span>
+</span><span class='line'><span class="cm"> * $Id$</span>
+</span><span class='line'><span class="cm"> * author: hoatle</span>
+</span><span class='line'><span class="cm"> * website: hoatle.net</span>
+</span><span class='line'><span class="cm"> * file: tab-interface.js</span>
+</span><span class='line'><span class="cm"> * This js file will control the tab-interface behavior</span>
+</span><span class='line'><span class="cm"> */</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#tab-menu:first&#39;</span><span class="p">).</span><span class="nx">css</span><span class="p">(</span><span class="s1">&#39;padding-left&#39;</span><span class="p">,</span> <span class="s1">&#39;0&#39;</span><span class="p">).</span><span class="nx">append</span><span class="p">(</span><span class="s1">&#39;&lt;li&gt;&lt;a href=#&gt;Tab More&lt;/a&gt;&lt;/li&gt;&#39;</span><span class="p">);</span> <span class="c1">//On the fly :)</span>
+</span><span class='line'>    <span class="kd">var</span> <span class="nx">nav_height</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#nav&#39;</span><span class="p">).</span><span class="nx">css</span><span class="p">(</span><span class="s1">&#39;height&#39;</span><span class="p">);</span>
+</span><span class='line'>    <span class="c1">//alert(&#39;nav_height: &#39;+nav_height);</span>
+</span><span class='line'>    <span class="kd">var</span> <span class="nx">content_height</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#content&#39;</span><span class="p">).</span><span class="nx">css</span><span class="p">(</span><span class="s1">&#39;height&#39;</span><span class="p">);</span>
+</span><span class='line'>    <span class="c1">//alert(&#39;content_height: &#39;+content_height);</span>
+</span><span class='line'>    <span class="kd">var</span> <span class="nx">common_height</span> <span class="o">=</span>  <span class="nx">nav_height</span> <span class="o">&gt;</span> <span class="nx">content_height</span><span class="o">?</span> <span class="nx">nav_height</span> <span class="o">:</span> <span class="nx">content_height</span><span class="p">;</span>
+</span><span class='line'>    <span class="c1">//alert(common_height);</span>
+</span><span class='line'>    <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#nav&#39;</span><span class="p">).</span><span class="nx">css</span><span class="p">(</span><span class="s1">&#39;height&#39;</span><span class="p">,</span> <span class="nx">common_height</span><span class="p">);</span>
+</span><span class='line'>    <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#content&#39;</span><span class="p">).</span><span class="nx">css</span><span class="p">(</span><span class="s1">&#39;height&#39;</span><span class="p">,</span> <span class="nx">common_height</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>    <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#main-nav ul li a&#39;</span><span class="p">)</span>
+</span><span class='line'>        <span class="p">.</span><span class="nx">click</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>            <span class="nx">event</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
+</span><span class='line'>            <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#main-nav ul li a&#39;</span><span class="p">).</span><span class="nx">removeClass</span><span class="p">(</span><span class="s1">&#39;main-nav-active&#39;</span><span class="p">)</span>
+</span><span class='line'>            <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">)</span>
+</span><span class='line'>            <span class="p">.</span><span class="nx">removeClass</span><span class="p">(</span><span class="s1">&#39;main-nav-hover&#39;</span><span class="p">)</span>
+</span><span class='line'>            <span class="p">.</span><span class="nx">addClass</span><span class="p">(</span><span class="s1">&#39;main-nav-active&#39;</span><span class="p">);</span>
+</span><span class='line'>            <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#tab-content&#39;</span><span class="p">).</span><span class="nx">hide</span><span class="p">();</span>
+</span><span class='line'>            <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#tab-menu li a&#39;</span><span class="p">).</span><span class="nx">fadeOut</span><span class="p">(</span><span class="s1">&#39;slow&#39;</span><span class="p">).</span><span class="nx">fadeIn</span><span class="p">(</span><span class="s1">&#39;slow&#39;</span><span class="p">);</span>
+</span><span class='line'>            <span class="c1">//$(&#39;#main-content&#39;).fadeOut(&#39;slow&#39;).fadeIn(&#39;slow&#39;);</span>
+</span><span class='line'>            <span class="nx">delay</span><span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#tab-content&#39;</span><span class="p">),</span> <span class="mi">1500</span><span class="p">);</span>
+</span><span class='line'>            <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#secondary-content&#39;</span><span class="p">).</span><span class="nx">hide</span><span class="p">(</span><span class="s1">&#39;slow&#39;</span><span class="p">);</span>
+</span><span class='line'>        <span class="p">})</span>
+</span><span class='line'>        <span class="p">.</span><span class="nx">hover</span><span class="p">(</span>
+</span><span class='line'>            <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>                <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">addClass</span><span class="p">(</span><span class="s1">&#39;main-nav-hover&#39;</span><span class="p">);</span>
+</span><span class='line'>            <span class="p">},</span>
+</span><span class='line'>            <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>                <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">removeClass</span><span class="p">(</span><span class="s1">&#39;main-nav-hover&#39;</span><span class="p">);</span>
+</span><span class='line'>            <span class="p">}</span>
+</span><span class='line'>        <span class="p">);</span>
+</span><span class='line'>    <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#tab-menu li a&#39;</span><span class="p">)</span>
+</span><span class='line'>        <span class="p">.</span><span class="nx">click</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>            <span class="nx">event</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
+</span><span class='line'>            <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#tab-menu li a&#39;</span><span class="p">).</span><span class="nx">removeClass</span><span class="p">(</span><span class="s1">&#39;tab-menu-active&#39;</span><span class="p">);</span>
+</span><span class='line'>            <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">removeClass</span><span class="p">(</span><span class="s1">&#39;tab-menu-hover&#39;</span><span class="p">);</span>
+</span><span class='line'>            <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">addClass</span><span class="p">(</span><span class="s1">&#39;tab-menu-active&#39;</span><span class="p">);</span>
+</span><span class='line'>            <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#tab-content&#39;</span><span class="p">).</span><span class="nx">fadeOut</span><span class="p">(</span><span class="s1">&#39;slow&#39;</span><span class="p">).</span><span class="nx">fadeIn</span><span class="p">(</span><span class="s1">&#39;slow&#39;</span><span class="p">);</span>
+</span><span class='line'>        <span class="p">})</span>
+</span><span class='line'>        <span class="p">.</span><span class="nx">hover</span><span class="p">(</span>
+</span><span class='line'>            <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>                <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">hasClass</span><span class="p">(</span><span class="s1">&#39;tab-menu-active&#39;</span><span class="p">))</span> <span class="p">{</span>
+</span><span class='line'>                    <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">addClass</span><span class="p">(</span><span class="s1">&#39;tab-menu-hover&#39;</span><span class="p">);</span>
+</span><span class='line'>                <span class="p">}</span>
+</span><span class='line'>            <span class="p">},</span>
+</span><span class='line'>            <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>                <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">removeClass</span><span class="p">(</span><span class="s1">&#39;tab-menu-hover&#39;</span><span class="p">);</span>
+</span><span class='line'>        <span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'><span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">function</span> <span class="nx">delay</span><span class="p">(</span><span class="nx">obj</span><span class="p">,</span> <span class="nx">time</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nb">window</span><span class="p">.</span><span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">obj</span><span class="p">.</span><span class="nx">fadeIn</span><span class="p">(</span><span class="s1">&#39;slow&#39;</span><span class="p">);</span>
+</span><span class='line'>    <span class="p">},</span> <span class="nx">time</span><span class="p">);</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Vậy là xong. Tạo 1 trang html rồi rồi include 2 file: tab-interface.css và tab-interface.js vào
+phần header [Nhớ include cả file thư viện Jquery.js], phần body thì chứa đoạn code HTML đã nói ở
+trên:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="cp">&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;</span>
+</span><span class='line'><span class="nt">&lt;html</span> <span class="na">xmlns=</span><span class="s">&quot;http://www.w3.org/1999/xhtml&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'><span class="nt">&lt;head&gt;</span>
+</span><span class='line'><span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">&quot;Content-Type&quot;</span> <span class="na">content=</span><span class="s">&quot;text/html; charset=utf-8&quot;</span> <span class="nt">/&gt;</span>
+</span><span class='line'><span class="nt">&lt;title&gt;</span>Simple Tab Interface - JQuery - hoatle.net<span class="nt">&lt;/title&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">type=</span><span class="s">&quot;text/css&quot;</span> <span class="na">href=</span><span class="s">&quot;tab-interface.css&quot;</span> <span class="na">media=</span><span class="s">&quot;screen&quot;</span> <span class="nt">/&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src=</span><span class="s">&quot;jquery.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src=</span><span class="s">&quot;tab-interface.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+</span><span class='line'><span class="nt">&lt;/head&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nt">&lt;body&gt;</span>
+</span><span class='line'><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;tab-wrapper&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;ul</span> <span class="na">id=</span><span class="s">&quot;tab-menu&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;tab-menu-active&quot;</span><span class="nt">&gt;</span>Tab 1<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Tab 2<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Tab 3<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;/ul&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;tab-content&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;p&gt;</span>If one examines subpatriarchialist material theory, one is faced with a choice: either accept the presemioticist paradigm of reality or conclude that the task of the artist is deconstruction, given that reality is equal to art. It could be said that the subject is contextualised into a Batailleist &#39;powerful communication&#39; that includes language as a totality. Marx uses the term &#39;precapitalist semiotic theory&#39; to denote the bridge between narrativity and society.<span class="nt">&lt;/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="nt">&lt;p&gt;</span>Any number of desituationisms concerning Sartreist absurdity may be discovered. In a sense, the textual paradigm of consensus states that reality has significance. Baudrillard uses the term &#39;surrealism&#39; to denote the absurdity, and subsequent rubicon, of substructuralist class. It could be said that la Tournier[4] holds that the works of Pynchon are modernistic. The premise of the textual paradigm of consensus states that the significance of the observer is social comment. However, in Gravity&#39;s Rainbow, Pynchon examines textual materialism; in The Crying of Lot 49 he denies subcultural discourse.<span class="nt">&lt;/p&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;/div&gt;</span>
+</span><span class='line'><span class="nt">&lt;/div&gt;</span>
+</span><span class='line'><span class="nt">&lt;/body&gt;</span>
+</span><span class='line'><span class="nt">&lt;/html&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Tab Interface cơ bản là vậy. Có thể từ HTML structure như vậy làm cái Tab Interface dạng ngang
+(giống như trong trang Home ở Twitter) chứ không dọc thế này. Mọi thứ đều được làm đơn giản, tớ
+thích sự đơn giản :).</p>
 ]]></content>
   </entry>
   

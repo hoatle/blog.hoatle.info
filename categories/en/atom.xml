@@ -4,7 +4,7 @@
   <title><![CDATA[Category: en | blog.hoatle.info]]></title>
   <link href="http://blog.hoatle.info/categories/en/atom.xml" rel="self"/>
   <link href="http://blog.hoatle.info/"/>
-  <updated>2013-12-02T18:46:26+00:00</updated>
+  <updated>2013-12-03T06:26:53+00:00</updated>
   <id>http://blog.hoatle.info/</id>
   <author>
     <name><![CDATA[hoatle]]></name>
@@ -12,6 +12,210 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Dynamic arguments binding with OpenSocial message bundle]]></title>
+    <link href="http://blog.hoatle.info/2010/01/16/dynamic-arguments-binding-with-opensocial-message-bundle/"/>
+    <updated>2010-01-16T19:44:00+00:00</updated>
+    <id>http://blog.hoatle.info/2010/01/16/dynamic-arguments-binding-with-opensocial-message-bundle</id>
+    <content type="html"><![CDATA[<h2>Problem</h2>
+
+<ul>
+<li><p>Working with OpenSocial message bundle for localization, sometimes it&rsquo;s necessary to bind dynamic
+arguments to the message. For example, we have greeting message like this: <code>Hello {user}</code> in which
+user will be replaced by user&rsquo;s name. But currently with OpenSocial api, we can&rsquo;t. We just can get
+message bundle by the key without passing any arguments for substitution.</p></li>
+<li><p>So this is my approach: using <code>eXo.social.Locale.getMsg(key)</code> the same as <code>prefs.getMsg(key)</code> and
+<code>eXo.social.Locale.getMsg(key, [val1, val2,...]);</code> for dynamic arguments binding with message bundle.</p></li>
+</ul>
+
+
+<!-- more -->
+
+
+<h2>Solution</h2>
+
+<ul>
+<li>Create <code>eXo.social.Locale class:</code></li>
+</ul>
+
+
+<p>```javascript
+/<em>*
+ * Locale.js
+ * Utility for Locale, dynamic binding message bundle with arguments
+ * Usage:
+ * eXo.social.Locale.getLang(); the same as prefs.getLang();
+ * eXo.social.Locale.getCountry(); the same as prefs.getCountry();
+ * eXo.social.Locale.getMsg(key); the same as prefs.getMsg(key);
+ * eXo.social.Locale.getMsg(key, args); dynamic binding argument to message bundle
+ * @author  hoatle
+ * @since   October 27, 2009
+ * @copyright   eXo Platform
+ </em>/</p>
+
+<p>(function() {</p>
+
+<pre><code>//prefs object to get lang, country, message bundle
+var prefs;
+
+/**
+ * private function to lazily initialize prefs object
+ */
+function getPrefs() {
+    if (!prefs) {
+        prefs = new gadgets.Prefs();
+    }
+    return prefs;
+}
+/**
+ * Class definition
+ */
+var Locale = function() {
+
+}
+/**
+ * gets current lang
+ * @static
+ */
+Locale.getLang = function() {
+    prefs = getPrefs();
+    return prefs.getLang();
+}
+/**
+ * gets current country
+ * @static
+ */
+Locale.getCountry = function() {
+    prefs = getPrefs();
+    return prefs.getCountry();
+}
+/**
+ * alternative for prefs.getMsg(key)
+ * uses to getMsg with provided key and substitute args
+ *
+ * eg: Test for {0}, {1}
+ * If args does not match num of {\d}, warning and try to replace by corresponding index.
+ * {0} should be replaced by args[0], etc.,
+ * If args not provided, functions as prefs.getMsg(key)
+ * @param   key String
+ * @param   opt_args Array
+ * @static
+ */
+Locale.getMsg = function(key, opt_args) {
+    prefs = getPrefs();
+    if (!key) {
+        debug.warn('key is null!');
+        return '';
+    }
+    var msg = prefs.getMsg(key);
+    if (msg === '') {
+        debug.warn('Can not find resource bundle with key = ' + key);
+        return msg;
+    }
+    if (!opt_args) return msg;
+
+    //checks if number of {\d} in msg matches opt_args.length
+    var regex = /{\d+}/g;
+    var matches = msg.match(regex);
+    if (matches.length !== opt_args.length) {
+        debug.warn("required " + matches.length + " args, provided: " + opt_args.length);
+    }
+    //substitutes by index: {0} in msg should be replaced by opt_args[0] and so on
+    for (var i = 0, l = matches.length; i &lt; l; i++) {
+        var index = matches[i].match(/\d+/g)[0];
+        //TODO should improve performance
+        var strToReplace = opt_args[index];
+        if (!strToReplace) {
+            debug.warn('matches[' + i + ']: ' + matches[i] + ' but no opt_args[' + index + ']');
+        } else {
+            msg = msg.replace(matches[i], opt_args[index]);
+        }
+    }
+    return msg;
+}
+//Expose
+window.eXo = window.eXo || {};
+window.eXo.social = window.eXo.social || {};
+window.eXo.social.Locale = Locale;
+</code></pre>
+
+<p>})();
+```</p>
+
+<p>Note: The <code>eXo.social.Locale</code> class uses <code>debug</code>, thanks @cowboy for his excellent JavaScript
+log/debug. I love it &lt;3. All my projects and apps use it, you should also use this way of debug/log
+instead of alert :).</p>
+
+<p>Download sample app for testing at <a href="http://github.com/hoatle/opensocial/downloads">http://github.com/hoatle/opensocial/downloads</a></p>
+
+<p>Source code available at: <a href="http://github.com/hoatle/opensocial/tree/master/message-bundle">http://github.com/hoatle/opensocial/tree/master/message-bundle</a></p>
+
+<p>The xml app file:</p>
+
+<p>```xml
+&lt;?xml version=&ldquo;1.0&rdquo; encoding=&ldquo;UTF-8&rdquo;?>
+<Module></p>
+
+<pre><code>&lt;ModulePrefs title="Arguments Binding Message Bundle"
+             description="Simple-App for arguments binding with message bundle"
+             author_email="hoatlevan@gmail.com"
+             author_affiliation="eXo Platform"&gt;
+    &lt;Locale messages="locale/ALL_ALL.xml" /&gt;
+    &lt;Locale lang="en" messages="locale/en_ALL.xml" /&gt;
+    &lt;Locale lang="vi" messages="locale/vi_ALL.xml" /&gt;
+    &lt;Require feature="opensocial-0.8" /&gt;
+&lt;/ModulePrefs&gt;
+&lt;Content type="html"&gt;
+&lt;![CDATA[
+    &lt;link rel="stylesheet" type="text/css" href="style/style.css" /&gt;
+    &lt;script type="text/javascript" src="script/debug.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" src="script/eXo/social/Locale.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" src="script/app.js"&gt;&lt;/script&gt;
+    &lt;p&gt;Resource bundle rendered by server: &lt;strong&gt;__MSG_hello_world__&lt;/strong&gt;&lt;/p&gt;
+    &lt;p&gt;Resource bundle rendered by JavaScript:&lt;/p&gt;
+    &lt;div id="helloMsg"&gt;&lt;/div&gt;
+    &lt;div id="helloMsgArgs"&gt;&lt;/div&gt;
+]]&gt;
+&lt;/Content&gt;
+</code></pre>
+
+<p></Module>
+```</p>
+
+<p>In the app code above, <code>__MSG_hello_world__</code> will be substituted by server with found message bundle
+with key &ldquo;hello_world&rdquo; defined in message bundles files. (in <code>/locale</code> folder).</p>
+
+<p>To test <code>eXo.social.Locale</code> class, we have the <code>app.js</code>:</p>
+
+<p>```javascript
+function run() {</p>
+
+<pre><code>var prefs = new gadgets.Prefs(),
+    helloWorld = prefs.getMsg('hello_world');
+alert(helloWorld); //"Hello world!" if current language is English
+                   //"Chào thế giới!" if current language is Vietnamese
+
+//eXo.social.Locale usage
+var Locale = eXo.social.Locale;
+var helloMsgEl = document.getElementById('helloMsg'),
+    helloMsgArgsEl = document.getElementById('helloMsgArgs');
+
+helloMsgEl.innerHTML = Locale.getMsg('hello_world');
+helloMsgArgsEl.innerHTML = Locale.getMsg('hello_user_to_place', ['hoatle', 'Vietnam']);
+</code></pre>
+
+<p>}</p>
+
+<p>gadgets.util.registerOnLoadHandler(run);
+```</p>
+
+<p>You can test this sample app from any OpenSocial container. Happy coding :D.</p>
+
+<p>P/S: We can use OpenSocial template for arguments binding with message bundle but it&rsquo;s currently
+not fully supported by all containers.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Multiple event handlers for an element in JavaScript]]></title>
@@ -469,25 +673,6 @@ is extended to:</p>
 right now!</p>
 
 <p>Thanks for joining and we are looking for your great Logo for BarCamp Hanoi 2009.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[OSDE - great for OpenSocial developers]]></title>
-    <link href="http://blog.hoatle.info/2009/02/22/osde-great-for-opensocial-developers/"/>
-    <updated>2009-02-22T22:53:00+00:00</updated>
-    <id>http://blog.hoatle.info/2009/02/22/osde-great-for-opensocial-developers</id>
-    <content type="html"><![CDATA[<p>This afternoon I just hit with this project: OSDE &ndash; OpenSocial Developement Environment and loved it
-at first sight :). This project is awesome for OpenSocial developers to work on their own
-environment. I remembered on the first days of developing app, registered all opensocial containers,
-make friends [for test :)] and then test the app. Somehow boring steps and not the pro way of app
-development. What if you can not have internet connnection but you still want to test you opensocial
-app. OSDE &ndash; OpenSocial Developement Environment is our solution. This is a great module for
-Eclipse :).</p>
-
-<p>Click on this link and let&rsquo;s create great apps: <a href="http://www.eisbahn.jp/trac/osde/">http://www.eisbahn.jp/trac/osde/</a></p>
-
-<p>Everything there is good enough to code, much more easier to have your app in development stage :)</p>
 ]]></content>
   </entry>
   

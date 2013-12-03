@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Tag: PHP Day | blog.hoatle.info]]></title>
+  <link href="http://blog.hoatle.info/tags/php-day/atom.xml" rel="self"/>
+  <link href="http://blog.hoatle.info/"/>
+  <updated>2013-12-03T06:26:53+00:00</updated>
+  <id>http://blog.hoatle.info/</id>
+  <author>
+    <name><![CDATA[hoatle]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Tổng kết Hà Nội PHP Day 14/12/2008]]></title>
+    <link href="http://blog.hoatle.info/2008/12/15/tong-ket-ha-noi-php-day-14-12-2008/"/>
+    <updated>2008-12-15T20:12:00+00:00</updated>
+    <id>http://blog.hoatle.info/2008/12/15/tong-ket-ha-noi-php-day-14-12-2008</id>
+    <content type="html"><![CDATA[<p>Định về viết ngay bài tổng kết nhưng mà chả hiểu sao về bị mất mạng đến tận chiều tối nay ngủ dậy
+mới lại connect được. Khổ thế đấy, đây là mạng của bên thằng hàng xóm, mới chuyển đến cả xóm dùng
+mạng của nó, nói là cả xóm nhưng thật ra là chỉ có 5 máy, mà nhà mình dùng tới 3 máy :)).</p>
+
+<!-- more -->
+
+
+<p>Đây là lần thứ hai tớ tham gia sự kiện công nghệ kiểu này (đúng sau OpenSocial Hackathon Hanoi 1
+ngày &ndash; là lần đầu tiên). Ở nước ngoài những hội thảo thế này thì rất nhiều nhưng ở Việt Nam thì phải
+nói là hơi bị hiếm, đặc biệt là hội thảo PHP. Nói là hội thảo nhưng chỉ là buổi anh em gặp nhau,
+chia sẻ kinh nghiệm offline; còn online thì hầu như ngày nào anh em cũng gặp nhau, tranh luận trên
+diễn đàn, trên google groups. Tớ thì không tranh luận nhiều, chủ yếu là theo dõi các thảo luận của
+phppvietnam trên google groups (<a href="http://groups.google.com/group/phpvietnam">http://groups.google.com/group/phpvietnam</a>). Nhiều khi tranh luận đi
+lạc chủ đề &ndash;> xích mích không đáng có + chủ đề loãng hơn :D.</p>
+
+<p>Ấn tượng đầu tiên là đã hẹn lúc 7h dậy rồi mà không dậy nổi, lúc mơ màng đang nghe thuyết trình thì
+giật mình, ặc đã 8h 30' rồi, vùng dậy nhanh + nhanh chóng đi luôn.</p>
+
+<p>Đến nơi tầm 9h. Phù!!! Vẫn đến kịp giờ, chưa bỏ lỡ bài nói nào cả :D.</p>
+
+<p>Trước lúc tớ đến:</p>
+
+<p>Ghi danh:</p>
+
+<p><img class="center <a" src="href="http://farm4.static.flickr.com/3136/3109300321_ecb7aae445.jpg?v=0">http://farm4.static.flickr.com/3136/3109300321_ecb7aae445.jpg?v=0</a>" title="Ghi danh" ></p>
+
+<p>Tranh thủ tí:</p>
+
+<p><img class="center <a" src="href="http://farm4.static.flickr.com/3238/3109299223_d9f7dd6155.jpg?v=0">http://farm4.static.flickr.com/3238/3109299223_d9f7dd6155.jpg?v=0</a>" title="Tranh thủ tí" ></p>
+
+<p>Bắt đầu:</p>
+
+<p><img class="center <a" src="href="http://farm4.static.flickr.com/3099/3109297901_dd6f18fd67.jpg?v=0">http://farm4.static.flickr.com/3099/3109297901_dd6f18fd67.jpg?v=0</a>" title="Bắt đầu" ></p>
+
+<p>Ấn tượng nhất chính là bài nói chuyện của anh pcdinh &ldquo;Build your own PHP framework&rdquo;. Đúng như tớ dự
+tính, nếu mỗi bài nói chuyện chỉ tầm 20' thì thất sự không nói được gì. Bằng chứng là mặc dù đã cố
+gắng đi nhanh nhưng bài nói của anh pcdinh cũng kéo dài phải tới 1 giờ 20' thì phải. Anh pcdinh có
+một nền tảng vững chắc &ndash; cực chắc. [Trông trên ảnh có vẻ anh pcdinh hơi gầy + khắc khổ tí ;) nhưng
+thực tế thì không đến nỗi nào, cao ráo &ndash;> đẹp giai???]</p>
+
+<p>Trong bài phát biểu anh đã chỉ ra những điểm yếu (shortcomings) của một số php framework hiện tại
+như CakePHP, Zend Framework. Sau đó là hướng giải quyết của anh trên PONE (PHP Open Network
+Environment) &ndash; PHP framework anh đã, đang xây dựng và sử dụng &ndash; một framework tầm enterprise. Định
+nói nhiều hơn nhưng nếu thế bài viết này sẽ dài quá mất, chỉ là tổng kết :|</p>
+
+<p><img class="center <a" src="href="http://farm4.static.flickr.com/3260/3110500562_139196855a.jpg?v=0">http://farm4.static.flickr.com/3260/3110500562_139196855a.jpg?v=0</a>" title="Anh pcdinh" ></p>
+
+<p>Do thời gian nói của anh pcdinh khá dài, dân tình muốn nghỉ ngơi &ndash;> Tea Break. Sau đó lại chiến tiếp :).</p>
+
+<p>Tiếp theo là bài nói về Drupal của anh Phan Thái Trung. Bài nói của anh hài hước + vui vẻ:). Anh
+cũng chưa nói được gì nhiều do thời gian có hạn, chỉ là màn giới thiệu và demo cái Panels + Views
+qua giao diện admin. Lúc demo tạo panel nhưng đến khi xem thì nhận lỗi 404 :): &ldquo;Đấy, như mọi người
+thấy là có lỗi (mọi người cười) nhưng tôi xin đảm bảo không phải lỗi của tôi mà là lỗi hê thống.
+Nếu bạn nào chỉ ngay được lỗi của tôi thì tôi xin tặng ngay 1 host free [tặng free 1 host hay tặng
+1 host free ;)].&rdquo;</p>
+
+<p>Tiếp theo nữa là bài nói về &ldquo;web standard&rdquo; của anh Đặng Minh Tuấn (<a href="http://ohisee.com,">http://ohisee.com,</a> hiện đang làm
+giảng viên của 1 trung tâm Aptech). Ví mô hình MVC với html, css và javascript. Cách ví này hơi có
+vẻ khập khiễng, nói html là structure, css là presentation và javascript là behavior thì tớ thấy
+chính xác hơn. Bài nói của anh Tuấn ở mức cơ bản, vui vẻ.</p>
+
+<p>Sau đó là bài &ldquo;Search Engine: News collection system&rdquo; của anh Nguyễn Đức Phú. Slide chuẩn bị kỹ,
+phân chia nội dung hợp lý + và cũng là chủ đề tớ thích. Đợt hè cũng đi làm và viết 1 cái News Spider
+lấy tin tức chứng khoán của các trang tin: lấy tiêu đề, thời gian, số đoạn văn + nội dung từng đoạn
+văn, tác giả. Dùng máy lấy tin thay cho người, nhưng vì thực sự tớ thấy cách copy &amp; paste đó không
+thực sự có tính khả thi cho 1 trang đưa tin + lương cũng không thỏa đáng => Nghỉ làm. [Chỗ này
+tâm sự hơi nhiều thì phải :D]. Đang viết tiếp cho cái music-engine-crawler.</p>
+
+<p><img class="center <a" src="href="http://farm4.static.flickr.com/3114/3109668255_3dea6ca52f.jpg?v=0">http://farm4.static.flickr.com/3114/3109668255_3dea6ca52f.jpg?v=0</a>" title="Anh Nguyễn Đức Phú" ></p>
+
+<p>Dù đã quá giờ hơn dự định nhưng anh em vẫn muốn ngồi thảo luận nữa, kết quả là mọi người ngồi từ 9h
+đến tận 1h30' mới xong. Bài nói cuối cùng là &ldquo;RESTful web service and PHP&rdquo; của bạn Nguyễn Hải Nhật
+Huy (<a href="http://byhuy.com">http://byhuy.com</a> bên <a href="http://clip.vn">http://clip.vn</a>). Về cách nói vì chưa có kinh nghiệm + sự chuẩn bị chưa kĩ
+nên bài nói chuyện chưa thực sự thành công. Và nhiều người cũng chưa quan tâm lắm đến vấn đề này thì
+phải.</p>
+
+<p><img class="center <a" src="href="http://farm4.static.flickr.com/3271/3110579756_fb40f3d0fc.jpg?v=0">http://farm4.static.flickr.com/3271/3110579756_fb40f3d0fc.jpg?v=0</a>" title="byhuy" ></p>
+
+<p>Sau sự kiện này rất có thể sẽ có nhiều buổi hội thảo PHP nữa: hẹp hơn + chuyên sâu hơn.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[PHP Day 14/12/2008]]></title>
+    <link href="http://blog.hoatle.info/2008/12/08/php-day-14-12-2008/"/>
+    <updated>2008-12-08T15:06:00+00:00</updated>
+    <id>http://blog.hoatle.info/2008/12/08/php-day-14-12-2008</id>
+    <content type="html"><![CDATA[<p><strong>Trích nội dung từ diendanphp.com</strong></p>
+
+<p><blockquote><p></p></p><p><p>Chào tất cả các thành viên trong diễn đàn, những ai yêu thích CNTT nói chung và PHP nói riêng.</p></p><p><p>Vào ngày 14/12/2008, công ty VNEXT tổ chức hội thảo mang chủ đề:</p></p><p><p>PHP DAY</p></p><p><!-- more --></p><p><br/><p>Mục tiêu<br/>&ndash; Chia sẻ kiến thức, kinh nghiệm về PHP<br/>&ndash; Giao lưu giữa các cá nhân yêu thích PHP</p></p><p><p>Địa điểm<br/>Phòng hội thảo số 5 &ndash; Khách sạn La Thành &ndash; 218 Đội Cấn &ndash; Hà Nội</p></p><p><p>Thời gian<br/>Sáng chủ nhật ngày 14/12/2008. Từ 9h ~ 12h.</p></p><p><p>PRESENTER đã đăng ký<br/>Mỗi chủ đề từ 10-20 phút, tổng tất cả các chủ đề (bao gồm chưa fix) khoảng 10+</p></p><p><p>[Mỗi chủ đề 10-20 phút &ndash;> có vẻ hơi ít &ndash;> nội dung sẽ bị loãng???]</p></p><p><ol><br/><li>Phan Thái Trung: Drupal</li><br/><li>Đào Bảo Ngọc (ZCE): Chưa fixed</li><br/><li>Nguyễn Đức Phú (TheHeTre): Chưa fixed</li><br/><li>Phạm Công Định (pcdinh): Build your own PHP Framework</li><br/><li>Hồ Xuân Hùng (CTO 1 công ty phần mềm Nhật): Chưa fixed</li><br/><li>Đặng Minh Tuấn (zmt264): HTML, CSS, javascript: The Good, the Best, the Ugly<br/>&hellip; (còn tiếp)</li><br/></ol></p><p><br/><p>Xin trân trọng thông báo tới tất cả thành viên, mọi người quan tâm đến dự.</p></p><p><p>Đăng ký tham gia<br/>&ndash; Đăng ký tại đây: Bao gồm<br/>Họ tên + Email</p></p><p><p>Đăng ký làm diễn giả<br/>Bạn có thể đăng ký làm người diễn giả với chủ đề mà bạn thích (hoặc bạn ghét ) về web 2.0 tới PHP, Framework hay CSS&hellip;</p></p><p><p>Với thành viên tham dự có đăng ký làm diễn giả, vui lòng ghi thêm chủ đề sẽ nói vào dưới dòng họ tên và email.</p></p><p><p>Trân trọng thông báo.</p></p><p><p></p></blockquote></p>
+
+<p>Danh sách thành viên đăng ký tham gia cập nhật tại:
+<a href="http://spreadsheets.google.com/pub?key=pj7Q7sgfjIhrMAMqD23nOUg">http://spreadsheets.google.com/pub?key=pj7Q7sgfjIhrMAMqD23nOUg</a></p>
+
+<p>Chi tiết: <a href="http://diendanphp.com/showthread.php?t=162">http://diendanphp.com/showthread.php?t=162</a></p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,1363 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Thiết kế bộ đếm trang (site-counter) đơn giản - blog.hoatle.info</title>
+  
+  <meta name="author" content="hoatle">
+
+  
+  <meta name="description" content="Thiết kế bộ đếm trang (site-counter) đơn giản">
+  
+
+  
+
+  
+
+  <meta property="og:url" content="http://blog.hoatle.info/2008/12/21/thiet-ke-bo-dem-trang-site-counter-don-gian/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Thiết kế bộ đếm trang (site-counter) đơn giản - blog.hoatle.info" />
+  <meta property="og:description" content="Thiết kế bộ đếm trang (site-counter) đơn giản" />
+
+  <meta property="og:image" content="http://blog.hoatle.info/images/default-cover.png" />
+
+
+
+
+
+
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@hoatle" />
+  <meta name="twitter:creator" content="@hoatle" />
+  <meta name="twitter:title" content="Thiết kế bộ đếm trang (site-counter) đơn giản - blog.hoatle.info" />
+  <meta name="twitter:description" content="Thiết kế bộ đếm trang (site-counter) đơn giản" />
+
+  <meta name="twitter:image:src" content="http://blog.hoatle.info/images/default-cover.png" />
+
+  <meta name="twitter:domain" content="http://blog.hoatle.info" />
+
+
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="canonical" href="http://blog.hoatle.info/2008/12/21/thiet-ke-bo-dem-trang-site-counter-don-gian/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="blog.hoatle.info" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-6303084-3']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">blog.hoatle.info</a></h1>
+  
+    <h2>just a value creator.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:blog.hoatle.info" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Home</a></li>
+  <li><a href="/categories/en">English</a></li>
+  <li><a href="/categories/vi">Tiếng Việt</a></li>
+  <li><a href="/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article itemscope itemtype="http://schema.org/Article" class="hentry" role="article">
+  
+  <header>
+    
+      <h1 itemprop="name" class="entry-title">Thiết Kế Bộ đếm Trang (Site-counter) đơn Giản</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time itemprop="datePublished" content="2008-12-21T05:38:00+00:00" datetime="2008-12-21T05:38:00+00:00" pubdate data-updated="true">Dec 21<span>st</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+<div itemprop="articleBody" class="entry-content"><p>Lại thêm một thứ đơn giản nữa :). Bộ đếm trang trước đây và cả bây giờ vẫn rất phổ biến. Có một số
+nhà cung cấp miễn phí bộ đếm cho bạn, chỉ việc đăng kí một tài khoản + nhúng đoạn code site-counter
+vào trang của bạn là xong :). Có bạn lại không thích như thế, muốn tự mình viết một cái site-counter
+riêng :). Bài viết này sẽ hướng dẫn + chia sẻ 1 bộ đếm trang đơn giản bằng PHP + MySQL.</p>
+
+<!-- more -->
+
+
+<p>Vì bảng dữ liệu khá nhỏ nên có thể sử dụng SQLite làm cơ sở dữ liệu, nhưng hiện giờ cái site-counter
+này của tớ chỉ đang hỗ trợ MySQL.</p>
+
+<p>Demo: <a href="http://d9k50.net/test/term7.">http://d9k50.net/test/term7.</a> Bạn để ý thấy bộ đếm trang nằm ở góc phải phía dưới ngoài cùng,
+có thống kê một số thông số nhất định về tình hình truy cập website. Bạn có thể dùng bộ đếm trang
+này để theo dõi, tuy nhiên thống kê chỉ có tính chất tương đối vì chả có cái gì là tuyệt đối
+(mà nói chung thì thống kê chẳng bao giờ đúng :D).</p>
+
+<p><strong>1. Cấu trúc file</strong></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>- config.php // Thông số cài đặt cơ sở dữ liệu: hostname, username, password và dabasename
+</span><span class='line'>- install.php // Chạy "1 lần rồi thôi" khi lần đấu bạn cài đặt bộ đếm trang này, sau đó nên xoá luôn đi
+</span><span class='line'>- site-counter-block.php // Include file này vào bất kỳ chỗ nào trong site của bạn để hiển thị thống kê
+</span><span class='line'>- site-counter-block.tpl.php // Đây là file template
+</span><span class='line'>- site-counter-include.php // Nên Include file này vào header để session hoạt động tốt
+</span><span class='line'>- SiteCounter.class.php // SiteCounter class - quan trọng nhất
+</span><span class='line'>- site-counter-block.css // Để tùy chỉnh style cho site-counter khi hiển thị
+</span><span class='line'>- site-counter-test.php // Để test</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Đấy là các file thiết yếu nhất, còn lại những phụ kiện phụ khác như: CHANGELOG.txt, INSTALL.txt,
+LICENSE.txt, README.txt, TODO.txt nữa. Ở đây chỉ bàn đến mấy file quan trọng trên thôi.</p>
+
+<p><em>2. Lần lượt phân tích từng file</em></p>
+
+<p>2.1 <code>config.php</code></p>
+
+<p>Lưu cấu hình về hostname, username, password và databasename để site-counter chạy được. Khi cài đặt
+thì điều đầu tiên là bạn phải điền các thông số vào trong file này.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="o">&lt;?</span><span class="nx">php</span>
+</span><span class='line'><span class="c1">// $Id$</span>
+</span><span class='line'><span class="sd">/**</span>
+</span><span class='line'><span class="sd"> * Config file for SiteCounter to work</span>
+</span><span class='line'><span class="sd"> *</span>
+</span><span class='line'><span class="sd"> * Edit to match your database, replace your_host by your host name...</span>
+</span><span class='line'><span class="sd"> * your_host is the host of your database</span>
+</span><span class='line'><span class="sd"> * your_username is the MySQL account of your database</span>
+</span><span class='line'><span class="sd"> * your_password is the password for that account</span>
+</span><span class='line'><span class="sd"> * your_database is the database name</span>
+</span><span class='line'><span class="sd"> */</span>
+</span><span class='line'>
+</span><span class='line'><span class="nb">define</span><span class="p">(</span><span class="s1">&#39;HOST&#39;</span><span class="p">,</span> <span class="s1">&#39;your_host&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="nb">define</span><span class="p">(</span><span class="s1">&#39;USERNAME&#39;</span><span class="p">,</span> <span class="s1">&#39;your_username&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="nb">define</span><span class="p">(</span><span class="s1">&#39;PASSWD&#39;</span><span class="p">,</span> <span class="s1">&#39;your_password&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="nb">define</span><span class="p">(</span><span class="s1">&#39;DBNAME&#39;</span><span class="p">,</span> <span class="s1">&#39;your_databasename&#39;</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>2.2 <code>install.php</code></p>
+
+<p>&ldquo;Chạy 1 lần rồi thôi&rdquo; để tạo bảng. Sau khi báo tạo bảng thành công thì bạn nên xóa file này đi
+luôn.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="o">&lt;?</span><span class="nx">php</span>
+</span><span class='line'><span class="c1">// $Id$</span>
+</span><span class='line'><span class="sd">/**</span>
+</span><span class='line'><span class="sd"> * @file</span>
+</span><span class='line'><span class="sd"> * Install file</span>
+</span><span class='line'><span class="sd"> *</span>
+</span><span class='line'><span class="sd"> * This enables to create table site_counter in your database to track visitor&#39;s information</span>
+</span><span class='line'><span class="sd"> */</span>
+</span><span class='line'><span class="k">require_once</span> <span class="s1">&#39;config.php&#39;</span><span class="p">;</span> <span class="c1">// Configuration file</span>
+</span><span class='line'><span class="nv">$query</span> <span class="o">=</span> <span class="s2">&quot;CREATE TABLE site_counter (</span>
+</span><span class='line'><span class="s2">   `ip` varchar(20) NOT NULL,</span>
+</span><span class='line'><span class="s2">   `timestamp` int(11) NOT NULL,</span>
+</span><span class='line'><span class="s2">   `visits` int(4) DEFAULT &#39;1&#39;</span>
+</span><span class='line'><span class="s2">);&quot;</span><span class="p">;</span> <span class="c1">// Query to create table.</span>
+</span><span class='line'><span class="nb">mysql_connect</span><span class="p">(</span><span class="nx">HOST</span><span class="p">,</span> <span class="nx">USERNAME</span><span class="p">,</span> <span class="nx">PASSWD</span><span class="p">)</span> <span class="k">or</span> <span class="k">die</span><span class="p">(</span><span class="s1">&#39;Could not connect to the host!&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="nb">mysql_select_db</span><span class="p">(</span><span class="nx">DBNAME</span><span class="p">)</span> <span class="k">or</span> <span class="k">die</span><span class="p">(</span><span class="s1">&#39;Could not select database!&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="nb">mysql_query</span><span class="p">(</span><span class="nv">$query</span><span class="p">)</span> <span class="k">or</span> <span class="k">die</span><span class="p">(</span><span class="s1">&#39;Could not create table!&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="k">echo</span> <span class="s1">&#39;Successful create table for site-counter! Please delete this install.php file by now.&#39;</span><span class="p">;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Ở đây sau khi chạy thành công sẽ tạo được bảng <code>site_counter</code> với 1 số trường sau: <code>ip (distinct)</code>,
+<code>timestamp</code>, <code>visits</code>. Nếu chưa có <code>ip</code> trong bảng thì <code>insert</code>, nếu có rồi và là <code>session</code> mới thì
+<code>update</code> tăng <code>visits</code> lên 1. Chỉ thế thôi.</p>
+
+<p>2.3 <code>SiteCounter.php</code></p>
+
+<p>Quan trọng bậc nhất và là cái đáng bàn nhiều nhất. Tuy nhiên khi nhìn vào source code là bạn có thể
+biết được cách hoạt động của nó luôn.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+<span class='line-number'>64</span>
+<span class='line-number'>65</span>
+<span class='line-number'>66</span>
+<span class='line-number'>67</span>
+<span class='line-number'>68</span>
+<span class='line-number'>69</span>
+<span class='line-number'>70</span>
+<span class='line-number'>71</span>
+<span class='line-number'>72</span>
+<span class='line-number'>73</span>
+<span class='line-number'>74</span>
+<span class='line-number'>75</span>
+<span class='line-number'>76</span>
+<span class='line-number'>77</span>
+<span class='line-number'>78</span>
+<span class='line-number'>79</span>
+<span class='line-number'>80</span>
+<span class='line-number'>81</span>
+<span class='line-number'>82</span>
+<span class='line-number'>83</span>
+<span class='line-number'>84</span>
+<span class='line-number'>85</span>
+<span class='line-number'>86</span>
+<span class='line-number'>87</span>
+<span class='line-number'>88</span>
+<span class='line-number'>89</span>
+<span class='line-number'>90</span>
+<span class='line-number'>91</span>
+<span class='line-number'>92</span>
+<span class='line-number'>93</span>
+<span class='line-number'>94</span>
+<span class='line-number'>95</span>
+<span class='line-number'>96</span>
+<span class='line-number'>97</span>
+<span class='line-number'>98</span>
+<span class='line-number'>99</span>
+<span class='line-number'>100</span>
+<span class='line-number'>101</span>
+<span class='line-number'>102</span>
+<span class='line-number'>103</span>
+<span class='line-number'>104</span>
+<span class='line-number'>105</span>
+<span class='line-number'>106</span>
+<span class='line-number'>107</span>
+<span class='line-number'>108</span>
+<span class='line-number'>109</span>
+<span class='line-number'>110</span>
+<span class='line-number'>111</span>
+<span class='line-number'>112</span>
+<span class='line-number'>113</span>
+<span class='line-number'>114</span>
+<span class='line-number'>115</span>
+<span class='line-number'>116</span>
+<span class='line-number'>117</span>
+<span class='line-number'>118</span>
+<span class='line-number'>119</span>
+<span class='line-number'>120</span>
+<span class='line-number'>121</span>
+<span class='line-number'>122</span>
+<span class='line-number'>123</span>
+<span class='line-number'>124</span>
+<span class='line-number'>125</span>
+<span class='line-number'>126</span>
+<span class='line-number'>127</span>
+<span class='line-number'>128</span>
+<span class='line-number'>129</span>
+<span class='line-number'>130</span>
+<span class='line-number'>131</span>
+<span class='line-number'>132</span>
+<span class='line-number'>133</span>
+<span class='line-number'>134</span>
+<span class='line-number'>135</span>
+<span class='line-number'>136</span>
+<span class='line-number'>137</span>
+<span class='line-number'>138</span>
+<span class='line-number'>139</span>
+<span class='line-number'>140</span>
+<span class='line-number'>141</span>
+<span class='line-number'>142</span>
+<span class='line-number'>143</span>
+<span class='line-number'>144</span>
+<span class='line-number'>145</span>
+<span class='line-number'>146</span>
+<span class='line-number'>147</span>
+<span class='line-number'>148</span>
+<span class='line-number'>149</span>
+<span class='line-number'>150</span>
+<span class='line-number'>151</span>
+<span class='line-number'>152</span>
+<span class='line-number'>153</span>
+<span class='line-number'>154</span>
+<span class='line-number'>155</span>
+<span class='line-number'>156</span>
+<span class='line-number'>157</span>
+<span class='line-number'>158</span>
+<span class='line-number'>159</span>
+<span class='line-number'>160</span>
+<span class='line-number'>161</span>
+<span class='line-number'>162</span>
+<span class='line-number'>163</span>
+<span class='line-number'>164</span>
+<span class='line-number'>165</span>
+<span class='line-number'>166</span>
+<span class='line-number'>167</span>
+<span class='line-number'>168</span>
+<span class='line-number'>169</span>
+<span class='line-number'>170</span>
+<span class='line-number'>171</span>
+<span class='line-number'>172</span>
+<span class='line-number'>173</span>
+<span class='line-number'>174</span>
+<span class='line-number'>175</span>
+<span class='line-number'>176</span>
+<span class='line-number'>177</span>
+<span class='line-number'>178</span>
+<span class='line-number'>179</span>
+<span class='line-number'>180</span>
+<span class='line-number'>181</span>
+<span class='line-number'>182</span>
+<span class='line-number'>183</span>
+<span class='line-number'>184</span>
+<span class='line-number'>185</span>
+<span class='line-number'>186</span>
+<span class='line-number'>187</span>
+<span class='line-number'>188</span>
+<span class='line-number'>189</span>
+<span class='line-number'>190</span>
+<span class='line-number'>191</span>
+<span class='line-number'>192</span>
+<span class='line-number'>193</span>
+<span class='line-number'>194</span>
+<span class='line-number'>195</span>
+<span class='line-number'>196</span>
+<span class='line-number'>197</span>
+<span class='line-number'>198</span>
+<span class='line-number'>199</span>
+<span class='line-number'>200</span>
+<span class='line-number'>201</span>
+<span class='line-number'>202</span>
+<span class='line-number'>203</span>
+<span class='line-number'>204</span>
+<span class='line-number'>205</span>
+<span class='line-number'>206</span>
+<span class='line-number'>207</span>
+<span class='line-number'>208</span>
+<span class='line-number'>209</span>
+<span class='line-number'>210</span>
+<span class='line-number'>211</span>
+<span class='line-number'>212</span>
+<span class='line-number'>213</span>
+<span class='line-number'>214</span>
+<span class='line-number'>215</span>
+<span class='line-number'>216</span>
+<span class='line-number'>217</span>
+<span class='line-number'>218</span>
+<span class='line-number'>219</span>
+<span class='line-number'>220</span>
+<span class='line-number'>221</span>
+<span class='line-number'>222</span>
+<span class='line-number'>223</span>
+<span class='line-number'>224</span>
+<span class='line-number'>225</span>
+<span class='line-number'>226</span>
+<span class='line-number'>227</span>
+<span class='line-number'>228</span>
+<span class='line-number'>229</span>
+<span class='line-number'>230</span>
+<span class='line-number'>231</span>
+<span class='line-number'>232</span>
+<span class='line-number'>233</span>
+<span class='line-number'>234</span>
+<span class='line-number'>235</span>
+<span class='line-number'>236</span>
+<span class='line-number'>237</span>
+<span class='line-number'>238</span>
+<span class='line-number'>239</span>
+<span class='line-number'>240</span>
+<span class='line-number'>241</span>
+<span class='line-number'>242</span>
+<span class='line-number'>243</span>
+<span class='line-number'>244</span>
+<span class='line-number'>245</span>
+<span class='line-number'>246</span>
+<span class='line-number'>247</span>
+<span class='line-number'>248</span>
+<span class='line-number'>249</span>
+<span class='line-number'>250</span>
+<span class='line-number'>251</span>
+<span class='line-number'>252</span>
+<span class='line-number'>253</span>
+<span class='line-number'>254</span>
+<span class='line-number'>255</span>
+<span class='line-number'>256</span>
+<span class='line-number'>257</span>
+<span class='line-number'>258</span>
+<span class='line-number'>259</span>
+<span class='line-number'>260</span>
+<span class='line-number'>261</span>
+<span class='line-number'>262</span>
+<span class='line-number'>263</span>
+<span class='line-number'>264</span>
+<span class='line-number'>265</span>
+<span class='line-number'>266</span>
+<span class='line-number'>267</span>
+<span class='line-number'>268</span>
+<span class='line-number'>269</span>
+<span class='line-number'>270</span>
+<span class='line-number'>271</span>
+<span class='line-number'>272</span>
+<span class='line-number'>273</span>
+<span class='line-number'>274</span>
+<span class='line-number'>275</span>
+<span class='line-number'>276</span>
+<span class='line-number'>277</span>
+<span class='line-number'>278</span>
+<span class='line-number'>279</span>
+<span class='line-number'>280</span>
+<span class='line-number'>281</span>
+<span class='line-number'>282</span>
+<span class='line-number'>283</span>
+<span class='line-number'>284</span>
+<span class='line-number'>285</span>
+<span class='line-number'>286</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="o">&lt;?</span><span class="nx">php</span>
+</span><span class='line'><span class="c1">// $Id$</span>
+</span><span class='line'><span class="sd">/**</span>
+</span><span class='line'><span class="sd"> * start session handler to avoid repetitive request info (visits) update for each session</span>
+</span><span class='line'><span class="sd"> *</span>
+</span><span class='line'><span class="sd"> * Is there any other better solution???</span>
+</span><span class='line'><span class="sd"> */</span>
+</span><span class='line'><span class="nb">session_start</span><span class="p">();</span>
+</span><span class='line'>
+</span><span class='line'><span class="sd">/**</span>
+</span><span class='line'><span class="sd"> * SiteCounter class to track and update basic site&#39;s info</span>
+</span><span class='line'><span class="sd"> *</span>
+</span><span class='line'><span class="sd"> * This is a Singleton Class to track and update basic site&#39;s info</span>
+</span><span class='line'><span class="sd"> * such as: IP, Visits, Total hits, Online, Unique visitors</span>
+</span><span class='line'><span class="sd"> *</span>
+</span><span class='line'><span class="sd"> * @copyright  hoatle (hoatle.net)</span>
+</span><span class='line'><span class="sd"> * @author     hoatle</span>
+</span><span class='line'><span class="sd"> * @license    http://opensource.org/licenses/gpl-license.php GNU Public License</span>
+</span><span class='line'><span class="sd"> * @version    1.0</span>
+</span><span class='line'><span class="sd"> * @link       http://hoatle.net/Project-Site-Counter</span>
+</span><span class='line'><span class="sd"> * @since      Class available since Release 1.0</span>
+</span><span class='line'><span class="sd"> */</span>
+</span><span class='line'><span class="k">class</span> <span class="nc">SiteCounter</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="sd">/**</span>
+</span><span class='line'><span class="sd">     * static property to hold singleton instance</span>
+</span><span class='line'><span class="sd">     * @access private</span>
+</span><span class='line'><span class="sd">     * @static</span>
+</span><span class='line'><span class="sd">     * @var SiteCounter</span>
+</span><span class='line'><span class="sd">     */</span>
+</span><span class='line'>    <span class="k">private</span> <span class="k">static</span> <span class="nv">$instance</span> <span class="o">=</span> <span class="k">false</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="sd">/**</span>
+</span><span class='line'><span class="sd">     * constant duration (in minutes) to get total online users</span>
+</span><span class='line'><span class="sd">     */</span>
+</span><span class='line'>    <span class="k">const</span> <span class="no">DURATION</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="sd">/**</span>
+</span><span class='line'><span class="sd">     * ip addressquery</span>
+</span><span class='line'><span class="sd">     * @access private</span>
+</span><span class='line'><span class="sd">     * @var string</span>
+</span><span class='line'><span class="sd">     */</span>
+</span><span class='line'>    <span class="k">private</span> <span class="nv">$ip</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="sd">/**</span>
+</span><span class='line'><span class="sd">     * number of visitis to your site from  this IP address</span>
+</span><span class='line'><span class="sd">     * @access private</span>
+</span><span class='line'><span class="sd">     * @var integer</span>
+</span><span class='line'><span class="sd">     */</span>
+</span><span class='line'>    <span class="k">private</span> <span class="nv">$visits</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="sd">/**</span>
+</span><span class='line'><span class="sd">     * number of online visitors</span>
+</span><span class='line'><span class="sd">     * @access private</span>
+</span><span class='line'><span class="sd">     * @var integer</span>
+</span><span class='line'><span class="sd">     */</span>
+</span><span class='line'>    <span class="k">private</span> <span class="nv">$online</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="sd">/**</span>
+</span><span class='line'><span class="sd">     * number of total hits since your connter&#39;s first operation</span>
+</span><span class='line'><span class="sd">     * @access private</span>
+</span><span class='line'><span class="sd">     * @var integer</span>
+</span><span class='line'><span class="sd">     */</span>
+</span><span class='line'>    <span class="k">private</span> <span class="nv">$totalHits</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="sd">/**</span>
+</span><span class='line'><span class="sd">     * number of unique visitors (ip address) since your counter&#39;s first operation</span>
+</span><span class='line'><span class="sd">     * @access private</span>
+</span><span class='line'><span class="sd">     * @var integer</span>
+</span><span class='line'><span class="sd">     */</span>
+</span><span class='line'>    <span class="k">private</span> <span class="nv">$unique</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="sd">/**</span>
+</span><span class='line'><span class="sd">     * database connection id to access</span>
+</span><span class='line'><span class="sd">     * @access private</span>
+</span><span class='line'><span class="sd">     * @static</span>
+</span><span class='line'><span class="sd">     * @var resource</span>
+</span><span class='line'><span class="sd">     */</span>
+</span><span class='line'>    <span class="k">private</span> <span class="k">static</span> <span class="nv">$dbConnectionId</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="sd">/**</span>
+</span><span class='line'><span class="sd">     * SiteCounter::__construct()</span>
+</span><span class='line'><span class="sd">     *</span>
+</span><span class='line'><span class="sd">     * private so only getInstance() method can instantiate</span>
+</span><span class='line'><span class="sd">     * @access private</span>
+</span><span class='line'><span class="sd">     * @return void</span>
+</span><span class='line'><span class="sd">     */</span>
+</span><span class='line'>    <span class="k">private</span> <span class="k">function</span> <span class="nf">__construct</span><span class="p">()</span>
+</span><span class='line'>    <span class="p">{</span>
+</span><span class='line'>        <span class="c1">// Get the IP address</span>
+</span><span class='line'>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">ip</span> <span class="o">=</span> <span class="nv">$_SERVER</span><span class="p">[</span><span class="s1">&#39;REMOTE_ADDR&#39;</span><span class="p">];</span>
+</span><span class='line'>        <span class="c1">// Get Info from request and insert to the database</span>
+</span><span class='line'>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_updateRequestInfo</span><span class="p">();</span>
+</span><span class='line'>        <span class="c1">// Get Info from database and update Counter instance</span>
+</span><span class='line'>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_updateCounterInfo</span><span class="p">();</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="sd">/**</span>
+</span><span class='line'><span class="sd">     * SiteCounter::_updateRequestInfo()</span>
+</span><span class='line'><span class="sd">     *</span>
+</span><span class='line'><span class="sd">     * Get request info and update database</span>
+</span><span class='line'><span class="sd">     * @access private</span>
+</span><span class='line'><span class="sd">     * @return void</span>
+</span><span class='line'><span class="sd">     */</span>
+</span><span class='line'>    <span class="k">private</span> <span class="k">function</span> <span class="nf">_updateRequestInfo</span><span class="p">()</span>
+</span><span class='line'>    <span class="p">{</span>
+</span><span class='line'>        <span class="c1">// Get current timestamp</span>
+</span><span class='line'>        <span class="nv">$time</span> <span class="o">=</span> <span class="nb">time</span><span class="p">();</span>
+</span><span class='line'>        <span class="nv">$query</span> <span class="o">=</span> <span class="s2">&quot;SELECT * FROM site_counter &quot;</span>
+</span><span class='line'>               <span class="o">.</span> <span class="s2">&quot;WHERE `ip` = &#39;</span><span class="si">$this-&gt;ip</span><span class="s2">&#39;&quot;</span><span class="p">;</span>
+</span><span class='line'>        <span class="nv">$res</span> <span class="o">=</span> <span class="nb">mysql_query</span><span class="p">(</span><span class="nv">$query</span><span class="p">,</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_getDbConnection</span><span class="p">());</span>
+</span><span class='line'>        <span class="nv">$row</span> <span class="o">=</span> <span class="nb">mysql_fetch_object</span><span class="p">(</span><span class="nv">$res</span><span class="p">);</span>
+</span><span class='line'>        <span class="c1">// Check ip existence in the table</span>
+</span><span class='line'>        <span class="k">if</span> <span class="p">(</span><span class="nv">$row</span><span class="o">-&gt;</span><span class="na">ip</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>          <span class="c1">// If ip exists, update visits</span>
+</span><span class='line'>          <span class="nv">$visits</span> <span class="o">=</span> <span class="nv">$row</span><span class="o">-&gt;</span><span class="na">visits</span><span class="p">;</span> <span class="c1">// current on database</span>
+</span><span class='line'>          <span class="c1">// increase $visits on each session only</span>
+</span><span class='line'>          <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">&#39;visitsIncreased&#39;</span><span class="p">])</span> <span class="p">{</span>
+</span><span class='line'>              <span class="nv">$visits</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
+</span><span class='line'>              <span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">&#39;visitsIncreased&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="k">true</span><span class="p">;</span>
+</span><span class='line'>          <span class="p">}</span>
+</span><span class='line'>          <span class="nv">$query</span> <span class="o">=</span> <span class="s2">&quot;UPDATE site_counter &quot;</span>
+</span><span class='line'>                 <span class="o">.</span> <span class="s2">&quot;SET `timestamp` = </span><span class="si">$time</span><span class="s2">, `visits` = </span><span class="si">$visits</span><span class="s2"> &quot;</span>
+</span><span class='line'>                 <span class="o">.</span> <span class="s2">&quot;WHERE `ip` = &#39;</span><span class="si">$this-&gt;ip</span><span class="s2">&#39;&quot;</span><span class="p">;</span>
+</span><span class='line'>        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span><span class='line'>          <span class="c1">// Else, insert into database</span>
+</span><span class='line'>          <span class="nv">$query</span> <span class="o">=</span> <span class="s2">&quot;INSERT site_counter(`ip`, `timestamp`, `visits`) &quot;</span>
+</span><span class='line'>                 <span class="o">.</span> <span class="s2">&quot;VALUES (&#39;</span><span class="si">$this-&gt;ip</span><span class="s2">&#39;, </span><span class="si">$time</span><span class="s2">, 1)&quot;</span><span class="p">;</span>
+</span><span class='line'>          <span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">&#39;visitsIncreased&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="k">true</span><span class="p">;</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>        <span class="nb">mysql_query</span><span class="p">(</span><span class="nv">$query</span><span class="p">,</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_getDbConnection</span><span class="p">())</span> <span class="k">or</span> <span class="k">die</span> <span class="p">(</span><span class="s1">&#39;Could not query database!&#39;</span><span class="p">);</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="sd">/**</span>
+</span><span class='line'><span class="sd">     * SiteCounter::_updateCounterInfo()</span>
+</span><span class='line'><span class="sd">     *</span>
+</span><span class='line'><span class="sd">     * Get database info and update Counter&#39;s attributes</span>
+</span><span class='line'><span class="sd">     * @access private</span>
+</span><span class='line'><span class="sd">     * @return void</span>
+</span><span class='line'><span class="sd">     */</span>
+</span><span class='line'>    <span class="k">private</span> <span class="k">function</span> <span class="nf">_updateCounterInfo</span><span class="p">()</span>
+</span><span class='line'>    <span class="p">{</span>
+</span><span class='line'>        <span class="c1">// Get online visitors</span>
+</span><span class='line'>        <span class="c1">// limit time</span>
+</span><span class='line'>        <span class="nv">$limitTime</span> <span class="o">=</span> <span class="nb">time</span><span class="p">()</span> <span class="o">-</span> <span class="p">(</span><span class="nx">self</span><span class="o">::</span><span class="na">DURATION</span> <span class="o">*</span> <span class="mi">60</span><span class="p">);</span> <span class="c1">// Count in senconds</span>
+</span><span class='line'>        <span class="nv">$query</span> <span class="o">=</span> <span class="s2">&quot;SELECT COUNT(*) `online` FROM site_counter &quot;</span>
+</span><span class='line'>               <span class="o">.</span> <span class="s2">&quot;WHERE `timestamp` &gt; </span><span class="si">$limitTime</span><span class="s2">&quot;</span><span class="p">;</span>
+</span><span class='line'>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">online</span> <span class="o">=</span> <span class="nb">mysql_fetch_object</span><span class="p">(</span><span class="nb">mysql_query</span><span class="p">(</span><span class="nv">$query</span><span class="p">,</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_getDbConnection</span><span class="p">()))</span><span class="o">-&gt;</span><span class="na">online</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="c1">// Get visits</span>
+</span><span class='line'>        <span class="nv">$query</span> <span class="o">=</span> <span class="s2">&quot;SELECT `visits` FROM site_counter &quot;</span>
+</span><span class='line'>               <span class="o">.</span> <span class="s2">&quot;WHERE `ip` = &#39;</span><span class="si">$this-&gt;ip</span><span class="s2">&#39;&quot;</span><span class="p">;</span>
+</span><span class='line'>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">visits</span> <span class="o">=</span> <span class="nb">mysql_fetch_object</span><span class="p">(</span><span class="nb">mysql_query</span><span class="p">(</span><span class="nv">$query</span><span class="p">,</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_getDbConnection</span><span class="p">()))</span><span class="o">-&gt;</span><span class="na">visits</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="c1">// Get total hits</span>
+</span><span class='line'>        <span class="nv">$query</span> <span class="o">=</span> <span class="s2">&quot;SELECT SUM(`visits`) `totalHits` &quot;</span>
+</span><span class='line'>               <span class="o">.</span> <span class="s2">&quot;FROM site_counter&quot;</span><span class="p">;</span>
+</span><span class='line'>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">totalHits</span> <span class="o">=</span> <span class="nb">mysql_fetch_object</span><span class="p">(</span><span class="nb">mysql_query</span><span class="p">(</span><span class="nv">$query</span><span class="p">,</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_getDbConnection</span><span class="p">()))</span><span class="o">-&gt;</span><span class="na">totalHits</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="c1">// Get the number of unique visitors</span>
+</span><span class='line'>        <span class="nv">$query</span> <span class="o">=</span> <span class="s2">&quot;SELECT COUNT(*) `unique` FROM site_counter&quot;</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">unique</span> <span class="o">=</span> <span class="nb">mysql_fetch_object</span><span class="p">(</span><span class="nb">mysql_query</span><span class="p">(</span><span class="nv">$query</span><span class="p">,</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_getDbConnection</span><span class="p">()))</span><span class="o">-&gt;</span><span class="na">unique</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="sd">/**</span>
+</span><span class='line'><span class="sd">     * SiteCounter::_getDbConnection()</span>
+</span><span class='line'><span class="sd">     *</span>
+</span><span class='line'><span class="sd">     * Get database connection resource, this is a singleton pattern. This method get config constant</span>
+</span><span class='line'><span class="sd">     * from config.php file: HOST, USERNAME, PASSWD, DBNAME</span>
+</span><span class='line'><span class="sd">     * @access private</span>
+</span><span class='line'><span class="sd">     * @return resource $dbConnectionId</span>
+</span><span class='line'><span class="sd">     */</span>
+</span><span class='line'>    <span class="k">private</span> <span class="k">function</span> <span class="nf">_getDbConnection</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>       <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">self</span><span class="o">::</span><span class="nv">$dbConnectionId</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>           <span class="nx">self</span><span class="o">::</span><span class="nv">$dbConnectionId</span> <span class="o">=</span> <span class="nb">mysql_connect</span><span class="p">(</span><span class="nx">HOST</span><span class="p">,</span> <span class="nx">USERNAME</span><span class="p">,</span> <span class="nx">PASSWD</span><span class="p">)</span> <span class="k">or</span> <span class="k">die</span><span class="p">(</span><span class="s1">&#39;Error connect to host: &#39;</span> <span class="o">.</span> <span class="nx">HOST</span><span class="p">);</span>
+</span><span class='line'>           <span class="nb">mysql_select_db</span><span class="p">(</span><span class="nx">DBNAME</span><span class="p">,</span> <span class="nx">self</span><span class="o">::</span><span class="nv">$dbConnectionId</span><span class="p">)</span> <span class="k">or</span> <span class="k">die</span><span class="p">(</span><span class="s1">&#39;Error connect to database: &#39;</span> <span class="o">.</span> <span class="nx">DBNAME</span><span class="p">);</span>
+</span><span class='line'>       <span class="p">}</span>
+</span><span class='line'>       <span class="k">return</span> <span class="nx">self</span><span class="o">::</span><span class="nv">$dbConnectionId</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="sd">/**</span>
+</span><span class='line'><span class="sd">     * SiteCounter::getInstance()</span>
+</span><span class='line'><span class="sd">     *</span>
+</span><span class='line'><span class="sd">     * factory method to return the singleton instance</span>
+</span><span class='line'><span class="sd">     * @access public</span>
+</span><span class='line'><span class="sd">     * @static</span>
+</span><span class='line'><span class="sd">     * @return Counter $instance</span>
+</span><span class='line'><span class="sd">     */</span>
+</span><span class='line'>    <span class="k">public</span> <span class="k">static</span> <span class="k">function</span> <span class="nf">getInstance</span><span class="p">()</span>
+</span><span class='line'>    <span class="p">{</span>
+</span><span class='line'>        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">self</span><span class="o">::</span><span class="nv">$instance</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>            <span class="c1">// If no instance, just create one</span>
+</span><span class='line'>            <span class="nx">self</span><span class="o">::</span><span class="nv">$instance</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">SiteCounter</span><span class="p">();</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>        <span class="k">return</span> <span class="nx">self</span><span class="o">::</span><span class="nv">$instance</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="sd">/**</span>
+</span><span class='line'><span class="sd">     * SiteCounter::__clone()</span>
+</span><span class='line'><span class="sd">     *</span>
+</span><span class='line'><span class="sd">     * Prevent from object clonning</span>
+</span><span class='line'><span class="sd">     * @access public</span>
+</span><span class='line'><span class="sd">     * @return Exception</span>
+</span><span class='line'><span class="sd">     */</span>
+</span><span class='line'>    <span class="k">final</span> <span class="k">public</span> <span class="k">function</span> <span class="nf">__clone</span><span class="p">()</span>
+</span><span class='line'>    <span class="p">{</span>
+</span><span class='line'>        <span class="k">return</span> <span class="k">new</span> <span class="nx">Exception</span><span class="p">(</span><span class="s1">&#39;This Counter object can not be cloned!&#39;</span><span class="p">);</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="cm">/*</span>
+</span><span class='line'><span class="cm">     * Getter method</span>
+</span><span class='line'><span class="cm">     *</span>
+</span><span class='line'><span class="cm">     * This magic getter method will return Counter&#39;s attributes if any</span>
+</span><span class='line'><span class="cm">     * @acess public</span>
+</span><span class='line'><span class="cm">     * @return mixed</span>
+</span><span class='line'><span class="cm">     */</span>
+</span><span class='line'>    <span class="k">public</span> <span class="k">function</span> <span class="nf">__get</span><span class="p">(</span><span class="nv">$property</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nv">$methodName</span> <span class="o">=</span> <span class="s2">&quot;get</span><span class="si">{</span><span class="nv">$property</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">;</span>
+</span><span class='line'>        <span class="k">if</span> <span class="p">(</span><span class="nb">method_exists</span><span class="p">(</span><span class="nv">$this</span><span class="p">,</span> <span class="nv">$methodName</span><span class="p">))</span> <span class="p">{</span>
+</span><span class='line'>            <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="nv">$methodName</span><span class="p">();</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="sd">/**</span>
+</span><span class='line'><span class="sd">     * SiteCounter::getIp()</span>
+</span><span class='line'><span class="sd">     *</span>
+</span><span class='line'><span class="sd">     * Get Ip address from the current request</span>
+</span><span class='line'><span class="sd">     * @access public</span>
+</span><span class='line'><span class="sd">     * @return string $ip</span>
+</span><span class='line'><span class="sd">     */</span>
+</span><span class='line'>    <span class="k">public</span> <span class="k">function</span> <span class="nf">getIp</span><span class="p">()</span>
+</span><span class='line'>    <span class="p">{</span>
+</span><span class='line'>        <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">ip</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="sd">/**</span>
+</span><span class='line'><span class="sd">     * SiteCounter::getVisits()</span>
+</span><span class='line'><span class="sd">     *</span>
+</span><span class='line'><span class="sd">     * Get number of visits from the current request</span>
+</span><span class='line'><span class="sd">     * @access public</span>
+</span><span class='line'><span class="sd">     * @return integer $visits</span>
+</span><span class='line'><span class="sd">     */</span>
+</span><span class='line'>    <span class="k">public</span> <span class="k">function</span> <span class="nf">getVisits</span><span class="p">()</span>
+</span><span class='line'>    <span class="p">{</span>
+</span><span class='line'>        <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">visits</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="sd">/**</span>
+</span><span class='line'><span class="sd">     * SiteCounter::getOnline()</span>
+</span><span class='line'><span class="sd">     *</span>
+</span><span class='line'><span class="sd">     * Get number of online user at the time of request</span>
+</span><span class='line'><span class="sd">     * @access public</span>
+</span><span class='line'><span class="sd">     * @return integer $online</span>
+</span><span class='line'><span class="sd">     */</span>
+</span><span class='line'>    <span class="k">public</span> <span class="k">function</span> <span class="nf">getOnline</span><span class="p">()</span>
+</span><span class='line'>    <span class="p">{</span>
+</span><span class='line'>        <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">online</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="sd">/**</span>
+</span><span class='line'><span class="sd">     * SiteCounter::getTotalHits()</span>
+</span><span class='line'><span class="sd">     *</span>
+</span><span class='line'><span class="sd">     * Get total hits from the day of site-counter&#39;s operation</span>
+</span><span class='line'><span class="sd">     * @access public</span>
+</span><span class='line'><span class="sd">     * @return integer $totalHits</span>
+</span><span class='line'><span class="sd">     */</span>
+</span><span class='line'>    <span class="k">public</span> <span class="k">function</span> <span class="nf">getTotalHits</span><span class="p">()</span>
+</span><span class='line'>    <span class="p">{</span>
+</span><span class='line'>        <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">totalHits</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="sd">/**</span>
+</span><span class='line'><span class="sd">     * SiteCounter::getUnique()</span>
+</span><span class='line'><span class="sd">     *</span>
+</span><span class='line'><span class="sd">     * Get the total number of unique visitor (ip address)</span>
+</span><span class='line'><span class="sd">     * @access public</span>
+</span><span class='line'><span class="sd">     * @return integer $unique</span>
+</span><span class='line'><span class="sd">     */</span>
+</span><span class='line'>    <span class="k">public</span> <span class="k">function</span> <span class="nf">getUnique</span><span class="p">()</span>
+</span><span class='line'>    <span class="p">{</span>
+</span><span class='line'>        <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">unique</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Ý tưởng cho class SiteCounter: Singleton vì có thể được gọi 2 lần trong 1 file, nhưng chỉ được phép
+có 1 instance trong 1 lần request. Đầu tiên là lấy ip của người dùng. Bước 1 là cập nhật cơ sở dữ
+liệu (<code>_updateRequestInfo</code>): kiểm tra ip có tồn tại hay chưa, nếu chưa thì thêm 1 record vào bảng,
+nếu rồi thì update visits tăng lên 1. Bước 2 là cập nhật đối tượng SiteCounter để sau đó lấy thông
+tin về $ip, $visits, $online, $totalHits, $unique thông qua đối tượng được khởi tạo từ class
+SiteCounter. Ví dụ:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="nv">$counter</span> <span class="o">=</span> <span class="nx">SiteCounter</span><span class="o">::</span><span class="na">getInstance</span><span class="p">();</span>
+</span><span class='line'><span class="nv">$counter</span><span class="o">-&gt;</span><span class="na">getIp</span><span class="p">();</span> <span class="c1">// = $counter-&gt;Ip;</span>
+</span><span class='line'><span class="nv">$counter</span><span class="o">-&gt;</span><span class="na">Online</span><span class="p">;</span> <span class="c1">// = $counter-&gt;getOnline();</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Có thể thấy có 2 cách lấy thuộc tính như vậy là do magic method <strong>get() được implement. Khi bạn truy
+cập thuộc tính của 1 object mà không public thì hàm </strong>get() này sẽ được gọi và tham số được truyền
+vào chính là property bạn gọi thông qua object. Tất nhiên là bạn cũng phải implement các hàm Getter
+trước rồi đã, đây coi như chỉ là helper method mà thôi.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="cm">/*</span>
+</span><span class='line'><span class="cm"> * Getter method</span>
+</span><span class='line'><span class="cm"> *</span>
+</span><span class='line'><span class="cm"> * This magic getter method will return Counter&#39;s attributes if any</span>
+</span><span class='line'><span class="cm"> * @acess public</span>
+</span><span class='line'><span class="cm"> * @return mixed</span>
+</span><span class='line'><span class="cm"> */</span>
+</span><span class='line'><span class="k">public</span> <span class="k">function</span> <span class="nf">__get</span><span class="p">(</span><span class="nv">$property</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nv">$methodName</span> <span class="o">=</span> <span class="s2">&quot;get</span><span class="si">{</span><span class="nv">$property</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="nb">method_exists</span><span class="p">(</span><span class="nv">$this</span><span class="p">,</span> <span class="nv">$methodName</span><span class="p">))</span> <span class="p">{</span>
+</span><span class='line'>        <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="nv">$methodName</span><span class="p">();</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>2.4 Bây giờ đến phần sử dụng class SiteCounter trên.</p>
+
+<p>Đầu tiên là sẽ có 2 file được include vào trang theo dõi của bạn: site-counter-include.php và
+site-counter-block.php để hiển thị. site-counter-include.php luôn phải được include vào header của
+trang vì sử dụng session, nếu include sau 1 vài file thì rất có thể session sẽ không được tạo vì
+header đã được gửi lại cho phía client => Warning.</p>
+
+<p>File site-counter-include.php</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="o">&lt;?</span><span class="nx">php</span>
+</span><span class='line'><span class="c1">// $Id$</span>
+</span><span class='line'><span class="sd">/**</span>
+</span><span class='line'><span class="sd"> * @file tracking visitor&#39;s information</span>
+</span><span class='line'><span class="sd"> *</span>
+</span><span class='line'><span class="sd"> * To track every visitor&#39;s information on every request to any page on your website,</span>
+</span><span class='line'><span class="sd"> * include this file on your header or footer part or any that that is represented on</span>
+</span><span class='line'><span class="sd"> * every page of your site.</span>
+</span><span class='line'><span class="sd"> */</span>
+</span><span class='line'><span class="k">require_once</span> <span class="s1">&#39;config.php&#39;</span><span class="p">;</span>
+</span><span class='line'><span class="k">require_once</span> <span class="s1">&#39;SiteCounter.class.php&#39;</span><span class="p">;</span>
+</span><span class='line'><span class="nv">$counter</span> <span class="o">=</span> <span class="nx">SiteCounter</span><span class="o">::</span><span class="na">getInstance</span><span class="p">();</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>File site-conter-block.php, site-counter-block.tpl.php và site-counter-block.css để hiển thị:</p>
+
+<p>File site-counter-block.php</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="o">&lt;?</span><span class="nx">php</span>
+</span><span class='line'><span class="c1">// $Id$</span>
+</span><span class='line'><span class="sd">/**</span>
+</span><span class='line'><span class="sd"> * @file display visitor&#39;s information</span>
+</span><span class='line'><span class="sd"> *</span>
+</span><span class='line'><span class="sd"> * To display visitor&#39;s information, include this file on any part of your page.</span>
+</span><span class='line'><span class="sd"> * Refer to README.txt on HOW TO USE part for more information.</span>
+</span><span class='line'><span class="sd"> */</span>
+</span><span class='line'><span class="nv">$counter</span> <span class="o">=</span> <span class="nx">SiteCounter</span><span class="o">::</span><span class="na">getInstance</span><span class="p">();</span>
+</span><span class='line'><span class="c1">// Get information</span>
+</span><span class='line'><span class="nv">$ip</span>        <span class="o">=</span> <span class="nv">$counter</span><span class="o">-&gt;</span><span class="na">Ip</span><span class="p">;</span>
+</span><span class='line'><span class="nv">$online</span>    <span class="o">=</span> <span class="nv">$counter</span><span class="o">-&gt;</span><span class="na">Online</span><span class="p">;</span>
+</span><span class='line'><span class="nv">$visits</span>    <span class="o">=</span> <span class="nv">$counter</span><span class="o">-&gt;</span><span class="na">Visits</span><span class="p">;</span>
+</span><span class='line'><span class="nv">$totalHits</span> <span class="o">=</span> <span class="nv">$counter</span><span class="o">-&gt;</span><span class="na">TotalHits</span><span class="p">;</span>
+</span><span class='line'><span class="nv">$unique</span>    <span class="o">=</span> <span class="nv">$counter</span><span class="o">-&gt;</span><span class="na">Unique</span><span class="p">;</span>
+</span><span class='line'><span class="c1">// display it</span>
+</span><span class='line'><span class="k">include_once</span> <span class="err">&#39;</span><span class="nx">site</span><span class="o">-</span><span class="nx">counter</span><span class="o">-</span><span class="nx">block</span><span class="o">.</span><span class="nx">tpl</span><span class="o">.</span><span class="nx">php</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>File site-counter-block.tpl.php:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="o">&lt;?</span><span class="nx">php</span>
+</span><span class='line'><span class="c1">// $Id$</span>
+</span><span class='line'><span class="sd">/**</span>
+</span><span class='line'><span class="sd"> * @file template file to display site-counter information</span>
+</span><span class='line'><span class="sd"> * Availabe variables:</span>
+</span><span class='line'><span class="sd"> * - $ip</span>
+</span><span class='line'><span class="sd"> * - $visits</span>
+</span><span class='line'><span class="sd"> * - $online</span>
+</span><span class='line'><span class="sd"> * - $totalHits</span>
+</span><span class='line'><span class="sd"> * - $unique</span>
+</span><span class='line'><span class="sd"> */</span>
+</span><span class='line'><span class="cp">?&gt;</span><span class="x"></span>
+</span><span class='line'><span class="x">&lt;div id=&quot;site-counter&quot;&gt;&lt;fieldset&gt;&lt;legend&gt;Site-Counter&lt;/legend&gt;</span>
+</span><span class='line'><span class="x">&lt;div&gt;Your IP: &lt;span id=&quot;ip&quot;&gt;</span><span class="cp">&lt;?php</span> <span class="k">print</span> <span class="nv">$ip</span><span class="p">;</span><span class="cp">?&gt;</span><span class="x">&lt;/span&gt;&lt;/div&gt;</span>
+</span><span class='line'><span class="x">&lt;div&gt;Your visits: &lt;span id=&quot;visits&quot;&gt;</span><span class="cp">&lt;?php</span> <span class="k">print</span> <span class="nv">$visits</span><span class="p">;</span><span class="cp">?&gt;</span><span class="x">&lt;/span&gt;&lt;/div&gt;</span>
+</span><span class='line'><span class="x">&lt;div&gt;Online: &lt;span id=&quot;online&quot;&gt;</span><span class="cp">&lt;?php</span> <span class="k">print</span> <span class="nv">$online</span><span class="p">;</span><span class="cp">?&gt;</span><span class="x">&lt;/span&gt;&lt;/div&gt;</span>
+</span><span class='line'><span class="x">&lt;div&gt;Total Hits: &lt;span id=&quot;total-hits&quot;&gt;</span><span class="cp">&lt;?php</span> <span class="k">print</span> <span class="nv">$totalHits</span><span class="p">;</span><span class="cp">?&gt;</span><span class="x">&lt;/span&gt;&lt;/div&gt;</span>
+</span><span class='line'><span class="x">&lt;div&gt;Unique visitors: &lt;span id=&quot;unique&quot;&gt;</span><span class="cp">&lt;?php</span> <span class="k">print</span> <span class="nv">$unique</span><span class="p">;</span> <span class="cp">?&gt;</span><span class="x">&lt;/span&gt;&lt;/div&gt;</span>
+</span><span class='line'><span class="x">&lt;/fieldset&gt;</span>
+</span><span class='line'><span class="x">&lt;/div&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>File site-counter-block.css:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+</pre></td><td class='code'><pre><code class='css'><span class='line'><span class="c">/**</span>
+</span><span class='line'><span class="c"> * $Id$</span>
+</span><span class='line'><span class="c"> * Styles site-counter</span>
+</span><span class='line'><span class="c"> * author: hoatle</span>
+</span><span class='line'><span class="c"> * website: hoatle.net</span>
+</span><span class='line'><span class="c"> */</span>
+</span><span class='line'>
+</span><span class='line'> <span class="nf">#site-counter</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">width</span><span class="o">:</span> <span class="m">220px</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">font-size</span><span class="o">:</span> <span class="m">12px</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">color</span><span class="o">:</span> <span class="nb">gray</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">text-align</span><span class="o">:</span> <span class="k">left</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">background-color</span><span class="o">:</span> <span class="nb">white</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">border</span><span class="o">:</span> <span class="m">1px</span> <span class="nb">black</span> <span class="k">dotted</span><span class="p">;</span>
+</span><span class='line'>    <span class="n">filter</span><span class="o">:</span> <span class="n">alpha</span><span class="p">(</span><span class="k">opacity</span><span class="o">=</span><span class="m">90</span><span class="p">);</span>
+</span><span class='line'>    <span class="o">-</span><span class="n">moz</span><span class="o">-</span><span class="k">opacity</span><span class="o">:</span> <span class="m">0</span><span class="o">.</span><span class="m">09</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">opacity</span><span class="o">:</span> <span class="m">0</span><span class="o">.</span><span class="m">90</span><span class="p">;</span>
+</span><span class='line'>    <span class="o">-</span><span class="n">khtml</span><span class="o">-</span><span class="k">opacity</span><span class="o">:</span> <span class="m">0</span><span class="o">.</span><span class="m">90</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">margin</span><span class="o">:</span> <span class="m">2em</span> <span class="m">0</span> <span class="m">0</span><span class="p">;</span>
+</span><span class='line'> <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'> <span class="nf">#site-counter</span> <span class="nt">div</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">text-align</span><span class="o">:</span> <span class="k">left</span><span class="p">;</span>
+</span><span class='line'> <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'> <span class="nf">#site-counter</span> <span class="nt">div</span> <span class="nf">#ip</span> <span class="p">{</span>
+</span><span class='line'>
+</span><span class='line'> <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'> <span class="nf">#site-counter</span> <span class="nt">div</span> <span class="nf">#visits</span> <span class="p">{</span>
+</span><span class='line'>
+</span><span class='line'> <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'> <span class="nf">#site-counter</span> <span class="nt">div</span> <span class="nf">#online</span> <span class="p">{</span>
+</span><span class='line'>
+</span><span class='line'> <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'> <span class="nf">#site-couner</span> <span class="nt">div</span> <span class="nf">#total-hits</span> <span class="p">{</span>
+</span><span class='line'>
+</span><span class='line'> <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'> <span class="nf">#site-counter</span> <span class="nt">p</span> <span class="nf">#unique</span> <span class="p">{</span>
+</span><span class='line'>
+</span><span class='line'> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>2.5 Xong</p>
+
+<p>Cuối cùng là test nó với trang site-counter-test.php.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="cp">&lt;?php</span>
+</span><span class='line'><span class="cp">// $Id$</span>
+</span><span class='line'><span class="cp">include_once &#39;site-counter-include.php&#39;;</span>
+</span><span class='line'><span class="cp">?&gt;</span>
+</span><span class='line'><span class="cp">&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;</span>
+</span><span class='line'><span class="nt">&lt;html</span> <span class="na">xmlns=</span><span class="s">&quot;http://www.w3.org/1999/xhtml&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'><span class="nt">&lt;head&gt;</span>
+</span><span class='line'><span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">&quot;Content-Type&quot;</span> <span class="na">content=</span><span class="s">&quot;text/html; charset=utf-8&quot;</span> <span class="nt">/&gt;</span>
+</span><span class='line'><span class="nt">&lt;title&gt;</span>Site-Counter Test Page<span class="nt">&lt;/title&gt;</span>
+</span><span class='line'><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href=</span><span class="s">&quot;site-counter-block.css&quot;</span> <span class="na">type=</span><span class="s">&quot;text/css&quot;</span> <span class="na">media=</span><span class="s">&quot;screen&quot;</span> <span class="nt">/&gt;</span>
+</span><span class='line'><span class="nt">&lt;/head&gt;</span>
+</span><span class='line'><span class="nt">&lt;body&gt;</span>
+</span><span class='line'><span class="cp">&lt;?php include_once &#39;site-counter-block.php&#39;; ?&gt;</span>
+</span><span class='line'><span class="nt">&lt;/body&gt;</span>
+</span><span class='line'><span class="nt">&lt;/html&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Chúc vui :).</p>
+</div>
+
+
+  <footer>
+    
+      <div class="revision">
+    <hr/>
+    <p><strong>Latest Change Log:</strong></p>
+    <ul><li><strong>Tue Dec 3 05:46:14 2013</strong><br/>Thiết kế bộ đếm trang (site-counter) đơn giản
+</li></ul><a href=https://github.com/hoatle/blog.hoatle.info/commits/HEAD/source/_posts/2008-12-21-thiet-ke-bo-dem-trang-site-counter-don-gian.markdown target=_blank>View all changes on Github</a>
+    <hr/>
+</div>
+
+    
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name" class="fn">hoatle</span></span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time itemprop="datePublished" content="2008-12-21T05:38:00+00:00" datetime="2008-12-21T05:38:00+00:00" pubdate data-updated="true">Dec 21<span>st</span>, 2008</time>
+      
+
+<span class="categories">posted in
+  
+    <a class='category' href='/categories/vi/'>vi</a>
+  
+</span>
+
+
+      
+
+
+    </p>
+    
+      
+        
+            
+            
+        
+
+
+
+
+
+
+        
+    
+
+
+
+
+
+<div class="cc-license">
+    <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">
+        <img alt="Creative Commons Attribution-ShareAlike 3.0 Unported License" src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" />
+    </a><br />
+    This work is licensed under a
+    <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.
+</div>
+
+    
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://blog.hoatle.info/2008/12/21/thiet-ke-bo-dem-trang-site-counter-don-gian/" data-via="hoatle" data-counturl="http://blog.hoatle.info/2008/12/21/thiet-ke-bo-dem-trang-site-counter-don-gian/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-href="http://blog.hoatle.info/2008/12/21/thiet-ke-bo-dem-trang-site-counter-don-gian/" data-send="true" data-width="450"
+         data-show-faces="false">
+     </div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/2008/12/20/tao-giao-dien-tab-don-gian-voi-css-va-jquery/" title="Previous Post: Tạo giao diện tab đơn giản với CSS và jQuery">&laquo; Tạo giao diện tab đơn giản với CSS và jQuery</a>
+      
+      
+        <a class="basic-alignment right" href="/2009/02/17/my-first-working-day-at-exo-platform-sea/" title="Next Post: my first working day at eXo Platform SEA">my first working day at eXo Platform SEA &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/2010/01/16/them-doi-so-vao-message-bundle-trong-opensocial/">Thêm đối Số Vào Message Bundle Trong OpenSocial</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2010/01/16/dynamic-arguments-binding-with-opensocial-message-bundle/">Dynamic Arguments Binding With OpenSocial Message Bundle</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2010/01/09/gan-nhieu-ham-xu-ly-su-kien-vao-mot-phan-tu-trong-javascript/">Gán Nhiều Hàm Xử Lý Sự Kiện Vào Một Phần Tử Trong JavaScript</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2010/01/09/multiple-event-handlers-for-an-element-in-javascript/">Multiple Event Handlers for an Element in JavaScript</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2009/12/31/tong-ket-nam-2009-va-nhung-du-dinh-cho-nam-2010/">Tổng Kết Năm 2009 và Những Dự định Cho Năm 2010</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>On Delicious</h1>
+  <div id="delicious"></div>
+  <script type="text/javascript" src="http://feeds.delicious.com/v2/json/hoatle?count=5&amp;sort=date&amp;callback=renderDeliciousLinks"></script>
+  <p><a href="http://delicious.com/hoatle">See all bookmarks &raquo;</a></p>
+</section>
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - hoatle -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'hoatle-blog';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://blog.hoatle.info/2008/12/21/thiet-ke-bo-dem-trang-site-counter-don-gian/';
+        var disqus_url = 'http://blog.hoatle.info/2008/12/21/thiet-ke-bo-dem-trang-site-counter-don-gian/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=625149054184531";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

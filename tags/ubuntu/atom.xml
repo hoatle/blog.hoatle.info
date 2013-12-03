@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Tag: Ubuntu | blog.hoatle.info]]></title>
+  <link href="http://blog.hoatle.info/tags/ubuntu/atom.xml" rel="self"/>
+  <link href="http://blog.hoatle.info/"/>
+  <updated>2013-12-03T06:26:53+00:00</updated>
+  <id>http://blog.hoatle.info/</id>
+  <author>
+    <name><![CDATA[hoatle]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Root role trong Nautilus]]></title>
+    <link href="http://blog.hoatle.info/2008/12/12/root-role-trong-nautilus/"/>
+    <updated>2008-12-12T19:15:00+00:00</updated>
+    <id>http://blog.hoatle.info/2008/12/12/root-role-trong-nautilus</id>
+    <content type="html"><![CDATA[<p>Khi sử dụng Ubuntu, quyền mặc định sẽ là người dùng bình thường, không phải là quyền &ldquo;root&rdquo;.
+(Với quyền &ldquo;root&rdquo; thì có thể làm mọi thao tác đến hệ thống).</p>
+
+<p>Trong terminal, các thao tác cần đến quyền root thì tất cả các lệnh đều phải có &ldquo;sudo&rdquo;
+[superuser do == root] ở trước.</p>
+
+<!-- more -->
+
+
+<p>Ví dụ: <code>computername: directory$ sudo mv file_path dir_path</code> [Di chuyển 1 file sang một thư mục mới,
+thường dùng sudo khi làm việc với file hệ thống không nằm trong home dir].</p>
+
+<p>Nhưng dùng lệnh copy, move trong terminal chỉ copy và move các file chứ không thể copy hoặc move
+thư mục.</p>
+
+<p>Vừa download FileZilla về, giải nén ra ở Desktop thì được 2 thư mục con là bin và share. Có thể sử
+dụng luôn khi click vào filezilla trong bin, nhưng tớ muốn copy vào thư mục cài đặt thông thường
+là <code>/usr</code> [Trong <code>/user</code> có 2 folder là <code>bin</code> và <code>share</code>]. Có thể copy vào <code>/usr/local</code> [Cũng có 2
+folder là <code>bin</code> và <code>share</code>]. Có thể phải mất một thời gian mới quen được cách sắp xếp file trong
+Linux, khác nhiều so với Windows. Mới đầu dùng thì hơi bị loạn :D.</p>
+
+<p>Vậy là tớ quyết định move 2 cái folder của FileZilla là <code>bin</code> và <code>share</code> sang <code>/usr</code>.</p>
+
+<p>Dùng Nautilus [Giống Windows Explorer trong Windows] với quyền thông thường thì không thể copy,
+delete, move trong File System. Mới đầu tớ dùng terminal để move file trong bin của FileZilla vào
+folder bin trong /usr. Còn lại folder share lại có thêm mấy cái folder con nữa, trong mấy cái folder
+con này lại có folder con nữa, nếu dùng terminal thì chắc chết :(.</p>
+
+<p>Hoặc là có cách copy, move cả folder mà tớ chưa biết, chưa search được ???</p>
+
+<p>Cách nhanh nhất là dùng Nautilus với quyền root. Vào terminal type: <code>sudo nautilus</code>. Thế là ổn. Giờ
+copy, paste, delete thoải mái :D.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Chuyển sang dùng Ubuntu]]></title>
+    <link href="http://blog.hoatle.info/2008/12/08/chuyen-sang-dung-ubuntu/"/>
+    <updated>2008-12-08T13:01:00+00:00</updated>
+    <id>http://blog.hoatle.info/2008/12/08/chuyen-sang-dung-ubuntu</id>
+    <content type="html"><![CDATA[<p>Cách đây mấy tháng cài Ubuntu 8.04 để thử nghiệm xem thế nào. Cấp dung lượng đĩa có 4GB, chưa làm
+được gì nhiều lắm, windows vẫn là primary.</p>
+
+<p>Vừa cài lại Ubuntu 8.10, cấp 20GB, thế là đủ dùng. Giờ thì mình làm việc trên Ubuntu, còn windows
+thì để test nhiều hơn là để làm việc. Môi trường làm việc đã thiết lập xong xuôi hết.</p>
+
+<p>Đang học Python để viết ứng dụng trên Google Apps. Thấy Python có cú pháp gọn, mạch lạc.</p>
+
+<p>Vụ namespace ở PHP dùng kí tự &ldquo;\&rdquo; để cho namespace thấy lạ. Hầu như các ngôn ngữ khác đều dùng kí
+tự &ldquo;.&rdquo; cho namespace, gọi method, lấy attribute. Còn PHP dùng &ndash;> cho method, attribute.</p>
+
+<p>Môi trường phát triển trên Ubuntu thuận lợi hơn nhiều, dùng terminal thích :).</p>
+
+<p>Vài cái screenshot của Ubuntu (sau khi cài OSX theme), tốc độ khỏi nói, hiệu ứng thích hơn Vista ;)
+Không gian rộng rãi, thoáng đãng hơn</p>
+
+<p>Đây là ảnh desktop:</p>
+
+<p><img class="center <a" src="href="http://farm4.static.flickr.com/3214/3091293771_ecc861c58c_o_d.png">http://farm4.static.flickr.com/3214/3091293771_ecc861c58c_o_d.png</a>"></p>
+
+<p>Đây là ảnh firefox:</p>
+
+<p><img class="center <a" src="href="http://farm4.static.flickr.com/3275/3091293783_7150c8a120_o_d.png">http://farm4.static.flickr.com/3275/3091293783_7150c8a120_o_d.png</a>"></p>
+
+<p>Đây là ảnh Eclipse:</p>
+
+<p><img class="center <a" src="href="http://farm4.static.flickr.com/3063/3091293773_5d9ffd9b31_o_d.png">http://farm4.static.flickr.com/3063/3091293773_5d9ffd9b31_o_d.png</a>"></p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Tag: PHP | blog.hoatle.info]]></title>
+  <link href="http://blog.hoatle.info/tags/php/atom.xml" rel="self"/>
+  <link href="http://blog.hoatle.info/"/>
+  <updated>2013-12-03T06:26:53+00:00</updated>
+  <id>http://blog.hoatle.info/</id>
+  <author>
+    <name><![CDATA[hoatle]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Bài tập tách chuỗi PHP]]></title>
+    <link href="http://blog.hoatle.info/2008/12/17/bai-tap-tach-chuoi-php/"/>
+    <updated>2008-12-17T03:14:00+00:00</updated>
+    <id>http://blog.hoatle.info/2008/12/17/bai-tap-tach-chuoi-php</id>
+    <content type="html"><![CDATA[<p><strong>Bài toán</strong>: Cho một chuỗi như sau:
+<code>http://210.245.126.171/Music/NhacTre/TinhYeu_LyMaiTrang/wma32/06_BienTham_TinhYeu_LyMaiTrang.wma</code>
+(Đây là một link bài hát trên NhacSo.net. Nhìn vào tên file ta có thể biết nhiều thông tin về bài
+hát này. Có thể thấy đây là bài số 06 mang tên Biển Thắm trong album Tình Yêu của ca sĩ Lý Mai Trang.
+Bạn hãy trích thành một mảng <code>$info</code> như sau:</p>
+
+<!-- more -->
+
+
+<p><code>php
+$info = array (
+  'no' =&gt; '06',
+  'name' =&gt; 'Bien Tham',
+  'album' =&gt; 'Tinh Yeu',
+  'singer' =&gt; 'Ly Mai Trang',
+  'link' =&gt; 'http://210.245.126.171/Music/NhacTre/TinhYeu_LyMaiTrang/wma32/06_BienTham_TinhYeu_LyMaiTrang.wma'
+);
+</code></p>
+
+<p><strong>Hướng giải quyết:</strong></p>
+
+<ol>
+<li>Tách tên file ra để phân tích => 06_BienTham_TinhYeu_LyMaiTrang</li>
+<li>Tách chuỗi thành mảng từ dấu phân cách &ldquo;_&rdquo; => (&ldquo;06&rdquo;, &ldquo;BienTham&rdquo;, &ldquo;TinhYeu&rdquo;, &ldquo;LyMaiTrang&rdquo;)</li>
+<li>Xử lý nốt dấu cách trong từ => (&ldquo;06&rdquo;, &ldquo;Bien Tham&rdquo;, &ldquo;Tinh Yeu&rdquo;, &ldquo;Ly Mai Trang&rdquo;)</li>
+<li>Done</li>
+</ol>
+
+
+<p><strong>Bước 1:</strong></p>
+
+<p><code>php
+$httpHref  = 'http://210.245.126.171/Music/NhacTre/TinhYeu_LyMaiTrang/wma32/06_BienTham_TinhYeu_LyMaiTrang.wma';
+$slashPos  = strrpos($httpHref, '/');
+$fileName  = substr($httpHref, $slashPos+1, strlen($httpHref) - $slashPos);
+$dotPos    = strrpos($fileName, '.');
+$extension = substr($fileName, $dotPos, strlen($fileName)-$dotPos);
+$fileName  = str_replace($extension, '', $fileName);
+</code></p>
+
+<p><strong>Bước 2:</strong></p>
+
+<p><code>php
+list($no, $name, $album, $singer) = explode('_', $fileName);
+</code></p>
+
+<p><strong>Bước 3:</strong>
+(Có vẻ như khó nhất, làm sao tách: BienTham => Bien Tham; LyMaiTrang => Ly Mai Trang??? Sau một hồi
+loay hoay cuối cùng cũng viết xong cái hàm biến đối nảy: input là một chuỗi có các ký tự liên tiếp
+nhau kiểu LyMaiTrang và output phải là Ly Mai Trang.</p>
+
+<p>```php
+function correct_string($str) {</p>
+
+<pre><code>$strLen = strlen($str);
+$arrStack = array();
+array_push($arrStack, substr($str, 0, 1));
+for ($i = 1; $i &lt; $strLen; $i++) {
+    $currentChar =  substr($str, $i, 1);
+    if (ctype_upper($currentChar)) {
+        $currentChar = ' ' . $currentChar;
+    }
+    array_push($arrStack, $currentChar);
+}
+return implode('', $arrStack);
+</code></pre>
+
+<p>}
+```</p>
+
+<p><strong>Phù!!! Thế là xong:</strong></p>
+
+<p>`&ldquo;php
+$httpHref = &lsquo;<a href="http://210.245.126.171/Music/NhacTre/TinhYeu_LyMaiTrang/wma32/06_BienTham_TinhYeu_LyMaiTrang.wma">http://210.245.126.171/Music/NhacTre/TinhYeu_LyMaiTrang/wma32/06_BienTham_TinhYeu_LyMaiTrang.wma</a>&rsquo;;
+$slashPos = strrpos($httpHref, &lsquo;/&rsquo;);
+$fileName = substr($httpHref, $slashPos+1, strlen($httpHref) &ndash; $slashPos);
+$dotPos = strrpos($fileName, &lsquo;.&rsquo;);
+$extension = substr($fileName, $dotPos, strlen($fileName)&ndash;$dotPos);
+$fileName = str_replace($extension, &rdquo;, $fileName);
+list($no, $name, $album, $singer) = explode(&lsquo;_&rsquo;, $fileName);
+$name = correct_string($name);
+$album = correct_string($album);
+$singer = correct_string($singer);
+$info = array(</p>
+
+<pre><code>'no' =&gt; $no,
+'name' =&gt; $name,
+'album' =&gt; $album,
+'singer' =&gt; $singer,
+'link'    =&gt; $httpHref
+</code></pre>
+
+<p>);</p>
+
+<p>function correct_string($str) {</p>
+
+<pre><code>$strLen = strlen($str);
+$arrStack = array();
+array_push($arrStack, substr($str, 0, 1));
+for ($i = 1; $i &lt; $strLen; $i++) {
+    $currentChar =  substr($str, $i, 1);
+    if (ctype_upper($currentChar)) {
+        $currentChar = ' ' . $currentChar;
+    }
+    array_push($arrStack, $currentChar);
+}
+return implode('', $arrStack);
+</code></pre>
+
+<p>}
+```</p>
+]]></content>
+  </entry>
+  
+</feed>

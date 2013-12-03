@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Tag: HTML | blog.hoatle.info]]></title>
+  <link href="http://blog.hoatle.info/tags/html/atom.xml" rel="self"/>
+  <link href="http://blog.hoatle.info/"/>
+  <updated>2013-12-03T06:26:53+00:00</updated>
+  <id>http://blog.hoatle.info/</id>
+  <author>
+    <name><![CDATA[hoatle]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Thiết kế một trang kiểm tra thuật ngữ đơn giản]]></title>
+    <link href="http://blog.hoatle.info/2008/12/19/thiet-ke-mot-trang-kiem-tra-thuat-ngu-don-gian/"/>
+    <updated>2008-12-19T00:14:00+00:00</updated>
+    <id>http://blog.hoatle.info/2008/12/19/thiet-ke-mot-trang-kiem-tra-thuat-ngu-don-gian</id>
+    <content type="html"><![CDATA[<p>Đây là 1 trang thuần Client: HTML + JavaScript + XML.
+XML là file dữ liệu. Xương sống của chương trình đơn giản này chính là JavaScript.</p>
+
+<!-- more -->
+
+
+<p>Học dịch trong trường thế nên cuối kì tớ hay có kiểu kiểm tra thuật ngữ => Điều tất yếu là phải
+học các term. Đến hẹn lại lên, cứ cuối mỗi kỳ thường có mấy đứa học thi + tớ viết cái này để test
+thử + học nhanh hơn.</p>
+
+<p>Một năm trước code thuần JavaScript, nghĩa là viết theo kiểu procedure, không OOP. Tớ vừa chỉnh
+lại 1 vài thứ, sau 1 năm xem lại vẫn hiểu code của chính mình :)).</p>
+
+<p>Đây là demo: <a href="http://wayback.archive.org/web/20091130065808/http://d9k50.net/test/term7">http://wayback.archive.org/web/20091130065808/http://d9k50.net/test/term7</a> Có thể tớ
+sẽ nói chi tiết hơn nếu bạn nào muốn hỏi gì :).</p>
+]]></content>
+  </entry>
+  
+</feed>
