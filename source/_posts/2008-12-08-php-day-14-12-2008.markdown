@@ -1,0 +1,71 @@
+---
+layout: post
+title: "PHP Day 14/12/2008"
+author: hoatle
+date: 2008-12-08 15:06
+comments: true
+categories:
+    - "vi"
+tags:
+    - "PHP Day"
+cover:
+description:
+keywords:
+published: true
+---
+
+**Trích nội dung từ diendanphp.com**
+
+{% blockquote %}
+
+Chào tất cả các thành viên trong diễn đàn, những ai yêu thích CNTT nói chung và PHP nói riêng.
+
+Vào ngày 14/12/2008, công ty VNEXT tổ chức hội thảo mang chủ đề:
+
+PHP DAY
+
+<!-- more -->
+
+Mục tiêu
+- Chia sẻ kiến thức, kinh nghiệm về PHP
+- Giao lưu giữa các cá nhân yêu thích PHP
+
+Địa điểm
+Phòng hội thảo số 5 - Khách sạn La Thành - 218 Đội Cấn - Hà Nội
+
+Thời gian
+Sáng chủ nhật ngày 14/12/2008. Từ 9h ~ 12h.
+
+PRESENTER đã đăng ký
+Mỗi chủ đề từ 10-20 phút, tổng tất cả các chủ đề (bao gồm chưa fix) khoảng 10+
+
+[Mỗi chủ đề 10-20 phút -> có vẻ hơi ít -> nội dung sẽ bị loãng???]
+
+1. Phan Thái Trung: Drupal
+2. Đào Bảo Ngọc (ZCE): Chưa fixed
+3. Nguyễn Đức Phú (TheHeTre): Chưa fixed
+4. Phạm Công Định (pcdinh): Build your own PHP Framework
+5. Hồ Xuân Hùng (CTO 1 công ty phần mềm Nhật): Chưa fixed
+6. Đặng Minh Tuấn (zmt264): HTML, CSS, javascript: The Good, the Best, the Ugly
+... (còn tiếp)
+
+Xin trân trọng thông báo tới tất cả thành viên, mọi người quan tâm đến dự.
+
+Đăng ký tham gia
+- Đăng ký tại đây: Bao gồm
+Họ tên + Email
+
+Đăng ký làm diễn giả
+Bạn có thể đăng ký làm người diễn giả với chủ đề mà bạn thích (hoặc bạn ghét ) về web 2.0 tới PHP, Framework hay CSS...
+
+Với thành viên tham dự có đăng ký làm diễn giả, vui lòng ghi thêm chủ đề sẽ nói vào dưới dòng họ tên và email.
+
+Trân trọng thông báo.
+
+{% endblockquote %}
+
+
+Danh sách thành viên đăng ký tham gia cập nhật tại:
+http://spreadsheets.google.com/pub?key=pj7Q7sgfjIhrMAMqD23nOUg
+
+Chi tiết: http://diendanphp.com/showthread.php?t=162
