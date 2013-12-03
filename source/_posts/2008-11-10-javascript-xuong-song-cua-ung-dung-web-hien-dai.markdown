@@ -25,6 +25,8 @@ hơn, động hơn. JavaScript có vai trò rất lớn trong các trình duyệ
 web 2.0. Và rồi JavaScript sẽ đi đến đâu? Trong bài viết này tôi xin giải đáp ngắn gọn một số câu
 hỏi trên.
 
+<!-- more -->
+
 Thứ nhất, JavaScript không phải là Java :) và chẳng có mối liên hệ nào với Java cả, có chăng là cả
 2 cái tên đều có "Java". JavaScript chỉ được dùng trong các trình duyệt, đầu tiên có tên là
 LiveScript do Netscape phát triển để tạo tính động và tương tác hơn cho các nhà phát triển xử lý
