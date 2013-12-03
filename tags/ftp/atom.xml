@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Tag: ftp | blog.hoatle.info]]></title>
+  <link href="http://blog.hoatle.info/tags/ftp/atom.xml" rel="self"/>
+  <link href="http://blog.hoatle.info/"/>
+  <updated>2013-12-03T07:02:01+00:00</updated>
+  <id>http://blog.hoatle.info/</id>
+  <author>
+    <name><![CDATA[hoatle]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[FTP upload]]></title>
+    <link href="http://blog.hoatle.info/2008/11/08/ftp-upload/"/>
+    <updated>2008-11-08T15:25:00+00:00</updated>
+    <id>http://blog.hoatle.info/2008/11/08/ftp-upload</id>
+    <content type="html"><![CDATA[<ul>
+<li><p>FTP (File Transfer Protocol) là giao thức được dùng để truyền tải file. Đây là cách được dùng khi
+upload/ download các file của web application lên/ từ host.</p></li>
+<li><p>Tớ dùng Zend Studio có hỗ trợ upload file trong phần remote system nhưng không hiệu quả lắm.</p></li>
+<li><p>Chương trình đặc dụng chỉ dùng cho FTP được sử dụng nhiều là FileZilla
+(<a href="http://filezilla-project.org/">http://filezilla-project.org/</a>).</p></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>
