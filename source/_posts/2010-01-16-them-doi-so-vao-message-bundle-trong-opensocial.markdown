@@ -2,7 +2,7 @@
 layout: post
 title: "Thêm đối số vào message bundle trong OpenSocial"
 author: hoatle
-date: 2010-16-01 21:18
+date: 2010-01-16 21:18
 comments: true
 categories:
     - "vi"
