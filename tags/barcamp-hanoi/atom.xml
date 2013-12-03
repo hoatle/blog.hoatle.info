@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Tag: barcamp-hanoi | blog.hoatle.info]]></title>
+  <title><![CDATA[Tag: Barcamp Hanoi | blog.hoatle.info]]></title>
   <link href="http://blog.hoatle.info/tags/barcamp-hanoi/atom.xml" rel="self"/>
   <link href="http://blog.hoatle.info/"/>
-  <updated>2013-12-03T07:05:39+00:00</updated>
+  <updated>2013-12-03T07:15:03+00:00</updated>
   <id>http://blog.hoatle.info/</id>
   <author>
     <name><![CDATA[hoatle]]></name>
@@ -14,123 +14,187 @@
 
   
   <entry>
-    <title type="html"><![CDATA[OpenSocial Hackathon và BarCamp Hà Nội]]></title>
-    <link href="http://blog.hoatle.info/2008/11/25/opensocial-hackathon-va-barcamp-ha-noi/"/>
-    <updated>2008-11-25T02:38:00+00:00</updated>
-    <id>http://blog.hoatle.info/2008/11/25/opensocial-hackathon-va-barcamp-ha-noi</id>
-    <content type="html"><![CDATA[<p>Tin dành cho các bạn ở Hà Nội. Như mọi người đã biết, Google DevFest HCMC &ndash; The First Ever Google
-Hackathon Tour in Vietnam<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup> (ngày 4/11/2008) và BarCamp Saigon<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup> (November 5, 2008) đã được tổ
-chức ở thành phố Hồ Chí Minh và nhiều bạn ở Hà Nội không tham gia được (tất nhiên trong đó có tớ :(,
-dù gì thì những sự kiện như vậy không thể không tham gia).</p>
+    <title type="html"><![CDATA[extended deadline for Barcamp Hanoi 2009 logo design contest]]></title>
+    <link href="http://blog.hoatle.info/2009/02/26/extended-deadline-for-barcamp-hanoi-2009-logo-design-contest/"/>
+    <updated>2009-02-26T23:32:00+00:00</updated>
+    <id>http://blog.hoatle.info/2009/02/26/extended-deadline-for-barcamp-hanoi-2009-logo-design-contest</id>
+    <content type="html"><![CDATA[<p>The 1st submission to Barcamp Hanoi 2009 Logo Design Contest:</p>
+
+<p><img class="center <a" src="href="http://farm4.static.flickr.com/3541/3307608039_9a27531d47.jpg?v=0">http://farm4.static.flickr.com/3541/3307608039_9a27531d47.jpg?v=0</a>" title="The 1st submission to Barcamp Hanoi 2009 Logo Design Contest" ></p>
+
+<p>At present we are having some logo submitted for the contest and we know that the time seems so
+short for you all to complete your logo for submission.</p>
+
+<p>After great 2nd Barcamp Hanoi organizer meetup tonight, the Logo Design Contest submission deadline
+is extended to:</p>
+
+<p><code>Saturday, March 21st, 11:59 PM (GMT+7)</code></p>
+
+<p>So you will have more than 3 weeks from now to prepare. But don’t waste your time, start your work
+right now!</p>
+
+<p>Thanks for joining and we are looking for your great Logo for BarCamp Hanoi 2009.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Barcamp Hanoi 2009 logo design contest]]></title>
+    <link href="http://blog.hoatle.info/2009/02/21/barcamp-hanoi-2009-logo-design-contest/"/>
+    <updated>2009-02-21T15:06:00+00:00</updated>
+    <id>http://blog.hoatle.info/2009/02/21/barcamp-hanoi-2009-logo-design-contest</id>
+    <content type="html"><![CDATA[<p><img class="center" src="/images/barcamphanoismall2.png" title="Barcamp Hanoi 1 Logo" ></p>
+
+<p>The current logo you’re seeing on top of this page is the logo of Barcamp Hanoi 1. Several months
+ago, right after we put it on the homepage,  some people gave us feedback that we should change the
+logo. And we see that other Barcamps also change their logo for each individual event. So we think
+it’s right time now to announce a tiny logo design contest for Barcamp Hanoi 2009. Then we can use
+the winning logo to print banner, T-shirt, official documents and put it on the homepage. You can
+read more detail about the contest below:</p>
 
 <!-- more -->
 
 
-<h2>OpenSocial Hackathon ở Hà Nội</h2>
+<p><strong>Barcamp Hanoi 2009 Logo Design Contest</strong></p>
 
-<p>&ldquo;Sau khi tổ chức thành công Google Devfest<sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup> ở thành phố HCM hôm 4/11/2008 và rất nhiều bạn ở Hà
-Nội đã không thể tham dự, chúng tôi dự định tổ chức một Hackathon nho nhỏ tập trung vào hệ thống API
-của OpenSocial. Các kỹ sư phần mềm của eXo Platform<sup id="fnref:4"><a href="#fn:4" rel="footnote">4</a></sup> (cùng với đội ngũ Google Devfest khu vực Đông
-Nam Á) sẽ tới trao đổi với mọi người, một số ứng dựng OpenSocial API ở các dịch vụ mạng xã hội Việt
-Nam sẽ được demo. Một kỹ sư của Google khu vực Đông Nam Á sẽ tham gia. Ngày tổ chức dự kiến:
-13/12/2008.&rdquo; (Nguồn Jason).</p>
+<p>Help Barcamp Hanoi create a unique and meaningful logo for the event of 2009.</p>
 
-<p>Lịch trình hôm 13/12/2008 tại OpenSocial Hackathon:</p>
+<p><strong>Reward for the Winner</strong></p>
 
 <ul>
-<li><p>10:30AM – 11:00AM : Đăng kí</p></li>
-<li><p>11:00AM – 12:00PM : Bài thuyết trình về openSocial</p></li>
-<li><p>12:00PM – 1:00PM : brainstorming + pizza</p></li>
-<li><p>1:00PM – 5:00PM : Viết các ứng dụng openSocial</p></li>
-<li><p>1:00PM – 2:00PM : Hướng dẫn viết gadget openSocial</p></li>
-<li><p>5:00PM – 6:00PM : Thuyết trình tổng kết kết quả làm việc buổi chiều</p></li>
+<li><p>Community-Wide recognition for designing the official Barcamp Hanoi 2009 logo featured on the
+official homepage.</p></li>
+<li><p>A free Barcamp Hanoi 2009 T-Shirt to show off your winning design.</p></li>
 </ul>
 
 
-<p>Xem thêm: <a href="http://blog.exoplatform.org/2008/11/24/opensocial-hackathon-in-hanoi/">http://blog.exoplatform.org/2008/11/24/opensocial-hackathon-in-hanoi/</a></p>
+<p><strong>Submission deadline</strong></p>
 
-<p>Chỉ có 50 ghế dành cho ai đăng kí sớm nhất và được lựa chọn Đăng kí ngay.</p>
+<p><code>Saturday, February 28th, 11:59 PM (GMT+7)</code></p>
 
-<h2>BarCamp Hà Nội đang được chuẩn bị</h2>
+<p><strong>Design Guidelines</strong></p>
 
-<p>Xem thêm <a href="http://wiki.barcamphanoi.org.">http://wiki.barcamphanoi.org.</a></p>
+<p>The logo should:</p>
 
-<p>Tuyệt vời!</p>
-<div class="footnotes">
-<hr/>
-<ol>
-<li id="fn:1">
-<p>http://jasonlog.supersized.org/archives/131-Google-DevFest-HCMC-The-First-Ever-Google-Hackathon-Tour-in-Vietnam.html<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
-<li id="fn:2">
-<p>http://www.barcampsaigon.org/<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
-<li id="fn:3">
-<p>http://code.google.com/events/apacdevfest/<a href="#fnref:3" rev="footnote">&#8617;</a></p></li>
-<li id="fn:4">
-<p>http://www.exoplatform.com/portal/public/en/<a href="#fnref:4" rev="footnote">&#8617;</a></p></li>
-</ol>
-</div>
+<ul>
+<li><p>Convey the concept of Barcamp (You can use the starting files here)</p></li>
+<li><p>Be distinct, unique and easily identifiable (It’s the logo of Barcamp Hanoi, not a general Barcamp)</p></li>
+<li><p>Aesthetically fit in with a broad range of site/application designs</p></li>
+</ul>
+
+
+<p>References:</p>
+
+<ul>
+<li><p>Starting files <a href="http://barcamp.org/SpreadBarCamp">http://barcamp.org/SpreadBarCamp</a></p></li>
+<li><p>Sample logos <a href="http://barcamp.org/LogoGallery">http://barcamp.org/LogoGallery</a></p></li>
+<li><p>Barcamp Saigon 2008 Logo <a href="http://www.barcampsaigon.org/dokuwiki/doku.php?id=2008_org_logo">http://www.barcampsaigon.org/dokuwiki/doku.php?id=2008_org_logo</a></p></li>
+<li><p>Barcamp Logos on Google Image search <a href="http://images.google.com/images?q=Barcamp%20logo&amp;oe=utf-8&amp;rls=com.ubuntu:en-US:unofficial&amp;client=firefox-a&amp;um=1&amp;ie=UTF-8&amp;sa=N&amp;hl=en&amp;tab=wi">http://images.google.com/images?q=Barcamp%20logo&amp;oe=utf-8&amp;rls=com.ubuntu:en-US:unofficial&amp;client=firefox-a&amp;um=1&amp;ie=UTF-8&amp;sa=N&amp;hl=en&amp;tab=wi</a></p></li>
+</ul>
+
+
+<p><strong>How it works</strong></p>
+
+<ul>
+<li><p>First, create your Logo design. View the Design Guidelines for more details.</p></li>
+<li><p>Upload your design to the contest-specific Flickr group <code>Barcamp Hanoi 2009 Logo Design Contest</code>
+for review.</p></li>
+<li><p>After a week, these designs will be posted online at the homepage of Barcamp Hanoi for public
+voting. You determine the <strong>winner</strong>!</p></li>
+<li><p>The winning Logo will be used on blog, websites, banners, documents and T-shirt to help promote
+Barcamp Hanoi 2009.</p></li>
+<li><p>If you have any additional questions, comment right below this post.</p></li>
+</ul>
+
+
+<p><strong> Submission &amp; Judging Criteria</strong></p>
+
+<ul>
+<li><p>You can submit more than one design.</p></li>
+<li><p>Submissions can be made via JPG/GIF/PNG however please be prepared to provide high
+resolution/vector graphic versions of your work.</p></li>
+<li><p>As part of the submission, participants must be willing to give up all their rights to the
+copyright and donate it to the community.</p></li>
+<li><p>Tag your photo with the phrase “BCHN 2009 LContest“. This will allow us to search for and pull your
+photo into a public image gallery.</p></li>
+<li><p>Join the contest-specific Flickr group Barcamp Hanoi 2009 Logo Design Contest and add your image
+to the image pool.</p></li>
+<li><p>Make sure your Flickr account is linked to an active email address; this is the only means of
+contacting the winner!</p></li>
+<li><p>Don’t forget, <strong>the submission deadline is Saturday, February 28th, 11:59 PM (GMT+7)</strong>. You have a
+week from now to prepare and submit your logo. <strong>Start right now!</strong></p></li>
+</ul>
 
 ]]></content>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[OpenSocial Hackathon and BarCamp Hanoi]]></title>
-    <link href="http://blog.hoatle.info/2008/11/25/opensocial-hackathon-and-barcamp-hanoi/"/>
-    <updated>2008-11-25T02:04:00+00:00</updated>
-    <id>http://blog.hoatle.info/2008/11/25/opensocial-hackathon-and-barcamp-hanoi</id>
-    <content type="html"><![CDATA[<p>Good news to Hanoi developers! As we know, Google DevFest HCMC &ndash; The First Ever Google Hackathon
-Tour in Vietnam<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup> (November 4, 2008) did succeed, BarCamp Saigon<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup> (November 5, 2008) did succeed.
-However, these two events was held in Ho Chi Minh city, many developers from Hanoi missed it.</p>
+    <title type="html"><![CDATA[Barcamp Hanoi 2 will come soon :)]]></title>
+    <link href="http://blog.hoatle.info/2009/02/20/barcamp-hanoi-2-will-come-soon/"/>
+    <updated>2009-02-20T08:11:00+00:00</updated>
+    <id>http://blog.hoatle.info/2009/02/20/barcamp-hanoi-2-will-come-soon</id>
+    <content type="html"><![CDATA[<p>Hi everyone,</p>
 
-<p>Now you can join OpenSocial Hackathon and BarCamp Hanoi :).</p>
+<p>To tell the truth, I&rsquo;m a little envious of some HCM city (Saigon) geeks' activities, especially about Barcamp Saigon 1 and their #H3 :(. What about in Hanoi? Just correct me if I&rsquo;m wrong but it seem there
+hasn&rsquo;t been any such interesting events in Hanoi. Here I just want to mention and introduce Barcamp Hanoi 2. You can just google some keyworks orderly to get info: barcamp to have general ideas about what is barcamp, barcampsaigon to know what Saigon geeks did to complete the task of organizing barcamp saigon 1. Then the last keywork is barcamphanoi to know more about Barcamp Hanoi organization status :). And then I will call for organizers + volunteers + participants + some more other things :)</p>
 
 <!-- more -->
 
 
-<h2>OpenSocial Hackathon in Hanoi</h2>
+<p>Firstly, about Barcamp Hanoi 2. Why 2? Good question :P, do you know that Barcamp Hanoi 1 was first organized in Vietnam, esp. in Hanoi :). Just check this: <a href="http://blog.exoplatform.org/2007/12/28/barcamp-hanoi/">http://blog.exoplatform.org/2007/12/28/barcamp-hanoi/</a> So, Barcamp Hanoi 1 was organized by eXo employees (esp. by jeremi) just in internal eXo Platform SEA employees. And Now we (Hanoi geeks, bloggers, volunteers&hellip;) are organizing Barcamp Hanoi 2.</p>
 
-<p>&ldquo;After the success of Google Devfest<sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup> in HCMC on November 4, 2008 and many talent developers in
-Hanoi missed the Event, we plan to hold a mini Hackathon in Hanoi with focus on OpenSocial API.
-Software engineers from eXo Platform<sup id="fnref:4"><a href="#fn:4" rel="footnote">4</a></sup> (going with Google Devfest team in Southeast Asia Tour) will
-interact with Hanoi based devs and geeks, some demos of OpenSocial API apps on Vietnamese social
-networking services should be showed. An engineer of Google Southeast Asia could join to assist the
-participants. The planned date is December 13, 2008&rdquo; (from Jason).</p>
+<p>After the great success of Barcamp Saigon 1, some efforts to organize Barcamp Hanoi 2
+started but in slow progress. Sometime it was supposed to happen before Tet holiday, then just some weeks after Tet holiday. But now we&rsquo;re still preparing for it and the progress is very fast. This post is also
+for the purpose of preparation for Barcamp Hanoi 2. Please just check out what is happening in
+Barcamp Hanoi 2 organization: <a href="http://groups.google.com.vn/group/barcamphanoi?hl=en.">http://groups.google.com.vn/group/barcamphanoi?hl=en.</a>
+So here I&rsquo;m calling for organizers for Barcamp Hanoi 2 :). It&rsquo;s open to everyone :). Now the number of organizers can not be counted more than 10 and there are many things to do. Some points just remember: Just join in organizer team when you have passionation + know the spirit of barcamp :). Some volunteers needed for doing other things like food-prepare (don&rsquo;t worry, you do not have to cook any meal :P),
+T-shirt design (for designers), sponsorship for persuasive speakers and many other things you can do for Barcamp Hanoi 2.</p>
 
-<p>Agenda on December 13, 2008:</p>
+<p>To participants: Know about barcamp spirit, know about barcamp rules, huh :P. No audience (exept for volunteers), just participants: think about what you will share for Barcamp Hanoi 2 (IT based topic),
+and what topics you&rsquo;re interesting. We will have some forms to get info soon. We will make Barcamp Hanoi 2 as great and relaxed as possible. If too many people will go for registering Barcamp Hanoi 2, we will have
+to filter out out some people :( because of time + venue + other problems.</p>
 
 <ul>
-<li><p>10:30AM – 11:00AM : Registration</p></li>
-<li><p>11:00AM – 12:00PM : openSocial Presentation</p></li>
-<li><p>12:00PM – 1:00PM : brainstorming + pizza</p></li>
-<li><p>1:00PM – 5:00PM : Coding your openSocial applications</p></li>
-<li><p>1:00PM – 2:00PM : guided walkthrough a first openSocial gadget</p></li>
-<li><p>5:00PM – 6:00PM : presentation of what have been done in the afternoon.</p></li>
+<li><p>Some expectations:</p>
+
+<ul>
+<li>What: call it Barcamp Hanoi 2 ;)</li>
+<li>When: April 12 (supposed)</li>
+<li>Where: RMIT Hanoi or Genetic BK or other?</li>
+<li>Who: any one interested in joining barcamp, participants but not audience :)</li>
+<li>How many people there: About 200 geeks. So think about some interesting topics to have your seat at Barcamp Hanoi 2. The seats are limited :)</li>
+<li>official tag for Barcamp Hanoi 2: barcamphanoi</li>
+<li>official website for Barcamp Hanoi 2 will be updated soon, just check it here <a href="http://barcamphanoi.org">http://barcamphanoi.org</a></li>
+<li>Twitter to follow: <a href="http://twitter.com/barcamphanoi">http://twitter.com/barcamphanoi</a></li>
+</ul>
+</li>
 </ul>
 
 
-<p>More info: <a href="http://blog.exoplatform.org/2008/11/24/opensocial-hackathon-in-hanoi/">http://blog.exoplatform.org/2008/11/24/opensocial-hackathon-in-hanoi/</a></p>
+<p>Links:</p>
 
-<p>Only 50 seats are available. Just register now.</p>
+<ul>
+<li>Google group for organizers: <a href="http://groups.google.com.vn/group/barcamphanoi?hl=en">http://groups.google.com.vn/group/barcamphanoi?hl=en</a> (English)</li>
+</ul>
 
-<h2>BarCamp Hanoi is on the way of preparation</h2>
 
-<p>Get information and just don&rsquo;t miss it from <a href="http://wiki.barcamphanoi.org.">http://wiki.barcamphanoi.org.</a></p>
+<p>Hey, it&rsquo;s time for us to join Barcamp Hanoi 2. What you are waiting for? Spread the world about this event is a resprectedly helpful action.</p>
 
-<p>Really interesting and good news!</p>
-<div class="footnotes">
-<hr/>
+<p>Just ping some of us here to get more info:</p>
+
 <ol>
-<li id="fn:1">
-<p>http://jasonlog.supersized.org/archives/131-Google-DevFest-HCMC-The-First-Ever-Google-Hackathon-Tour-in-Vietnam.html<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
-<li id="fn:2">
-<p>http://www.barcampsaigon.org/<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
-<li id="fn:3">
-<p>http://code.google.com/events/apacdevfest/<a href="#fnref:3" rev="footnote">&#8617;</a></p></li>
-<li id="fn:4">
-<p>http://www.exoplatform.com/portal/public/en/<a href="#fnref:4" rev="footnote">&#8617;</a></p></li>
+<li>Hoat Le (<a href="http://hoatle.net">http://hoatle.net</a>)</li>
 </ol>
-</div>
 
+
+<p>email: hoatlevan at gmail dot com</p>
+
+<p>yahoo: wild_tiger8607</p>
+
+<p>skype: hoatlevan</p>
+
+<p>twitter: <a href="http://twitter.com/hoatle">http://twitter.com/hoatle</a></p>
+
+<p>Thanks for reading :)</p>
 ]]></content>
   </entry>
   
