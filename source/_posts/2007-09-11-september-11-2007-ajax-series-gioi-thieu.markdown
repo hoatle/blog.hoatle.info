@@ -2,7 +2,7 @@
 layout: post
 title: "September 11, 2007 - Ajax Series_Giới thiệu"
 author: hoatle
-date: 2013-12-04 20:19
+date: 2007-09-11 20:19
 comments: true
 categories:
     - "vi"
