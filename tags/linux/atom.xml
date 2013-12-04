@@ -4,7 +4,7 @@
   <title><![CDATA[Tag: Linux | blog.hoatle.info]]></title>
   <link href="http://blog.hoatle.info/tags/linux/atom.xml" rel="self"/>
   <link href="http://blog.hoatle.info/"/>
-  <updated>2013-12-03T22:19:16+00:00</updated>
+  <updated>2013-12-04T09:01:41+00:00</updated>
   <id>http://blog.hoatle.info/</id>
   <author>
     <name><![CDATA[hoatle]]></name>
@@ -25,6 +25,9 @@
 thì để test nhiều hơn là để làm việc. Môi trường làm việc đã thiết lập xong xuôi hết.</p>
 
 <p>Đang học Python để viết ứng dụng trên Google Apps. Thấy Python có cú pháp gọn, mạch lạc.</p>
+
+<!-- more -->
+
 
 <p>Vụ namespace ở PHP dùng kí tự &ldquo;\&rdquo; để cho namespace thấy lạ. Hầu như các ngôn ngữ khác đều dùng kí
 tự &ldquo;.&rdquo; cho namespace, gọi method, lấy attribute. Còn PHP dùng &ndash;> cho method, attribute.</p>
