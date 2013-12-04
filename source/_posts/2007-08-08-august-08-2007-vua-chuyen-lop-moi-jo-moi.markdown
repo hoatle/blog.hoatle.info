@@ -60,7 +60,7 @@ rồi, phải giữ vững đà tăng trưởng như vầy ke ke…
 Bình luận
 ---------
 
-- \[broken] (2007-8-9 03:25:00):
+- vannessar (2007-8-9 03:25:00):
 
 *:)) tôi ngồi ở cái ghế sát tường ế :)) tôi cá là ông có nhìn thấy nhưng ko nghĩ là tôi thôi. trông
 ngoài đời hơi hâm hâm dở dở 1 tí :))*

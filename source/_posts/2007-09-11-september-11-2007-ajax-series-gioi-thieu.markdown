@@ -131,7 +131,7 @@ lượng từ mà phân bố. Các phần theo thứ tự sẽ là:
 Bình luận
 ---------
 
-- \[broken] (2007-9-11 11:38:00):
+- vannessar (2007-9-11 11:38:00):
 
 *Nói đến các framework cho ajax thì trên kia mới chỉ là FW cho phía server thôi :D Những framework
 cho phía client hỗ trợ lập trình JS cũng rất quan trọng và đem lại những cảm giác khác biệt rõ rệt
@@ -145,7 +145,7 @@ nhất cho người sử dụng :D Đó là EXT, ầu yé, và nhiều nữa, YU
 mấy chương đầu thấy thích là viết entry ngay, các kỹ thuật trong sách nêu ra cũng hay, dễ hiểu.
 Càng về sau mới khó :<*
 
-- \[broken] (2007-9-11 11:49:00):
+- vannessar (2007-9-11 11:49:00):
 
 *tiếp tục dịch đi ^ ^ hay tôi cả ông dịch xen ké chương cho nhanh \:D/*
 
@@ -153,7 +153,7 @@ Càng về sau mới khó :<*
 
 *uh, vậy ông dịch chương chẵn, tôi chương lẻ nhé. Dịch vậy cho nhanh, có gì hỏi nhau cũng dễ.*
 
-- \[broken] (2007-9-12 12:09:00):
+- vannessar (2007-9-12 12:09:00):
 
 *vấn đề là chương ông đã dịch mới chỉ là introduction. Giờ tôi sẽ dịch chương 1:'What is ajax?',
 dành cho ông chương kĩ thuật cơ bản để nghiên cứu nhá :D*

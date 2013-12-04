@@ -68,7 +68,7 @@ lại gì trong mình nữa.
 Bình luận
 ---------
 
-- \[broken] (2007-8-30 01:59:00):
+- vannessar (2007-8-30 01:59:00):
 
 *uhm...*
 

@@ -41,7 +41,7 @@ Professional Ajax he he)!!!
 Bình luận
 ---------
 
-- \[broken] (2007-9-13 10:14:00):
+- vannessar (2007-9-13 10:14:00):
 
 *với tôi thì ko may mắn lắm :)) cả quyển sách làm gần hết các phần, riêng bài này ko sờ vào thì nó
 lại thi :))*
