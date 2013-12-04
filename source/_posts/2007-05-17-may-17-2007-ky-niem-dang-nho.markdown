@@ -56,3 +56,17 @@ cái quý chính là tấm lòng, lòng tin vào người khác – người đ�
 người đều có lòng tin vào người khác và người khác lại là đáng tin thì hay biết bao dấu biết giá
 như chẳng bao giờ là sự thật cả bởi nếu là sự thật thì chẳng ai thèm giá như nữa. Người con gái Việt
 Nam thật đáng quý, đáng trân trọng biết bao.
+
+
+Bình luận
+---------
+
+- (¯`•.º-:¦:-† Tuấn♥Lâm†-:¦:-º.•´¯) (2007-5-31 09:47:00):
+
+*thế rút cuộc là mày đã trả tiền chị ý chưa?*
+
+- hoatle (2007-6-3 08:27:00):
+
+*Mày nghĩ tao là người thế nào mà có mấy khìn không trả chị ý. Lúc đó về một lúc xong đem tiền ra,
+vì nhà cũng gần đấy tao đi bộ ra đem trả. Đứng một lúc chị ý còn hỏi mình làm gì đấy? Ở đây chỉ bơm
+xăng thôi. Đưa tiền cho chị, chị mới ờ ờ...*

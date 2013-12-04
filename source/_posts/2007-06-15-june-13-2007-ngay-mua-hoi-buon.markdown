@@ -64,3 +64,15 @@ dùng đến nó nhìu nhìu. Vít nhìu, mệt nhìu.
 
 Ngoài trời vẫn mưa, mà mình thì vẫn chả thấy hết bùn, thôi viết Entry khác cho anh em nào làm
 Project kỳ I đã, cái đó để dở lâu quá rồi. Phải hoàn thành cái đã.
+
+
+Bình luận
+---------
+
+- Porcupine (2007-6-19 07:28:00):
+
+*Co j ma buon the ;)*
+
+- hoatle (2007-6-20 03:47:00):
+
+*nhieu chuyen lam, nhung jo minh lai thay vui vui roi. May tuan vua roi thuc dem nhieu wa, pho phac het ca nguoi. Cha hom nao dam vao IM chat ca, so chat thi kho dut, khong lam dc j mat.*

@@ -54,3 +54,31 @@ tôn vinh nhất nhưng mình tự hào về nó, về những gì mình đã th
 
 (Sắp phải thi lại Phong cách học, Tiếng Nhật chả biết có qua không nữa, môn nghe có vẻ đuối, vừa thi
 lại Triết học từ năm ngoái, vẫn còn nợ trình môn Logic -> Thế này thì chít con rồi!!!)
+
+
+Bình luận
+---------
+
+- Mr Pham Aptech (2007-6-16 11:56:00):
+
+*A rất nể tinh thần học tập của E đó...hihi rất xứng đáng là một GL...chỉ có điều chẳng chịu chỉ giáo cho bọn A với...ặc ặc!!!*
+
+- hoatle (2007-6-20 03:59:00):
+
+*Khong phai khong chiu chi giao ma la khong biet anh can hoi cai gi. Co cai gi can hoi thi a cu hoi
+e, minh cung mot nhom co ma. Ma ke ca bat ki ai cung vay, neu em biet cai gi thi se noi ngay khong
+con khuc mac nao ca. Con neu khong bit thi ;) lai di hoi dua bit, the thoi. Noi chung lam cai nghe
+nay phai ngam cuu du thu, khong phai chi trong sach hoc o trung tam minh thoi dau. That day.*
+
+- Mr Pham Aptech (2007-7-1 02:44:00):
+
+*chúc mừng E nha! project đc HĐPB đánh giá rất cao! cám ơn E rất nhìu vì đã chỉ cho A phương pháp
+học! từ nay có j ko hỉu A sẽ nhờ E chỉ giáo...chắc là trình độ của A sẽ "khủng" dần lên khi nói
+chuyện với những người như E đó! hì*
+
+- hoatle (2007-7-2 12:11:00):
+
+*ko có gì, a wá khen e rùi. Thực ra e rất rất bình thường thui, chỉ có niềm đam mê và tìm hiểu thui.
+Sang kì mới e học ở trường buổi chiều chắc phải chuyển lớp sang học buổi sáng rùi. Cầu cho lớp đó có
+em nào xinh xinh :P chứ lớp mình toàn boy là boy chán. Hồi cấp 3 tới ĐH lớp toàn con gái, sang học ở
+APTECH thì lại toàn là boy. Chả hài hoà tí nào cả.*
