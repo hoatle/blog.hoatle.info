@@ -23,6 +23,8 @@ thì để test nhiều hơn là để làm việc. Môi trường làm việc �
 
 Đang học Python để viết ứng dụng trên Google Apps. Thấy Python có cú pháp gọn, mạch lạc.
 
+<!-- more -->
+
 Vụ namespace ở PHP dùng kí tự "\" để cho namespace thấy lạ. Hầu như các ngôn ngữ khác đều dùng kí
 tự "." cho namespace, gọi method, lấy attribute. Còn PHP dùng -> cho method, attribute.
 
