@@ -7,7 +7,7 @@ comments: true
 categories:
     - "vi"
 tags:
-    - "giới thiệu"
+    -
 cover:
 description:
 keywords:

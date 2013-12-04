@@ -8,6 +8,7 @@ categories:
     - "vi"
 tags:
     - "360.yahoo.com"
+    - "JavaScript"
 cover:
 description:
 keywords:
