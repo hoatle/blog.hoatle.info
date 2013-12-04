@@ -4,7 +4,7 @@
   <title><![CDATA[Tag: 360.yahoo.com | blog.hoatle.info]]></title>
   <link href="http://blog.hoatle.info/tags/360-dot-yahoo-dot-com/atom.xml" rel="self"/>
   <link href="http://blog.hoatle.info/"/>
-  <updated>2013-12-04T09:01:41+00:00</updated>
+  <updated>2013-12-04T22:51:07+00:00</updated>
   <id>http://blog.hoatle.info/</id>
   <author>
     <name><![CDATA[hoatle]]></name>
@@ -14,381 +14,406 @@
 
   
   <entry>
-    <title type="html"><![CDATA[July 02, 2007 - Bảo vệ Project thành công!]]></title>
-    <link href="http://blog.hoatle.info/2007/07/02/july-02-2007-bao-ve-project-thanh-cong/"/>
-    <updated>2007-07-02T12:24:00+00:00</updated>
-    <id>http://blog.hoatle.info/2007/07/02/july-02-2007-bao-ve-project-thanh-cong</id>
-    <content type="html"><![CDATA[<p>Mình vui quá xá, thật không uổng công thức đêm mấy tuần để (gần) hoàn thành Project, tuy nó còn một
-số Module nhỏ chưa hoàn thành nhưng được thầy đánh giá cao (đúng thế còn gì). Qua buổi bảo vệ này
-mình thấy rất “phình phường” thế mà trước mình cứ nghĩ phải kinh khủng lắm cơ. Quả thật thầy trong
-hội đồng hỏi nhiều và bắt lỗi, những thực sự mình làm ra cái gì thì chả sợ, cớ vanh vách mà trả lời
-thui. Mà lúc lên thuyết trình mình chả thấy có gì mà phải run, mà mình lại có cảm giác sướng (chả
-hiểu tại sao).</p>
+    <title type="html"><![CDATA[September 11, 2007 - Ajax Series_Giới thiệu]]></title>
+    <link href="http://blog.hoatle.info/2013/12/04/september-11-2007-ajax-series-gioi-thieu/"/>
+    <updated>2013-12-04T20:19:00+00:00</updated>
+    <id>http://blog.hoatle.info/2013/12/04/september-11-2007-ajax-series-gioi-thieu</id>
+    <content type="html"><![CDATA[<p>Sau một thời gian ngâm cứu khá lâu (nhưng chưa kĩ lắm về Ajax, tự nhiên thấy hứng viết các entry về
+chủ đề này. Tất nhiên những entry này sẽ tìm hiều Ajax từ đầu đến cuối (mình dựa vào sách để viết –
+dịch). Chia sẻ cho những bạn nào không thích đọc bằng tiếng Anh. Dù sao mình vẫn thích đọc bản gốc,
+các bạn nên đọc bản gốc mới thú, mới hiểu và nắm chắc vấn đề. Tuy nhiên trong quá trình dịch, chỗ
+nào cần giải thích mình sẽ giải thích thêm luôn cho dễ hiểu. Cuốn “Professional Ajax” mình cho là
+thâu tóm hơi bị đầy đủ các kỹ thuật Ajax. Khỏi dài dòng văn tự. Chúng ta bắt đầu nhé. Cuốn sách hơi
+bị dài, khi nào rảnh rỗi có hứng mình lại viết tiếp. Các bạn có thể tìm cuốn sách này đọc, còn muốn
+đọc tiếng Việt thì đọc cái này cũng hơi bị ổn. Mình viết entry này vì trên một số diễn đàn thấy
+nhiều bạn thích tìm đọc tiếng Việt :> (Mỗi tội hơi lâu, đang học dịch ở trường mà &ndash;> có thời gian
+ngồi type một lúc cho đỡ phí!).</p>
 
 <!-- more -->
 
 
-<p>Bảo vệ chia làm 2 phần: phần thuyết trình và phần demo. Thuyết trình mình nói ngon ơ (chuyện, ở
-trường kỹ năng làm powerpoint rùi thuyết trình còn kinh khủng hơn ở đây nhìu) mặc dù lúc đầu hơi
-lúng túng, mình vốn không bít ăn nói lắm mà. Còn không thì.. Giờ mới thấy trong tài liệu nộp cho
-thầy phần ERD mình làm sai quá nhiều, sai là do trình bày sai chứ bản chất thì không hề sai, mỗi
-tội ai nhìn vào cũng thấy hoa mắt vì nhiều bảng quá. Thầy cô lúc đó trước khi xem demo của mình thì
-cứ nói mình làm sai, đến khi xem xong demo thì.. hi hi nhớ lại cái cảm giác đó sướng không tả nổi.
-Chỉ muốn được bảo vệ dài dài, được nói dài dài, được demo hết các chức năng của hệ thống nhưng chả
-hỉu sao chưa show hết thì thầy đã bảo thui rùi, đứng ở đấy được mỗi 40 phút, còn bao nhiêu chức năng
-hay mà chưa show cho bà con mở rộng tầm mắt ke ke.</p>
+<p><strong>GIỚI THIỆU:</strong></p>
 
-<p>Không sao, mình sẽ lại có dịp show demo lần nữa trong cuộc thi Best Project kì này. Dù có giải hay
-không thì mình vẫn theo đuổi, phát triển sản phầm mình đã bỏ bao công sức, bao đêm trắng để hoàn
-thành nó. Nó là đứa con đầu đời do chính mình làm ra, có những thuật toán ngẫm lại thấy thật tối ưu
-mà không ngờ mình lại có thể nghĩ ra. Đây là tối ưu với mình thui, chứ đối với mấy anh Pro thì mình
-chả là gì cả. Tất nhiên con đường đi của mình mới bắt đầu, nhưng mình bít hết con đường đó mình sẽ
-trưởng thành, vững vàng như thế nào, và công lực chắc chắc sẽ chẳng thua ai. Chỉ còn năm rưỡi nữa
-thui, cố lên.</p>
+<p>Với những kỹ năng JavaScript nâng cao, các nhà phát triển web đã tạo ra những trải nghiệm mới cho
+người duyệt web trong các ứng dụng của mình. Phá vỡ kiểu mẫu cổ điển “click-and-wait”
+(“nhấn-và-đợi”) đã thống trị thế giới web ngay từ buổi sơ khai, giờ đây các nhà phát triển có thể
+đem những tính năng chỉ có ở các ứng dụng desktop vào trang web bằng cách sử dụng kỹ thuật Ajax.</p>
 
-<p>21 này là hết hạn nộp sản phẩm, mình cố gắng hoàn thiện lại chứ chưa cải tiến, phát triển hệ thống
-Hà Nội Quán của mình lên tầm. Cứ đi được bước nào phải chắc bước đó, cái đích của mình đặt ra không
-thể đạt được ngày một ngày hai mà phải trong một quá trình dài dài. Học tập, học hỏi còn nhiều,
-dài dài.</p>
+<p>Ajax là một thuật ngữ chỉ việc sử dụng các yêu cầu HTTP bất đồng bộ (asynchoronous HTTP requests)
+được khởi tạo bằng JavaScript để lấy được dữ liệu từ server mà không cần tải lại trang web. Các yêu
+cầu này có thể được tạo ra và thực thi bằng rất nhiều cách và sử dụng rất nhiều định dạng truyền tải
+dữ liệu khác nhau để truyền tới trình duyệt cho JavaScript xử lý. Việc kết hợp lấy dữ liệu từ xa và
+tương tác với DOM (Document Object Model &ndash; mô hình đối tượng tài liệu) đã tạo ra một thế hệ các ứng
+dụng web mới dường như không còn tuân theo các quy tắc truyền thống về những gì có thể diễn ra trên
+web. Các công ty lớn như Google, Yahoo! và Microsoft… đã tạo ra và chia sẻ nhiều nguồn tài nguyên
+đặc biệt hướng tới mục tiêu tạo các ứng dụng web chạy và trông giống như các ứng dụng trên desktop.</p>
+
+<p>Các entry về Ajax này sẽ nói đến các khía cạnh của Ajax, bao gồm các cách khác nhau bạn có thể khởi
+tạo các yêu cầu HTTP tới server “behind the scene” và các định dạng dữ liệu khác nhau để truyền cho
+nhau giữa trình duyệt và server. Bạn sẽ học được các kỹ thuật và kiểu mẫu Ajax khác nhau để thực thi
+giao tiếp client-server trên website hay các ứng dụng web của bạn. (máy khách: gửi yêu cầu tới máy
+chủ – máy chủ: đáp lại yêu cầu của máy khách. Thực ra máy chủ phải gọi là máy phục vụ mới đúng –
+nhưng mà toàn gọi là máy chủ thì cứ gọi vậy đi, đỡ gây nhầm lẫn; còn máy khách thì nên gọi là máy
+người dùng thì dễ hiểu hơn :)</p>
+
+<p><strong>AI NÊN ĐỌC CÁC ENTRY NÀY?</strong></p>
+
+<p>Các entry này dành cho tất các các bạn quan tâm tới kỹ thuật này, các bạn phát triển các ứng dụng
+web, các bạn có trình độ JavaScript trung cấp muốn hiểu nhiều hơn về ngôn ngữ này, nâng cao lên
+trình độ pro :D. Àh, những bạn nào quen với các công nghệ: XML, XSLT, PHP, C#, HTML, CSS, các dịch
+vụ web thì đừng bỏ qua các entry này nhé. Thật ra bạn chỉ cần biết HTML, CSS, JavaScript là có thể
+sử dụng đến các kỹ thuật Ajax rồi.</p>
+
+<p><strong>CÁC VẤN ĐỀ ĐƯỢC ĐỀ CẬP ĐẾN?</strong></p>
+
+<p>Tất nhiên không gì khác ngoài việc giới thiệu, hướng dẫn các kỹ thuật, kiểu mẫu và các trường hợp
+sử dụng Ajax.</p>
+
+<p>Series entry này bắt đầu đi tìm hiểu nguồn gốc Ajax, sự phát triển của web, và các công nghệ mới
+trực tiếp dẫn tới sự phát triển của các kỹ thuật Ajax. Chúng ta sẽ bàn chi tiết hơn về các frame,
+JavaScript, cookies, XML, và XMLhttp liên quan như thế nào tới Ajax.</p>
+
+<p>Sau phần giới thiệu này, chúng ta sẽ nói đến các kỹ thuật Ajax cụ thể. Các yêu cầu “behind the
+scene” được tạo ra bằng cách sử dụng các frame ẩn (hidden), các iframe động (dynamic) (chú ý frame
+và iframe sẽ được nói chi tiết sau); các cách sử dụng này sẽ được so sánh và đối chiếu, giải thích
+khi nào thì nên sử dụng cách nào hơn cách nào. Để bàn luận kỹ và rõ ràng hơn, chúng ta sẽ xem xét
+các yêu cầu HTTP (requests) và đáp trả HTTP (responses) được diễn ra như thế nào.</p>
+
+<p>Một khi bạn đã có kiến thức cơ bản về các loại yêu cầu khác nhau, chúng ta sẽ đi sâu khám phá các
+ví dụ khi nào và bằng cách nào sử dụng Ajax trong website và ứng dụng web. Các thuận lợi cũng như
+bất lợi khi sử dụng các kiểu định dạng truyền dữ liệu khác nhau như: text thường (không theo định
+dạng nào), HTML, XML, và JSON. Sau đó là bàn đến các dịch vụ web và làm sao sử dụng chúng để thể
+hiện được các kỹ thuật Ajax.</p>
+
+<p>Phần cuối cùng (chả biết có làm đến đây không nữa) sẽ hướng dẫn bạn làm một ứng dụng web Ajax đầy
+đủ, hoàn thiện: AjaxMail sẽ kết hợp các kỹ thuật đã nói ở trên lại với nhau. Mình cũng sẽ giới thiệu
+một số thư việc Ajax được thiết kế để việc giao tiếp Ajax dễ dàng hơn.</p>
+
+<p><strong>CÁCH PHÂN CHIA AJAX SERIES?</strong></p>
+
+<p>Để tiện việc theo dõi, series này sẽ được chia thành 10 phần. Mỗi phần sẽ được chia nhỏ tiếp theo
+lượng từ mà phân bố. Các phần theo thứ tự sẽ là:</p>
+
+<ul>
+<li><p>Phần 1: “Ajax là gì? ” – giải thích nguồn gốc Ajax và các công nghệ liên quan. Mô tả quá trình
+phát triển của Ajax khi web phát triển, và ai (nếu có) có quyền sở hữu thuật ngữ và các kỹ thuật này.</p></li>
+<li><p>Phần 2: “Ajax cơ bản” – giới thiệu các cách khác nhau để thực hiện giao tiếp Ajax, bao gồm kỹ
+thuật frame ẩn, inframe động và XMLHttp. Các thuận lợi cũng như bất lợi đối với mỗi cách tiếp cận,
+và các hướng dẫn khi nào thì kỹ thuật nào được sử dụng.</p></li>
+<li><p>Phần 3: “Các kiểu mẫu Ajax” – tập trung vào các kiểu mẫu sử dụng Ajax. Có rất nhiều cách kết hợp
+Ajax vào website và các ứng dụng web. Tất cả sẽ được tổ thức thành kiểu mẫu thiết kế thuận tiện
+để kết hợp sử dụng Ajax thực tế.</p></li>
+<li><p>Phần 4: “XML, XPath, và XSLT” – giới thiệu XML, XPath, và XSLT là các công nghệ bổ sung Ajax. Tập
+trung vào cách sử dụng XML – định dạng truyền dữ liệu và XPath, XSLT để truy xuất và hiển thị thông
+tin.</p></li>
+<li><p>Phần 5: “Syndication với RSS/ ATom”. – sử dụng Ajax với các định dạng tập hợp dữ liệu RSS và ATom
+để tạo ra tập hợp tin tức trên nền web.</p></li>
+<li><p>Phần 6: “Các dịch vụ web” – Đem các dịch vụ web vào bức tranh Ajax. Các ví dụ giải thích cách gọi
+các dịch vụ web từ máy khách (máy người dùng) cũng như làm sao tạo các proxy bên server để làm
+việc với các hạn chế truy cập dưới chính sách bảo mật của trình duyệt.</p></li>
+<li><p>Phần 7: “JSON” &ndash; Giới thiệu JSON (JavaScript Object Notation – Chú giải đối tượng JavaScript).
+Nghe dịch như vậy cũng hơi khó hiểu, đây là cách biểu diễn đối tượng JavaScript theo cách khác
+ngắn gọn hơn, dễ dàng sử dụng hơn. JSON có thể được sử dụng để thay thế cho các giao tiếp Ajax.
+Chúng ta cũng bàn đến những thuân lợi cũng như bất lợi khi sử dụng XML và text thông thường.</p></li>
+<li><p>Phần 8: “Website Widgets” – Tập hợp các kỹ thuật từ các phần trước tập trung tạo ra các Ajax
+Widget có thể chèn vào website của bạn.</p></li>
+<li><p>Phần 9: “AjaxMail” – Hướng dẫn bạn hoàn thành một ứng dụng web – AjaxMail. Đúng như tên gọi của
+nó, đây là một hệ thống email trên nền Ajax. Tất nhiên ứng dụng này sử dụng rất nhiều kỹ thuật
+Ajax khác nhau được nói đến ở các phần trước. Đến phần này chắc là mình cũng có thể làm xong một
+cái ứng dụng dễ hiểu hơn, khi đó có thể mình thay bằng ứng dụng mình viết (dự định thôi!)</p></li>
+<li><p>Phần 10: “Ajax Frameworks” – Nói đến 3 Ajax Framework: JPSPAN cho PHP, DWR cho Java và JSP,
+Ajax.NET cho .NET framework.</p></li>
+</ul>
+
+
+<h2>Bình luận</h2>
+
+<ul>
+<li>vannessar (2007-9-11 11:38:00):</li>
+</ul>
+
+
+<p><em>Nói đến các framework cho ajax thì trên kia mới chỉ là FW cho phía server thôi :D Những framework
+cho phía client hỗ trợ lập trình JS cũng rất quan trọng và đem lại những cảm giác khác biệt rõ rệt
+nhất cho người sử dụng :D Đó là EXT, ầu yé, và nhiều nữa, YUI, mootools, prototype &hellip;</em></p>
+
+<p><em>Aniwei, cuốn này có vẻ rất hay :D Nhất là việc dành nguyên 1 chương cho JSON :D</em></p>
+
+<ul>
+<li>hoatle (2007-9-11 11:49:00):</li>
+</ul>
+
+
+<p><em>Ừh, Những FW cho client rất quan trọng vì ứng dụng web là hướng tới người dùng cơ mà :D. Đọc xong
+mấy chương đầu thấy thích là viết entry ngay, các kỹ thuật trong sách nêu ra cũng hay, dễ hiểu.
+Càng về sau mới khó :&lt;</em></p>
+
+<ul>
+<li>vannessar (2007-9-11 11:49:00):</li>
+</ul>
+
+
+<p><em>tiếp tục dịch đi ^ ^ hay tôi cả ông dịch xen ké chương cho nhanh \:D/</em></p>
+
+<ul>
+<li>hoatle (2007-9-11 11:53:00):</li>
+</ul>
+
+
+<p><em>uh, vậy ông dịch chương chẵn, tôi chương lẻ nhé. Dịch vậy cho nhanh, có gì hỏi nhau cũng dễ.</em></p>
+
+<ul>
+<li>vannessar (2007-9-12 12:09:00):</li>
+</ul>
+
+
+<p><em>vấn đề là chương ông đã dịch mới chỉ là introduction. Giờ tôi sẽ dịch chương 1:&lsquo;What is ajax?&rsquo;,
+dành cho ông chương kĩ thuật cơ bản để nghiên cứu nhá :D</em></p>
+
+<ul>
+<li>hoatle (2007-9-12 12:37:00):</li>
+</ul>
+
+
+<p><em>Okie, thế cũng được.</em></p>
 ]]></content>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[July 02, 2007 - Được xả hơi, sướng!!]]></title>
-    <link href="http://blog.hoatle.info/2007/07/02/july-02-2007-duoc-xa-hoi-suong/"/>
-    <updated>2007-07-02T12:14:00+00:00</updated>
-    <id>http://blog.hoatle.info/2007/07/02/july-02-2007-duoc-xa-hoi-suong</id>
-    <content type="html"><![CDATA[<p>Vừa từ quê lên, được nghỉ xả hơi một ngày thui cũng sướng đã đời, ở nhà nằm xem TV và giảng giải cho
-đứa em mình những câu thắc mắc chẳng hỏi được ai. Chuyện, những dịp như thế này nó phải tận dụng là
-phải rùi. 2 tuần mình với về nhà một lần cơ mà, mà về từ tối hôm thứ 7 thì chiều chủ nhật lại ra
-đây. Mà công nhận giờ mình nhiều việc ghê, sướng!!. Mình chỉ sợ không có việc mà làm thui, nhưng chả
-bao giờ có chuyện hết việc cả, chỉ khi nào mình không thích làm nữa thì mới hết việc. he..he. Được
-làm những công việc mình thích thật thú vị, nó cứ tạo cho mình một niềm đam mê khó tả. Cứ làm được
-cái này rồi thì mình lại muốn phải hoàn hảo nó, cải tiến nó và phát triển nó không ngừng.</p>
+    <title type="html"><![CDATA[December 23, 2007-“Tin học thực hành” =))]]></title>
+    <link href="http://blog.hoatle.info/2007/12/23/december-23-2007-tin-hoc-thuc-hanh/"/>
+    <updated>2007-12-23T09:12:00+00:00</updated>
+    <id>http://blog.hoatle.info/2007/12/23/december-23-2007-tin-hoc-thuc-hanh</id>
+    <content type="html"><![CDATA[<p>Hồi kì đầu tiên trong đời sinh viên, với những hứng khởi, vui mừng được học trong một ngôi trường
+“ranh tiếng” mà lại có cái môn “tin học thực hành” mà nhớ lại vẫn muốn học lại cho vui, đúng là môn
+hài nhất, được ngồi cười ông thầy vẽ những ứng dụng lên bảng để giảng bài cho sinh viên.</p>
 
 <!-- more -->
 
 
-<p>Nó ở đây không phải là cái gì to tát cả, chỉ là những đoạn chương trình, những thuật toán theo đuổi
-mình thui. Đừng nghe thấy thuật toán mà bảo chả hiểu gì, từ ngữ chuyên môn :P. Thật ra thuật toán
-rất đơn giản, nó một tập hợp các bước, quá trình để đi đến cái mình cần có. Ví dụ một thuật toán cưa
-cẩm nhé. Thuật toán này phải nói là cực kì thú vị, phức tạp và gian nan. Mình chỉ đưa ra một thuật
-toán rất đơn giản để bạn hỉu về cái này thui, nhé!!</p>
+<p>Không biết sau hai năm thì giờ các em khoá dưới mới vào còn học kiểu đó không. Học “tin học thực
+hảnh” mà sinh viên 5 lớp học trên giảng đường (100 sv) chẳng những không (bao giờ) được sờ vào máy
+tính để nghịch, để “thực hành” mà còn phải cố tưởng tượng ứng dụng trên bảng mà ông thầy vẽ nó giống
+cái gì, thầy đang vẽ cái gì, menu nào, button nào, thanh công cụ Standard hay Formatting có gì, làm
+gì và ở đâu. Tất cả chỉ là tưởng tượng, mường tượng và… tưởng tượng. Ấn tượng thế, tuy học 1 kì mỗi
+buổi 1 tuần mà giờ vẫn nhớ ông thầy, gặp ông ý vẫn nhận ra ;))</p>
 
-<p>Dữ liệu bài toán: bạn đang đi trên đường có thấy một cô gái trông “dễ xương” &ndash;> có ý định muốn làm
-wen với mục đích vô cùng “trong sáng” he he.</p>
+<p>Môn đó được chia làm 3 phần: Giới thiệu cơ bản về máy tính + Word + Exel. Phần đầu thì không có gì
+phải nói cả, nhưng đến 2 phần sau ghê. Microsoft mà biết thầy vẽ ứng dụng của họ lên bảng để sinh
+viên tưởng tượng chắc sẽ kiện thầy đấy, chẳng lẽ thầy dạy tin học không có nổi 1 cái Laptop, mang
+máy chiếu lên minh hoạ cho sinh viên có phải tốt hơn (gấp nghìn lần) không? Thầy lười hay thầy
+nghèo? Nhà trường không trang bị hay thầy thấy không cần thiết đối với sinh viên khối D??? Thắc mắc
+lên khoa thì các cô bảo các em thông cảm, khoa mình còn thiếu thốn? Ừh, thiếu thốn không có máy cho
+sinh viên thực hành đã đành, chẳng lẽ thầy cũng thiếu thốn 1 cái Laptop để minh hoạ cho sinh viên
+thay vì bắt sinh viên phải tượng tưởng trên những đường cong xấu xí, kì quái mà thầy thì (chắc chắn)
+không có hoa tay vẽ vời??</p>
 
-<p>Bắt đầu:</p>
+<p>Nếu không đủ điều kiện thì thà không dạy còn hơn, chất lượng là thứ chúng ta cần chứ không cần số
+lượng. Nghĩ lại chỉ muốn cười, cười xót xa.</p>
 
-<ul>
-<li><p>Đến làm wen:</p>
-
-<ul>
-<li><p>Không cho làm wen &ndash;> Cố mà làm wen, khiến người ta lưỡng lự. Còn ko thì ráng chịu, thất bại
-lun, hic. Tốt nhất là đi tìm iem khác nhé, good luck. Khi tìm được lại bắt đầu thuật toán này.</p></li>
-<li><p>Lưỡng lự &ndash;> Bắt chuyện đến khi chịu gật đầu làm wen mới thui.</p></li>
-<li><p>Gật đầu làm wen: Thế là xong bước làm wen rùi nhé, chuyển sang bước tiếp theo.</p></li>
-</ul>
-</li>
-<li><p>Chinh phục:</p>
-
-<ul>
-<li><p>Tặng hoa, nói lời ngon ngọt (không hề dụ dỗ ke ke)</p></li>
-<li><p>Rủ đi chơi, nói những câu lãng mạn, mủi lòng</p></li>
-<li><p>Làm cho người ta vui, giận hờn (vu vơ) &ndash;> Cứ tiếp tục như vậy cho đến khi điểm cộng dành cho
-bạn lên vùn vụt. Đến khi đạt đến độ iu rùi sang bước típ.</p></li>
-</ul>
-</li>
-<li><p>Tỏ tình:</p>
+<h2>Bình luận</h2>
 
 <ul>
-<li><p>Một màn tỏ tình lãng mạn, không cho người ta từ chối được.</p></li>
-<li><p>Nếu từ chối quay lại bước trên nhé</p></li>
-<li><p>Đồng ý &ndash;> còn gì mà ngần ngại nữa, chúc mừng nhé.!!</p></li>
-</ul>
-</li>
+<li>qj246 (2007-12-23 09:27:00):</li>
 </ul>
 
 
-<p>** Chú ý: trên chỉ là thuật toán vui vui, cấm trẻ em dưới tuổi mẫu giáo áp dụng, còn người lớn chắc
-chả ai áp dụng cái này. Và từ thuật toán đơn giản như trên dựa vào các ngôn ngữ lập trình mà viết
-chương trình cưa bạn gái. Để mình viết một chương trình bằng javascript theo thuật toán trên nhé.</p>
+<p><em>chi biet cuoi xot xa bay h phai khong. Hi vong sau nay em se thanh cong va dong gop duoc chut j cai
+thien tinh trang giao duc nay nhe! ;&ndash;)</em></p>
 
-<p>```javascript
-var answer, tryCount, lovePoints, response;</p>
+<ul>
+<li>hoatle (2007-12-23 10:42:00):</li>
+</ul>
 
-<p>tryCount = 0; // Đếm xem số lần cố gắng ý mà, nếu quá 3 lần thì thui luôn</p>
 
-<p>step1: answer = prompt(&ldquo;Cho tớ làm wen nhé?&rdquo;,&ldquo;đi mà :)&rdquo;); // hỏi xem tình hình chiến sự ra sao (thăm dò ý mà)</p>
-
-<p>if (answer == &ldquo;no&rdquo;) { // Tức là câu trả lời của cô ấy đấy
-  if(tryCount &lt; 3) {</p>
-
-<pre><code>tryCount = tryCount + 1 // hoặc tryCount++
-goto step1;
-</code></pre>
-
-<p>  } else {</p>
-
-<pre><code>alert("Cô ấy thật sự không phải là người bạn cần. GoodLuck and Try another girl!");
-return false;
-</code></pre>
-
-<p>  }
-} else if (answer == &ldquo;ứ ừ&rdquo;) { // Đang lưỡng lự đấy
-  while(answer != &ldquo;ứ ừ&rdquo;) { // lặp cho đến khi nào không còn trả lời ứ ừ nữa thì thôi</p>
-
-<pre><code>answer = prompt("Hãy trả lời thật cho tớ bít đi mà",""); // Nhớ tâm trạng chút
-</code></pre>
-
-<p>  }
-  if(answer == &ldquo;yes&rdquo;) {</p>
-
-<pre><code>goto step2;
-</code></pre>
-
-<p>  } else {// Tức answer là &ldquo;no” rùi đấy</p>
-
-<pre><code>goto step1; // Bắt đầu lại từ Mo rùi
-</code></pre>
-
-<p>  }
-} else if (answer == &ldquo;yes&rdquo;) { // Còn chờ gì nữa mà không thẳng tiến
-  goto step2;
-}</p>
-
-<p>// Bước chinh phục
-step2: while (lovePoints &lt; AskForLovePointTime) {
-  /<em>Lặp đi lặp lại những việc trong ngoặc này tới khi đạt tới điểm tỏ tình thì thui </em>/
-  /* đây là hàm dụ dỗ, trả về số điểm tình cảm cho bạn; hàm này phức tạp,</p>
-
-<pre><code> coi là vậy đi */
-</code></pre>
-
-<p>  lovePoints = tangHoa();
-  lovePoints = lovePoints + noiLoiNgonNgot();
-  lovePoints = lovePoints + ruDiChoi();
-  lovePoints = lovePoints + lamNguoiTaVui();
-  lovePoints = lovePoints + lamNguoiTaGianHonVuVo();
-  lovePoints = lovePoints + lamLanh();
-  lovePoints = lovePoints + chiemTinhCam();
-  /<em> Đáng lẽ các hành động nàyphải ngẫu nhiên, nhưng thé này cho đỡ phức tạp wa </em>/
-}</p>
-
-<p>step3: response = toTinhLangMan(); // To tinh rùi đấy, nếu đồng ý thì response = &ldquo;yes&rdquo;
-if (response == &ldquo;yes&rdquo;) {
-  /* Những việc gì thì có trời mới bít ke ke (trong sáng tí đi, tớ không vít típ vì nó</p>
-
-<pre><code> phức tạp và dài lắm */
-</code></pre>
-
-<p>  <em>%^##%@%</em>();
-else {// Tức là response == &ldquo;no&rdquo; đấy
-  goto step2;
-}
-```</p>
-
-<p>Nhìn thí này chắc mấy bạn hơi bị nhức đầu, nhưng tớ lí tưởng hoá rùi đấy, đơn giản nhất rùi chứ thực
-ra cái này mà hiệu quả thì jờ này tớ chả đơn côi một mình nghĩ ra cái trò này. Hum nay là ngày xả
-hơi thứ hai của tớ mà. Tất cả những công việc còn lại để đến ngày mai. Jờ là thời gian chăm sóc
-Blog, tớ vít cái Entry khác đây. Ở đây nó không cho thụt đầu dòng, làm cho đoạn trên nhìn lại đau cả
-mắt. Nhớ là chương trình cưa cẩm trên chỉ là mô phỏng thui, chứ chắc chắc có (nhiều) lỗi lắm, đố
-chạy đươc. Vít cho vui thui, cơ bản từ thuật toán tới chương trình nó là vậy.</p>
+<p><em>Em chỉ biết nói những gì được thấy, những thứ muốn nói. Còn vấn đề giáo dục này phải để những nhà
+giáo dục chứ, thân em tài hèn sức không khoẻ thì biết làm được gì. Còn chuyện sau này không biết
+được thế nào ;)). Hôm nọ gặp một cô giáo cũ, cô đã sống với nghề hơn chục năm và bảo: &ldquo;Hơn chục năm
+trong nghề, quả thật Giáo dục VN vẫn vậy, vẫn dậm chân tại chỗ mà thôi&rdquo;&hellip;</em></p>
 ]]></content>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[June 16, 2007: Hôm nay thức khoẻ thật]]></title>
-    <link href="http://blog.hoatle.info/2007/06/16/june-16-2007-hom-nay-thuc-khoe-that/"/>
-    <updated>2007-06-16T02:20:00+00:00</updated>
-    <id>http://blog.hoatle.info/2007/06/16/june-16-2007-hom-nay-thuc-khoe-that</id>
-    <content type="html"><![CDATA[<p>2h sáng, vừa làm xong cái Form thêm nhà hàng mới, cũng hoàn thành xong phần kiểm tra nhập dữ liệu.
-Còn chưa viết được phần xử lý, nhưng sướng cái là mình vừa chỉnh sửa xong cái phần chọn Quận –
-Phường ở 2 cái drop-down menu cũng giống như kiểu chọn di động: chọn hãng rồi thì chọn máy của hãng
-đó. Cái của mình cũng thế, chọn Quận xong thì mới chọn được Phường ở Quận đó. Hay wá!!! Còn một chút
-rắc rối nho nhỏ về phần upload ảnh lên server bằng browser, thử ở trung tâm thì được còn ở nhà thì
-nó lại báo lỗi. Rõ ràng mình check vào cho phép Write rồi mà, pó tay. Còn 2 tuần nữa, mang tiếng GL
-hay sao mà mình phải làm nhiều wá, tuy thức đêm mệt nhưng mà mình càng có thêm nhiều kinh nghiệm,
-cố lên vậy.</p>
+    <title type="html"><![CDATA[December 21, 2007-Lại được tự do rồi :))]]></title>
+    <link href="http://blog.hoatle.info/2007/12/21/december-21-2007-lai-duoc-tu-do-roi/"/>
+    <updated>2007-12-21T11:56:00+00:00</updated>
+    <id>http://blog.hoatle.info/2007/12/21/december-21-2007-lai-duoc-tu-do-roi</id>
+    <content type="html"><![CDATA[<p>Gần tháng rồi thoát khỏi “chốn bụi trần”, xa rời “thế sự” tớ lên núi tu tỉnh, tầm sư học đạo. Trong
+gần tháng “gian + khổ” này, học thì cũng (không) được nhiều, chơi thì cũng không ít. Điều đặc biệt
+nhất là tớ đã phát hiện ra dòng năng lượng tiềm ẩn của mình – nguồn năng lượng mà lâu lắm rồi mới
+cảm nhận lại được, lần này còn mạnh mẽ hơn hồi trước. Quả là đã 2 năm kể từ ngày bước chân vào
+“học đại” tớ chỉ lơ tơ ngơ, không có hứng thú tu chí tu thân jì cả, học hành qua loa cho qua. Thế mà
+trong lần lên núi này, tự nhiên thấy mình vẫn còn jỏi fết, cũng không đến nỗi nào đâu nhỉ. Thật ra
+là cả kì (tất nhiên là) không học jì cả, truớc kì thi đã xác định kiểu jì cũng thi lại 2, 3 môn là
+ít. Thế mà trước kì thi mấy hôm, đặc biệt trong kì thi, trước sự “xúi giục”, “lôi kéo” của đồng môn,
+sáng sáng, chiều chiều, đều đều lên núi (D4 &ndash; FOFL) học đạo. Trời ạ, dậy sớm vào buổi sáng là khó
+lắm ý (bình thường ngủ tới 10h dậy là sớm), thế mà trong lúc nước sôi lửa bỏng 7h – 7 rưỡi đã dậy
+rồi. Ghê thật, mình phục mình quá. Buổi chiều 2 rưỡi &ndash; 3h nghỉ trưa xong lại tiếp tục. Ngay điểm
+chăm chỉ này đã là một cuộc cách mạng rồi.</p>
 
 <!-- more -->
 
 
-<p>Rồi 23 này lại phải thi lại môn Phong cách học ở trường nữa chứ, chả hiểu học môn này xong làm cái
-wái gì nữa, chỉ biết là chán kinh khủng. Giờ mình còn chả buồn ôn cái môn này mà vẫn còn sớm mà :P.
-Rồi lại còn môn tiếng Nhật nữa – đây là một trong những môn “chiến lược” của mình mà chả chịu học gì
-cả, lần này chắc thi lại cho nó điểm cao, he he. Giờ học ở trường cũng không quan trọng lắm với
-mình, đã xác định được nghề nghiệp rồi thì mình phải thật sự tập trung vào chuyên môn, còn những môn
-vớ vẩn ở trường thì cho đi luôn. Tất nhiên học được tất cả thì sẽ tốt nhưng mình mà học hết thì điên
-mất, thôi điểm có kém một (vài) tí cũng chả sao. Mình từ cấp 3 học có quan trọng gì điểm đâu, miễn
-không quá kém là được.</p>
+<p>Còn về phần thi ư, tất nhiên là (phải) qua hết rồi. Về điểm “chác” không cao (lắm) nhưng cái được
+nhất là dòng năng lượng “tiềm ẩn” kia đã được đánh thức và nhất định sẽ có tác dụng nào đó trong kì
+tới. Môn học cả kì, chỉ cần học thi 2-3 hôm cũng tự tin đi thi lắm rồi. Thanx Diệp, Thư, H. Giang
+nhá, những buổi đi học và cả những buổi đi chơi nữa, cảm ơn những buổi đi chơi nhiều hơn :)).</p>
 
-<p>Hồi lớp 12 môn giáo dục công dân, mình cũng chả để ý điểm đâu nhưng thấy thấp quá (hình như trên
-5,), lên thắc mắc thì thầy giáo bảo cộng nhầm điểm. Nhưng ông ý (giáo viên mới, hồi đó chưa lấy vợ)
-chả thèm xin lỗi mình mà còn nói: “1 – 2 phẩy thì có sao đâu, liệu sửa điểm lại thì anh có được học
-sinh giỏi không?” – Chắc chắn mình không thể đạt HSG hồi đó được vì cũng xác định từ trước rồi, mà
-cũng phấn đấu 2 năm mệt rồi có được đâu. Phải nói là hồi đó ở lớp cũng có kiểu xin thêm điểm, thấy
-đứa nào có triển vọng hay hoặc quen biết, nhờ cậy gì đó (có mà không phải ít đâu) mỗi môn thầy cô
-cho một ít phẩy, rồi gỡ điểm cuối năm. Bình thường môn Văn thầy giáo chả bao giờ cho đứa nào 8,
-hiếm 7 thế mà cuối năm cho bọn “triển vọng” lên gỡ điểm toàn 8 với 9. Vậy là lớp mình có mấy cái mác
-HSG, đi thi ĐH được cộng thêm điểm, được có lợi thế… Mình chả cần, chả cần các mác đó mình cũng đã
-đỗ ĐH, còn có nhiều đứa trong trường đều mang mác HSG, thi tốt nghiệp đỗ loại Giỏi (có người đưa
-hẳn tài liệu cho mà chép ý ạ &ndash; những đứa có trong danh sách “cần đặc biệt quan tâm.” Hồi đó cùng
-phòng mình có thằng là con một cô giáo trong trường, trông khôi ngô, đẹp trai mà học chả ra gì cả,
-cũng mang tiếng lớp trưởng chỉ được cái mã thôi, nó học khối A mình học khối D mà Hoá nó còn hỏi
-mình thì pó tay. Thế rồi những đứa có mác đỏ &ndash; đẹp đó khi thi ĐH cũng chẳng qua, đến nỗi chẳng qua
-được điểm sàn. Chính vì vậy mà mình chẳng cần cái mác quá đẹp nào cả, chỉ cần cái mác (thành quả)
-đó xứng đáng với mình, với những gì mình thực sự bỏ ra dù nó không phải là cái mác đẹp nhất, đưọc
-tôn vinh nhất nhưng mình tự hào về nó, về những gì mình đã thực sự cố gắng.</p>
+<p>Àh, thi CNXH tớ có dòm qua 1 tí “reference” và bị phát hiện nhưng không sao, ghê nhất mấy môn này.
+Triết học tớ đã phải học lại, thi lại còn suýt trượt cơ. Lần đó cũng không đến nỗi nào, làm xong sớm
+ra sớm nhất fòng, thở phào nhẹ nhõm thế là qua. Vậy mà lần đó tiện qua trường, vào xem điểm không
+biết mình được 7 hay 8 đây, nhìn chình ình con 3 to đùng đỏ loẹt to tướng ghi đè lên con 5 khiêm
+nhường. Đau, chán, không thể tin được, mất mấy tuần shocked, vậy là lại fải học lại lần 3 ư, lại
+phải mất 120k nữa sao??? Không, thà tớ hi sinh tất cả chứ không chịu mất 120k, không chịu làm trò
+chơi (cho người ta) như thế. Kết quả là tớ đã định bỏ học rồi đấy :|. Rồi một lần tình cờ xem điểm
+trên trang dtdh.hut.edu.vn nhìn thấy con 5 vẫn được giữ. Thật khó hiểu, chẳng lẽ (giả vờ) cho tớ con
+3 để thi lại lần 2 thu thêm 5k?? Nhưng do điều kiện không cho phép tớ không “được” tham gia, vậy là
+người ta thấy thương tình nên lại cho 5??</p>
 
-<p>(Sắp phải thi lại Phong cách học, Tiếng Nhật chả biết có qua không nữa, môn nghe có vẻ đuối, vừa thi
-lại Triết học từ năm ngoái, vẫn còn nợ trình môn Logic &ndash;> Thế này thì chít con rồi!!!)</p>
+<p>Trở lại “chốn bụi trần”, thấy nhiều chuyện (hơi bị) nghiêm trọng xảy ra. Thứ nhất là chuyện lãnh thổ
+đất đai vừa rồi, thêm vài chuyện lặt vặt khác nữa mới biết hệ thống thông tin của ta nếu không có
+Internet chắc là dân mù tịt hết, chả biết jì cả. Những chuyện nghiêm trọng tày đình liên quan tới
+chủ quyền lãnh thổ, trong thời đại này mà người dân cũng không được “đày tớ” cho biết, phải chăng
+dân là chủ đâu cần biết tới mấy chuyện “lặt vặt” như vậy, cứ để “tớ” lo là xong :|.</p>
+
+<p>Được dạy dỗ tinh thần yêu nước, truyền thống đánh giặc ngoại xâm, bao chiến công lẫy lừng từ thời
+cha ông. Đến khi chính người được dạy dỗ được thể hiện lòng yêu nước thì bị vùi dập là sao? Có tin
+đồn là người ta sắp đưa môn “chống tham nhũng, lạm fát” vào hệ thống giáo dục hay sao ấy?? Rồi đến
+khi người được dạy dỗ thể hiện tinh thần ấy lại tiếp tục bị vùi dập? Lịch sử là môn học khách quan,
+tại sao mỗi thời kì tuỳ quan hệ mà sách lịch sử đã được cải biên, lược bỏ, sửa chữ, sửa từ? Tại sao
+chúng ta học lịch sử khi mà nó không còn là lịch sử? Học lịch sử để quan tâm lịch sử, hiện tại không
+phải là lịch sử? Tất cả chỉ là những câu hỏi hỗn độn, lung tung, mơ hồ. Tại sao nhỉ, ờ tại sao???
+Sao lại có chuyện đó được nhỉ? Sao người ta lại làm thế nhỉ? Chỉ biết hỏi và thở dài, mong một ngày…
+hừ…</p>
+
+<p>Gần tháng trời bị dồn nén, chất chứa quá, thi xong thấy nhẹ nhõm, lại trở về cái hồi thức đêm, hồi
+vít blog, hồi gộp 2 bữa sáng trưa làm 1. Không, gộp jì chứ jờ tớ đã dậy sớm fết để ăn sáng rồi, có
+thể ăn sáng xong rồi ngủ tiếp =)). Vui và cố gắng!</p>
 ]]></content>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[June 16, 2007 - Guide to Project I (end)]]></title>
-    <link href="http://blog.hoatle.info/2007/06/16/june-16-2007-guide-to-project-i-end/"/>
-    <updated>2007-06-16T01:47:00+00:00</updated>
-    <id>http://blog.hoatle.info/2007/06/16/june-16-2007-guide-to-project-i-end</id>
-    <content type="html"><![CDATA[<p>Típ tục phần hai Projec học kỳ I nhé anh em. Ở phần trước mình nói 2 (các giai đoạn làm Prject và
-cách chọn đề tài) trong 6 nội dung (Các giai đoạn, Chọn đề tài, Quá trình và công việc cần hoàn
-thành cũng như vai trò các thành viên, Làm việc theo nhóm phát triển, Một số kỹ năng khi thuyết
-trình bảo vệ và cuối cùng là Trả lời hội đồng như thế nào). Giờ mình nói tiếp 4 nội dung còn lại nhé
-(hơi bị dài, cố mà đọc vì nó bổ ích mà).</p>
+    <title type="html"><![CDATA[November 15, 2007 - Túi bụi mà chả gì ra hồn]]></title>
+    <link href="http://blog.hoatle.info/2007/11/15/november-15-2007-tui-bui-ma-cha-gi-ra-hon/"/>
+    <updated>2007-11-15T11:50:00+00:00</updated>
+    <id>http://blog.hoatle.info/2007/11/15/november-15-2007-tui-bui-ma-cha-gi-ra-hon</id>
+    <content type="html"><![CDATA[<p>Thời gian này (cả sắp tới nữa) bắt đầu bận túi bụi. Ở trường sắp thi. Dở hơi cái mọi kì trước các
+môn thi cách nhau cũng fải 1 tuần, đến kì này nhiều môn khoai lại cách nhau có 2 &ndash; 3 hôm. Kiểu này
+chắc chết mất.</p>
 
 <!-- more -->
 
 
-<p>Khi làm một Project thì phải có những quá trình nào và việc gì cần hoàn thành trước, việc gì cần
-hoàn thành sau cũng như các thành viên đóng vai trò như thế nào trong Project? Trước hết các giai
-đoạn đó gồm: Chọn đề tài; Phân thích và thiết kế (thiết kế Database rất rất quan trọng, chả thế mà
-bọn mình phải mất gần 3 tuần mới xuôi xuôi cái ERD (Entity Relationship Diagram); típ theo là Viết
-Code (bọn mình đang viết cái này) và chạy thử (thì vừa viết Code vừa chạy thử, Bug lỗi liên tằng
-tằng; rõ ràng cùng một Code copy sang máy khác mà chẳng chạy được như chiều hôm nay, cái này thì
-Pótay. Chả biết lỗi ở chố nào, còn bên mình thì chạy ngon ơ, chắc do máy bên đó); Giai đoạn tiếp
-theo là Chuẩn bị bảo vệ (in bản Document Template lần cuối để nộp, tinh chỉnh lại website…) và cuối
-cùng là Bảo vệ &ndash; Trình bày trước hội đồng (nói hội đồng có vẻ ghê ghê chứ toàn thầy thôi – nhưng
-mình cũng thấy hơi run và ghê ghê). Vậy thôi, nói tóm lại có 5 giai đoạn: Chọn – Phân kế (phân tích,
-thiết kế nói ngắn gon là &ldquo;phân kế&rdquo; :))) – Code Bug (Viết Code và Debug – chữa lỗi) – Chuẩn bị bảo vệ
-&ndash; Bảo vệ chính thức. Àh, còn vai trò của các thành viên thì chủ chốt là Group Leader (he he, mình
-tự hào là Group Leader hơi bị được, mỗi tội chưa phân phối được công việc tốt lắm, vì chẳng biết nên
-phân phần nào cho GM (Group Member) làm cả vì phần nào cũng thấy hay, tiếp nữa vẫn chưa đủ sức lôi
-kéo GM tập trung vào làm, có một số GM chưa thực sự nhiệt tình, mình cũng chả bắt vì cái này tự
-nguyện làm, làm nhiều thì có nhiều kinh nghiệm xương máu, tăng công lực về sau. Trong lớp còn có
-nhóm có nghe nói có mỗi một GL (Group Leader) làm thôi. &ndash;> Khổ ông ý. Hôm nay mình phân cho 2 GM một
-người về làm form nhập tin tức, một người làm Module FAQ – Contact. Còn một người nữa thì bặt vô âm
-tín mấy ngày nay, nghe nói là phải bảo vệ Project cũng ASP ở trường (ĐH Xây dựng). Nhắn tin mấy lần
-mà chả thấy nói gì. Nói chung GL là rất quan trọng, có việc gì cứ hỏi GL này là rõ ràng nhất, giải
-quyết tất.</p>
+<p>Ở Aptech đang học C#, chỉ thi lý thuyết nên có fần lơ là :P. Hình như tuần sau cũng thi roài, tuần
+sau nữa ở trường cũng thi. Đang có project hoành tráng fết, đang bù đầu, loạn cả lên. Thời gian thì
+gấp, jờ lại bắt đầu dậy sớm đi ôn bài mới kinh chứ.</p>
 
-<p>Để nói rõ hơn về vai trò, tầm quan trọng của các thành viên trong một nhóm chúng ta “ngâm kíu” tiếp
-vai trò của các thành viên trong nhóm. Để có một nhóm tốt để có thể trở thành một Team tốt thì phải
-trải qua những thăng trầm, sóng gió. Trước tiên là thành lập nhóm, co kéo vài người (thường 4 người)
-vào 1 nhóm. Lúc này mỗi người một cách nghĩ, một cách làm làm sao mà hiểu nhau để mà làm với nhau.
-Sau khi thành lập nhóm phải trải qua giai đoạn “Sóng gió” – mỗi người một ý tưởng, một cách làm.
-Phải điều chỉnh để sống hoà hợp cùng nhóm, đây là giai đoạn quyết định có thể anh em phải ra đi nếu
-thực sự không thể ở nhóm này và sang nhóm khác và lại làm cho nhóm đó vào giai đoạn “Sóng gió”. Nếu
-vào nhóm tiếp theo mà không hoà hợp được thì phải xem lại mình thôi. Sau khi sóng gió đã qua, các GM
-phần nào hiểu nhau (để hiểu nhau phải 100% vài cốc mới thực sự hiểu nhau được, yeah!). Sau khi đã
-hiểu nhau thì làm việc với nhau mới dễ dàng hơn, dần hình thành chuẩn mực nhóm và cuối cùng nhất
-định hoạt động thành công. Nhóm mình giờ chắc đang ở giai đoạn chuẩn bị hình thành chuẩn mực vì vẫn
-lung tung lắm, có thể làm xong Project này thì tan rã (mình đoán thế). Mình rất mong tìm được những
-người bạn thực sự hợp với mình, sống đẹp, yêu và gắn bó với nghề gõ KeyBoard Code này. (Ngày trước
-lập trình viên hơi bị khổ, những ngày đầu viết chương trình đục lỗ trên bảng nhất định, cái đục cái
-không quy định là 0 – 1. Sau đó đưa vào máy đọc, chạy. Giờ thì có nhiều ngôn ngữ bậc cao gần với
-tiếng người hơn (tiếng Anh) rồi sao đó nhờ Compiler (trình biên dịch) dịch sang ngôn ngữ máy để máy
-tính đọc. Chứ ngày trước có khi viết code toàn 0 với 1 bố ai mà hiểu (àh, chỉ có người viết hiểu và
-máy hiểu nếu viết không sai :P). Để kết thúc phần này có mấy câu hay ho do thấy đọc để hiểu hơn vai
-trò và tầm quan trọng của việc thành lập, hoạt động nhóm: “Đến với nhau chỉ là sự khởi đầu – Làm
-việc với nhau là sự tiến bộ &ndash; Giữ được nhau mới là thành công.”</p>
+<p>Ở lớp mấy đứa rủ nhau mang sách vở buổi sáng tới ôn bài. Đến đến luyện dịch, ôn bài cũng ghê. Được
+mấy buổi rồi, jờ cố gắng đi còn ôn được ít nào chứ ở nhà chắc chả chịu ôn. Thi xong kì này mới dồn
+toàn lực vào project được. Jờ đầu cứ ong lên, quay cuồng, quay cuồng.</p>
 
-<p>Còn hai phần cuối liên quan đến một số vấn đề khi thuyết trình bảo vệ và làm sao để trả lời tốt câu
-hỏi của hội đồng đưa ra. Vấn đề cốt yếu khi bảo vệ không phải là nói những gì mà là nói như thế nào,
-người nghe cảm nhận như thế nào. Phải chứng minh được rằng nhóm thực sự làm việc, tạo ra nó chứ
-không phải lấy ở đâu ra rồi nói, rồi bảo vệ là thành quả của nhóm. Trước tiên cần chọn một người ăn
-nói lưu loát (mình không nói lưu loát lắm, kỳ này điểm nói của mình có mỗi 7 nhưng tình nguyện
-thuyết trình); thứ hai không được trả lời liều, có gì không hiểu thì phải hỏi lại, xin thời gian
-thảo luận cùng nhóm; còn nói mãi mà hội đồng không (chịu) hiểu gì thì nên thay người khác lên thuyết
-trình. Hội đồng chủ yếu đánh giá mỗi project theo 3 tiêu chí: Thái độ (Attitude) – Kỹ năng (Skills)
-– Kiến thức (Knowledge). Có thể một bài bảo vệ của nhóm kéo dài từ 30 đến 60 phút. Và một số lỗi bị
-trừ điểm không đáng có sau: Document Template trình bày cẩu thả; ERD không đúng dẫn đến hình vẽ
-không đúng; Database Design có các trường sử dụng không đúng này; vẽ sơ đồ thuật toán sai này rồi
-lại còn thiếu một số phần cuối nữa. Nói chung anh em nên cẩn thận, tránh những vết xe đổ kiểu này.</p>
+<p>Cố gắng không thi lại mấy môn ngoài khoa chứ thi lại cũng chết, thi lại môn ở khoa thì các cô còn
+thương tình 1 chút, chứ sang khoa khác thi mấy cái môn đó thì không sống nổi. Đã có kinh nghiệm học
+lại, thi lại môn Triết (phù, may mà thi lại được 5), thi lại Phong cách học. Còn nợ mấy môn nữa chưa
+trả. Chắc ở khoa jờ mình là “chúa chổm” roài.</p>
 
-<p>Sau khi trình bày Project của mình, hội đồng bắt đầu hỏi. Điều quan trọng là ta phải trả lời như
-thế nào? Đầu tiên, nghe có vẻ to tát lắm chứ hội đồng chẳng phải ai mà là “Người quen” – đến để giúp
-đỡ chứ không phải đến để tiêu diệt ta (phù, đỡ lo). Quan điểm của các thầy thiếu một chút là qua thì
-sẽ cho xuống, không cho lên. Cho mình làm lại tốt hơn chứ không cho mình qua mà vẫn non tay. Thực tế
-đã chứng minh rằng có lớp Fail hàng loạt, chỉ có Pass 1, 2 mống. Như thi C thực hành vừa rồi, cả lớp
-mình có mỗi 3 người qua, còn lại Fail hết. Fail ở đây là tốt đấy. Nhiệm vụ của hội đồng là gì? Hội
-đồng có nhiệm vụ giúp đỡ chúng ta (toàn người có kinh nghiệm mà lị); không tiêu diệt ta mặc dù
-Fail luôn luôn là số nhiều còn Pass thỉ chỉ là số ít và chính hội đồng là người đánh giá chúng ta.
-Đánh Fail để tự chúng ta nhìn lại chứ không “tiêu diệt,” chúng ta phải biết nhìn nhận vấn đề; biết
-đến đâu trả lời đến đấy (“Không biết dựa cột mà nghe, cứ le le người ta… đấm cho vỡ mũm”) &ndash;> Không
-biết nhờ sự hỗ trợ của giáo viên hướng dẫn (Supervisor); đặc biệt có tinh thần cầu tiến. Nếu anh em
-hội đủ các tố chất, tiêu chuẩn này thì cứ đường hoàng mà Pass, có khi Distinction chứ không phải
-Credit đâu. Thế mà đã 10h 30 rồi đấy. Hầu như ngày nào mình cũng phải “quá ngọ về đêm” mới đi ngủ
-chứ ngủ sớm quá làm gì, đêm lướt nét nó cũng nhanh hơn hì hì.</p>
+<p>Trong thời gian sắp tới, cố gắng dậy sớm nháy máy bọn nó, ôn được ít nào thi cho xong. Thời gian ngủ
+bị rút ngắn trầm trọng. Trước hay ngủ từ 2-3h tới 10-11h, ăn gộp bữa sáng + trưa rồi đi học. Jờ fải
+dậy 6 rưỡi mà jờ ngủ vẫn thế. Cố, sau đợt này lại xơ xác đây.</p>
+
+<p>Loạn trong social network, quá nhiều, quá nhiều, quá nhanh, quá nhanh, mình quá lạc hậu. Nếu so sánh
+thì mình còn đang thời kì siêu đồ đá. Đúng là công nghệ, bắt kịp công nghệ cũng không fải chuyện đơn
+giản. Thật ngưỡng mộ, thật tuyệt vời. Có quá nhiều thứ fải tìm hiểu, fải làm. Được làm việc, được
+bận rộn, được bay nhảy cũng vui.</p>
 ]]></content>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[June 13, 2007 - Ngày mưa hơi buồn :(]]></title>
-    <link href="http://blog.hoatle.info/2007/06/15/june-13-2007-ngay-mua-hoi-buon/"/>
-    <updated>2007-06-15T01:19:00+00:00</updated>
-    <id>http://blog.hoatle.info/2007/06/15/june-13-2007-ngay-mua-hoi-buon</id>
-    <content type="html"><![CDATA[<p>Hè hè, mấy tuần này bận thi cử, viết code cho Project không có điều kiện chăm sóc cho Blog. Hôm wa
-đã hứa tự cho mình nghỉ xả hơi một hôm rồi, dự định bao nhiêu việc cần làm cho hôm nay vậy mà !?
-Mấy hôm nay trời mưa càng làm cho mình thấy buồn hơn, thấy có gì đó khó tả, man mác và hơi chán nữa.
-Thôi tối nay là tối chăm sóc cho Blog vậy. Mà xem ở các Blog khác thấy nhiều chuyện buồn hơn là
-chuyện vui. Lâu phết rồi ghé wa Blog của một em học ĐH Hà Nội cũng quê ở Hưng Yên (Khoái Châu) kể
-toàn chuyện sướt mướt, đau khổ. Mà đấy cũng đúng thôi, vì khi vui mấy khi ai viết Blog đâu, chỉ
-những khi chẳng có việc gì làm, có nhiều tâm sự lại “hâm hâm” một chút mới nhớ tới nó thôi (Ôi khổ
-thân mày wá, tao hứa sẽ chăm sóc mày thật tốt. Cụ thể là chuẩn bị thay áo mới cho mày nhé (Sướng
-không? Yên tâm, tao đã ra tay là phải đẹp rồi.).</p>
+    <title type="html"><![CDATA[November 08, 2007 - Phần 1_Ajax là gì? (2)]]></title>
+    <link href="http://blog.hoatle.info/2007/11/08/november-08-2007-phan-1-ajax-la-gi-2/"/>
+    <updated>2007-11-08T03:14:00+00:00</updated>
+    <id>http://blog.hoatle.info/2007/11/08/november-08-2007-phan-1-ajax-la-gi-2</id>
+    <content type="html"><![CDATA[<p>[Xin ghi rõ nguồn <a href="http://360.yahoo.com/wild_tiger8607">Hoat Le’s blog</a> khi muốn đăng lại các bài
+viết trong <strong>Ajax Series</strong>]</p>
+
+<p>Cần thời gian cho nhiều việc khác, chuyện gì đã qua sẽ qua không nói lại nữa. Chúng ta tiếp tục với
+Ajax Series, lâu rồi chưa sờ đến nó, lại tiếp tục cùng mọi người “ngâm cứu” nào. Lần này sẽ là giọng
+như viết sách, không thích kiểu “informal” nữa vì hơi “bát nháo” :(. Đêm nay chỉ type thôi.</p>
 
 <!-- more -->
 
 
-<p>Nhiệm vụ hôm nay của mình là chẳng làm gì cả, viết code cho Project cũng được tầm 30% rồi, 2 tuần
-nữa là bảo vệ. Xong rồi chuẩn bị nộp đơn tham gia cuộc thi Best Project nữa chứ. Nếu mà được giải
-nhất thì ôi thích wá. Giải nhất được 3 triệu, được giải tài trợ nữa ít nhất 10 triệu của các doanh
-nghiệp, công ty phầm mềm đầu tư. Thôi, mình cũng không cần giải nhất đâu, miễn là có giải là được.
-Nhưng dù có giải hay không thì nhất định bọn mình sẽ hoàn thành và triển khai thực tế. Àh, Project
-của bọn mình một website giới thiệu các nhà hàng, hàng quán, món ăn đặc sản, cách chế biến… chỉ ở
-Hà Nôi. Cái này hay vì trước có qua một Forum (hình như HaNoiCorner.Info) hay gì đó, ở đây nhiều bạn
-du học hay hỏi các món ăn ở Hà Nội, hàng wán ngon, bổ, rẻ. Vì là Forum nên post bài tùm lum, đọc
-nhiều mà không có sắp xếp hợp lý, nản. (Biết được cái này vì đi tìm hiểu dân tình mà, nếu có website
-nào làm tốt rồi thì mình phải làm tốt hơn, nhưng search mãi chả có Website nào chuyên về ẩm thực Hà
-Nội. Còn tìm theo ẩm thực thì thôi rồi, kinh khủng luôn.) Còn một số thứ bọn mình vẫn chưa làm xong
-như: giao diện phải chỉnh sửa nhiều, ACP (Admin Control Panel) chưa xong. Mấy hôm nay mình viết xong
-cái Module quản lý User, chiều nay hoàn thành xong. Còn mấy Module quản lý nhà hàng, món ăn… chưa
-xong. Chắc mai làm tiếp, cố lên. Thời gian không còn nhiều nữa. Mà còn nộp hồ sơ dự thi nữa chứ.
-Chắc là kịp thôi.</p>
+<p>Ở Entry trước chúng ta đã tìm hiểu một số thông tin cơ bản về Ajax, sự ra đời của Ajax. Tiếp tục
+trong phần này sẽ giúp các bạn tìm hiểu sâu hơn nữa về Ajax – thuật ngữ rất “hot” từ năm 2005.</p>
 
-<p>Hè này mình cũng có nhiều kế hoạch ghê, nghĩ cũng sướng. Tầm cuối tháng này bảo vệ Project xong là
-thiết kế website cho công ty dịch thuật PTI (Mình dịch ở đây được hơn 1 tháng, bận quá, lại trả công
-trả được bao nhiêu thế là xin nghỉ, tập trung vào “chuyên môn”, tăng công lực rồi kiếm tiền sau (hê
-hê). Sau khi thiết kế website cho công ty PTI xong thì mình tiếp tục viết code cho Project học, ôn,
-thi trực tuyến Anh Văn (hoàn toàn miễn phí) từ kinh nghiệm ít ỏi bản thân trong quá trình học tập.
-Phục vụ mọi người từ kinh nghiệm, các bài học, kiểm tra trắc nghiệm, nói chung đủ cả 4 kỹ năng nghe,
-nói, đọc, viết. Cái Forum NgoaiNguClub.Com đó héo quá, vì nó chẳng có gì là đặc biệt cả, nhưng mình
-sẽ tích hợp Forum với Trang học ngoại ngữ của mình, đảm bảo lúc đó mọi người sẽ đặc biệt cần đến nó
-đấy. Giờ thấy một số website như hocngoaingu.com, quickhelp.vn… mở ra thu phí, bản thẻ luyện thi
-thấy khổ cho những người học tụi mình wá. Người ta làm vậy cũng đúng thôi, nếu không thì lấy kinh
-phí đâu duy trì web. Bán thẻ học 2K/tiếng thì cũng hơi bị kiếm. Mình mới sinh viên, làm các thứ này
-chủ yếu lấy kinh nghiệm về sau, còn kiếm hay không kiếm cũng chả có gì thay đổi cả, miến là mình
-thích. Àh, anh em nào có chút trình độ về PHP, cùng mong muốn xây dựng hệ thống này thì hợp tác nhé
-(rất, rất cần bạn nếu thật sự wan tâm và gắn bó). Mình định viết bằng ASP nhưng lại muốn tích hợp
-với Forum VBB nên sẽ viết bằng PHP, và chuẩn bị ngâm cứu (cũng vui đây). Mấy tuần wa ngâm cứu
-Photoshop cũng thấy hay hay, phần mềm này không phải dành cho dân kỹ thuật mà dành cho dân nghệ
-thuật, bạn nào có óc sáng tạo nghệ thuật dùng cái này thì.. chậc.chậc.. Còn mình ngâm cứu cũng chỉ
-để thiết kế giao diện web, sửa, ghép ảnh thôi. Nhưng kiểu gì cũng phải master cái này, về sau còn
-dùng đến nó nhìu nhìu. Vít nhìu, mệt nhìu.</p>
+<p><strong>1.3 Sự phát triển của Web</strong></p>
 
-<p>Ngoài trời vẫn mưa, mà mình thì vẫn chả thấy hết bùn, thôi viết Entry khác cho anh em nào làm
-Project kỳ I đã, cái đó để dở lâu quá rồi. Phải hoàn thành cái đã.</p>
+<p>Năm 1990, khi Tim Berners-Lee lần đầu tiên đưa bản dự thảo cho thế giới Web (World Wide Web) thì ý
+tưởng của ông khá giản đơn: tạo ra một mạng thông tin được kết nối với nhau sử dụng siêu văn bản
+(hypertext) và bộ định danh tài nguyên thống nhất (Uniform Resource Identifiers &ndash; URIs). Khả năng
+liên kết các loại tài liệu khác nhau từ khắp nơi trên thế giới đã tạo ra tiềm năng rất lớn cho những
+người đang tìm kiếm học bổng vì mọi người có thể dễ dàng truy xuất các tài liệu tham khảo gần như
+ngay tức khắc. Hơn nữa, phiên bản đầu tiên của ngôn ngữ đánh dấu siêu văn bản (HyperText Markup
+Language &ndash; HTML) có rất ít tính năng, chỉ để định dạng và liên kết các tài liệu, đó là một nền không
+phải để xây dựng phần mềm giàu tính tương tác mà chỉ là nơi chia sẻ các loại tài liệu minh hoạ và
+văn bản đã thống trị thế giới in ấn. Web đã phát triển từ những trang web tĩnh như vậy.</p>
+
+<p>Khi Web phát triển, các nhà kinh doanh sớm nhận ra khả năng tiềm ẩn đưa thông tin về các sản phẩm và
+dịch vụ của mình tới đông đảo mọi người trên mạng. Thế hệ tiếp theo của Web đã có nhiều khả năng
+định dạng và hiển thị thông tin hơn vì HTML cũng đã phát triển để đáp ứng nhu cầu phù hợp với những
+kì vọng của những người sử dụng biết đến kiểu truyền thông mới này. Nhưng một công ty nhỏ &ndash; Netscape
+– ngay sau đó đã nhanh chóng đẩy tốc độ phát triển của Web nhanh hơn rất nhiều.</p>
+
+<p>Note: Bắt đầu từ năm 1994 Netscape bắt đầu cuộc chiến giữa các trình duyệt (browser wars) khi đưa ra
+hàng loạt các thẻ HTML mở rộng như hiển thị màu chữ, hiện ảnh.. trong trình duyệt của mình mà trong
+các trình duyệt khác sẽ báo lỗi hoặc ra kết quả hiện thị không như mong muốn, hoặc không hiện gì cả.
+Nhưng mọi người thích những mở rộng này và đều muốn sử dụng trình duyệt của Netscape để duyệt web.
+Đến năm 1996, trình duyệt của Netscape đã trở thành chương trình máy tính phổ biến nhất thế giới. Có
+thể nói đây là thời kì hoàng kim nhất của Netscape cho đến khi Microsoft cũng phát triển, cuốn hút
+người dùng bằng cách thêm những phần mở rộng không phải là chuẩn vào trình duyệt của mình mà trình
+duyệt khác không hiển thị hoặc báo lỗi. Bắt đầu từ đây cuộc chiến giữa 2 ông trùm trình duyệt bắt
+đầu, nảy sinh rất nhiều vấn đề không tương thích cho các nhà phát triển. Đến những năm 2000,
+Internet Explorer đã khẳng định vị trí số 1 của mình, trở thành trình duyệt phổ biến nhất đi cùng
+hệ điều hành Windows. Đến năm 2004, trình duyệt mã nguồn mở Mozilla Firefox chính thức ra phiên bản
+1.0. Đến năm 2005 sản phẩm mã nguồn mở từ bộ Mozilla Suite của Netscape đã được bình chọn là sản
+phẩm số 1. Mozilla Firefox hoàn toàn miễn phí và ngày càng được ưa chuộng bởi các nhà phát triển,
+người dùng. Và hiện nay Mozilla Firefox đã trở thành trình duyệt số 1 được sử dụng nhiều nhất trên
+thế giới.</p>
+
+<p><strong>1.4 JavaScript</strong></p>
+
+<p>Netscape Navigator là trình duyệt web chủ đạo thành công trước nhất và cũng là trình duyệt đầu tiên
+đẩy nhanh các công nghệ web. Tuy nhiên, Netscape thường bị chỉ trích bởi các tổ chức tiêu chuẩn vì
+đã tiến hành áp dụng những công nghệ mới và các mở rộng cho các công nghệ hiện hành trước khi các
+chuẩn được ban hành (rất giống Microsoft cũng bị chỉ trích vì đã không theo các chuẩn khi phát triển
+Internet Explorer). Một trong những công nghệ được Netscape phát triển là JavaScript.</p>
+
+<p>Đầu tiên được đặt tên là LiveScript, JavaScript đã được Brendan Eich của Netscape tạo ra và có trong
+trình duyệt phiên bản 2.0 (1995). Đây là lần đầu tiên các nhà phát triển có thể tác động tới trang
+web để tương tác với người dùng. Thay vì phải bắt server phải thực hiện nhiệm vụ đơn giản như kiểm
+tra tính hợp lệ của dữ liệu, chúng ta có thể làm cho trình duyệt có thể kiểm tra tính hợp lệ của dữ
+liệu ngay mà không cần gửi tới server. Khả năng này rất quan trọng tại thời điểm đó khi hầu hết
+người dùng Internet sử dụng modem 28.8 Kbps, nếu gửi yêu cầu tới <em>server</em> thì sẽ trở thành game đợi
+chờ (Có lúc người ta nói vui với nhau: WWW – World Wide Wait). Giảm thiểu số lần người dùng phải đợi
+<em>response</em> từ <em>server</em> chính là bước lớn đầu tiên tiến tới cách tiếp cận Ajax.</p>
+
+<p><strong>1.5 Frames (Khung)</strong></p>
+
+<p>Phiên bản đầu tiên của HTML có mục đích tạo ra các tài liệu đứng độc lập một mình và đến tận HTML
+4.0 <em>frame</em> mới được chính thức giới thiệu. Ý tưởng hiển thị một trang web từ một số tài liệu được
+gộp lại là một ý tưởng cấp tiến đầy tranh luận đã được Netscape chọn để đưa vào tính năng cho trình
+duyệt trước khi hoàn thành HTML 4.0. Netscape Navigator 2.0 là trình duyệt đầu tiên hỗ trợ các
+<em>frame</em> và cả JavaScript. Đây là một bước tiến quan trọng trong sự phát triển của Ajax.</p>
+
+<p>Vào cuối những năm 1990 khi cuộc chiến giữa các trình duyệt (browser wars) giữa Microsoft và
+Netscape nổ ra thì cả JavaScript và frame đều được chính thức hoá. Khi ngày càng có nhiều tính năng
+được hỗ trợ bởi 2 trình duyệt, các nhà phát triển sáng tạo bắt đầu thử nghiệm sử dụng cả 2 tính năng
+này của trình duyệt. Do một frame đại diện cho một <em>request</em> hoàn toàn độc lập tới <em>server</em> nên khả
+năng kiểm soát một <em>frame</em> và nội dung của nó bằng JavaScript đã mở cánh cửa cho một số khả năng lí
+thú.</p>
+
+<p>Trong bài viết tới sẽ đề cập tới một số kỹ thuật cơ bản sử dụng <em>frame</em> để gửi yêu cầu tới <em>server</em>
+mà không cần <em>load</em> lại trang.</p>
 ]]></content>
   </entry>
   
