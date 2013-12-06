@@ -50,3 +50,25 @@ Giờ nếu tớ đồng ý sang Sing làm việc cho Google thì tớ phải t�
 tớ vẫn làm việc ở eXo Platform bình thường. Trời ơi!!! Làm thế nào bây giờ? Giá mà làm việc ở eXo
 Platform được 1 thời gian sau đó rồi mới nhận được lời đề nghị của Google có phải tốt hơn không. Tớ
 phải làm sao giờ, ai có thể cho tớ lời khuyên đúng đắn không :(?
+
+
+Bình luận
+---------
+
+- xuân (2009-05-07 21:32):
+
+*lucky you,*
+
+*Vì tớ mới nộp hồ sơ vào exo, nên cũng đã search google về exo (từ đó tìm ra site cậu), download, install & test software của họ.*
+
+*sau khi phỏng vấn bên exo & chờ qua hạn mà ko thấy hồi âm từ họ nên tớ đã apply vào cty khác, tuy ko pro như exo nhưng tớ cảm thấy khá là thoải mái ở cty mới này, quan trọng hơn là tớ có thể thực hiện project của tớ tại đây.*
+
+*mà cậu chơi drupal lâu chưa vậy ?*
+
+- hoatle (2009-05-09 21:32):
+
+*Ừh, làm ở đâu không quan trọng lắm, quan trọng là được làm hết mình, thể hiện mình ^^.*
+
+*Chúc project của bạn thành công :).*
+
+*Tớ dùng Drupal cũng khá lâu rồi.*
