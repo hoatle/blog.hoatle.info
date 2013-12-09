@@ -4,7 +4,7 @@
   <title><![CDATA[blog.hoatle.info]]></title>
   <link href="http://blog.hoatle.info/atom.xml" rel="self"/>
   <link href="http://blog.hoatle.info/"/>
-  <updated>2013-12-09T01:18:36+00:00</updated>
+  <updated>2013-12-09T21:54:35+00:00</updated>
   <id>http://blog.hoatle.info/</id>
   <author>
     <name><![CDATA[hoatle]]></name>
@@ -12,6 +12,41 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Tổng thống Obama kêu gọi người dân Mỹ học lập trình]]></title>
+    <link href="http://blog.hoatle.info/2013/12/09/tong-thong-obama-keu-goi-nguoi-dan-my-hoc-lap-trinh/"/>
+    <updated>2013-12-09T20:49:00+00:00</updated>
+    <id>http://blog.hoatle.info/2013/12/09/tong-thong-obama-keu-goi-nguoi-dan-my-hoc-lap-trinh</id>
+    <content type="html"><![CDATA[<div class="embed-video-container"><iframe src="http://www.youtube.com/embed/6XvmhE1J9PY "></iframe></div>
+
+
+<p>Dịch lời:</p>
+
+<!-- more -->
+
+
+
+
+<blockquote><p>Chào các bạn,</p><p>Tuần này tôi rất vinh dự được tham gia cùng các sinh viên, giáo viên, doanh nghiệp và tổ chức phi lợi nhuận khởi động chương trình hành động lớn mới để hỗ trợ giáo dục khoa học máy tính ở các trường học Mỹ.</p><p>Học những kỹ năng này không những quan trọng cho tương lai của các bạn mà còn cho cả tương lai đất nước chúng ta. Nếu chúng ta muốn nước Mỹ tiếp tục dẫn đầu sự phát triển, chúng ta cần những người Mỹ trẻ, như các bạn, nắm vững những công cụ và công nghệ sẽ thay đổi mọi thứ chúng ta làm. Đó là lý do tôi yêu cầu các bạn cùng tham gia.</p><p>Đừng chỉ mua một trò chơi video mới, hãy làm một cái.</p><p>Đừng chỉ tải về ứng dụng mới nhất, hãy giúp thiết kế nó.</p><p>Đừng chỉ chơi trên điện thoại, hãy lập trình nó.</p><p>Không ai sinh ra đã là nhà khoa học máy tính nhưng với một chút chăm chỉ cộng với một chút kiến thức toán và khoa học thì bất kỳ ai cũng có thể trở thành người như vậy.</p><p>Tuần này là cơ hội để bạn hãy thử cho mình cơ hội lập trình. Và đừng để bất kỳ ai nói với bạn rằng &#8220;bạn không thể&#8221;.</p><p>Dù bạn có là thanh niên nam hay nữ, dù bạn sống ở thành phố hay nông thôn thì máy tính sẽ trở thành một phần quan trọng rất lớn cho tương lai của các bạn. Và nếu bạn sẵn sàng làm việc và học tập chăm chỉ, tương lai đó được định hình thế nào nằm cả trong tay các bạn.</p><p>Cảm ơn các bạn.</p></blockquote>
+
+
+<p>Xem thêm video cổ động:</p>
+
+<div class="embed-video-container"><iframe src="http://www.youtube.com/embed/FC5FbmsH4fw "></iframe></div>
+
+
+<p>Còn tương lai của nước Việt?&hellip;</p>
+
+<h2>Nên Xem Thêm</h2>
+
+<ul>
+<li><a href="http://code.org/">http://code.org/</a></li>
+<li><a href="https://www.youtube.com/user/CodeOrg">https://www.youtube.com/user/CodeOrg</a></li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Điều gì làm nên hệ thống IT tốt?]]></title>
@@ -2754,40 +2789,6 @@ Jeremi làm việc cho eXo gần 2 năm, chuẩn bị mở công ty riêng ở T
 <p>http://www.linkedin.com/pub/dir/brice/revenant<a href="#fnref:4" rev="footnote">&#8617;</a></p></li>
 <li id="fn:5">
 <p>http://blog.hoatle.info/2008/11/15/cuoc-thi-viet-ung-dung-opensocial-khu-vuc-dong-nam-a/<a href="#fnref:5" rev="footnote">&#8617;</a></p></li>
-</ol>
-</div>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[my first working day at eXo Platform SEA]]></title>
-    <link href="http://blog.hoatle.info/2009/02/17/my-first-working-day-at-exo-platform-sea/"/>
-    <updated>2009-02-17T02:06:00+00:00</updated>
-    <id>http://blog.hoatle.info/2009/02/17/my-first-working-day-at-exo-platform-sea</id>
-    <content type="html"><![CDATA[<p>Today is my first working day at eXo Platform SEA, a nice start working day :). Hey, so long no post from my blog sice Tet holiday, now I will blog more often.</p>
-
-<!-- more -->
-
-
-<p>I&rsquo;m the lucky one to have chance working at eXo<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup> , I&rsquo;ve never thought about it before knowing and meeting Jeremi<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup> since Opensocial Hackathon in Hanoi<sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup>. After the hackathon, Jeremi and I had some discussion, he just introduced me to apply for a position at eXo &ndash; a position where my English learning at HUT and computer learning at HN-Aptech meets, so the best position is document writer. I have some good points of writing English, I will write technical documents for eXo, nice and thank Jeremi so much! Though, this is just the very first step to join eXo. I had English test, interview with 3 guys to check general Java knowledge, openSocial knowledge (Tung) and document writing skill (Cong) and then continue my interview with Brice Revenant<sup id="fnref:4"><a href="#fn:4" rel="footnote">4</a></sup> &ndash; manager at eXo Platform SEA before our Tet holiday. I had another more test for writing a sample of user guide for comminity management when I was home. Lucky me, everything was nice and today I&rsquo;m very pleased to have my first working day and now blogging about it :).</p>
-
-<p>The unlucky year passed by, last year I lost many things and had so many hardships: I was cheated when helping my friend finding a job, cheated to get address for renting, my motorbike was stolen (I will work hard to buy another by the end of this year), so living in Hanoi is really really dangerous [dangerous in peaceful :))], so I should be more and more and more careful. My bike was stolen at the second term at HUT, too :(. Now the new time for new year: my OpenSocial App took second prize at SE Asia OpenSocial Application contest, however, it is still in developement, hope to release it soon. Got some job offers which is very nice at the time of the world economic meltdown :D. Barcamp Hanoi 2 is being prepared, eXo will be one of the sponsers. I hope that I will have more time to wake everything up, Barcamp Hanoi 2 now seems slow in progress, I&rsquo;m preparing to have a session for Barcamp, too :). Next year will be my next big one after university graduation, more time for work, for meetup :).</p>
-
-<p>Today I had some training to have basic ideas about Portal, how to use and organize it, cool ;). Tomorrow I will have training about WebOS and after that a test will come to check for understanding. Everyone here is nice! I just know some more guys: Tung (eXo Social project leader) and Trong (Portal team leader) from Hackathon, Cong (tester) from the interview, Nga (document writer) and Hang (give me and another guy training) &ndash; today. You can see more staffs here: <a href="http://wiki.exoplatform.org/xwiki/bin/view/Main/Team.">http://wiki.exoplatform.org/xwiki/bin/view/Main/Team.</a></p>
-
-<p>Love this busy and promising year :)</p>
-<div class="footnotes">
-<hr/>
-<ol>
-<li id="fn:1">
-<p>http://exoplatform.com/<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
-<li id="fn:2">
-<p>http://jeremi.info<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
-<li id="fn:3">
-<p>http://blog.hoatle.info/2008/12/13/opensocial-hackathon-in-hanoi/<a href="#fnref:3" rev="footnote">&#8617;</a></p></li>
-<li id="fn:4">
-<p>http://www.linkedin.com/pub/dir/brice/revenant<a href="#fnref:4" rev="footnote">&#8617;</a></p></li>
 </ol>
 </div>
 
