@@ -5,12 +5,14 @@ author:
 date: 2013-12-09 20:49
 comments: true
 categories:
-    -
+    - "vi"
 tags:
-    -
+    - "Obama"
+    - "code.org"
+    - "lập trình"
 cover:
-description:
-keywords:
+description: Tổng thống Obama kêu gọi người dân Mỹ học lập trình
+keywords: Obama, Mỹ, kêu gọi, học lập trình
 published: true
 ---
 
