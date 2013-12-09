@@ -4,7 +4,7 @@
   <title><![CDATA[blog.hoatle.info]]></title>
   <link href="http://blog.hoatle.info/atom.xml" rel="self"/>
   <link href="http://blog.hoatle.info/"/>
-  <updated>2013-12-09T00:34:27+00:00</updated>
+  <updated>2013-12-09T01:18:36+00:00</updated>
   <id>http://blog.hoatle.info/</id>
   <author>
     <name><![CDATA[hoatle]]></name>
@@ -18,7 +18,7 @@
     <link href="http://blog.hoatle.info/2013/12/08/dieu-gi-lam-nen-he-thong-it-tot/"/>
     <updated>2013-12-08T23:32:00+00:00</updated>
     <id>http://blog.hoatle.info/2013/12/08/dieu-gi-lam-nen-he-thong-it-tot</id>
-    <content type="html"><![CDATA[<p><img class="center" src="http://blog.hoatle.info/images/2013/12/data-protection.jpg" title="Dữ liệu và bảobảobaorba  vệ dữ liệu" ></p>
+    <content type="html"><![CDATA[<p><img class="center" src="http://blog.hoatle.info/images/2013/12/data-protection.jpg" title="Dữ liệu và bảo vệ dữ liệu" ></p>
 
 <p>Hệ thống IT (Information Technology) là gì? Hệ thống IT tốt cần đảm bảo điều gì?</p>
 
@@ -61,9 +61,9 @@ một trong những tôn chỉ quan trọng sống còn cho các dịch vụ c�
 <p>Tuy nhiên để triển khai hệ thống IT tốt không dễ và một ngày hai ngày là xong. Tuy đã có sự chuẩn bị
 ngay từ ban đầu nhưng một sự cố đáng tiếc đã xảy ra quá sớm khiến toàn bộ dữ liệu trên một VPS của
 Teracy đã biến mất hoàn toàn chỉ sau vài giờ (do sự bất cẩn khi chọn nhà cung cấp VPS không tốt và
-DEVOPS không kịp trở tay sau khi có sự thông báo dừng dịch vụ của nhà cung cấp). Rất may là dữ liệu
-không có nhiều và đã có backup một phần nên sau 2 ngày toàn bộ dữ liệu đã được phục hồi. Những bài
-học đắt giá như vậy cần phải có để Teracy biết tầm quan trọng của dữ liệu và bảo vệ dữ liệu.</p>
+DEVOPS không kịp trở tay sau khi có thông báo dừng dịch vụ đột ngột của nhà cung cấp). Rất may là dữ
+liệu không có nhiều và đã có backup một phần nên sau 2 ngày toàn bộ dữ liệu đã được phục hồi. Những
+bài học đắt giá như vậy cần phải có để Teracy biết tầm quan trọng của dữ liệu và bảo vệ dữ liệu.</p>
 
 <h2>Nên Xem Thêm</h2>
 
