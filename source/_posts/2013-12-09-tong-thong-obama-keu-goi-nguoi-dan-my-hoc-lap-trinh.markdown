@@ -51,7 +51,11 @@ Xem thêm video cổ động:
 {% youtube FC5FbmsH4fw %}
 
 
-Còn tương lai của nước Việt?...
+Còn tương lai của nước Việt?
+
+1 - Học tiếng Anh
+
+2 - Học lập trình
 
 
 Nên Xem Thêm
@@ -59,3 +63,4 @@ Nên Xem Thêm
 
 - http://code.org/
 - https://www.youtube.com/user/CodeOrg
+- https://news.ycombinator.com/item?id=6875842
