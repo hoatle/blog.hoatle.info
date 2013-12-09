@@ -14,7 +14,7 @@ keywords: hệ thống IT, tốt, IT system, good, robust
 published: true
 ---
 
-{%  img center /images/2013/12/data-protection.jpg Dữ liệu và bảobảobaorba  vệ dữ liệu %}
+{%  img center /images/2013/12/data-protection.jpg Dữ liệu và bảo vệ dữ liệu %}
 
 Hệ thống IT (Information Technology) là gì? Hệ thống IT tốt cần đảm bảo điều gì?
 
@@ -65,9 +65,9 @@ Chi tiết: http://dev.teracy.org/docs/intro.html#about-teracy
 Tuy nhiên để triển khai hệ thống IT tốt không dễ và một ngày hai ngày là xong. Tuy đã có sự chuẩn bị
 ngay từ ban đầu nhưng một sự cố đáng tiếc đã xảy ra quá sớm khiến toàn bộ dữ liệu trên một VPS của
 Teracy đã biến mất hoàn toàn chỉ sau vài giờ (do sự bất cẩn khi chọn nhà cung cấp VPS không tốt và
-DEVOPS không kịp trở tay sau khi có sự thông báo dừng dịch vụ của nhà cung cấp). Rất may là dữ liệu
-không có nhiều và đã có backup một phần nên sau 2 ngày toàn bộ dữ liệu đã được phục hồi. Những bài
-học đắt giá như vậy cần phải có để Teracy biết tầm quan trọng của dữ liệu và bảo vệ dữ liệu.
+DEVOPS không kịp trở tay sau khi có thông báo dừng dịch vụ đột ngột của nhà cung cấp). Rất may là dữ
+liệu không có nhiều và đã có backup một phần nên sau 2 ngày toàn bộ dữ liệu đã được phục hồi. Những
+bài học đắt giá như vậy cần phải có để Teracy biết tầm quan trọng của dữ liệu và bảo vệ dữ liệu.
 
 
 Nên Xem Thêm
