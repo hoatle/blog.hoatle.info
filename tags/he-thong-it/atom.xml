@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Tag: hệ thống IT | blog.hoatle.info]]></title>
+  <link href="http://blog.hoatle.info/tags/he-thong-it/atom.xml" rel="self"/>
+  <link href="http://blog.hoatle.info/"/>
+  <updated>2013-12-09T00:34:27+00:00</updated>
+  <id>http://blog.hoatle.info/</id>
+  <author>
+    <name><![CDATA[hoatle]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Điều gì làm nên hệ thống IT tốt?]]></title>
+    <link href="http://blog.hoatle.info/2013/12/08/dieu-gi-lam-nen-he-thong-it-tot/"/>
+    <updated>2013-12-08T23:32:00+00:00</updated>
+    <id>http://blog.hoatle.info/2013/12/08/dieu-gi-lam-nen-he-thong-it-tot</id>
+    <content type="html"><![CDATA[<p><img class="center" src="/images/2013/12/data-protection.jpg" title="Dữ liệu và bảobảobaorba  vệ dữ liệu" ></p>
+
+<p>Hệ thống IT (Information Technology) là gì? Hệ thống IT tốt cần đảm bảo điều gì?</p>
+
+<!-- more -->
+
+
+<h2>Hệ Thống IT Là Gì?</h2>
+
+<p>Nói ngắn gọn, hệ thống IT là hệ thống lưu trữ và xử lý dữ liệu.</p>
+
+<h2>Dữ Liệu (Data)</h2>
+
+<p>Chính vì vậy, dữ liệu là quan trọng nhất. Hệ thống IT tốt cần phải bảo vệ dữ liệu đó.</p>
+
+<h2>Bảo Vệ Dữ Liệu (Data Protection)</h2>
+
+<p>Cần:</p>
+
+<ul>
+<li><p>an toàn thông tin (security)</p></li>
+<li><p>sao chép dự phòng (backup) và phục hồi (recovery)</p></li>
+</ul>
+
+
+<h2>Tóm Lại</h2>
+
+<p>Một hệ thống IT tốt cần lưu trữ, xử lý dữ liệu và phải đảm bảo an toàn cho dữ liệu đó.</p>
+
+<p>Hệ thống IT tốt = dữ liệu + an toàn thông tin + sao chép dự phòng + phục hồi</p>
+
+<p>(A robust IT system = data + security + backup + recovery)</p>
+
+<h2>Áp Dụng Cho Teracy</h2>
+
+<p>Ngay từ những ngày đầu triển khai hệ thống IT, Teracy lấy mục tiêu phát triển hệ thống IT tốt làm
+một trong những tôn chỉ quan trọng sống còn cho các dịch vụ của mình.</p>
+
+<p>Chi tiết: <a href="http://dev.teracy.org/docs/intro.html#about-teracy">http://dev.teracy.org/docs/intro.html#about-teracy</a></p>
+
+<p>Tuy nhiên để triển khai hệ thống IT tốt không dễ và một ngày hai ngày là xong. Tuy đã có sự chuẩn bị
+ngay từ ban đầu nhưng một sự cố đáng tiếc đã xảy ra quá sớm khiến toàn bộ dữ liệu trên một VPS của
+Teracy đã biến mất hoàn toàn chỉ sau vài giờ (do sự bất cẩn khi chọn nhà cung cấp VPS không tốt và
+DEVOPS không kịp trở tay sau khi có sự thông báo dừng dịch vụ của nhà cung cấp). Rất may là dữ liệu
+không có nhiều và đã có backup một phần nên sau 2 ngày toàn bộ dữ liệu đã được phục hồi. Những bài
+học đắt giá như vậy cần phải có để Teracy biết tầm quan trọng của dữ liệu và bảo vệ dữ liệu.</p>
+
+<h2>Nên Xem Thêm</h2>
+
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Backup">http://en.wikipedia.org/wiki/Backup</a></li>
+<li><a href="http://www.dpbestflow.org/links/39">http://www.dpbestflow.org/links/39</a></li>
+<li><a href="http://www.quora.com/What-tape-technology-does-Google-use-for-backups">http://www.quora.com/What-tape-technology-does-Google-use-for-backups</a></li>
+<li><a href="http://www.quora.com/Data/How-do-top-companies-like-Google-Microsoft-Facebook-backup-their-data-How-many-layers-of-backups-do-they-have">http://www.quora.com/Data/How-do-top-companies-like-Google-Microsoft-Facebook-backup-their-data-How-many-layers-of-backups-do-they-have</a></li>
+<li><a href="http://www.quora.com/Facebook-1/Does-Facebook-keep-a-redundant-copy-of-their-users-data-on-backup-tapes">http://www.quora.com/Facebook-1/Does-Facebook-keep-a-redundant-copy-of-their-users-data-on-backup-tapes</a></li>
+<li><a href="http://www.quora.com/Mark-Zuckerberg-1/Does-Mark-Zuckerberg-or-Facebook-employees-have-a-skeleton-key-granting-him-access-to-every-members-Facebook-profile-page-and-information">http://www.quora.com/Mark-Zuckerberg-1/Does-Mark-Zuckerberg-or-Facebook-employees-have-a-skeleton-key-granting-him-access-to-every-members-Facebook-profile-page-and-information</a></li>
+</ul>
+
+
+<h2>Ảnh Minh Hoạ</h2>
+
+<ul>
+<li><a href="http://signalhilldigital.com/wp-content/uploads/2012/11/privacy-e1354237310123.jpg">http://signalhilldigital.com/wp-content/uploads/2012/11/privacy-e1354237310123.jpg</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>

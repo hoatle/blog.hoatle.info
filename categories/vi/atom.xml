@@ -4,7 +4,7 @@
   <title><![CDATA[Category: vi | blog.hoatle.info]]></title>
   <link href="http://blog.hoatle.info/categories/vi/atom.xml" rel="self"/>
   <link href="http://blog.hoatle.info/"/>
-  <updated>2013-12-06T16:42:19+00:00</updated>
+  <updated>2013-12-09T00:34:27+00:00</updated>
   <id>http://blog.hoatle.info/</id>
   <author>
     <name><![CDATA[hoatle]]></name>
@@ -12,6 +12,79 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Điều gì làm nên hệ thống IT tốt?]]></title>
+    <link href="http://blog.hoatle.info/2013/12/08/dieu-gi-lam-nen-he-thong-it-tot/"/>
+    <updated>2013-12-08T23:32:00+00:00</updated>
+    <id>http://blog.hoatle.info/2013/12/08/dieu-gi-lam-nen-he-thong-it-tot</id>
+    <content type="html"><![CDATA[<p><img class="center" src="/images/2013/12/data-protection.jpg" title="Dữ liệu và bảobảobaorba  vệ dữ liệu" ></p>
+
+<p>Hệ thống IT (Information Technology) là gì? Hệ thống IT tốt cần đảm bảo điều gì?</p>
+
+<!-- more -->
+
+
+<h2>Hệ Thống IT Là Gì?</h2>
+
+<p>Nói ngắn gọn, hệ thống IT là hệ thống lưu trữ và xử lý dữ liệu.</p>
+
+<h2>Dữ Liệu (Data)</h2>
+
+<p>Chính vì vậy, dữ liệu là quan trọng nhất. Hệ thống IT tốt cần phải bảo vệ dữ liệu đó.</p>
+
+<h2>Bảo Vệ Dữ Liệu (Data Protection)</h2>
+
+<p>Cần:</p>
+
+<ul>
+<li><p>an toàn thông tin (security)</p></li>
+<li><p>sao chép dự phòng (backup) và phục hồi (recovery)</p></li>
+</ul>
+
+
+<h2>Tóm Lại</h2>
+
+<p>Một hệ thống IT tốt cần lưu trữ, xử lý dữ liệu và phải đảm bảo an toàn cho dữ liệu đó.</p>
+
+<p>Hệ thống IT tốt = dữ liệu + an toàn thông tin + sao chép dự phòng + phục hồi</p>
+
+<p>(A robust IT system = data + security + backup + recovery)</p>
+
+<h2>Áp Dụng Cho Teracy</h2>
+
+<p>Ngay từ những ngày đầu triển khai hệ thống IT, Teracy lấy mục tiêu phát triển hệ thống IT tốt làm
+một trong những tôn chỉ quan trọng sống còn cho các dịch vụ của mình.</p>
+
+<p>Chi tiết: <a href="http://dev.teracy.org/docs/intro.html#about-teracy">http://dev.teracy.org/docs/intro.html#about-teracy</a></p>
+
+<p>Tuy nhiên để triển khai hệ thống IT tốt không dễ và một ngày hai ngày là xong. Tuy đã có sự chuẩn bị
+ngay từ ban đầu nhưng một sự cố đáng tiếc đã xảy ra quá sớm khiến toàn bộ dữ liệu trên một VPS của
+Teracy đã biến mất hoàn toàn chỉ sau vài giờ (do sự bất cẩn khi chọn nhà cung cấp VPS không tốt và
+DEVOPS không kịp trở tay sau khi có sự thông báo dừng dịch vụ của nhà cung cấp). Rất may là dữ liệu
+không có nhiều và đã có backup một phần nên sau 2 ngày toàn bộ dữ liệu đã được phục hồi. Những bài
+học đắt giá như vậy cần phải có để Teracy biết tầm quan trọng của dữ liệu và bảo vệ dữ liệu.</p>
+
+<h2>Nên Xem Thêm</h2>
+
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Backup">http://en.wikipedia.org/wiki/Backup</a></li>
+<li><a href="http://www.dpbestflow.org/links/39">http://www.dpbestflow.org/links/39</a></li>
+<li><a href="http://www.quora.com/What-tape-technology-does-Google-use-for-backups">http://www.quora.com/What-tape-technology-does-Google-use-for-backups</a></li>
+<li><a href="http://www.quora.com/Data/How-do-top-companies-like-Google-Microsoft-Facebook-backup-their-data-How-many-layers-of-backups-do-they-have">http://www.quora.com/Data/How-do-top-companies-like-Google-Microsoft-Facebook-backup-their-data-How-many-layers-of-backups-do-they-have</a></li>
+<li><a href="http://www.quora.com/Facebook-1/Does-Facebook-keep-a-redundant-copy-of-their-users-data-on-backup-tapes">http://www.quora.com/Facebook-1/Does-Facebook-keep-a-redundant-copy-of-their-users-data-on-backup-tapes</a></li>
+<li><a href="http://www.quora.com/Mark-Zuckerberg-1/Does-Mark-Zuckerberg-or-Facebook-employees-have-a-skeleton-key-granting-him-access-to-every-members-Facebook-profile-page-and-information">http://www.quora.com/Mark-Zuckerberg-1/Does-Mark-Zuckerberg-or-Facebook-employees-have-a-skeleton-key-granting-him-access-to-every-members-Facebook-profile-page-and-information</a></li>
+</ul>
+
+
+<h2>Ảnh Minh Hoạ</h2>
+
+<ul>
+<li><a href="http://signalhilldigital.com/wp-content/uploads/2012/11/privacy-e1354237310123.jpg">http://signalhilldigital.com/wp-content/uploads/2012/11/privacy-e1354237310123.jpg</a></li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[22 quy tắc từ Pixar để tạo ra những câu chuyện phi thường]]></title>
@@ -828,76 +901,6 @@ do bay nhảy :d.</p>
 
 <p>Đầu tư khá nhiều sức vào project để bảo vệ ở Hanoi Aptech (cùng @huydung) nhưng cuối cùng đuối :((,
 sau đấy chưa lấy lại được tinh thần để làm tiếp :|.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Làm việc cho eXo Platform hay Google đây?]]></title>
-    <link href="http://blog.hoatle.info/2009/04/01/lam-viec-cho-exo-platform-hay-google-day/"/>
-    <updated>2009-04-01T22:35:00+00:00</updated>
-    <id>http://blog.hoatle.info/2009/04/01/lam-viec-cho-exo-platform-hay-google-day</id>
-    <content type="html"><![CDATA[<p><strong>Chú ý: Đây là bài viết trêu đùa ngày Cá Tháng Tư</strong></p>
-
-<p>Tớ đã suy nghĩ rất nhiều. Chả là bên phía Google có đề nghị tớ qua làm việc (full-time) ở Singapore
-trong vòng 2 năm sau vụ ứng dụng OpenSocial của tớ (Music-Engine) đạt giải nhì trong cuộc thi viết
-ứng dụng OpenSocial khu vực Đông Nam Á do Google tổ chức. Tuy nhiên, không hiểu lý do phức tạp gì
-về vụ hải quan mà tớ không thể nhận được Ipod Touch như trong phần thưởng đã ghi, thay vào đó sẽ
-nhận được tiền mặt :(. Shannon Madison (là người chịu trách nhiệm chính của cuộc thi) và tớ gần đây
-đã bàn luận nhiều về cơ hội việc làm này. Chị ý bảo rằng một số nhân viên của Google sẽ tham gia
-BarCamp Hanoi 2009 này và sẽ hé lộ cho chúng ta biết về chiến lược của Google ở Đông Nam Á nói chung
-và Việt Nam nói riêng. Giờ thì tớ phải chọn: làm việc bán thời gian ở eXo Platform hay làm việc toàn
-thời gian cho Google ở Singapore trong vòng 2 năm.</p>
-
-<!-- more -->
-
-
-<p>Làm việc cho Google là một cơ hội tốt và hiếm có cho tương lai của tớ. Shannon cũng có nói về kế
-hoạch văn phòng đại diện của Google ở Việt Nam, so vậy nếu tớ làm việc cho Google ở Singapore xong
-2 năm thì có thể trở lại Việt Nam để làm ở văn phòng đại diện của Google ở Việt Nam. Tớ biết, đây
-là cơ hội rất tốt và hiếm hoi đê tớ có thể thử sức mình khi làm việc ở nước ngoài và lại là làm việc
-cho Google nữa chứ, sẽ tuyệt vời lắm chứ! Tuy nhiên, nếu tớ đồng ý làm việc ở Sing, điều đó có nghĩa
-là tớ phải ngừng việc học của mình ở HUT, nghĩa là tớ phải rờ xa gia đình, bạn bè và những kỷ niệm
-đẹp để đến đó làm việc. Thực sự tớ chưa bao giờ ra nước ngoài cả, nếu được vậy thì còn gì bằng.</p>
-
-<p>Tuy nhiên cũng không phải là không có khúc mắc. Tớ vừa mới làm việc ở eXo Platform được có 1 tháng
-rưỡi. Mọi thứ mới chỉ là bắt đầu và thực sự thì tớ chưa đạt được điều gì ở eXo Platform cả. Tớ đã
-cố gắng nhiều để được làm việc nơi đây. Chỉ sau một thời gian ngắn ngủi như vậy thôi thì tớ biết eXo
-Platform chính là môi trường tốt nhất ở Hà Nội này để cho tớ học tập, làm việc và có những người bạn
-tốt. Mọi người ở đây thật tốt, dường như tớ đã quen hết với mọi người rồi. Mọi người đã chia sẻ với
-nhau rất nhiều, nhất là trong các vụ: tiệc tùng đám cưới, chia tay (Jeremi), karaoke. Ngoài ra thì
-tớ cũng muốn tìm hiểu về eXo Platform sau đó áp dụng vào project cuối cùng ở Hanoi Aptech sau đó là
-tốt nghiệp.</p>
-
-<p>Giờ nếu tớ đồng ý sang Sing làm việc cho Google thì tớ phải từ bỏ nhiều thứ ở nơi đây. Nếu không thì
-tớ vẫn làm việc ở eXo Platform bình thường. Trời ơi!!! Làm thế nào bây giờ? Giá mà làm việc ở eXo
-Platform được 1 thời gian sau đó rồi mới nhận được lời đề nghị của Google có phải tốt hơn không. Tớ
-phải làm sao giờ, ai có thể cho tớ lời khuyên đúng đắn không :(?</p>
-
-<h2>Bình luận</h2>
-
-<ul>
-<li>xuân (2009-05-07 21:32):</li>
-</ul>
-
-
-<p><em>lucky you,</em></p>
-
-<p><em>Vì tớ mới nộp hồ sơ vào exo, nên cũng đã search google về exo (từ đó tìm ra site cậu), download, install &amp; test software của họ.</em></p>
-
-<p><em>sau khi phỏng vấn bên exo &amp; chờ qua hạn mà ko thấy hồi âm từ họ nên tớ đã apply vào cty khác, tuy ko pro như exo nhưng tớ cảm thấy khá là thoải mái ở cty mới này, quan trọng hơn là tớ có thể thực hiện project của tớ tại đây.</em></p>
-
-<p><em>mà cậu chơi drupal lâu chưa vậy ?</em></p>
-
-<ul>
-<li>hoatle (2009-05-09 21:32):</li>
-</ul>
-
-
-<p><em>Ừh, làm ở đâu không quan trọng lắm, quan trọng là được làm hết mình, thể hiện mình ^^.</em></p>
-
-<p><em>Chúc project của bạn thành công :).</em></p>
-
-<p><em>Tớ dùng Drupal cũng khá lâu rồi.</em></p>
 ]]></content>
   </entry>
   
