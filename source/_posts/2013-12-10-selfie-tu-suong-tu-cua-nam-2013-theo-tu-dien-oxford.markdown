@@ -7,7 +7,7 @@ comments: true
 categories:
     - "vi"
 tags:
-    - "từ"
+    - "ngôn ngữ"
     - "từ điển Oxford"
 cover: /images/2013/12/presidential-selfie.jpg
 description: "selfie (tự sướng) - từ của năm 2013 theo từ điển Oxford: định nghĩa, nguồn gốc, các
