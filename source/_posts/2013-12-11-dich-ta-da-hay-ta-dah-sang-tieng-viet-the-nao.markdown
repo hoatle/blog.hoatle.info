@@ -61,6 +61,11 @@ Tìm hiểu về ngôn ngữ, nhất là xử lý đa ngôn ngữ là một mả
 Bạn có thể tìm hiểu thêm về cách sử dụng của "ta-da" tại:
 http://www.urbandictionary.com/define.php?term=tada
 
+Ảnh Minh Hoạ
+------------
+
+- http://weknowmemes.com/2012/09/but-then-theres-will-smith/
+
 
 [^1]: http://www.imdb.com/title/tt1981115/
 [^2]: http://www.imdb.com/title/tt1453405/
