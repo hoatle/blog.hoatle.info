@@ -16,7 +16,7 @@ published: true
 
 {% img center /images/2013/12/will_smith_ta_da.jpg Will Smith's ta-da moment %}
 
-Hôm trước xem "Thor: The Dark World"[^1] có phần dịch "ta-da" mà tôi thấy rất thú vị, và cứ ghi nhớ
+Đợt trước xem "Thor: The Dark World"[^1] có phần dịch "ta-da" mà tôi thấy rất thú vị, và cứ ghi nhớ
 mãi, còn nói chuyện với các em về việc dịch từ này thú vị thế nào. Bẵng đi một thời gian, hôm trước
 xem "Monsters University"[^2] cũng có đoạn "ta-da" nhưng bạn dịch phụ đề giữ nguyên khi chuyển sang
 tiếng Việt là "ta-da". Việc giữ nguyên (vay mượn) này cũng không ảnh hưởng lắm nhưng nếu dịch sang
