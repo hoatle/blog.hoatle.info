@@ -4,7 +4,7 @@
   <title><![CDATA[Category: vi | blog.hoatle.info]]></title>
   <link href="http://blog.hoatle.info/categories/vi/atom.xml" rel="self"/>
   <link href="http://blog.hoatle.info/"/>
-  <updated>2013-12-11T01:20:40+00:00</updated>
+  <updated>2013-12-12T12:51:48+00:00</updated>
   <id>http://blog.hoatle.info/</id>
   <author>
     <name><![CDATA[hoatle]]></name>
@@ -12,6 +12,74 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Dịch "ta-da" hay "ta-dah" sang tiếng Việt thế nào?]]></title>
+    <link href="http://blog.hoatle.info/2013/12/11/dich-ta-da-hay-ta-dah-sang-tieng-viet-the-nao/"/>
+    <updated>2013-12-11T22:29:00+00:00</updated>
+    <id>http://blog.hoatle.info/2013/12/11/dich-ta-da-hay-ta-dah-sang-tieng-viet-the-nao</id>
+    <content type="html"><![CDATA[<p><img class="center" src="/images/2013/12/will_smith_ta_da.jpg" title="Will Smith&rsquo;s ta-da moment" ></p>
+
+<p>Hôm trước xem &ldquo;Thor: The Dark World&rdquo;<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup> có phần dịch &ldquo;ta-da&rdquo; mà tôi thấy rất thú vị, và cứ ghi nhớ
+mãi, còn nói chuyện với các em về việc dịch từ này thú vị thế nào. Bẵng đi một thời gian, hôm trước
+xem &ldquo;Monsters University&rdquo;<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup> cũng có đoạn &ldquo;ta-da&rdquo; nhưng bạn dịch phụ đề giữ nguyên khi chuyển sang
+tiếng Việt là &ldquo;ta-da&rdquo;. Việc giữ nguyên (vay mượn) này cũng không ảnh hưởng lắm nhưng nếu dịch sang
+tiếng Việt thì tôi thấy sẽ hay hơn.</p>
+
+<!-- more -->
+
+
+<p>Nay lúc đó tôi liền lục lại trí nhớ để tìm lại cách dịch thú vị đó, nhưng không thể, càng cố tìm
+càng không thấy, nên tôi cần làm nhiệm vụ là viết về nó cho đỡ quên, về sau không lục lại được
+trong đầu thì có thể lục lại từ những gì đã viết.</p>
+
+<p>Đến sáng tôi hỏi lại mấy cô em nhưng mọi người cũng không nhớ, mãi đến cuối ngày tôi mới có câu trả
+lời từ câu buột miệng của cô em. Thật là may mắn!</p>
+
+<p>Theo từ điển Oxford<sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup>:</p>
+
+<p>```
+ta-da</p>
+
+<p>Phát âm: /təˈdɑː/</p>
+
+<p>(hay ta-dah)</p>
+
+<p>cảm thán</p>
+
+<pre><code>bắt chước âm thanh một hồi kèn (thường được sử dụng để tạo ấn tượng khi giới thiệu hay tuyên bố
+điều gì).
+</code></pre>
+
+<p>Nguồn gốc:</p>
+
+<p>Từ những năm 1970: bắt chước
+```</p>
+
+<p>Từ tương đương sang tiếng Việt cũng có những đặc điểm trên, điều này lý giải vì sao cách phát âm của
+hai từ rất tương đồng, tạo ra sự thú vị mà tôi thấy rất tâm đắc.</p>
+
+<p>Và từ tiếng Việt đó chính là: <strong>tèn ten</strong> :), có thể thấy hai từ này rất sát nghĩa nhau về âm thanh
+cũng như cách sử dụng.</p>
+
+<p>Tìm hiểu về ngôn ngữ, nhất là xử lý đa ngôn ngữ là một mảng mà tôi luôn thấy rất rất rất thú vị.</p>
+
+<p>Bạn có thể tìm hiểu thêm về cách sử dụng của &ldquo;ta-da&rdquo; tại:
+<a href="http://www.urbandictionary.com/define.php?term=tada">http://www.urbandictionary.com/define.php?term=tada</a></p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>http://www.imdb.com/title/tt1981115/<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<li id="fn:2">
+<p>http://www.imdb.com/title/tt1453405/<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
+<li id="fn:3">
+<p>http://www.oxforddictionaries.com/definition/english/ta-da<a href="#fnref:3" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[selfie (tự sướng) - từ của năm 2013 theo từ điển Oxford]]></title>
@@ -474,230 +542,6 @@ thuyết, hay một cuốn tiểu thuyết, v.v&hellip;</p>
 </ol>
 </div>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Thêm đối số vào message bundle trong OpenSocial]]></title>
-    <link href="http://blog.hoatle.info/2010/01/16/them-doi-so-vao-message-bundle-trong-opensocial/"/>
-    <updated>2010-01-16T21:18:00+00:00</updated>
-    <id>http://blog.hoatle.info/2010/01/16/them-doi-so-vao-message-bundle-trong-opensocial</id>
-    <content type="html"><![CDATA[<h2>Bài toán</h2>
-
-<ul>
-<li>Khi làm việc với message bundle trong OpenSocial để dùng nhiều ngôn ngữ trong ứng dụng tùy thuộc
-vào ngôn ngữ người dùng
-(<a href="http://wiki.opensocial.org/index.php?title=Localizing_OpenSocial_applications">localization</a>) đôi
-khi bạn cần phải thêm đối số động vào chuỗi hiển thị.</li>
-</ul>
-
-
-<p>Ví dụ có chuỗi chào như này: Hello {user} trong đó user sẽ được thay bằng username tương ứng của
-người dùng. Nhưng với OpenSocial api hiện tại thì không làm thế nào để thêm đối số vào được mà chỉ
-có thể lấy được message tương ứng theo key cung cấp.</p>
-
-<ul>
-<li>Do vậy đây là cách làm của tớ: viết một thêm 1 class <code>eXo.social.Locale.getMsg(key)</code> và class này
-cung cấp api cũng tương tự như với class <code>Prefs</code> để lấy <code>lang</code>, <code>country</code>, <code>msg</code> (class <code>Prefs</code> còn
-cung cấp nhiều api khác nữa): prefs.getMsg(key). Class <code>eXo.social.Locale</code> cung cấp thêm phương thức
-<code>eXo.social.Locale.getMsg(key, [val1, val2,...]);</code> để thêm đối số vào &ldquo;message bundle&rdquo;.</li>
-</ul>
-
-
-<!-- more -->
-
-
-<h2>Giải pháp</h2>
-
-<ul>
-<li>Viết class <code>eXo.social.Locale</code>:</li>
-</ul>
-
-
-<p>```javascript
-/<em>*
- * Locale.js
- * Utility for Locale, dynamic binding message bundle with arguments
- * Usage:
- * eXo.social.Locale.getLang(); the same as prefs.getLang();
- * eXo.social.Locale.getCountry(); the same as prefs.getCountry();
- * eXo.social.Locale.getMsg(key); the same as prefs.getMsg(key);
- * eXo.social.Locale.getMsg(key, args); dynamic binding argument to message bundle
- * @author  hoatle
- * @since   October 27, 2009
- * @copyright   eXo Platform
- </em>/</p>
-
-<p>(function() {</p>
-
-<pre><code>//prefs object to get lang, country, message bundle
-var prefs;
-
-/**
- * private function to lazily initialize prefs object
- */
-function getPrefs() {
-    if (!prefs) {
-        prefs = new gadgets.Prefs();
-    }
-    return prefs;
-}
-/**
- * Class definition
- */
-var Locale = function() {
-
-}
-/**
- * gets current lang
- * @static
- */
-Locale.getLang = function() {
-    prefs = getPrefs();
-    return prefs.getLang();
-}
-/**
- * gets current country
- * @static
- */
-Locale.getCountry = function() {
-    prefs = getPrefs();
-    return prefs.getCountry();
-}
-/**
- * alternative for prefs.getMsg(key)
- * uses to getMsg with provided key and substitute args
- *
- * eg: Test for {0}, {1}
- * If args does not match num of {\d}, warning and try to replace by corresponding index.
- * {0} should be replaced by args[0], etc.,
- * If args not provided, functions as prefs.getMsg(key)
- * @param   key String
- * @param   opt_args Array
- * @static
- */
-Locale.getMsg = function(key, opt_args) {
-    prefs = getPrefs();
-    if (!key) {
-        debug.warn('key is null!');
-        return '';
-    }
-    var msg = prefs.getMsg(key);
-    if (msg === '') {
-        debug.warn('Can not find resource bundle with key = ' + key);
-        return msg;
-    }
-    if (!opt_args) return msg;
-
-    //checks if number of {\d} in msg matches opt_args.length
-    var regex = /{\d+}/g;
-    var matches = msg.match(regex);
-    if (matches.length !== opt_args.length) {
-        debug.warn("required " + matches.length + " args, provided: " + opt_args.length);
-    }
-    //substitutes by index: {0} in msg should be replaced by opt_args[0] and so on
-    for (var i = 0, l = matches.length; i &lt; l; i++) {
-        var index = matches[i].match(/\d+/g)[0];
-        //TODO should improve performance
-        var strToReplace = opt_args[index];
-        if (!strToReplace) {
-            debug.warn('matches[' + i + ']: ' + matches[i] + ' but no opt_args[' + index + ']');
-        } else {
-            msg = msg.replace(matches[i], opt_args[index]);
-        }
-    }
-    return msg;
-}
-//Expose
-window.eXo = window.eXo || {};
-window.eXo.social = window.eXo.social || {};
-window.eXo.social.Locale = Locale;
-</code></pre>
-
-<p>})();
-```</p>
-
-<p>Trong class trên không có gì đáng nói ngoài cách dùng regular expression để thay thế chuỗi với
-pattern là <code>{0}, {1}, {2}</code> và lấy các index trong <code>{}</code> để thay bằng <code>opt_args[index]</code> tương ứng.
-Bạn có thể xem thêm vài viết của <a href="http://twitter.com/sanglt">@sanglt</a>:
-<a href="http://www.sanglt.com/content/su-dung-regular-expression-trong-javascript">Sử dụng regular expression trong JavaScript</a>.</p>
-
-<ul>
-<li>Chú ý: Class <code>eXo.social.Locale</code> dùng debug được @cowboy viết, đây là cách debug/log tuyệt vời và
-tớ rất thích. Giờ trong tất cả các dự án hay ứng dụng nào tớ cũng dùng, sau này nhìn vào console là
-biết lỗi gì ở đâu ngay, chứ dùng alert thì đúng là cực hình. Các bạn cũng nên sử dụng cách debug/log
-này :).</li>
-</ul>
-
-
-<p>Download ứng dụng ví dụ đơn giản với cách thêm đối số vào &ldquo;message bundle&rdquo; tại
-<a href="http://github.com/hoatle/opensocial/downloads">http://github.com/hoatle/opensocial/downloads</a></p>
-
-<p>Mã nguồn tớ để ở đây: <a href="http://github.com/hoatle/opensocial/tree/master/message-bundle">http://github.com/hoatle/opensocial/tree/master/message-bundle</a></p>
-
-<p>Đây là file ứng dụng xml:</p>
-
-<p>```xml
-&lt;?xml version=&ldquo;1.0&rdquo; encoding=&ldquo;UTF-8&rdquo;?>
-<Module></p>
-
-<pre><code>&lt;ModulePrefs title="Arguments Binding Message Bundle"
-             description="Simple-App for arguments binding with message bundle"
-             author_email="hoatlevan@gmail.com"
-             author_affiliation="eXo Platform"&gt;
-    &lt;Locale messages="locale/ALL_ALL.xml" /&gt;
-    &lt;Locale lang="en" messages="locale/en_ALL.xml" /&gt;
-    &lt;Locale lang="vi" messages="locale/vi_ALL.xml" /&gt;
-    &lt;Require feature="opensocial-0.8" /&gt;
-&lt;/ModulePrefs&gt;
-&lt;Content type="html"&gt;
-&lt;![CDATA[
-    &lt;link rel="stylesheet" type="text/css" href="style/style.css" /&gt;
-    &lt;script type="text/javascript" src="script/debug.js"&gt;&lt;/script&gt;
-    &lt;script type="text/javascript" src="script/eXo/social/Locale.js"&gt;&lt;/script&gt;
-    &lt;script type="text/javascript" src="script/app.js"&gt;&lt;/script&gt;
-    &lt;p&gt;Resource bundle rendered by server: &lt;strong&gt;__MSG_hello_world__&lt;/strong&gt;&lt;/p&gt;
-    &lt;p&gt;Resource bundle rendered by JavaScript:&lt;/p&gt;
-    &lt;div id="helloMsg"&gt;&lt;/div&gt;
-    &lt;div id="helloMsgArgs"&gt;&lt;/div&gt;
-]]&gt;
-&lt;/Content&gt;
-</code></pre>
-
-<p></Module>
-```</p>
-
-<p>Có thể thấy ở trên <code>__MSG_hello_world__</code> sẽ được thay thế bằng message bundle tương ứng với key là
-&ldquo;hello_world&rdquo; (tớ để tất cả các file message bundle trong thư mục <code>locale</code>).</p>
-
-<p>Để sử dụng class <code>eXo.social.Locale</code>, chúng ta có file app.js:</p>
-
-<p>```javascript
-function run() {</p>
-
-<pre><code>var prefs = new gadgets.Prefs(),
-    helloWorld = prefs.getMsg('hello_world');
-alert(helloWorld); //"Hello world!" if current language is English
-                   //"Chào thế giới!" if current language is Vietnamese
-
-//eXo.social.Locale usage
-var Locale = eXo.social.Locale;
-var helloMsgEl = document.getElementById('helloMsg'),
-    helloMsgArgsEl = document.getElementById('helloMsgArgs');
-
-helloMsgEl.innerHTML = Locale.getMsg('hello_world');
-helloMsgArgsEl.innerHTML = Locale.getMsg('hello_user_to_place', ['hoatle', 'Vietnam']);
-</code></pre>
-
-<p>}</p>
-
-<p>gadgets.util.registerOnLoadHandler(run);
-```</p>
-
-<p>Bạn có thể chạy ứng dụng này ở bất kì OpenSocial container nào. Chúc bạn code vui :D.</p>
-
-<p>Lưu ý: Có thể sử dụng OpenSocial templates để thêm đối số vào message bundle nhưng hiện nay hầu hết
-các container chưa hỗ trợ hết.</p>
 ]]></content>
   </entry>
   
