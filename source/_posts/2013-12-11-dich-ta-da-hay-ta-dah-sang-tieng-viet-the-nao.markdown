@@ -24,12 +24,12 @@ tiếng Việt thì tôi thấy sẽ hay hơn.
 
 <!-- more -->
 
-Nay lúc đó tôi liền lục lại trí nhớ để tìm lại cách dịch thú vị đó, nhưng không thể, càng cố tìm
-càng không thấy, nên tôi cần làm nhiệm vụ là viết về nó cho đỡ quên, về sau không lục lại được
-trong đầu thì có thể lục lại từ những gì đã viết.
+Ngay lúc đó tôi liền lục lại trí nhớ để tìm lại cách dịch thú vị đó, nhưng không thể, càng cố tìm
+càng không thấy, nên tôi cần làm nhiệm vụ "cao cả"" là viết về nó cho đỡ quên, về sau không lục lại
+được trong đầu thì có thể lục lại từ những gì đã viết.
 
-Đến sáng tôi hỏi lại mấy cô em nhưng mọi người cũng không nhớ, mãi đến cuối ngày tôi mới có câu trả
-lời từ câu buột miệng của cô em. Thật là may mắn!
+Đến ngày hôm sau tôi hỏi lại mấy cô em nhưng mọi người cũng không nhớ, mãi đến cuối ngày tôi mới có
+câu trả lời từ câu buột miệng của cô em. Thật là may mắn!
 
 Theo từ điển Oxford[^3]:
 
@@ -53,8 +53,7 @@ Từ những năm 1970: bắt chước
 Từ tương đương sang tiếng Việt cũng có những đặc điểm trên, điều này lý giải vì sao cách phát âm của
 hai từ rất tương đồng, tạo ra sự thú vị mà tôi thấy rất tâm đắc.
 
-Và từ tiếng Việt đó chính là: **tèn ten** :), có thể thấy hai từ này rất sát nghĩa nhau về âm thanh
-cũng như cách sử dụng.
+Và từ tiếng Việt đó chính là........: **tèn ten** :)
 
 Tìm hiểu về ngôn ngữ, nhất là xử lý đa ngôn ngữ là một mảng mà tôi luôn thấy rất rất rất thú vị.
 
