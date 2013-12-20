@@ -4,7 +4,7 @@
   <title><![CDATA[Category: vi | blog.hoatle.info]]></title>
   <link href="http://blog.hoatle.info/categories/vi/atom.xml" rel="self"/>
   <link href="http://blog.hoatle.info/"/>
-  <updated>2013-12-12T14:34:40+00:00</updated>
+  <updated>2013-12-20T19:11:15+00:00</updated>
   <id>http://blog.hoatle.info/</id>
   <author>
     <name><![CDATA[hoatle]]></name>
@@ -12,6 +12,169 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Tại sao cần kiểm thử phần mềm?]]></title>
+    <link href="http://blog.hoatle.info/2013/12/20/tai-sao-can-kiem-thu-phan-mem/"/>
+    <updated>2013-12-20T16:22:00+00:00</updated>
+    <id>http://blog.hoatle.info/2013/12/20/tai-sao-can-kiem-thu-phan-mem</id>
+    <content type="html"><![CDATA[<p><img class="center" src="/images/2013/12/software-testing.jpg" title="Kiểm Thử Phần Mềm &ndash; Software Testing" ></p>
+
+<p>Làm gì cũng cần kiểm tra, đánh giá thì mới biết được liệu nó có đạt được những gì được mong đợi, có
+sai sót gì không. Tôi không hình dung được liệu trên thế giới này có gì không phải kiểm thử không?
+Ngay cả quá trình phát triển của con người cũng trải qua hàng triệu năm được tự nhiên kiểm thử với
+nhiều nhánh phát triển khác nhau. Có thể nói kiểm thử cũng có quy luật của nó, tôi gọi là &ldquo;bảo toàn
+kiểm thử&rdquo;.</p>
+
+<!-- more -->
+
+
+<p>&ldquo;Bảo toàn kiểm thử&rdquo; nghĩa là thế nào? Nếu bạn nắm định luật &ldquo;bảo toàn năng lượng&rdquo;<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup> thì bạn cứ
+thay  &ldquo;năng lượng&rdquo; bằng &ldquo;kiểm thử&rdquo;.</p>
+
+<ul>
+<li><p>Bạn dùng một thiết bị, đồ vật nào đó? Nó đã được kiểm thử trước khi đến tay bạn.</p></li>
+<li><p>Bạn chuẩn bị nâng cấp hệ điều hành cho chiếc điện thoại của mình? Các nhà phát triển đã kiểm thử
+trước khi phân phối cho bạn. Ngay cả vậy thì bạn cũng vẫn muốn nghe ngóng những người khác sau khi
+nâng cấp có bị vấn đề gì không trước khi quyết định nâng cấp nó? Những người dùng trước đó cũng thực
+hiện công việc kiểm thử cho bạn.</p></li>
+</ul>
+
+
+<p>Còn vô số ví dụ như vậy để biết rằng kiểm thử là một phần không thể thiếu trong cuộc sống, và trong
+bài viết này tôi nói cụ thể về kiểm thử trong phần mềm.</p>
+
+<p>Khi làm kiểm thử trong phần mềm, chúng ta thường dùng các công cụ để tự động hoá quá trình kiểm thử
+này. Nếu không tự động hoá được thì bạn phải kiểm thử bằng tay. Vậy kiểm thử tự động hay bằng tay,
+cái nào tốt hơn?</p>
+
+<p>Trước khi có tự động thì phải làm bằng tay, tuy nhiên khi làm bằng tay lặp lại nhiều lần thì nên
+(phải) tự động hoá nó để tối ưu hoá sức lao động của máy móc và giải phóng sức lao động của con
+người. Như chúng ta đã biết, máy tính làm một tác vụ nào đó lặp đi lặp lại rất chính xác và nhanh
+khi được lập trình, đấy chính là điểm mạnh duy nhất của máy tính để chúng ta tận dụng nó. Nhưng để
+tự động nó cần phải học cách sử dụng công cụ, cần phải nắm vững công cụ mới làm được. Còn kiểm thử
+bằng tay thì chi phí thấp hơn, nhanh hơn vào giai đoạn đầu. Qua quá trình làm việc, tôi thấy được
+quy luật sau:</p>
+
+<ul>
+<li><p>Kiểm thử tự động có chi phí lớn trong giai đoạn đầu nhưng sẽ giảm dần theo thời gian.</p></li>
+<li><p>Kiểm thử bằng tay có chi phí thấp trong giai đoạn đầu nhưng sẽ tăng dần theo thời gian.</p></li>
+</ul>
+
+
+<p>Vậy nên để trả lời câu hỏi kiểm thử tự động hay bằng tay chỉ cần xem xét quy luật trên. Nếu dự án
+của bạn đủ dài, đủ lớn thì cần đầu tư nhiều cho tự động hoá kiểm thử.</p>
+
+<p>Một lý do khác cần tự động hoá kiểm thử là khi các trường hợp cần kiểm thử tăng dần theo thời gian,
+nếu bạn không kiểm thử được hết thì khi phần mềm được cập nhật rất dễ gây nhiều lỗi. Đây là một bài
+học đắt giá mà tôi đã phải trả khi còn làm dự án eXo Social. Trong 3 năm tham gia dự án, bắt đầu năm
+thứ 2 tôi đã tập trung nhiều vào tự động hoá kiểm thử, nâng dần tỉ lệ bao quát (&ldquo;coverage&rdquo;). Sau một
+thời gian dài nỗ lực thì tỉ lệ hệ thống được kiểm thử từ 2-3% được nâng lên hơn 10%, trong đó các
+thành phần chủ chốt (&ldquo;core component&rdquo;) có tỉ lệ không dưới 70% (nếu tôi nhớ không nhầm), đó là cả sự
+nỗ lực cố gắng không ngừng nghỉ của cả nhóm phát triển. Mặc dù vậy, tôi cũng đã mắc một sai lầm nghiêm
+trọng khi để một bạn mới tham gia nhóm thay đổi nhiều code ở tầng có tỉ lệ kiểm thử thấp, sau đó phần
+mềm đã có nhiễu lỗi cũ cũng như mới xảy ra. Tin tôi đi, đó là trải nghiệm không hề dễ chịu chút nào.</p>
+
+<p>Sau bài học đó, tôi càng bị ám ảnh nhiều hơn với kiểm thử và quy trình kiểm thử. Nếu chúng ta có cơ
+hội được làm việc với nhau, bạn sẽ thấy tôi có những yêu cầu rất khắt khe, có thể bạn cho là vô lý,
+nhưng đó là từ những bài học, kinh nghiệm tôi đã đúc rút khi làm một dự án liên tục trong vòng hơn
+3 năm với eXo Social và các dự án sau này.</p>
+
+<p>Thật ra đến thời điểm này đầu tư cho tự động hoá kiểm thử phần mềm có chi phí không quá cao, học
+công cụ cũng không khó, chỉ cần tìm hiểu một chút là bạn có thể làm được rồi. Tuy nhiên chi phí tổ
+chức tự động hoá kiểm thử sao cho thật khoa học lại là cả một vấn đề lớn, nếu không có thể nó lại
+đẩy thêm chi phí, gánh nặng cho phát triển phần mềm.</p>
+
+<p>Kiểm thử có 4 cấp độ (&ldquo;testing level&rdquo;) như sau:</p>
+
+<ul>
+<li><p><code>unit testing</code>: kiểm thử từng đơn vị độc lập, riêng lẻ. Cụ thể trong phần mềm sẽ là các &ldquo;method&rdquo;
+hoặc &ldquo;function&rdquo;. Bạn cần kiểm tra đầu vào và đầu ra của từng đơn vị độc lập ấy. Tôi xin nhấn mạnh
+&ldquo;từng đơn vị độc lập, riêng lẻ&rdquo; thêm một lần nữa.</p></li>
+<li><p><code>integration testing</code>: kiểm thử các &ldquo;module&rdquo; hay &ldquo;component&rdquo; khi chúng tương tác với nhau.</p></li>
+<li><p><code>system testing</code>: kiểm thử cả một hệ thống hoàn chỉnh khi toàn bộ các &ldquo;module&rdquo; hay &ldquo;component&rdquo;
+được tích hợp.</p></li>
+<li><p><code>acceptance testing</code>: kiểm thử cả một hệ thống hoàn chỉnh từ A đến Z như được cài đặt cho người
+dùng cuối.</p></li>
+</ul>
+
+
+<p>Càng ở cấp độ sau thì chi phí kiểm thử càng tốn kém hơn. Tuy nhiên, tự động hoá kiểm thử cho các cấp
+độ này hoàn toàn làm được, và thực sự là tôi đang làm rồi. Càng tự động hoá được nhiều, thì về lâu
+dài bạn sẽ tiết kiệm được rất nhiều chi phí. Chính vì thế mà &ldquo;automation&rdquo; là một trong những quan
+điểm phát triển của Teracy<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup> &ndash; startup chúng tôi đang dành tâm huyết gây dựng.</p>
+
+<p>Hôm trước bạn của tôi có hỏi trên Facebook<sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup>:</p>
+
+<p><blockquote><p></p></p><p><p>Nếu như unit test đã pass hết. thì tại sao mọi ng lại cần tới acceptance test, functional (or integrate) test nhỉ?</p></p><p><p></p><footer><strong>Vinh Quốc Nguyễn <a href="https://www.facebook.com/kureikain/posts/10152118115309113">https://www.facebook.com/kureikain/posts/10152118115309113</a></strong></footer></blockquote></p>
+
+<p>Và tôi có trả lời thế này:</p>
+
+<p><blockquote><p></p></p><p><ul><br/><li><p>mỗi cái test 1 kiểu mà, unit test là test đơn vị method, functional test là test vài method liên quan với nhau, integration test là test ở mức các module với nhau, acceptance test là test 1 hệ thống người dùng sử dụng được rồi. Theo ý mình hiểu nôm na là thế, nên không có sự chồng chéo giữa các test level đâu.</p></li><br/><li><p>ví dụ như test lắp ráp hệ thống xe máy đi, unit test là test từng bộ phận (bánh răng, ốc vít, ống xả&hellip;), test unit (từng cái 1) thì ok, rồi lắp 1 số bộ phận làm bánh xe, động cơ xe. Mình vẫn phải test bánh xe, động cơ xe (functional) chứ kể cả unit test ok rồi. Rồi lắp bánh xe, động cơ xe, khung xe lại thành xe hoàn chỉnh thì cần test là xe nổ máy, vào số thì bánh xe phải chạy, đồng hồ phải hiển thị km/h&hellip; (integration test). Rồi sau đấy đi thử thật trên đường (acceptance test). Như vậy bước nào cũng cần. Khi viết test cần phân biệt các level của test thì tránh được sự chồng chéo.</p></li><br/></ul></p><p><br/><p></p></blockquote></p>
+
+<p>Nhiều người (ngay cả tôi) có thể nhầm &ldquo;functional testing&rdquo; là 1 cấp độ kiểm thử (&ldquo;testing level&rdquo;),
+nhưng thực ra nó là một kiểu kiểm thử (&ldquo;testing type&rdquo;). Kent Beck <sup id="fnref:4"><a href="#fn:4" rel="footnote">4</a></sup>, tác giả của cuốn &ldquo;Extreme
+Programming&rdquo;, cũng có trả lời câu hỏi phân biệt giữa &ldquo;unit testing&rdquo;, &ldquo;functional testing&rdquo; và
+&ldquo;integration testing&rdquo;<sup id="fnref:5"><a href="#fn:5" rel="footnote">5</a></sup>.</p>
+
+<p>Một số kiểu kiểm thử tôi có thể liệt kê ra ở đây:</p>
+
+<ul>
+<li><p><code>smoke testing</code></p></li>
+<li><p><code>regression testing</code></p></li>
+<li><p><code>functional testing</code></p></li>
+<li><p><code>compatibility testing</code></p></li>
+<li><p><code>acceptance testing</code></p></li>
+<li><p><code>performance testing</code></p></li>
+<li><p><code>security testing</code></p></li>
+<li><p><code>destructive testing</code></p></li>
+<li><p><code>usability testing</code></p></li>
+<li><p><code>accessibility testing</code></p></li>
+<li><p><code>A/B testing</code></p></li>
+<li><p>&hellip;</p></li>
+</ul>
+
+
+<p>Để tổ chức kiểm thử thì mỗi một kiểu kiểm thử bạn cần kiểm thử ở các cấp độ khác nhau. Sự giao thoa
+của các kiểu và cấp độ kiểm thử sẽ cho ta bức tranh khá hoàn chỉnh về kiểm thử phần mềm. Bạn có thể
+xem thêm thông tin cụ thể hơn ở phần xem thêm ở cuối bài viết.</p>
+
+<p>Hy vọng bài viết có thể giúp bạn hiểu thêm về kiểm thử phần mềm. Tôi sẽ viết cụ thể về các công cụ
+cũng như cách tổ chức, sắp sắp tự động hoá kiểm thử phần mềm thế nào trong các bài viết sau.</p>
+
+<p>Chúc bạn vui khi tìm hiểu về kiểm thử và kiểm thử phần mềm!</p>
+
+<h2>Xem Thêm</h2>
+
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Software_testing">http://en.wikipedia.org/wiki/Software_testing</a></li>
+</ul>
+
+
+<h2>Hình Ảnh</h2>
+
+<ul>
+<li><a href="http://sanjeevanisolutions.net/SoftwareTesting.aspx">http://sanjeevanisolutions.net/SoftwareTesting.aspx</a></li>
+</ul>
+
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>http://vi.wikipedia.org/wiki/B%E1%BA%A3o_to%C3%A0n_n%C4%83ng_l%C6%B0%E1%BB%A3ng<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<li id="fn:2">
+<p>http://dev.teracy.org/docs/intro.html#about-teracy<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
+<li id="fn:3">
+<p>https://www.facebook.com/kureikain/posts/10152118115309113<a href="#fnref:3" rev="footnote">&#8617;</a></p></li>
+<li id="fn:4">
+<p>http://en.wikipedia.org/wiki/Kent_Beck<a href="#fnref:4" rev="footnote">&#8617;</a></p></li>
+<li id="fn:5">
+<p>http://www.quora.com/What-is-the-difference-between-unit-testing-functional-testing-and-integration-testing<a href="#fnref:5" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Dịch "ta-da" hay "ta-dah" sang tiếng Việt thế nào?]]></title>
@@ -370,183 +533,6 @@ bài học đắt giá như vậy cần phải có để Teracy biết tầm qua
 <ul>
 <li><a href="http://signalhilldigital.com/wp-content/uploads/2012/11/privacy-e1354237310123.jpg">http://signalhilldigital.com/wp-content/uploads/2012/11/privacy-e1354237310123.jpg</a></li>
 </ul>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[22 quy tắc từ Pixar để tạo ra những câu chuyện phi thường]]></title>
-    <link href="http://blog.hoatle.info/2013/12/05/22-quy-tac-tu-pixar-de-tao-ra-nhung-cau-chuyen-phi-thuong/"/>
-    <updated>2013-12-05T20:43:00+00:00</updated>
-    <id>http://blog.hoatle.info/2013/12/05/22-quy-tac-tu-pixar-de-tao-ra-nhung-cau-chuyen-phi-thuong</id>
-    <content type="html"><![CDATA[<p><img class="center <a" src="href="http://i.imgur.com/0R62pAxh.jpg">http://i.imgur.com/0R62pAxh.jpg</a>" title="&ldquo;22 quy tắc kể chuyện từ Pixar&rdquo;" ></p>
-
-<p>Làm thế nào để kể được những câu chuyện hấp dẫn, cuốn hút người đọc, người nghe? Kể chuyện là một
-hình thức giao tiếp và kỹ năng giao tiếp có thể học được. Emma Coats<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup> &ndash; nghệ sỹ kịch bản và là
-cựu nhân viên của hãng phim Pixar đã đưa ra 22 quy tắc được áp dụng trong quá trình làm việc. Nắm
-được các quy tắc này có thể giúp tạo ra những câu chuyện hay để áp dụng cho bài blog, buổi diễn
-thuyết, hay một cuốn tiểu thuyết, v.v&hellip;</p>
-
-<!-- more -->
-
-
-<p><strong>Quy tắc 1</strong></p>
-
-<p><img class="center <a" src="href="http://i.imgur.com/FH5iTTGh.jpg">http://i.imgur.com/FH5iTTGh.jpg</a>" title="You admire a character for trying more than for their successes." ></p>
-
-<p><blockquote><p>Bạn ngưỡng mộ nhân vật vì sự cố gắng hơn là sự thành công.</p></blockquote></p>
-
-<p><strong>Quy tắc 2</strong></p>
-
-<p><img class="center <a" src="href="http://i.imgur.com/p3QY4RFh.jpg">http://i.imgur.com/p3QY4RFh.jpg</a>" title="You gotta keep in mind what’s interesting to you as an audience, not what’s fun to do as a writer. They can be very different." ></p>
-
-<p><blockquote><p>Bạn phải luôn tâm niệm điều gì thu hút bạn khi là khán giả chứ không phải điều gì làm bạn vui khi là người viết truyện. Hai điều này có thể rất khác biệt.</p></blockquote></p>
-
-<p><strong>Quy tắc 3</strong></p>
-
-<p><img class="center <a" src="href="http://i.imgur.com/UvVbXGzh.jpg">http://i.imgur.com/UvVbXGzh.jpg</a>" title="Trying for theme is important, but you won’t see what the story is actually about til you’re at the end of it. Now rewrite." ></p>
-
-<p><blockquote><p>Theo chủ đề rất quan trọng, nhưng bạn sẽ không thấy được thực sự câu chuyện về cái gì cho đến khi nó kết thúc. Giờ hãy viết lại.</p></blockquote></p>
-
-<p><strong>Quy tắc 4</strong></p>
-
-<p><img class="center <a href=http://i.imgur.com/X0ciEDHh.jpg>http://i.imgur.com/X0ciEDHh.jpg</a> Once upon a time there was <strong><em>. Every day, </em></strong>. One day <strong><em>. Because of that, </em></strong>. Because of that, <strong><em>. Until finally" src="</em></strong>."></p>
-
-<p><blockquote><p>Ngày xửa ngày xưa có một <strong><em>. Ngày ngày, </em></strong>. Một hôm <strong><em>. Vì điều đó, </em></strong>. Vì điều đó, <strong><em>. Cuối cùng </em></strong>.</p></blockquote></p>
-
-<p><strong>Quy tắc 5</strong></p>
-
-<p><img class="center <a" src="href="http://i.imgur.com/3DaFKkrh.jpg">http://i.imgur.com/3DaFKkrh.jpg</a>" title="Simplify. Focus. Combine characters. Hop over detours. You’ll feel like you’re losing valuable stuff but it sets you free." ></p>
-
-<p><blockquote><p>Đơn giản hoá. Tập trung. Kết hợp các nhân vật. Không đi lòng vòng. Bạn sẽ cảm thấy như mình đang đánh mất thứ có giá trị nhưng điều đó lại khiến bạn được tự do.</p></blockquote></p>
-
-<p><strong>Quy tắc 6</strong></p>
-
-<p><img class="center <a" src="href="http://i.imgur.com/vWfQRLqh.jpg">http://i.imgur.com/vWfQRLqh.jpg</a>" title="What is your character good at, comfortable with? Throw the polar opposite at them. Challenge them. How do they deal?" ></p>
-
-<p><blockquote><p>Nhân vật của bạn giỏi, thoải mái với điều gì? Hãy ném điều hoàn toàn ngược lại vào nhân vật. Thử thách nhân vật. Nhân vật sẽ xử lý thế nào?</p></blockquote></p>
-
-<p><strong>Quy tắc 7</strong></p>
-
-<p><img class="center <a" src="href="http://i.imgur.com/cFUIo38h.jpg">http://i.imgur.com/cFUIo38h.jpg</a>" title="Come up with your ending before you figure out your middle. Seriously. Endings are hard, get yours working up front." ></p>
-
-<p><blockquote><p>Đưa ra kết thúc trước khi bạn xử lý được phần giữa. Thực sự phần kết rất khó vì vậy hãy giải quyết nó trước.</p></blockquote></p>
-
-<p><strong>Quy tắc 8</strong></p>
-
-<p><img class="center <a" src="href="http://i.imgur.com/Wz37wm9h.jpg">http://i.imgur.com/Wz37wm9h.jpg</a>" title="Finish your story, let go even if it’s not perfect. In an ideal world you have both, but move on. Do better next time." ></p>
-
-<p><blockquote><p>Hãy hoàn thành câu chuyện của bạn, tạm hài lòng dù nó chưa hoàn hảo. Bạn có cả hai trong điều kiện lý tưởng, nhưng bạn không thể chờ đợi mãi. Lần tới hãy làm tốt hơn.</p></blockquote></p>
-
-<p><strong>Quy tắc 9</strong></p>
-
-<p><img class="center <a" src="href="http://i.imgur.com/8uDAIrqh.jpg">http://i.imgur.com/8uDAIrqh.jpg</a>" title="When you’re stuck, make a list of what WOULDN’T happen next. Lots of times the material to get you unstuck will show up." ></p>
-
-<p><blockquote><p>Khi bạn bí, hãy tạo danh sách những gì SẼ KHÔNG xảy ra tiếp theo. Nguyên liệu giúp bạn hết bí sẽ xuất hiện.</p></blockquote></p>
-
-<p><strong>Quy tắc 10</strong></p>
-
-<p><img class="center <a" src="href="http://i.imgur.com/p819bg0h.jpg">http://i.imgur.com/p819bg0h.jpg</a>" title="Pull apart the stories you like. What you like in them is a part of you; you’ve got to recognize it before you can use it." ></p>
-
-<p><blockquote><p>Mổ xẻ những câu chuyện bạn thích. Điều làm bạn thích từ các câu chuyện đó là một phần trong con người bạn; bạn sẽ phải nhận ra nó trước khi bạn có thể sử dụng nó.</p></blockquote></p>
-
-<p><strong>Quy tắc 11</strong></p>
-
-<p><img class="center <a" src="href="http://i.imgur.com/M6Io26ah.jpg">http://i.imgur.com/M6Io26ah.jpg</a>" title="Putting it on paper lets you start fixing it. If it stays in your head, a perfect idea, you’ll never share it with anyone." ></p>
-
-<p><blockquote><p>Đặt ý tưởng lên giấy để bạn bắt đầu sửa nó. Nếu nó cứ mãi ở trong đầu bạn, dù là ý tưởng hoàn hảo thì bạn sẽ không bao giờ chia sẻ được nó với ai.</p></blockquote></p>
-
-<p><strong>Quy tắc 12</strong></p>
-
-<p><img class="center <a" src="href="http://i.imgur.com/UqK06Egh.jpg">http://i.imgur.com/UqK06Egh.jpg</a>" title="Discount the 1st thing that comes to mind. And the 2nd, 3rd, 4th, 5th – get the obvious out of the way. Surprise yourself." ></p>
-
-<p><blockquote><p>Loại bỏ điều đầu tiên xuất hiện trong đầu. Và điều thứ 2, thứ 3, thứ 4, thứ 5 &ndash; hãy loại bỏ những điều hiển nhiên ra khỏi đầu bạn. Hãy làm bạn ngạc nhiên.</p></blockquote></p>
-
-<p><strong>Quy tắc 13</strong></p>
-
-<p><img class="center <a" src="href="http://i.imgur.com/FomAmzyh.jpg">http://i.imgur.com/FomAmzyh.jpg</a>" title="Give your characters opinions. Passive or malleable might seem likable to you as you write, but it’s poison to the audience." ></p>
-
-<p><blockquote><p>Để nhân vật của bạn nói lên tiếng nói của mình. Có thể bạn thích tính thụ động/ sự mài dũa khi viết, nhưng đó lại là thuốc độc với khán giả.</p></blockquote></p>
-
-<p><strong>Quy tắc 14</strong></p>
-
-<p><img class="center <a" src="href="http://i.imgur.com/iDIBEE5h.jpg">http://i.imgur.com/iDIBEE5h.jpg</a>" title="Why must you tell THIS story? What’s the belief burning within you that your story feeds off of? That’s the heart of it." ></p>
-
-<p><blockquote><p>Tại sao bạn phải kể CHÍNH câu chuyện này? Niềm tin nào đang cháy trong bạn để nuôi dưỡng câu chuyện đó? Đây chính là trái tim của câu chuyện.</p></blockquote></p>
-
-<p><strong>Quy tắc 15</strong></p>
-
-<p><img class="center <a" src="href="http://i.imgur.com/2YCppV1h.jpg">http://i.imgur.com/2YCppV1h.jpg</a>" title="If you were your character, in this situation, how would you feel? Honesty lends credibility to unbelievable situations." ></p>
-
-<p><blockquote><p>Nếu bạn rơi vào hoàn cảnh của nhân vật, bạn sẽ cảm thấy thế nào? Sự thành thật tạo sự tin cậy cho các tình huống khó tin.</p></blockquote></p>
-
-<p><strong>Quy tắc 16</strong></p>
-
-<p><img class="center <a" src="href="http://i.imgur.com/BR08aPmh.jpg">http://i.imgur.com/BR08aPmh.jpg</a>" title="What are the stakes? Give us reason to root for the character. What happens if they don’t succeed? Stack the odds against." ></p>
-
-<p><blockquote><p>Những trở ngại là gì? Cho chúng tôi lý do để khuyến khích, cổ vũ nhân vật. Điều gì xảy ra nếu nhân vật không thành công? Hãy tạo các lớp trở ngại cho nhân vật.</p></blockquote></p>
-
-<p><strong>Quy tắc 17</strong></p>
-
-<p><img class="center <a" src="href="http://i.imgur.com/w6RMHXAh.jpg">http://i.imgur.com/w6RMHXAh.jpg</a>" title="No work is ever wasted. If it’s not working, let go and move on &ndash; it’ll come back around to be useful later." ></p>
-
-<p><blockquote><p>Không có việc nào là lãng phí cả. Nếu giờ nó không giải quyết điều gì, bỏ lại và hãy tiếp tục công việc &ndash; sẽ có lúc nó có ích.</p></blockquote></p>
-
-<p><strong>Quy tắc 18</strong></p>
-
-<p><img class="center <a" src="href="http://i.imgur.com/P0CyOcgh.jpg">http://i.imgur.com/P0CyOcgh.jpg</a>" title="You have to know yourself: the difference between doing your best &amp; fussing. Story is testing, not refining." ></p>
-
-<p><blockquote><p>Bạn phải hiểu rõ bản thân: sự khác biệt giữa làm tốt nhất và sự cầu toàn. Câu chuyện là phép thử, không phải tinh chỉnh.</p></blockquote></p>
-
-<p><strong>Quy tắc 19</strong></p>
-
-<p><img class="center <a" src="href="http://i.imgur.com/85cXV7Eh.jpg">http://i.imgur.com/85cXV7Eh.jpg</a>" title="Coincidences to get characters into trouble are great; coincidences to get them out of it are cheating." ></p>
-
-<p><blockquote><p>Những ngẫu nhiên khiến nhân vật gặp rắc rối thì tuyệt; nhưng những ngẫu nhiên để đưa nhân vật ra khỏi rắc rối là lừa dối.</p></blockquote></p>
-
-<p><strong>Quy tắc 20</strong></p>
-
-<p><img class="center <a" src="href="http://i.imgur.com/Kk0Hnvoh.jpg">http://i.imgur.com/Kk0Hnvoh.jpg</a>" title="Exercise: take the building blocks of a movie you dislike. How d’you rearrange them into what you DO like?" ></p>
-
-<p><blockquote><p>Luyện tập: lấy những khối xây dựng của một phim bạn không thích. Làm thế nào để sắp xếp lại các khối đó để bạn THÍCH nó?</p></blockquote></p>
-
-<p><strong>Quy tắc 21</strong></p>
-
-<p><img class="center <a" src="href="http://i.imgur.com/6ruM3G1h.jpg">http://i.imgur.com/6ruM3G1h.jpg</a>" title="You gotta identify with your situation or characters, can’t just write ‘cool’. What would make YOU act that way?" ></p>
-
-<p><blockquote><p>Bạn phải đồng nhất với tình huống/ nhân vật của bạn, không thể chỉ cần viết cho nó &lsquo;ngầu&rsquo;. Điều gì khiến BẠN hành động theo cách đó?</p></blockquote></p>
-
-<p><strong>Quy tắc 22</strong></p>
-
-<p><img class="center <a" src="href="http://i.imgur.com/Yl2uz21h.jpg">http://i.imgur.com/Yl2uz21h.jpg</a>" title="What’s the essence of your story? Most economical telling of it? If you know that, you can build out from there." ></p>
-
-<p><blockquote><p>Điều cốt lõi ở câu chuyện của bạn là gì? Cách kể chuyện hiệu quả nhất cho nó? Nếu bạn làm rõ được điều này, bạn có thể xây dựng câu chuyện từ đó.</p></blockquote></p>
-
-<p>Ảnh minh hoạ:</p>
-
-<ul>
-<li><a href="http://imgur.com/a/fPLnM">http://imgur.com/a/fPLnM</a></li>
-</ul>
-
-
-<p>Tham khảo:</p>
-
-<ul>
-<li><a href="http://storyshots.tumblr.com/post/25032057278/22-storybasics-ive-picked-up-in-my-time-at-pixar">http://storyshots.tumblr.com/post/25032057278/22-storybasics-ive-picked-up-in-my-time-at-pixar</a></li>
-<li><a href="http://www.slideshare.net/powerfulpoint/pixar-22rulestophenomenalstorytellingpowerfulpointslideshare?sf19996470=1">http://www.slideshare.net/powerfulpoint/pixar-22rulestophenomenalstorytellingpowerfulpointslideshare?sf19996470=1</a></li>
-<li><a href="http://en.wikipedia.org/wiki/Pixar">http://en.wikipedia.org/wiki/Pixar</a></li>
-<li><a href="http://imgur.com/a/fPLnM">http://imgur.com/a/fPLnM</a></li>
-<li><a href="http://communicateskills.com/2012/10/11/22-rules-to-phenomenal-storytelling/">http://communicateskills.com/2012/10/11/22-rules-to-phenomenal-storytelling/</a></li>
-<li><a href="http://katebrauning.com/2013/05/15/pixar-rule-18-no-writerly-fussing-allowed/">http://katebrauning.com/2013/05/15/pixar-rule-18-no-writerly-fussing-allowed/</a></li>
-</ul>
-
-<div class="footnotes">
-<hr/>
-<ol>
-<li id="fn:1">
-<p>https://twitter.com/lawnrocket<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
-</ol>
-</div>
 
 ]]></content>
   </entry>
