@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Tag: opensocial | blog.hoatle.info]]></title>
+  <title><![CDATA[Tag: OpenSocial | blog.hoatle.info]]></title>
   <link href="http://blog.hoatle.info/tags/opensocial/atom.xml" rel="self"/>
   <link href="http://blog.hoatle.info/"/>
-  <updated>2013-12-20T19:11:15+00:00</updated>
+  <updated>2013-12-25T02:07:33+00:00</updated>
   <id>http://blog.hoatle.info/</id>
   <author>
     <name><![CDATA[hoatle]]></name>
@@ -14,332 +14,499 @@
 
   
   <entry>
-    <title type="html"><![CDATA[OpenSocial Hackathon Hà Nội]]></title>
-    <link href="http://blog.hoatle.info/2008/12/14/opensocial-hackathon-ha-noi/"/>
-    <updated>2008-12-14T00:51:00+00:00</updated>
-    <id>http://blog.hoatle.info/2008/12/14/opensocial-hackathon-ha-noi</id>
-    <content type="html"><![CDATA[<p>Hôm nay khá là bận rộn :). Vừa ở eXo Platform về thì đi chơi ngay với mấy đứa bạn cùng lớp, lâu lắm rồi thì phải :(. Nhiều chuyện quá làm mình không thích đi chơi nhiều như ngày trước nữa.</p>
+    <title type="html"><![CDATA[Thêm đối số vào message bundle trong OpenSocial]]></title>
+    <link href="http://blog.hoatle.info/2010/01/16/them-doi-so-vao-message-bundle-trong-opensocial/"/>
+    <updated>2010-01-16T21:18:00+00:00</updated>
+    <id>http://blog.hoatle.info/2010/01/16/them-doi-so-vao-message-bundle-trong-opensocial</id>
+    <content type="html"><![CDATA[<h2>Bài toán</h2>
 
-<p>Hôm nay tham gia OpenSocial Hackathon, được gặp một số bạn khá thú vị :).</p>
+<ul>
+<li>Khi làm việc với message bundle trong OpenSocial để dùng nhiều ngôn ngữ trong ứng dụng tùy thuộc
+vào ngôn ngữ người dùng
+(<a href="http://wiki.opensocial.org/index.php?title=Localizing_OpenSocial_applications">localization</a>) đôi
+khi bạn cần phải thêm đối số động vào chuỗi hiển thị.</li>
+</ul>
+
+
+<p>Ví dụ có chuỗi chào như này: Hello {user} trong đó user sẽ được thay bằng username tương ứng của
+người dùng. Nhưng với OpenSocial api hiện tại thì không làm thế nào để thêm đối số vào được mà chỉ
+có thể lấy được message tương ứng theo key cung cấp.</p>
+
+<ul>
+<li>Do vậy đây là cách làm của tớ: viết một thêm 1 class <code>eXo.social.Locale.getMsg(key)</code> và class này
+cung cấp api cũng tương tự như với class <code>Prefs</code> để lấy <code>lang</code>, <code>country</code>, <code>msg</code> (class <code>Prefs</code> còn
+cung cấp nhiều api khác nữa): prefs.getMsg(key). Class <code>eXo.social.Locale</code> cung cấp thêm phương thức
+<code>eXo.social.Locale.getMsg(key, [val1, val2,...]);</code> để thêm đối số vào &ldquo;message bundle&rdquo;.</li>
+</ul>
+
 
 <!-- more -->
 
 
-<p>Hôm nay bình minh của tớ bắt đầu lúc 9h. Cũng thường thôi :D, nếu mà không phải đi học hay đi thi vào buổi sáng thì đấy là lịch thường ngày của tớ. Không biết sao nhưng thực sự tớ rất thích làm việc qua đêm, bao giờ chán hoặc buồn ngủ mới thôi. Hôm qua đi ngủ lúc 4h. Cũng khó mà hiểu hết những việc tớ làm :). Chỉ làm những việc tớ thích với máy tính: viết blog, xây dựng website theo yêu cầu của khách &ndash; chỉ là những website nho nhỏ cho doanh nghiệp giới thiệu sản phẩm, giới thiệu công ty, đăng tin tức, nghịch lung tung với một số xu hướng công nghệ, như viết opensocial app chẳng hạn, nâng cao khả năng lập trình = cách code nhiều hơn, nghĩ nhiều hơn, còn nhiều nữa. Thích thì học thì làm, chỉ là thói quen.</p>
+<h2>Giải pháp</h2>
 
-<p>Mất gần nửa tiếng mới đến được văn phòng eXo Platform ở tầng 7 số 11 Thái Hà (chính xác hơn là ngõ 11 Thái Hà). Có vẻ đến hơi sớm thì phải (lúc đó tầm 10 giờ 20'), đến mới thấy có 2 hoặc 3 anh gì đó (trừ những người bên eXo).</p>
+<ul>
+<li>Viết class <code>eXo.social.Locale</code>:</li>
+</ul>
 
-<p><strong>Lúc sớm</strong></p>
 
-<p><img class="center <a" src="href="http://farm4.static.flickr.com/3208/3127289114_6c42ab2824.jpg?v=0">http://farm4.static.flickr.com/3208/3127289114_6c42ab2824.jpg?v=0</a>" title="Lúc sớm" ></p>
+<p>```javascript
+/<em>*
+ * Locale.js
+ * Utility for Locale, dynamic binding message bundle with arguments
+ * Usage:
+ * eXo.social.Locale.getLang(); the same as prefs.getLang();
+ * eXo.social.Locale.getCountry(); the same as prefs.getCountry();
+ * eXo.social.Locale.getMsg(key); the same as prefs.getMsg(key);
+ * eXo.social.Locale.getMsg(key, args); dynamic binding argument to message bundle
+ * @author  hoatle
+ * @since   October 27, 2009
+ * @copyright   eXo Platform
+ </em>/</p>
 
-<p>11 giờ là mọi người có vẻ đã đến đông đủ. Chỉ có khoảng hơn 20 người &ndash; con số khá khiêm tốn so với dự tính. Tớ cứ nghĩ là phải tầm 50 người cơ ;). Chỉ sợ đăng kí chậm không có chỗ, hóa ra tớ là người đăng kí thứ 3 trong danh sách :)</p>
+<p>(function() {</p>
 
-<p><strong>Mọi người đến đông [chắc chưa đủ :D]</strong></p>
+<pre><code>//prefs object to get lang, country, message bundle
+var prefs;
 
-<p><img class="center <a" src="href="http://farm4.static.flickr.com/3290/3127289274_56552c8884.jpg?v=0">http://farm4.static.flickr.com/3290/3127289274_56552c8884.jpg?v=0</a>" title="Mọi người đến đông [chắc chưa đủ :D]" ></p>
+/**
+ * private function to lazily initialize prefs object
+ */
+function getPrefs() {
+    if (!prefs) {
+        prefs = new gadgets.Prefs();
+    }
+    return prefs;
+}
+/**
+ * Class definition
+ */
+var Locale = function() {
 
-<p>Ở đấy gặp bao nhiêu là người ở nhiều công ty khác nhau, trừ tớ, tớ hiện chưa làm cho công ty nào cả :), vẫn đang đi tìm, có vẻ nhiều công ty không có part-time job thì phải. Tớ không nhớ hết được tất cả mọi người, chỉ xin liệt kê một số công ty: eXo Platform (tất nhiên là có Jeremi Joslin, 3 người nữa mà tớ đã trao đổi khá nhiều với 2 anh ở eXo), Tinh Van Media (2 bạn sinh viên năm 3 của trường ĐH Công Nghệ Quốc Gia, mới đầu tớ gọi 2 cậu này = anh, sau thì đổi ngược lại khi biết tuổi nhau :))), Moore Corporation (<a href="http://nghenhac.info;">http://nghenhac.info;</a> <a href="http://anhso.net">http://anhso.net</a> &ndash; có 1 người), VinaLive (<a href="http://phununet.com">http://phununet.com</a> &ndash; mạng xã hội dành riêng cho phụ nữ; 3-4 người thì phải); 1 người bên Tầm Tay (<a href="http://tamtay.vn">http://tamtay.vn</a>). 2 người đến từ <a href="http://teevn.com.">http://teevn.com.</a> Àh, cả Jason nữa, cuối cùng thì cũng được biết mặt anh này :). Một anh Tây của <a href="http://newhanoian.xemzi.com.">http://newhanoian.xemzi.com.</a> Còn một số người khác nữa nhưng tớ không nhớ hết được.</p>
+}
+/**
+ * gets current lang
+ * @static
+ */
+Locale.getLang = function() {
+    prefs = getPrefs();
+    return prefs.getLang();
+}
+/**
+ * gets current country
+ * @static
+ */
+Locale.getCountry = function() {
+    prefs = getPrefs();
+    return prefs.getCountry();
+}
+/**
+ * alternative for prefs.getMsg(key)
+ * uses to getMsg with provided key and substitute args
+ *
+ * eg: Test for {0}, {1}
+ * If args does not match num of {\d}, warning and try to replace by corresponding index.
+ * {0} should be replaced by args[0], etc.,
+ * If args not provided, functions as prefs.getMsg(key)
+ * @param   key String
+ * @param   opt_args Array
+ * @static
+ */
+Locale.getMsg = function(key, opt_args) {
+    prefs = getPrefs();
+    if (!key) {
+        debug.warn('key is null!');
+        return '';
+    }
+    var msg = prefs.getMsg(key);
+    if (msg === '') {
+        debug.warn('Can not find resource bundle with key = ' + key);
+        return msg;
+    }
+    if (!opt_args) return msg;
 
-<p><strong>Đố biết tớ đâu? :)</strong></p>
+    //checks if number of {\d} in msg matches opt_args.length
+    var regex = /{\d+}/g;
+    var matches = msg.match(regex);
+    if (matches.length !== opt_args.length) {
+        debug.warn("required " + matches.length + " args, provided: " + opt_args.length);
+    }
+    //substitutes by index: {0} in msg should be replaced by opt_args[0] and so on
+    for (var i = 0, l = matches.length; i &lt; l; i++) {
+        var index = matches[i].match(/\d+/g)[0];
+        //TODO should improve performance
+        var strToReplace = opt_args[index];
+        if (!strToReplace) {
+            debug.warn('matches[' + i + ']: ' + matches[i] + ' but no opt_args[' + index + ']');
+        } else {
+            msg = msg.replace(matches[i], opt_args[index]);
+        }
+    }
+    return msg;
+}
+//Expose
+window.eXo = window.eXo || {};
+window.eXo.social = window.eXo.social || {};
+window.eXo.social.Locale = Locale;
+</code></pre>
 
-<p><img class="center <a" src="href="http://farm4.static.flickr.com/3196/3127290146_951883aa5b.jpg?v=0">http://farm4.static.flickr.com/3196/3127290146_951883aa5b.jpg?v=0</a>" title="Đố biết tớ đâu? :)" ></p>
+<p>})();
+```</p>
 
-<p>Jeremi có một bài thuyết trình khá rõ về OpenSocial, nhưng tớ nghĩ đây chỉ là giới thiệu cơ bản,
-hầu như những gì Jeremi nói thì cũng đã tìm hiểu trước rồi. Nhưng lạ là một số người hình như đến
-tham gia mà chưa biết gì về OpenSocial hay sao ý hoặc là rất mơ hồ về nó thì phải??? Tớ không biết
-sao nữa. Tớ cứ nghĩ là đây thực sự là sự kiện rất thú vị để trao đổi kiến thức, thông tin và còn
-hack nữa chứ :), nhưng mà một số người đến đây chỉ để xem hay sao ý, dường như không có ý tưởng để
-viết một cái opensocial gadget thì phải, hoặc là không muốn chia sẻ???</p>
+<p>Trong class trên không có gì đáng nói ngoài cách dùng regular expression để thay thế chuỗi với
+pattern là <code>{0}, {1}, {2}</code> và lấy các index trong <code>{}</code> để thay bằng <code>opt_args[index]</code> tương ứng.
+Bạn có thể xem thêm vài viết của <a href="http://twitter.com/sanglt">@sanglt</a>:
+<a href="http://www.sanglt.com/content/su-dung-regular-expression-trong-javascript">Sử dụng regular expression trong JavaScript</a>.</p>
 
-<p>Bài thuyết trình kéo dài khoảng một giờ đồng hồ. Mặc dù phần demo có một số vấn đề với newhanoian
-gadget nhưng bài thuyết trình rất rõ ràng. Thực sự rất thích sự cởi mở và giọng nói tiếng Anh chậm,
-rõ (Jeremi là người Pháp). Sẽ post một số ảnh ở đây khi Jeremi gửi ảnh cho tớ, vừa gửi email rồi.</p>
+<ul>
+<li>Chú ý: Class <code>eXo.social.Locale</code> dùng debug được @cowboy viết, đây là cách debug/log tuyệt vời và
+tớ rất thích. Giờ trong tất cả các dự án hay ứng dụng nào tớ cũng dùng, sau này nhìn vào console là
+biết lỗi gì ở đâu ngay, chứ dùng alert thì đúng là cực hình. Các bạn cũng nên sử dụng cách debug/log
+này :).</li>
+</ul>
 
-<p>Sau đấy là đến giờ ăn trưa!!! Không có pizza như trong agenda :), nhưng mà có bánh mì, thịt, rau,
-hoa quả&hellip; ngon. Cảm ơn eXo, Jason, Google về bữa trưa :).</p>
 
-<p><strong>Chuẩn bị cho bữa trưa [Đầy thức ăn nhưng mà không có cái ảnh nào như thế :)]</strong></p>
+<p>Download ứng dụng ví dụ đơn giản với cách thêm đối số vào &ldquo;message bundle&rdquo; tại
+<a href="http://github.com/hoatle/opensocial/downloads">http://github.com/hoatle/opensocial/downloads</a></p>
 
-<p><img class="center <a" src="href="http://farm4.static.flickr.com/3211/3126459089_a0703a11de.jpg?v=0">http://farm4.static.flickr.com/3211/3126459089_a0703a11de.jpg?v=0</a>" title="Chuẩn bị cho bữa trưa [Đầy thức ăn nhưng mà không có cái ảnh nào như thế :)]" ></p>
+<p>Mã nguồn tớ để ở đây: <a href="http://github.com/hoatle/opensocial/tree/master/message-bundle">http://github.com/hoatle/opensocial/tree/master/message-bundle</a></p>
 
-<p>Ăn trưa xong mọi người giới thiệu về mình: bạn là ai, bạn đang làm gì, ý tưởng của bạn..blah blah.
-Mọi thứ bạn muốn nói và muốn chia sẻ.</p>
+<p>Đây là file ứng dụng xml:</p>
 
-<p>Tiếp theo là đến lúc hack. Đầu tiên là học cách viết gadget bằng cách code theo một gadget mẫu:
-place searching trên newhanoian. Khá hay, đơn giản nhưng tớ biết một số người có vẻ chưa hoàn thành
-hoặc không thích lắm thì phải. Một số người nói là không sử dụng javascript, chính vì thế mà rất khó
-để code cùng mọi người.</p>
+<p>```xml
+&lt;?xml version=&ldquo;1.0&rdquo; encoding=&ldquo;UTF-8&rdquo;?>
+<Module></p>
 
-<p><strong>Đến lúc hack :)</strong></p>
+<pre><code>&lt;ModulePrefs title="Arguments Binding Message Bundle"
+             description="Simple-App for arguments binding with message bundle"
+             author_email="hoatlevan@gmail.com"
+             author_affiliation="eXo Platform"&gt;
+    &lt;Locale messages="locale/ALL_ALL.xml" /&gt;
+    &lt;Locale lang="en" messages="locale/en_ALL.xml" /&gt;
+    &lt;Locale lang="vi" messages="locale/vi_ALL.xml" /&gt;
+    &lt;Require feature="opensocial-0.8" /&gt;
+&lt;/ModulePrefs&gt;
+&lt;Content type="html"&gt;
+&lt;![CDATA[
+    &lt;link rel="stylesheet" type="text/css" href="style/style.css" /&gt;
+    &lt;script type="text/javascript" src="script/debug.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" src="script/eXo/social/Locale.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" src="script/app.js"&gt;&lt;/script&gt;
+    &lt;p&gt;Resource bundle rendered by server: &lt;strong&gt;__MSG_hello_world__&lt;/strong&gt;&lt;/p&gt;
+    &lt;p&gt;Resource bundle rendered by JavaScript:&lt;/p&gt;
+    &lt;div id="helloMsg"&gt;&lt;/div&gt;
+    &lt;div id="helloMsgArgs"&gt;&lt;/div&gt;
+]]&gt;
+&lt;/Content&gt;
+</code></pre>
 
-<p><img class="center <a" src="href="http://farm4.static.flickr.com/3088/3127289804_a93ff9ee3a.jpg?v=0">http://farm4.static.flickr.com/3088/3127289804_a93ff9ee3a.jpg?v=0</a>" title="Đến lúc hack :)" ></p>
+<p></Module>
+```</p>
 
-<p>Sau khi code gadget mẫu, mọi người có phần chia sẻ ý tưởng và tìm người cùng code một gadget theo ý
-tưởng đó. Lạ là có mỗi tớ lên chia sẻ ý tưởng của mình :(.</p>
+<p>Có thể thấy ở trên <code>__MSG_hello_world__</code> sẽ được thay thế bằng message bundle tương ứng với key là
+&ldquo;hello_world&rdquo; (tớ để tất cả các file message bundle trong thư mục <code>locale</code>).</p>
 
-<p>Có một câu hỏi khá lạ (lùng) và lặp đi lặp lại: &ndash; Làm sao để mạng xã hội của tôi có thể trở thành
-một opensocial container? Cách config thế nào? Thực sự đây là một câu hỏi lớn. Để có thể trở thành
-một opensocial container, mạng xã hội đó phải đáp ứng một số chuẩn của mạng xã hội, phải implement
-hệ thống opensocial api và còn nhiều thứ khác nữa. Thực sự theo tớ nghĩ rất khó để &ldquo;cái-gọi-là&rdquo;
-mạng xã hội ở Việt Nam có thể implement mọi thứ để trở thành một container cho các opensocial app
-khi những người quản lý của các mạng này hỏi những câu hỏi như thế? Nếu có thời gian tìm hiểu chắc
-sẽ không hỏi câu này đâu :)).</p>
+<p>Để sử dụng class <code>eXo.social.Locale</code>, chúng ta có file app.js:</p>
 
-<p>Cũng hơi buồn tí khi mà thời gian kết thúc khá sớm, khoảng 4h chiều &ndash; sớm hơn 2 giờ so với dự kiến.
-Đây cũng là điều dễ hiểu thôi vì dường như một số người muốn code nhưng một số người thì không hoặc
-là chưa sẵn sàng.</p>
+<p>```javascript
+function run() {</p>
 
-<p>Một chi tiết khá thú vị. Thông thường những sự kiện như này thì mọi người sẽ được phát một chiếc
-T-shirt đặc trưng, nhưng lần này mỗi người được 2 cái cơ ;)). Theo tớ để ý thì có khá nhiều T-shirt,
-thừa hơi bị nhiều so với dự tính. Không có cảnh xô đẩy (thì phải) như D3vF3st ở t.p Hồ Chí Minh.
-Mỗi người một chiếc màu đen truyền thống, một chiếc màu trắng của bên <a href="http://teevn.com.">http://teevn.com.</a> Nhưng rất
-không may là tớ nhận được 2 chiếc đều cỡ L. Tìm mãi mà chả thấy cỡ M đâu cả. Giá mà mình to hơn 1 tí
-thì tốt, đỡ phải kén chọn ;))&hellip;</p>
+<pre><code>var prefs = new gadgets.Prefs(),
+    helloWorld = prefs.getMsg('hello_world');
+alert(helloWorld); //"Hello world!" if current language is English
+                   //"Chào thế giới!" if current language is Vietnamese
 
-<p>Thực sự cảm ơn Jeremi vì cái bắt tay ;), vì sự cởi mở. Cảm on mọi người đã đến. Tớ thực sự thích
-OpenSocial Hackathon Hanoi :)</p>
+//eXo.social.Locale usage
+var Locale = eXo.social.Locale;
+var helloMsgEl = document.getElementById('helloMsg'),
+    helloMsgArgsEl = document.getElementById('helloMsgArgs');
 
-<p>Xem thêm ảnh: <a href="http://flickr.com/photos/jeremi/sets/72157611434836951/">http://flickr.com/photos/jeremi/sets/72157611434836951/</a></p>
+helloMsgEl.innerHTML = Locale.getMsg('hello_world');
+helloMsgArgsEl.innerHTML = Locale.getMsg('hello_user_to_place', ['hoatle', 'Vietnam']);
+</code></pre>
+
+<p>}</p>
+
+<p>gadgets.util.registerOnLoadHandler(run);
+```</p>
+
+<p>Bạn có thể chạy ứng dụng này ở bất kì OpenSocial container nào. Chúc bạn code vui :D.</p>
+
+<p>Lưu ý: Có thể sử dụng OpenSocial templates để thêm đối số vào message bundle nhưng hiện nay hầu hết
+các container chưa hỗ trợ hết.</p>
 ]]></content>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[OpenSocial Hackathon in Hanoi]]></title>
-    <link href="http://blog.hoatle.info/2008/12/13/opensocial-hackathon-in-hanoi/"/>
-    <updated>2008-12-13T23:39:00+00:00</updated>
-    <id>http://blog.hoatle.info/2008/12/13/opensocial-hackathon-in-hanoi</id>
-    <content type="html"><![CDATA[<p>Today is one of the most active day of mine :). With the opensocial hackathon in Hanoi, I have
-chance to meet some interesting people.</p>
+    <title type="html"><![CDATA[Dynamic arguments binding with OpenSocial message bundle]]></title>
+    <link href="http://blog.hoatle.info/2010/01/16/dynamic-arguments-binding-with-opensocial-message-bundle/"/>
+    <updated>2010-01-16T19:44:00+00:00</updated>
+    <id>http://blog.hoatle.info/2010/01/16/dynamic-arguments-binding-with-opensocial-message-bundle</id>
+    <content type="html"><![CDATA[<h2>Problem</h2>
+
+<ul>
+<li><p>Working with OpenSocial message bundle for localization, sometimes it&rsquo;s necessary to bind dynamic
+arguments to the message. For example, we have greeting message like this: <code>Hello {user}</code> in which
+user will be replaced by user&rsquo;s name. But currently with OpenSocial api, we can&rsquo;t. We just can get
+message bundle by the key without passing any arguments for substitution.</p></li>
+<li><p>So this is my approach: using <code>eXo.social.Locale.getMsg(key)</code> the same as <code>prefs.getMsg(key)</code> and
+<code>eXo.social.Locale.getMsg(key, [val1, val2,...]);</code> for dynamic arguments binding with message bundle.</p></li>
+</ul>
+
 
 <!-- more -->
 
 
-<p>My morning started in 9 A.M (OMG!!! But it&rsquo;s my normal day; I don&rsquo;t know why but I&rsquo;d really like to
-work at late night. Yesterday, I stopped working at about 4 A.M. It&rsquo;s hard to define my work :).
-Just do everything with computer: blogging, building some requested websites from customers,
-experimenting new technology trend, improve programming skill, oh many more. Just my habit :).</p>
+<h2>Solution</h2>
 
-<p>It took me about half an hour to get to eXo Platform office. Coming a bit early (about 10h 20'),
-I just saw 2 or 3 geeks sitting there.</p>
+<ul>
+<li>Create <code>eXo.social.Locale class:</code></li>
+</ul>
 
-<p><strong>Early time</strong></p>
 
-<p><img class="center <a" src="href="http://farm4.static.flickr.com/3208/3127289114_6c42ab2824.jpg?v=0">http://farm4.static.flickr.com/3208/3127289114_6c42ab2824.jpg?v=0</a>" title="Early time" ></p>
+<p>```javascript
+/<em>*
+ * Locale.js
+ * Utility for Locale, dynamic binding message bundle with arguments
+ * Usage:
+ * eXo.social.Locale.getLang(); the same as prefs.getLang();
+ * eXo.social.Locale.getCountry(); the same as prefs.getCountry();
+ * eXo.social.Locale.getMsg(key); the same as prefs.getMsg(key);
+ * eXo.social.Locale.getMsg(key, args); dynamic binding argument to message bundle
+ * @author  hoatle
+ * @since   October 27, 2009
+ * @copyright   eXo Platform
+ </em>/</p>
 
-<p>11h everyone came. It&rsquo;s just about more than 20 geeks &ndash; this number is less than my expectation ;). I thought there must have been about 50 geeks ;).</p>
+<p>(function() {</p>
 
-<p><strong>Everyone came</strong></p>
+<pre><code>//prefs object to get lang, country, message bundle
+var prefs;
 
-<p><img class="center <a" src="href="http://farm4.static.flickr.com/3290/3127289274_56552c8884.jpg?v=0">http://farm4.static.flickr.com/3290/3127289274_56552c8884.jpg?v=0</a>" title="Everyone came" ></p>
+/**
+ * private function to lazily initialize prefs object
+ */
+function getPrefs() {
+    if (!prefs) {
+        prefs = new gadgets.Prefs();
+    }
+    return prefs;
+}
+/**
+ * Class definition
+ */
+var Locale = function() {
 
-<p>I met many geeks from many companies, except me, I&rsquo;m currently not working for any company :), just finding! I don&rsquo;t remember all, but just list some here: eXo Platform (of course, Jereme Joslin, 3 other guys and I have much talk with two of them), Tinh Van Media (<a href="http://xalo.vn;">http://xalo.vn;</a> two 3th-year students from College of Technology), Moore Corporation (<a href="http://nghenhac.info,">http://nghenhac.info,</a> <a href="http://anhso.net">http://anhso.net</a>), VinaLive (<a href="http://phununet.com;">http://phununet.com;</a> 3-4 guys), <a href="http://tamtay.vn">http://tamtay.vn</a> (one guy), guys from <a href="http://teevn.com.">http://teevn.com.</a> Ah, Jason &ndash; now I know him ;), and a guy from <a href="http://newhanoian.xemzi.com/.">http://newhanoian.xemzi.com/.</a> There are more guys but currently I can not remember all.</p>
+}
+/**
+ * gets current lang
+ * @static
+ */
+Locale.getLang = function() {
+    prefs = getPrefs();
+    return prefs.getLang();
+}
+/**
+ * gets current country
+ * @static
+ */
+Locale.getCountry = function() {
+    prefs = getPrefs();
+    return prefs.getCountry();
+}
+/**
+ * alternative for prefs.getMsg(key)
+ * uses to getMsg with provided key and substitute args
+ *
+ * eg: Test for {0}, {1}
+ * If args does not match num of {\d}, warning and try to replace by corresponding index.
+ * {0} should be replaced by args[0], etc.,
+ * If args not provided, functions as prefs.getMsg(key)
+ * @param   key String
+ * @param   opt_args Array
+ * @static
+ */
+Locale.getMsg = function(key, opt_args) {
+    prefs = getPrefs();
+    if (!key) {
+        debug.warn('key is null!');
+        return '';
+    }
+    var msg = prefs.getMsg(key);
+    if (msg === '') {
+        debug.warn('Can not find resource bundle with key = ' + key);
+        return msg;
+    }
+    if (!opt_args) return msg;
 
-<p><strong>Where am I? :)</strong></p>
+    //checks if number of {\d} in msg matches opt_args.length
+    var regex = /{\d+}/g;
+    var matches = msg.match(regex);
+    if (matches.length !== opt_args.length) {
+        debug.warn("required " + matches.length + " args, provided: " + opt_args.length);
+    }
+    //substitutes by index: {0} in msg should be replaced by opt_args[0] and so on
+    for (var i = 0, l = matches.length; i &lt; l; i++) {
+        var index = matches[i].match(/\d+/g)[0];
+        //TODO should improve performance
+        var strToReplace = opt_args[index];
+        if (!strToReplace) {
+            debug.warn('matches[' + i + ']: ' + matches[i] + ' but no opt_args[' + index + ']');
+        } else {
+            msg = msg.replace(matches[i], opt_args[index]);
+        }
+    }
+    return msg;
+}
+//Expose
+window.eXo = window.eXo || {};
+window.eXo.social = window.eXo.social || {};
+window.eXo.social.Locale = Locale;
+</code></pre>
 
-<p><img class="center <a" src="href="http://farm4.static.flickr.com/3196/3127290146_951883aa5b.jpg?v=0">http://farm4.static.flickr.com/3196/3127290146_951883aa5b.jpg?v=0</a>" title="Where am I? :)" ></p>
+<p>})();
+```</p>
 
-<p>Jeremi had a very clear presentation about OpenSocial, but I think it&rsquo;s just introduction, everything he said I have known before. How strange it is when some guys coming here have no idea from OpenSocial??? I don&rsquo;t know why. I thought this event is really interesting to exchange idea and information, and to hack but some guys don&rsquo;t have any idea to code an opensocial gadget :(.</p>
+<p>Note: The <code>eXo.social.Locale</code> class uses <code>debug</code>, thanks @cowboy for his excellent JavaScript
+log/debug. I love it &lt;3. All my projects and apps use it, you should also use this way of debug/log
+instead of alert :).</p>
 
-<p>Jemeri&rsquo;s presentation took about 1 hour, although there is some technical problems with newhanoian gadget, but it&rsquo;s clear and I really like his openness and clear voice. He took some pics and I will post them here when having it.</p>
+<p>Download sample app for testing at <a href="http://github.com/hoatle/opensocial/downloads">http://github.com/hoatle/opensocial/downloads</a></p>
 
-<p>It&rsquo;s time for lunch!!! No pizza as proposed in agenda :). But it&rsquo;s really good with bread, meat, vegetables, juices&hellip; Thank for your lunch, eXo, Jason, Google :).</p>
+<p>Source code available at: <a href="http://github.com/hoatle/opensocial/tree/master/message-bundle">http://github.com/hoatle/opensocial/tree/master/message-bundle</a></p>
 
-<p><strong>Preparing for lunch [full of food but no such pic captured]</strong></p>
+<p>The xml app file:</p>
 
-<p><img class="center <a" src="href="http://farm4.static.flickr.com/3211/3126459089_a0703a11de.jpg?v=0">http://farm4.static.flickr.com/3211/3126459089_a0703a11de.jpg?v=0</a>" title="Preparing for lunch [full of food but no such pic captured]" ></p>
+<p>```xml
+&lt;?xml version=&ldquo;1.0&rdquo; encoding=&ldquo;UTF-8&rdquo;?>
+<Module></p>
 
-<p>After lunch we have some introduction: who you are, what you are working, your ideas..blah blah. Just everything you would like to talk, to share.</p>
+<pre><code>&lt;ModulePrefs title="Arguments Binding Message Bundle"
+             description="Simple-App for arguments binding with message bundle"
+             author_email="hoatlevan@gmail.com"
+             author_affiliation="eXo Platform"&gt;
+    &lt;Locale messages="locale/ALL_ALL.xml" /&gt;
+    &lt;Locale lang="en" messages="locale/en_ALL.xml" /&gt;
+    &lt;Locale lang="vi" messages="locale/vi_ALL.xml" /&gt;
+    &lt;Require feature="opensocial-0.8" /&gt;
+&lt;/ModulePrefs&gt;
+&lt;Content type="html"&gt;
+&lt;![CDATA[
+    &lt;link rel="stylesheet" type="text/css" href="style/style.css" /&gt;
+    &lt;script type="text/javascript" src="script/debug.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" src="script/eXo/social/Locale.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" src="script/app.js"&gt;&lt;/script&gt;
+    &lt;p&gt;Resource bundle rendered by server: &lt;strong&gt;__MSG_hello_world__&lt;/strong&gt;&lt;/p&gt;
+    &lt;p&gt;Resource bundle rendered by JavaScript:&lt;/p&gt;
+    &lt;div id="helloMsg"&gt;&lt;/div&gt;
+    &lt;div id="helloMsgArgs"&gt;&lt;/div&gt;
+]]&gt;
+&lt;/Content&gt;
+</code></pre>
 
-<p>Coming back to hacking time. Just learn to code following a gadget example: place searching. It&rsquo;s fun, but I knew some guys did not complete or like it. Some guys said they have no idea about javascript so it&rsquo;s really hard for them to follow.</p>
+<p></Module>
+```</p>
 
-<p><strong>Hacking time</strong></p>
+<p>In the app code above, <code>__MSG_hello_world__</code> will be substituted by server with found message bundle
+with key &ldquo;hello_world&rdquo; defined in message bundles files. (in <code>/locale</code> folder).</p>
 
-<p><img class="center <a" src="href="http://farm4.static.flickr.com/3088/3127289804_a93ff9ee3a.jpg?v=0">http://farm4.static.flickr.com/3088/3127289804_a93ff9ee3a.jpg?v=0</a>" title="Hacking time" ></p>
+<p>To test <code>eXo.social.Locale</code> class, we have the <code>app.js</code>:</p>
 
-<p>After the gadget example, we have an idea sharing section to talk with people about your idea of an gadget (social app). How strange to me when just me sharing it :(. What about others'???</p>
+<p>```javascript
+function run() {</p>
 
-<p>A strange and repetitive question: &ndash; How to config my server to host opensocial app??? It&rsquo;s a really big question to answer. You have to meet some social standards, implementing opensocial api, any may other things. Currently, I think it&rsquo;s really hard for so-called Vietnamese social network to implement OpenSocial api.</p>
+<pre><code>var prefs = new gadgets.Prefs(),
+    helloWorld = prefs.getMsg('hello_world');
+alert(helloWorld); //"Hello world!" if current language is English
+                   //"Chào thế giới!" if current language is Vietnamese
 
-<p>It&rsquo;s a little sad to me when it ended too early, about 4 P.M &ndash; 2 hours earlier than expected. Why? Because it seems that some guys would like to code, some guys don&rsquo;t, perhaps they didn&rsquo;t have any idea to code an gadget??</p>
+//eXo.social.Locale usage
+var Locale = eXo.social.Locale;
+var helloMsgEl = document.getElementById('helloMsg'),
+    helloMsgArgsEl = document.getElementById('helloMsgArgs');
 
-<p>One interesting thing, as usually every developer will get a T-shirt. But here we can get 2 T-shirt. A black one from Google D3vF3st, a white one from <a href="http://teevn.com">http://teevn.com</a> :). So interesting!!! But unlucky me, I got 2 L-size ones. I could not find M-size one :(. If only I could be more bigger&hellip;</p>
+helloMsgEl.innerHTML = Locale.getMsg('hello_world');
+helloMsgArgsEl.innerHTML = Locale.getMsg('hello_user_to_place', ['hoatle', 'Vietnam']);
+</code></pre>
 
-<p>Thank you, Jeremi for your friendly hand-shake ;), your openness; thank you all guys for coming. I really like and love it :)</p>
+<p>}</p>
 
-<p>See more pics here from Jeremi: <a href="http://flickr.com/photos/jeremi/sets/72157611434836951/">http://flickr.com/photos/jeremi/sets/72157611434836951/</a></p>
+<p>gadgets.util.registerOnLoadHandler(run);
+```</p>
+
+<p>You can test this sample app from any OpenSocial container. Happy coding :D.</p>
+
+<p>P/S: We can use OpenSocial template for arguments binding with message bundle but it&rsquo;s currently
+not fully supported by all containers.</p>
 ]]></content>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[OpenSocial Hackathon và BarCamp Hà Nội]]></title>
-    <link href="http://blog.hoatle.info/2008/11/25/opensocial-hackathon-va-barcamp-ha-noi/"/>
-    <updated>2008-11-25T02:38:00+00:00</updated>
-    <id>http://blog.hoatle.info/2008/11/25/opensocial-hackathon-va-barcamp-ha-noi</id>
-    <content type="html"><![CDATA[<p>Tin dành cho các bạn ở Hà Nội. Như mọi người đã biết, Google DevFest HCMC &ndash; The First Ever Google
-Hackathon Tour in Vietnam<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup> (ngày 4/11/2008) và BarCamp Saigon<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup> (November 5, 2008) đã được tổ
-chức ở thành phố Hồ Chí Minh và nhiều bạn ở Hà Nội không tham gia được (tất nhiên trong đó có tớ :(,
-dù gì thì những sự kiện như vậy không thể không tham gia).</p>
+    <title type="html"><![CDATA[OSDE - môi trường tuyệt vời cho các nhà phát triển ứng dụng OpenSocial]]></title>
+    <link href="http://blog.hoatle.info/2009/02/22/osde-moi-truong-tuyet-voi-cho-cac-nha-phat-trien-ung-dung-opensocial/"/>
+    <updated>2009-02-22T23:06:00+00:00</updated>
+    <id>http://blog.hoatle.info/2009/02/22/osde-moi-truong-tuyet-voi-cho-cac-nha-phat-trien-ung-dung-opensocial</id>
+    <content type="html"><![CDATA[<p>Vừa chiều nay xong vào twitter search về opensocial, thấy mọi người đang rất quan tâm đến OpenSocia
+weekendapps. Tự dưng thấy có cái link đến project này: OSDE &ndash; OpenSocial Development Environment và
+yêu ngay tắp lự. Dự án là một module cho Eclipse để phát triển các ứng dụng OpenSocial trên môi
+trường phát triển của các nhà phát triển.</p>
 
-<!-- more -->
+<p>Tớ vẫn còn nhớ cách đây hơn tháng vẫn code ứng dụng rồi test luôn trên các container thật như orkut,
+hi5, myspace, friendster&hellip; nhưng rồi chẳng hiểu sao chỉ test được mỗi trên orkut :|. Khi đăng kí
+trên các mạng này, để test ứng dụng của mình, bạn phải đăng kí, kết bạn [để test:)] và sau đó tiến
+hành test và nhờ các friend-tester của mình test cho nhau :)).</p>
 
+<p>Theo tớ đây là những bước nhàm chán và thực sự không phải cách pro trong phát triển ứng dụng. Bạn sẽ
+test ứng dụng của mình như thế nào khi không có kết nối internet? OSDE chính là giải pháp hoàn hảo
+và thực sự là module tuyệt vời cho Eclipse để phát triển các ứng dụng OpenSocial.</p>
 
-<h2>OpenSocial Hackathon ở Hà Nội</h2>
+<p>Bạn còn chờ gì nữa, project đó đây và hãy phát triển những ứng dụng OpenSocial tuyệt vời cho cộng
+đồng nhé: <a href="http://www.eisbahn.jp/trac/osde/">http://www.eisbahn.jp/trac/osde/</a></p>
 
-<p>&ldquo;Sau khi tổ chức thành công Google Devfest<sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup> ở thành phố HCM hôm 4/11/2008 và rất nhiều bạn ở Hà
-Nội đã không thể tham dự, chúng tôi dự định tổ chức một Hackathon nho nhỏ tập trung vào hệ thống API
-của OpenSocial. Các kỹ sư phần mềm của eXo Platform<sup id="fnref:4"><a href="#fn:4" rel="footnote">4</a></sup> (cùng với đội ngũ Google Devfest khu vực Đông
-Nam Á) sẽ tới trao đổi với mọi người, một số ứng dựng OpenSocial API ở các dịch vụ mạng xã hội Việt
-Nam sẽ được demo. Một kỹ sư của Google khu vực Đông Nam Á sẽ tham gia. Ngày tổ chức dự kiến:
-13/12/2008.&rdquo; (Nguồn Jason).</p>
-
-<p>Lịch trình hôm 13/12/2008 tại OpenSocial Hackathon:</p>
-
-<ul>
-<li><p>10:30AM – 11:00AM : Đăng kí</p></li>
-<li><p>11:00AM – 12:00PM : Bài thuyết trình về openSocial</p></li>
-<li><p>12:00PM – 1:00PM : brainstorming + pizza</p></li>
-<li><p>1:00PM – 5:00PM : Viết các ứng dụng openSocial</p></li>
-<li><p>1:00PM – 2:00PM : Hướng dẫn viết gadget openSocial</p></li>
-<li><p>5:00PM – 6:00PM : Thuyết trình tổng kết kết quả làm việc buổi chiều</p></li>
-</ul>
-
-
-<p>Xem thêm: <a href="http://blog.exoplatform.org/2008/11/24/opensocial-hackathon-in-hanoi/">http://blog.exoplatform.org/2008/11/24/opensocial-hackathon-in-hanoi/</a></p>
-
-<p>Chỉ có 50 ghế dành cho ai đăng kí sớm nhất và được lựa chọn Đăng kí ngay.</p>
-
-<h2>BarCamp Hà Nội đang được chuẩn bị</h2>
-
-<p>Xem thêm <a href="http://wiki.barcamphanoi.org.">http://wiki.barcamphanoi.org.</a></p>
-
-<p>Tuyệt vời!</p>
-<div class="footnotes">
-<hr/>
-<ol>
-<li id="fn:1">
-<p>http://jasonlog.supersized.org/archives/131-Google-DevFest-HCMC-The-First-Ever-Google-Hackathon-Tour-in-Vietnam.html<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
-<li id="fn:2">
-<p>http://www.barcampsaigon.org/<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
-<li id="fn:3">
-<p>http://code.google.com/events/apacdevfest/<a href="#fnref:3" rev="footnote">&#8617;</a></p></li>
-<li id="fn:4">
-<p>http://www.exoplatform.com/portal/public/en/<a href="#fnref:4" rev="footnote">&#8617;</a></p></li>
-</ol>
-</div>
-
+<p>Tuyệt vời, không thể nói gì hơn :). Thực sự có module này mình hào hứng hơn để phát triển các ứng
+dụng OpenSocial. Code cho vui ý mà, hè hè ;)</p>
 ]]></content>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[OpenSocial Hackathon and BarCamp Hanoi]]></title>
-    <link href="http://blog.hoatle.info/2008/11/25/opensocial-hackathon-and-barcamp-hanoi/"/>
-    <updated>2008-11-25T02:04:00+00:00</updated>
-    <id>http://blog.hoatle.info/2008/11/25/opensocial-hackathon-and-barcamp-hanoi</id>
-    <content type="html"><![CDATA[<p>Good news to Hanoi developers! As we know, Google DevFest HCMC &ndash; The First Ever Google Hackathon
-Tour in Vietnam<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup> (November 4, 2008) did succeed, BarCamp Saigon<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup> (November 5, 2008) did succeed.
-However, these two events was held in Ho Chi Minh city, many developers from Hanoi missed it.</p>
+    <title type="html"><![CDATA[OSDE - great for OpenSocial developers]]></title>
+    <link href="http://blog.hoatle.info/2009/02/22/osde-great-for-opensocial-developers/"/>
+    <updated>2009-02-22T22:53:00+00:00</updated>
+    <id>http://blog.hoatle.info/2009/02/22/osde-great-for-opensocial-developers</id>
+    <content type="html"><![CDATA[<p>This afternoon I just hit with this project: OSDE &ndash; OpenSocial Developement Environment and loved it
+at first sight :). This project is awesome for OpenSocial developers to work on their own
+environment. I remembered on the first days of developing app, registered all opensocial containers,
+make friends [for test :)] and then test the app. Somehow boring steps and not the pro way of app
+development. What if you can not have internet connnection but you still want to test you opensocial
+app. OSDE &ndash; OpenSocial Developement Environment is our solution. This is a great module for
+Eclipse :).</p>
 
-<p>Now you can join OpenSocial Hackathon and BarCamp Hanoi :).</p>
+<p>Click on this link and let&rsquo;s create great apps: <a href="http://www.eisbahn.jp/trac/osde/">http://www.eisbahn.jp/trac/osde/</a></p>
 
-<!-- more -->
-
-
-<h2>OpenSocial Hackathon in Hanoi</h2>
-
-<p>&ldquo;After the success of Google Devfest<sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup> in HCMC on November 4, 2008 and many talent developers in
-Hanoi missed the Event, we plan to hold a mini Hackathon in Hanoi with focus on OpenSocial API.
-Software engineers from eXo Platform<sup id="fnref:4"><a href="#fn:4" rel="footnote">4</a></sup> (going with Google Devfest team in Southeast Asia Tour) will
-interact with Hanoi based devs and geeks, some demos of OpenSocial API apps on Vietnamese social
-networking services should be showed. An engineer of Google Southeast Asia could join to assist the
-participants. The planned date is December 13, 2008&rdquo; (from Jason).</p>
-
-<p>Agenda on December 13, 2008:</p>
-
-<ul>
-<li><p>10:30AM – 11:00AM : Registration</p></li>
-<li><p>11:00AM – 12:00PM : openSocial Presentation</p></li>
-<li><p>12:00PM – 1:00PM : brainstorming + pizza</p></li>
-<li><p>1:00PM – 5:00PM : Coding your openSocial applications</p></li>
-<li><p>1:00PM – 2:00PM : guided walkthrough a first openSocial gadget</p></li>
-<li><p>5:00PM – 6:00PM : presentation of what have been done in the afternoon.</p></li>
-</ul>
-
-
-<p>More info: <a href="http://blog.exoplatform.org/2008/11/24/opensocial-hackathon-in-hanoi/">http://blog.exoplatform.org/2008/11/24/opensocial-hackathon-in-hanoi/</a></p>
-
-<p>Only 50 seats are available. Just register now.</p>
-
-<h2>BarCamp Hanoi is on the way of preparation</h2>
-
-<p>Get information and just don&rsquo;t miss it from <a href="http://wiki.barcamphanoi.org.">http://wiki.barcamphanoi.org.</a></p>
-
-<p>Really interesting and good news!</p>
-<div class="footnotes">
-<hr/>
-<ol>
-<li id="fn:1">
-<p>http://jasonlog.supersized.org/archives/131-Google-DevFest-HCMC-The-First-Ever-Google-Hackathon-Tour-in-Vietnam.html<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
-<li id="fn:2">
-<p>http://www.barcampsaigon.org/<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
-<li id="fn:3">
-<p>http://code.google.com/events/apacdevfest/<a href="#fnref:3" rev="footnote">&#8617;</a></p></li>
-<li id="fn:4">
-<p>http://www.exoplatform.com/portal/public/en/<a href="#fnref:4" rev="footnote">&#8617;</a></p></li>
-</ol>
-</div>
-
+<p>Everything there is good enough to code, much more easier to have your app in development stage :)</p>
 ]]></content>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[SE Asia OpenSocial Application Contest]]></title>
-    <link href="http://blog.hoatle.info/2008/11/16/se-asia-opensocial-application-contest/"/>
-    <updated>2008-11-16T15:14:00+00:00</updated>
-    <id>http://blog.hoatle.info/2008/11/16/se-asia-opensocial-application-contest</id>
-    <content type="html"><![CDATA[<p>This contest is only for 5 SE Asia countries: Singapore, Malaysia, the Phillipines, Thailand, and
-Vietnam. All developers from these 5 countries can take part in. Entries are limited to three per
-person.</p>
+    <title type="html"><![CDATA[Gửi ứng dụng cuộc thi OpenSocial Đông Nam Á]]></title>
+    <link href="http://blog.hoatle.info/2009/01/12/gui-ung-dung-cuoc-thi-opensocial-dong-nam-a/"/>
+    <updated>2009-01-12T17:29:00+00:00</updated>
+    <id>http://blog.hoatle.info/2009/01/12/gui-ung-dung-cuoc-thi-opensocial-dong-nam-a</id>
+    <content type="html"><![CDATA[<p>Vừa submit cái ứng dụng dự thi, nhưng mà không biết thế nào cả. Ứng dụng thì được test + develop ở
+mỗi orkut, còn lại các container khác thì có nhiều vấn đề. Tức nhất là mình không test ngay ở eXo
+Social, nếu mà chỉ cần chạy trên này là thỏa mãn điều kiện cuộc thi rồi. Chắc là người ta cũng cân
+nhắc. Sau đây là một số hình chụp.</p>
 
-<!-- more -->
+<p>Khi Search + Preview + Download:</p>
 
+<p><img class="center <a" src="href="http://farm4.static.flickr.com/3317/3183569511_9b56d9a977_o.png">http://farm4.static.flickr.com/3317/3183569511_9b56d9a977_o.png</a>" title="Khi Search + Preview + Download" ></p>
 
-<p>The Open registration day is November 15, 2008 and the close registration day is January 10, 2009.</p>
+<p>Khi xem ở chế độ song detail:</p>
 
-<p>Each entry will be judged by a panel of experts who are employees of Exo Platform, Friendster,
-Globant, Google Inc, and hi5. Entries will be evaluated on:</p>
+<p><img class="center <a" src="href="http://farm4.static.flickr.com/3126/3184221303_07c0df6e96.jpg?v=0">http://farm4.static.flickr.com/3126/3184221303_07c0df6e96.jpg?v=0</a>" title="Khi xem ở chế độ song detail" ></p>
 
-<ul>
-<li>Creativity and user appeal</li>
-<li>Internationalization (Message Bundles)</li>
-<li>Use of other Google APIs</li>
-<li>Cross-platform operability</li>
-<li>Use of App Engine for storing user data and hosting files</li>
-</ul>
-
-
-<p>What about prize? :D</p>
-
-<p>The top five entrants with the highest overall scores in each participating country will be awarded
-an Apple iPod Touch (valued at US$230). In addition, the entrant with the highest overall score in
-each participating country will also be awarded a Nintendo Wii (valued at US$270).</p>
-
-<ul>
-<li>Oh, nearly 2 months left to find ideas and implement an application ;)</li>
-</ul>
-
-
-<p>Useful links:
-&ndash; <a href="http://code.google.com">http://code.google.com</a> &ndash; developer network; find opensocial section</p>
-
-<ul>
-<li><p><a href="http://code.google.com/appengine/">http://code.google.com/appengine/</a> -App Engine Registration. What happens to Vietnamese developers?
-We can&rsquo;t registry because of the verification step: &ldquo;Verify Your Account by SMS&rdquo;?</p></li>
-<li><p><a href="http://code.google.com/events/apacdevfest/contest/index.html">http://code.google.com/events/apacdevfest/contest/index.html</a> &ndash; contest site</p></li>
-<li><p><a href="http://groups.google.com/group/seasia-social-gadget-contest?hl=en">http://groups.google.com/group/seasia-social-gadget-contest?hl=en</a> &ndash; Questions and answers about
-this contest</p></li>
-</ul>
-
+<p>Viết lại cái này cho eXo Social, vừa vẽ vẽ vài cái layout, thật là pờ-zồ :), chả giống gì cái trên
+cả. Kế thừa cái cũ + chính thức sang production.</p>
 ]]></content>
   </entry>
   
