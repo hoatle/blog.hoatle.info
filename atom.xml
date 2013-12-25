@@ -4,7 +4,7 @@
   <title><![CDATA[blog.hoatle.info]]></title>
   <link href="http://blog.hoatle.info/atom.xml" rel="self"/>
   <link href="http://blog.hoatle.info/"/>
-  <updated>2013-12-25T23:48:05+00:00</updated>
+  <updated>2013-12-25T23:56:35+00:00</updated>
   <id>http://blog.hoatle.info/</id>
   <author>
     <name><![CDATA[hoatle]]></name>
@@ -20,9 +20,9 @@
     <id>http://blog.hoatle.info/2013/12/25/dung-decorator-de-do-thoi-gian-thuc-thi-cua-bat-ky-ham-nao-trong-python</id>
     <content type="html"><![CDATA[<p><img class="center" src="http://blog.hoatle.info/images/2013/12/python-logo-master.png" title="Python Logo" ></p>
 
-<p>Python có cú pháp cho &ldquo;decorator&rdquo; rất linh hoạt, nó được sử dụng khá linh hoạt.
-Bài viết này tôi giới thiệu cách sử dụng 1 ví dụ về &ldquo;decorator&rdquo; khá hay để đo
-đếm thời gian thực thi của bất kỳ hàm nào.</p>
+<p>Python có cú pháp cho &ldquo;decorator&rdquo; rất linh hoạt, nó được sử dụng khá rộng rãi.
+Bài viết này tôi giới thiệu cách sử dụng &ldquo;decorator&rdquo; cho một ví dụ khá hay:
+dùng &ldquo;decorator&rdquo; để đo đếm thời gian thực thi của bất kỳ hàm nào.</p>
 
 <!-- more -->
 
@@ -49,7 +49,7 @@ trong phần đọc thêm bên dưới.</p>
 
 <p>Lưu tệp tin là: &ldquo;add.py&rdquo;.</p>
 
-<h2>Đo thời gian đơn giản nhất</h2>
+<h2>Đo Thời Gian Theo Cách Đơn Giản Nhất</h2>
 
 <p>Để đo thời gian thực thi, cách đơn giản nhất là đếm thời gian trước lúc chạy và
 sau khi chạy xong hàm, rồi lấy thời gian sau trừ thời gian trước cho khoảng
@@ -95,7 +95,7 @@ thời gian thực thi.</p>
 cách đo đếm này không hiệu quả khi cần đo đếm hàng nghìn hàm, code sẽ bị trùng
 lặp nhiều (&ldquo;boiler plate&rdquo;).</p>
 
-<h2>Dùng &ldquo;decorator design pattern&rdquo;</h2>
+<h2>Đo Thời Gian Dùng &ldquo;decorator design pattern&rdquo;</h2>
 
 <p>Trong Python, có thể làm như sau:</p>
 
@@ -166,11 +166,11 @@ lặp nhiều (&ldquo;boiler plate&rdquo;).</p>
 
 
 <p>Đây là cách làm thường thấy trước khi cú pháp &ldquo;decorator&rdquo; được giới thiệu, có
-thể dùng <code>timer</code> để đo đếm các hàm, ví dụ <code>add</code> và <code>sub</code> như ví dụ trên.</p>
+thể dùng <code>timer</code> để đo đếm các hàm, ví dụ <code>add</code> và <code>sub</code> như trên.</p>
 
-<h2>Dùng cú pháp &ldquo;decorator&rdquo;</h2>
+<h2>Dùng Cú Pháp Của &ldquo;decorator&rdquo;</h2>
 
-<p>Rất đơn giản, thay vì <code>add = timer(add)</code> mà dùng <code>@timer</code>:</p>
+<p>Rất đơn giản, thay vì dùng <code>add = timer(add)</code> thì dùng <code>@timer</code>:</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -224,7 +224,7 @@ thể dùng <code>timer</code> để đo đếm các hàm, ví dụ <code>add</c
 <p>Như vậy bằng việc dùng &ldquo;decorator&rdquo;, code Python dễ đọc hơn, lưu ý bạn có thể
 thêm nhiều &ldquo;decorator&rdquo; cho 1 hàm.</p>
 
-<h2>Ứng dụng <code>timer</code></h2>
+<h2>Ứng Dụng <code>timer</code></h2>
 
 <p>Đo đếm thời gian liên quan đến &ldquo;performance-tuning&rdquo; và &ldquo;timeout&rdquo; &ndash; giới hạn
 thời gian thực thi của hàm, nếu lâu quá thì thông báo lỗi và phải xử lý. Ví dụ
