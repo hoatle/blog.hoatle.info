@@ -17,9 +17,9 @@ published: true
 
 {% img center /images/2013/12/python-logo-master.png Python Logo %}
 
-Python có cú pháp cho "decorator" rất linh hoạt, nó được sử dụng khá linh hoạt.
-Bài viết này tôi giới thiệu cách sử dụng 1 ví dụ về "decorator" khá hay để đo
-đếm thời gian thực thi của bất kỳ hàm nào.
+Python có cú pháp cho "decorator" rất linh hoạt, nó được sử dụng khá rộng rãi.
+Bài viết này tôi giới thiệu cách sử dụng "decorator" cho một ví dụ khá hay:
+dùng "decorator" để đo đếm thời gian thực thi của bất kỳ hàm nào.
 
 <!-- more -->
 
@@ -45,8 +45,8 @@ def add(x, y):
 
 Lưu tệp tin là: "add.py".
 
-Đo thời gian đơn giản nhất
---------------------------
+Đo Thời Gian Theo Cách Đơn Giản Nhất
+------------------------------------
 
 Để đo thời gian thực thi, cách đơn giản nhất là đếm thời gian trước lúc chạy và
 sau khi chạy xong hàm, rồi lấy thời gian sau trừ thời gian trước cho khoảng
@@ -80,8 +80,8 @@ cách đo đếm này không hiệu quả khi cần đo đếm hàng nghìn hàm
 lặp nhiều ("boiler plate").
 
 
-Dùng "decorator design pattern"
--------------------------------
+Đo Thời Gian Dùng "decorator design pattern"
+--------------------------------------------
 
 Trong Python, có thể làm như sau:
 
@@ -123,13 +123,13 @@ total run-time of 'sub': 3.393173 ms
 ```
 
 Đây là cách làm thường thấy trước khi cú pháp "decorator" được giới thiệu, có
-thể dùng `timer` để đo đếm các hàm, ví dụ `add` và `sub` như ví dụ trên.
+thể dùng `timer` để đo đếm các hàm, ví dụ `add` và `sub` như trên.
 
 
-Dùng cú pháp "decorator"
-------------------------
+Dùng Cú Pháp Của "decorator"
+----------------------------
 
-Rất đơn giản, thay vì `add = timer(add)` mà dùng `@timer`:
+Rất đơn giản, thay vì dùng `add = timer(add)` thì dùng `@timer`:
 
 ```python
 import time
@@ -161,7 +161,7 @@ Như vậy bằng việc dùng "decorator", code Python dễ đọc hơn, lưu �
 thêm nhiều "decorator" cho 1 hàm.
 
 
-Ứng dụng `timer`
+Ứng Dụng `timer`
 ---------------
 
 Đo đếm thời gian liên quan đến "performance-tuning" và "timeout" - giới hạn
