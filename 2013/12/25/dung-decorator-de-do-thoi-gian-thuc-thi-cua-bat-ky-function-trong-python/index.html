@@ -1,0 +1,702 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Dùng "decorator" để đo thời gian thực thi của bất kỳ hàm nào trong Python - blog.hoatle.info</title>
+  
+  <meta name="author" content="hoatle">
+
+  
+  <meta name="description" content="Dùng "decorator" để đo thời gian thực thi của bất kỳ hàm nào trong Python">
+  <meta name="keywords" content="python, decorator, timeout, hàm, đo thời gian">
+
+  
+
+  
+
+  <meta property="og:url" content="http://blog.hoatle.info/2013/12/25/dung-decorator-de-do-thoi-gian-thuc-thi-cua-bat-ky-function-trong-python/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Dùng "decorator" để đo thời gian thực thi của bất kỳ hàm nào trong Python - blog.hoatle.info" />
+  <meta property="og:description" content="Dùng "decorator" để đo thời gian thực thi của bất kỳ hàm nào trong Python" />
+
+  <meta property="og:image" content="http://blog.hoatle.info/images/2013/12/python-logo-master.png" />
+
+
+
+
+
+
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@hoatle" />
+  <meta name="twitter:creator" content="@hoatle" />
+  <meta name="twitter:title" content="Dùng "decorator" để đo thời gian thực thi của bất kỳ hàm nào trong Python - blog.hoatle.info" />
+  <meta name="twitter:description" content="Dùng "decorator" để đo thời gian thực thi của bất kỳ hàm nào trong Python" />
+
+  <meta name="twitter:image:src" content="http://blog.hoatle.info/images/2013/12/python-logo-master.png" />
+
+  <meta name="twitter:domain" content="http://blog.hoatle.info" />
+
+
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="canonical" href="http://blog.hoatle.info/2013/12/25/dung-decorator-de-do-thoi-gian-thuc-thi-cua-bat-ky-function-trong-python/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  
+  <link href="/atom.xml" rel="alternate" title="blog.hoatle.info" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-6303084-3']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">blog.hoatle.info</a></h1>
+  
+    <h2>just a value creator.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:blog.hoatle.info" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Home</a></li>
+  <li><a href="/categories/en">English</a></li>
+  <li><a href="/categories/vi">Tiếng Việt</a></li>
+  <li><a href="/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article itemscope itemtype="http://schema.org/Article" class="hentry" role="article">
+  
+  <header>
+    
+      <h1 itemprop="name" class="entry-title">Dùng "Decorator" để đo Thời Gian Thực Thi Của Bất Kỳ Hàm Nào Trong Python</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time itemprop="datePublished" content="2013-12-25T20:09:00+00:00" datetime="2013-12-25T20:09:00+00:00" pubdate data-updated="true">Dec 25<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+<div itemprop="articleBody" class="entry-content"><p><img class="center" src="/images/2013/12/python-logo-master.png" title="Python Logo" ></p>
+
+<p>Python có cú pháp cho &ldquo;decorator&rdquo; rất linh hoạt, nó được sử dụng khá rộng rãi.
+Bài viết này tôi giới thiệu cách sử dụng &ldquo;decorator&rdquo; cho một ví dụ khá hay:
+dùng &ldquo;decorator&rdquo; để đo đếm thời gian thực thi của bất kỳ hàm nào.</p>
+
+<!-- more -->
+
+
+<h2>&ldquo;decorator&rdquo; là gì?</h2>
+
+<p>Bạn đừng nhầm lẫn &ldquo;decorator&rdquo; trong Python với &ldquo;decorator design pattern&rdquo;<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>
+vì nó còn làm được nhiều hơn thế, nó nghiêng về &ldquo;AOP (Aspect Oriented
+Programming)&rdquo;<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup> hơn.</p>
+
+<p>Để tìm hiểu nhiều hơn về &ldquo;decorator&rdquo; trong Python, bạn có thể xem các bài viết
+trong phần đọc thêm bên dưới.</p>
+
+<h2>Yêu Cầu</h2>
+
+<p>Đo thời gian thực thi của hàm sau (theo mili-giây):</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+</span><span class='line'>    <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Lưu tệp tin là: &ldquo;add.py&rdquo;.</p>
+
+<h2>Đo Thời Gian Theo Cách Đơn Giản Nhất</h2>
+
+<p>Để đo thời gian thực thi, cách đơn giản nhất là đếm thời gian trước lúc chạy và
+sau khi chạy xong hàm, rồi lấy thời gian sau trừ thời gian trước cho khoảng
+thời gian thực thi.</p>
+
+<p>Có thể viết như sau:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="kn">import</span> <span class="nn">time</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+</span><span class='line'>    <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+</span><span class='line'>
+</span><span class='line'><span class="c"># test</span>
+</span><span class='line'><span class="n">start_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+</span><span class='line'><span class="n">add</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+</span><span class='line'><span class="n">end_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+</span><span class='line'><span class="k">print</span> <span class="s">&#39;total run-time: </span><span class="si">%f</span><span class="s"> ms&#39;</span> <span class="o">%</span> <span class="p">((</span><span class="n">end_time</span> <span class="o">-</span> <span class="n">start_time</span><span class="p">)</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Sau khi chạy <code>$ python add.py</code> có kết quả tương tự như sau:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>python add.py
+</span><span class='line'>total run-time: 0.007153 ms
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Đấy là cách đo đơn giản nhất mà có thể làm được với bất kỳ ngôn ngữ nào, nhưng
+cách đo đếm này không hiệu quả khi cần đo đếm hàng nghìn hàm, code sẽ bị trùng
+lặp nhiều (&ldquo;boiler plate&rdquo;).</p>
+
+<h2>Đo Thời Gian Dùng &ldquo;decorator design pattern&rdquo;</h2>
+
+<p>Trong Python, có thể làm như sau:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="kn">import</span> <span class="nn">time</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="k">def</span> <span class="nf">timer</span><span class="p">(</span><span class="n">fn</span><span class="p">):</span>
+</span><span class='line'>    <span class="k">def</span> <span class="nf">wrapper</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+</span><span class='line'>        <span class="n">start_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+</span><span class='line'>        <span class="n">result</span> <span class="o">=</span> <span class="n">fn</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+</span><span class='line'>        <span class="n">end_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+</span><span class='line'>        <span class="k">print</span> <span class="s">&#39;total run-time of </span><span class="si">%r</span><span class="s">: </span><span class="si">%f</span><span class="s"> ms&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">fn</span><span class="o">.</span><span class="n">__name__</span><span class="p">,</span> <span class="p">(</span><span class="n">end_time</span> <span class="o">-</span> <span class="n">start_time</span><span class="p">)</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">)</span>
+</span><span class='line'>        <span class="k">return</span> <span class="n">result</span>
+</span><span class='line'>    <span class="k">return</span> <span class="n">wrapper</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+</span><span class='line'>    <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">add</span> <span class="o">=</span> <span class="n">timer</span><span class="p">(</span><span class="n">add</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">def</span> <span class="nf">sub</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+</span><span class='line'>    <span class="k">return</span> <span class="n">x</span> <span class="o">-</span> <span class="n">y</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">sub</span> <span class="o">=</span> <span class="n">timer</span><span class="p">(</span><span class="n">sub</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="c"># test</span>
+</span><span class='line'><span class="n">add</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+</span><span class='line'><span class="n">sub</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Kết quả chạy có thể như sau:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>python add.py
+</span><span class='line'>total run-time of <span class="s1">&#39;add&#39;</span>: 0.143051 ms
+</span><span class='line'>total run-time of <span class="s1">&#39;sub&#39;</span>: 3.393173 ms
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Đây là cách làm thường thấy trước khi cú pháp &ldquo;decorator&rdquo; được giới thiệu, có
+thể dùng <code>timer</code> để đo đếm các hàm, ví dụ <code>add</code> và <code>sub</code> như ví dụ trên.</p>
+
+<h2>Dùng Cú Pháp Của &ldquo;decorator&rdquo;</h2>
+
+<p>Rất đơn giản, thay vì <code>add = timer(add)</code> mà dùng <code>@timer</code>:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="kn">import</span> <span class="nn">time</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="k">def</span> <span class="nf">timer</span><span class="p">(</span><span class="n">fn</span><span class="p">):</span>
+</span><span class='line'>    <span class="k">def</span> <span class="nf">wrapper</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+</span><span class='line'>        <span class="n">start_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+</span><span class='line'>        <span class="n">result</span> <span class="o">=</span> <span class="n">fn</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+</span><span class='line'>        <span class="n">end_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+</span><span class='line'>        <span class="k">print</span> <span class="s">&#39;total run-time of </span><span class="si">%r</span><span class="s">: </span><span class="si">%f</span><span class="s"> ms&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">fn</span><span class="o">.</span><span class="n">__name__</span><span class="p">,</span> <span class="p">(</span><span class="n">end_time</span> <span class="o">-</span> <span class="n">start_time</span><span class="p">)</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">)</span>
+</span><span class='line'>        <span class="k">return</span> <span class="n">result</span>
+</span><span class='line'>    <span class="k">return</span> <span class="n">wrapper</span>
+</span><span class='line'>
+</span><span class='line'><span class="nd">@timer</span>
+</span><span class='line'><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+</span><span class='line'>    <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+</span><span class='line'>
+</span><span class='line'><span class="nd">@timer</span>
+</span><span class='line'><span class="k">def</span> <span class="nf">sub</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+</span><span class='line'>    <span class="k">return</span> <span class="n">x</span> <span class="o">-</span> <span class="n">y</span>
+</span><span class='line'>
+</span><span class='line'><span class="c"># test</span>
+</span><span class='line'><span class="n">add</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+</span><span class='line'><span class="n">sub</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Như vậy bằng việc dùng &ldquo;decorator&rdquo;, code Python dễ đọc hơn, lưu ý bạn có thể
+thêm nhiều &ldquo;decorator&rdquo; cho 1 hàm.</p>
+
+<h2>Ứng Dụng <code>timer</code></h2>
+
+<p>Đo đếm thời gian liên quan đến &ldquo;performance-tuning&rdquo; và &ldquo;timeout&rdquo; &ndash; giới hạn
+thời gian thực thi của hàm, nếu lâu quá thì thông báo lỗi và phải xử lý. Ví dụ
+chỉ cho hàm <code>add</code> trên được thực thi trong khoảng <code>0.007 ms</code> thì làm như sau:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="kn">import</span> <span class="nn">sys</span>
+</span><span class='line'><span class="kn">import</span> <span class="nn">time</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="k">class</span> <span class="nc">TimeoutException</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+</span><span class='line'>    <span class="k">pass</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="k">def</span> <span class="nf">timeout</span><span class="p">(</span><span class="n">val</span><span class="o">=</span><span class="n">sys</span><span class="o">.</span><span class="n">maxsize</span><span class="p">,</span> <span class="n">info</span><span class="o">=</span><span class="bp">False</span><span class="p">):</span>
+</span><span class='line'>    <span class="k">def</span> <span class="nf">wrapper</span><span class="p">(</span><span class="n">fn</span><span class="p">):</span>
+</span><span class='line'>        <span class="k">def</span> <span class="nf">wrapper_fn</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+</span><span class='line'>            <span class="n">start_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+</span><span class='line'>            <span class="n">result</span> <span class="o">=</span> <span class="n">fn</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+</span><span class='line'>            <span class="n">end_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+</span><span class='line'>            <span class="n">run_time</span> <span class="o">=</span> <span class="p">(</span><span class="n">end_time</span> <span class="o">-</span> <span class="n">start_time</span><span class="p">)</span> <span class="o">*</span> <span class="mi">1000</span> <span class="c"># miliseconds</span>
+</span><span class='line'>            <span class="k">if</span> <span class="n">val</span> <span class="o">&lt;</span> <span class="n">run_time</span><span class="p">:</span>
+</span><span class='line'>                <span class="k">raise</span> <span class="n">TimeoutException</span><span class="p">(</span><span class="s">&#39;</span><span class="si">%r</span><span class="s"> run-time: expected: </span><span class="si">%f</span><span class="s"> ms, but actual: </span><span class="si">%f</span><span class="s"> ms&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">fn</span><span class="o">.</span><span class="n">__name__</span><span class="p">,</span> <span class="n">val</span><span class="p">,</span> <span class="n">run_time</span><span class="p">))</span>
+</span><span class='line'>            <span class="k">if</span> <span class="n">info</span><span class="p">:</span>
+</span><span class='line'>                <span class="k">print</span> <span class="s">&#39;</span><span class="si">%r</span><span class="s"> run-time: </span><span class="si">%f</span><span class="s"> ms&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">fn</span><span class="o">.</span><span class="n">__name__</span><span class="p">,</span> <span class="n">run_time</span><span class="p">)</span>
+</span><span class='line'>            <span class="k">return</span> <span class="n">result</span>
+</span><span class='line'>        <span class="k">return</span> <span class="n">wrapper_fn</span>
+</span><span class='line'>    <span class="k">return</span> <span class="n">wrapper</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="nd">@timeout</span><span class="p">(</span><span class="mf">0.007</span><span class="p">)</span>
+</span><span class='line'><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+</span><span class='line'>    <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+</span><span class='line'>
+</span><span class='line'><span class="nd">@timeout</span><span class="p">(</span><span class="n">info</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</span><span class='line'><span class="k">def</span> <span class="nf">sub</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+</span><span class='line'>    <span class="k">return</span> <span class="n">x</span> <span class="o">-</span> <span class="n">y</span>
+</span><span class='line'>
+</span><span class='line'><span class="c"># Test</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">add</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">sub</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><code>timeout</code> nhận 2 tham số là <code>val</code> &ndash; giá trị &ldquo;timeout&rdquo; và in ra thông tin thời
+gian chạy với tham số <code>info</code>.</p>
+
+<p>Khi thời gian thực thi của <code>add</code> quá 0.007 mili-giây sẽ xảy ra
+<code>TimeoutException</code> tương tự như lần chạy sau:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>python add.py
+</span><span class='line'>Traceback <span class="o">(</span>most recent call last<span class="o">)</span>:
+</span><span class='line'>  File <span class="s2">&quot;test.py&quot;</span>, line 35, in &lt;module&gt;
+</span><span class='line'>    add<span class="o">(</span>3, 4<span class="o">)</span>
+</span><span class='line'>  File <span class="s2">&quot;test.py&quot;</span>, line 17, in wrapper_fn
+</span><span class='line'>    raise TimeoutException<span class="o">(</span><span class="s1">&#39;%r run-time: expected: %f ms, but actual: %f ms&#39;</span> % <span class="o">(</span>fn.__name__, val, run_time<span class="o">))</span>
+</span><span class='line'>__main__.TimeoutException: <span class="s1">&#39;add&#39;</span> run-time: expected: 0.007000 ms, but actual: 0.137091 ms
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Tổng Kết</h2>
+
+<p>Như vậy bạn có thể quản lý và đưa giới hạn thời gian thực thi cho bất kỳ hàm
+nào, điều này khá quan trọng với vấn đề &ldquo;performance&rdquo; cũng như &ldquo;security&rdquo; nhờ
+cách dùng &ldquo;decorator&rdquo; rất linh hoạt trong Python. Đây chỉ là một ứng dụng nho
+nhỏ của &ldquo;decorator&rdquo;, chúc bạn có thể áp dụng &ldquo;decorator&rdquo; trong nhiều bài
+toán thực tế hơn.</p>
+
+<h2>Đọc Thêm</h2>
+
+<ul>
+<li><a href="http://www.artima.com/weblogs/viewpost.jsp?thread=240808">http://www.artima.com/weblogs/viewpost.jsp?thread=240808</a></li>
+<li><a href="http://www.artima.com/weblogs/viewpost.jsp?thread=240845">http://www.artima.com/weblogs/viewpost.jsp?thread=240845</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Python_syntax_and_semantics#Decorators">http://en.wikipedia.org/wiki/Python_syntax_and_semantics#Decorators</a></li>
+</ul>
+
+
+<h2>Hình Ảnh</h2>
+
+<ul>
+<li><a href="http://www.vizteams.com/blog/why-python-as-programming-language-past-present-future">http://www.vizteams.com/blog/why-python-as-programming-language-past-present-future</a></li>
+</ul>
+
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>http://en.wikipedia.org/wiki/Decorator_pattern<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<li id="fn:2">
+<p>http://en.wikipedia.org/wiki/Aspect-oriented_programming<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+</div>
+
+
+  <footer>
+    
+      <div class="revision">
+    <hr/>
+    <p><strong>Latest Change Log:</strong></p>
+    
+    <hr/>
+</div>
+
+    
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name" class="fn">hoatle</span></span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time itemprop="datePublished" content="2013-12-25T20:09:00+00:00" datetime="2013-12-25T20:09:00+00:00" pubdate data-updated="true">Dec 25<span>th</span>, 2013</time>
+      
+
+<span class="categories">posted in
+  
+    <a class='category' href='/categories/vi/'>vi</a>
+  
+</span>
+
+
+      
+
+<span class="tags">tagged with
+  
+    <a class='tag' href='/tags/decorator/'>decorator</a>, <a class='tag' href='/tags/python/'>python</a>
+  
+</span>
+
+
+    </p>
+    
+      
+        
+            
+            
+        
+
+
+
+
+
+
+        
+    
+
+
+
+
+
+<div class="cc-license">
+    <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">
+        <img alt="Creative Commons Attribution-ShareAlike 3.0 Unported License" src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" />
+    </a><br />
+    This work is licensed under a
+    <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.
+</div>
+
+    
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://blog.hoatle.info/2013/12/25/dung-decorator-de-do-thoi-gian-thuc-thi-cua-bat-ky-function-trong-python/" data-via="hoatle" data-counturl="http://blog.hoatle.info/2013/12/25/dung-decorator-de-do-thoi-gian-thuc-thi-cua-bat-ky-function-trong-python/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-href="http://blog.hoatle.info/2013/12/25/dung-decorator-de-do-thoi-gian-thuc-thi-cua-bat-ky-function-trong-python/" data-send="true" data-width="450"
+         data-show-faces="false">
+     </div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/2013/12/20/tai-sao-can-kiem-thu-phan-mem/" title="Previous Post: Tại sao cần kiểm thử phần mềm?">&laquo; Tại sao cần kiểm thử phần mềm?</a>
+      
+      
+        <a class="basic-alignment right" href="/2013/12/25/dung-decorator-de-do-thoi-gian-thuc-thi-cua-bat-ky-ham-nao-trong-python/" title="Next Post: Dùng "decorator" để đo thời gian thực thi của bất kỳ hàm nào trong Python">Dùng "decorator" để đo thời gian thực thi của bất kỳ hàm nào trong Python &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/2013/12/25/dung-decorator-de-do-thoi-gian-thuc-thi-cua-bat-ky-ham-nao-trong-python/">Dùng "Decorator" để đo Thời Gian Thực Thi Của Bất Kỳ Hàm Nào Trong Python</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2013/12/25/dung-decorator-de-do-thoi-gian-thuc-thi-cua-bat-ky-function-trong-python/">Dùng "Decorator" để đo Thời Gian Thực Thi Của Bất Kỳ Hàm Nào Trong Python</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2013/12/20/tai-sao-can-kiem-thu-phan-mem/">Tại Sao Cần Kiểm Thử Phần Mềm?</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2013/12/11/dich-ta-da-hay-ta-dah-sang-tieng-viet-the-nao/">Dịch "Ta-da" Hay "Ta-dah" Sang Tiếng Việt Thế Nào?</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2013/12/10/selfie-tu-suong-tu-cua-nam-2013-theo-tu-dien-oxford/">Selfie (Tự Sướng) - Từ Của Năm 2013 Theo Từ điển Oxford</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>On Delicious</h1>
+  <div id="delicious"></div>
+  <script type="text/javascript" src="http://feeds.delicious.com/v2/json/hoatle?count=5&amp;sort=date&amp;callback=renderDeliciousLinks"></script>
+  <p><a href="http://delicious.com/hoatle">See all bookmarks &raquo;</a></p>
+</section>
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - hoatle -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'hoatle-blog';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://blog.hoatle.info/2013/12/25/dung-decorator-de-do-thoi-gian-thuc-thi-cua-bat-ky-function-trong-python/';
+        var disqus_url = 'http://blog.hoatle.info/2013/12/25/dung-decorator-de-do-thoi-gian-thuc-thi-cua-bat-ky-function-trong-python/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=625149054184531";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

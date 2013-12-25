@@ -4,7 +4,7 @@
   <title><![CDATA[Category: vi | blog.hoatle.info]]></title>
   <link href="http://blog.hoatle.info/categories/vi/atom.xml" rel="self"/>
   <link href="http://blog.hoatle.info/"/>
-  <updated>2013-12-25T02:07:33+00:00</updated>
+  <updated>2013-12-25T22:16:48+00:00</updated>
   <id>http://blog.hoatle.info/</id>
   <author>
     <name><![CDATA[hoatle]]></name>
@@ -12,6 +12,544 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Dùng "decorator" để đo thời gian thực thi của bất kỳ hàm nào trong Python]]></title>
+    <link href="http://blog.hoatle.info/2013/12/25/dung-decorator-de-do-thoi-gian-thuc-thi-cua-bat-ky-ham-nao-trong-python/"/>
+    <updated>2013-12-25T20:09:00+00:00</updated>
+    <id>http://blog.hoatle.info/2013/12/25/dung-decorator-de-do-thoi-gian-thuc-thi-cua-bat-ky-ham-nao-trong-python</id>
+    <content type="html"><![CDATA[<p><img class="center" src="/images/2013/12/python-logo-master.png" title="Python Logo" ></p>
+
+<p>Python có cú pháp cho &ldquo;decorator&rdquo; rất linh hoạt, nó được sử dụng khá linh hoạt.
+Bài viết này tôi giới thiệu cách sử dụng 1 ví dụ về &ldquo;decorator&rdquo; khá hay để đo
+đếm thời gian thực thi của bất kỳ hàm nào.</p>
+
+<!-- more -->
+
+
+<h2>&ldquo;decorator&rdquo; là gì?</h2>
+
+<p>Bạn đừng nhầm lẫn &ldquo;decorator&rdquo; trong Python với &ldquo;decorator design pattern&rdquo;<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>
+vì nó còn làm được nhiều hơn thế, nó nghiêng về &ldquo;AOP (Aspect Oriented
+Programming)&rdquo;<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup> hơn.</p>
+
+<p>Để tìm hiểu nhiều hơn về &ldquo;decorator&rdquo; trong Python, bạn có thể xem các bài viết
+trong phần đọc thêm bên dưới.</p>
+
+<h2>Yêu Cầu</h2>
+
+<p>Đo thời gian thực thi của hàm sau (theo mili-giây):</p>
+
+<p>```python
+def add(x, y):</p>
+
+<pre><code>return x + y
+</code></pre>
+
+<p>```</p>
+
+<p>Lưu tệp tin là: &ldquo;add.py&rdquo;.</p>
+
+<h2>Đo thời gian đơn giản nhất</h2>
+
+<p>Để đo thời gian thực thi, cách đơn giản nhất là đếm thời gian trước lúc chạy và
+sau khi chạy xong hàm, rồi lấy thời gian sau trừ thời gian trước cho khoảng
+thời gian thực thi.</p>
+
+<p>Có thể viết như sau:</p>
+
+<p>```python
+import time</p>
+
+<p>def add(x, y):</p>
+
+<pre><code>return x + y
+</code></pre>
+
+<h1>test</h1>
+
+<p>start_time = time.time()
+add(3, 4)
+end_time = time.time()
+print &lsquo;total run-time: %f ms&rsquo; % ((end_time &ndash; start_time) * 1000)
+```</p>
+
+<p>Sau khi chạy <code>$ python add.py</code> có kết quả tương tự như sau:</p>
+
+<p><code>bash
+$ python add.py
+total run-time: 0.007153 ms
+</code></p>
+
+<p>Đấy là cách đo đơn giản nhất mà có thể làm được với bất kỳ ngôn ngữ nào, nhưng
+cách đo đếm này không hiệu quả khi cần đo đếm hàng nghìn hàm, code sẽ bị trùng
+lặp nhiều (&ldquo;boiler plate&rdquo;).</p>
+
+<h2>Dùng &ldquo;decorator design pattern&rdquo;</h2>
+
+<p>Trong Python, có thể làm như sau:</p>
+
+<p>```python
+import time</p>
+
+<p>def timer(fn):</p>
+
+<pre><code>def wrapper(*args, **kwargs):
+    start_time = time.time()
+    result = fn(*args, **kwargs)
+    end_time = time.time()
+    print 'total run-time of %r: %f ms' % (fn.__name__, (end_time - start_time) * 1000)
+    return result
+return wrapper
+</code></pre>
+
+<p>def add(x, y):</p>
+
+<pre><code>return x + y
+</code></pre>
+
+<p>add = timer(add)</p>
+
+<p>def sub(x, y):</p>
+
+<pre><code>return x - y
+</code></pre>
+
+<p>sub = timer(sub)</p>
+
+<h1>test</h1>
+
+<p>add(3, 4)
+sub(3, 4)
+```</p>
+
+<p>Kết quả chạy có thể như sau:</p>
+
+<p><code>bash
+$ python add.py
+total run-time of 'add': 0.143051 ms
+total run-time of 'sub': 3.393173 ms
+</code></p>
+
+<p>Đây là cách làm thường thấy trước khi cú pháp &ldquo;decorator&rdquo; được giới thiệu, có
+thể dùng <code>timer</code> để đo đếm các hàm, ví dụ <code>add</code> và <code>sub</code> như ví dụ trên.</p>
+
+<h2>Dùng cú pháp &ldquo;decorator&rdquo;</h2>
+
+<p>Rất đơn giản, thay vì <code>add = timer(add)</code> mà dùng <code>@timer</code>:</p>
+
+<p>```python
+import time</p>
+
+<p>def timer(fn):</p>
+
+<pre><code>def wrapper(*args, **kwargs):
+    start_time = time.time()
+    result = fn(*args, **kwargs)
+    end_time = time.time()
+    print 'total run-time of %r: %f ms' % (fn.__name__, (end_time - start_time) * 1000)
+    return result
+return wrapper
+</code></pre>
+
+<p>@timer
+def add(x, y):</p>
+
+<pre><code>return x + y
+</code></pre>
+
+<p>@timer
+def sub(x, y):</p>
+
+<pre><code>return x - y
+</code></pre>
+
+<h1>test</h1>
+
+<p>add(3, 4)
+sub(3, 4)
+```</p>
+
+<p>Như vậy bằng việc dùng &ldquo;decorator&rdquo;, code Python dễ đọc hơn, lưu ý bạn có thể
+thêm nhiều &ldquo;decorator&rdquo; cho 1 hàm.</p>
+
+<h2>Ứng dụng <code>timer</code></h2>
+
+<p>Đo đếm thời gian liên quan đến &ldquo;performance-tuning&rdquo; và &ldquo;timeout&rdquo; &ndash; giới hạn
+thời gian thực thi của hàm, nếu lâu quá thì thông báo lỗi và phải xử lý. Ví dụ
+chỉ cho hàm <code>add</code> trên được thực thi trong khoảng <code>0.007 ms</code> thì làm như sau:</p>
+
+<p>```python
+import sys
+import time</p>
+
+<p>class TimeoutException(Exception):</p>
+
+<pre><code>pass
+</code></pre>
+
+<p>def timeout(val=sys.maxsize, info=False):</p>
+
+<pre><code>def wrapper(fn):
+    def wrapper_fn(*args, **kwargs):
+        start_time = time.time()
+        result = fn(*args, **kwargs)
+        end_time = time.time()
+        run_time = (end_time - start_time) * 1000 # miliseconds
+        if val &lt; run_time:
+            raise TimeoutException('%r run-time: expected: %f ms, but actual: %f ms' % (fn.__name__, val, run_time))
+        if info:
+            print '%r run-time: %f ms' % (fn.__name__, run_time)
+        return result
+    return wrapper_fn
+return wrapper
+</code></pre>
+
+<p>@timeout(0.007)
+def add(x, y):</p>
+
+<pre><code>return x + y
+</code></pre>
+
+<p>@timeout(info=True)
+def sub(x, y):</p>
+
+<pre><code>return x - y
+</code></pre>
+
+<h1>Test</h1>
+
+<p>add(3, 4)</p>
+
+<p>sub(3, 4)
+```</p>
+
+<p><code>timeout</code> nhận 2 tham số là <code>val</code> &ndash; giá trị &ldquo;timeout&rdquo; và in ra thông tin thời
+gian chạy với tham số <code>info</code>.</p>
+
+<p>Khi thời gian thực thi của <code>add</code> quá 0.007 mili-giây sẽ xảy ra
+<code>TimeoutException</code> tương tự như lần chạy sau:</p>
+
+<p>```bash
+$ python add.py
+Traceback (most recent call last):
+  File &ldquo;test.py&rdquo;, line 35, in <module></p>
+
+<pre><code>add(3, 4)
+</code></pre>
+
+<p>  File &ldquo;test.py&rdquo;, line 17, in wrapper_fn</p>
+
+<pre><code>raise TimeoutException('%r run-time: expected: %f ms, but actual: %f ms' % (fn.__name__, val, run_time))
+</code></pre>
+
+<p><strong>main</strong>.TimeoutException: &lsquo;add&rsquo; run-time: expected: 0.007000 ms, but actual: 0.137091 ms
+```</p>
+
+<h2>Tổng Kết</h2>
+
+<p>Như vậy bạn có thể quản lý và đưa giới hạn thời gian thực thi cho bất kỳ hàm
+nào, điều này khá quan trọng với vấn đề &ldquo;performance&rdquo; cũng như &ldquo;security&rdquo; nhờ
+cách dùng &ldquo;decorator&rdquo; rất linh hoạt trong Python. Đây chỉ là một ứng dụng nho
+nhỏ của &ldquo;decorator&rdquo;, chúc bạn có thể áp dụng &ldquo;decorator&rdquo; trong nhiều bài
+toán thực tế hơn.</p>
+
+<h2>Đọc Thêm</h2>
+
+<ul>
+<li><a href="http://www.artima.com/weblogs/viewpost.jsp?thread=240808">http://www.artima.com/weblogs/viewpost.jsp?thread=240808</a></li>
+<li><a href="http://www.artima.com/weblogs/viewpost.jsp?thread=240845">http://www.artima.com/weblogs/viewpost.jsp?thread=240845</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Python_syntax_and_semantics#Decorators">http://en.wikipedia.org/wiki/Python_syntax_and_semantics#Decorators</a></li>
+</ul>
+
+
+<h2>Hình Ảnh</h2>
+
+<ul>
+<li><a href="http://www.vizteams.com/blog/why-python-as-programming-language-past-present-future">http://www.vizteams.com/blog/why-python-as-programming-language-past-present-future</a></li>
+</ul>
+
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>http://en.wikipedia.org/wiki/Decorator_pattern<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<li id="fn:2">
+<p>http://en.wikipedia.org/wiki/Aspect-oriented_programming<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Dùng "decorator" để đo thời gian thực thi của bất kỳ hàm nào trong Python]]></title>
+    <link href="http://blog.hoatle.info/2013/12/25/dung-decorator-de-do-thoi-gian-thuc-thi-cua-bat-ky-function-trong-python/"/>
+    <updated>2013-12-25T20:09:00+00:00</updated>
+    <id>http://blog.hoatle.info/2013/12/25/dung-decorator-de-do-thoi-gian-thuc-thi-cua-bat-ky-function-trong-python</id>
+    <content type="html"><![CDATA[<p><img class="center" src="/images/2013/12/python-logo-master.png" title="Python Logo" ></p>
+
+<p>Python có cú pháp cho &ldquo;decorator&rdquo; rất linh hoạt, nó được sử dụng khá rộng rãi.
+Bài viết này tôi giới thiệu cách sử dụng &ldquo;decorator&rdquo; cho một ví dụ khá hay:
+dùng &ldquo;decorator&rdquo; để đo đếm thời gian thực thi của bất kỳ hàm nào.</p>
+
+<!-- more -->
+
+
+<h2>&ldquo;decorator&rdquo; là gì?</h2>
+
+<p>Bạn đừng nhầm lẫn &ldquo;decorator&rdquo; trong Python với &ldquo;decorator design pattern&rdquo;<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>
+vì nó còn làm được nhiều hơn thế, nó nghiêng về &ldquo;AOP (Aspect Oriented
+Programming)&rdquo;<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup> hơn.</p>
+
+<p>Để tìm hiểu nhiều hơn về &ldquo;decorator&rdquo; trong Python, bạn có thể xem các bài viết
+trong phần đọc thêm bên dưới.</p>
+
+<h2>Yêu Cầu</h2>
+
+<p>Đo thời gian thực thi của hàm sau (theo mili-giây):</p>
+
+<p>```python
+def add(x, y):</p>
+
+<pre><code>return x + y
+</code></pre>
+
+<p>```</p>
+
+<p>Lưu tệp tin là: &ldquo;add.py&rdquo;.</p>
+
+<h2>Đo Thời Gian Theo Cách Đơn Giản Nhất</h2>
+
+<p>Để đo thời gian thực thi, cách đơn giản nhất là đếm thời gian trước lúc chạy và
+sau khi chạy xong hàm, rồi lấy thời gian sau trừ thời gian trước cho khoảng
+thời gian thực thi.</p>
+
+<p>Có thể viết như sau:</p>
+
+<p>```python
+import time</p>
+
+<p>def add(x, y):</p>
+
+<pre><code>return x + y
+</code></pre>
+
+<h1>test</h1>
+
+<p>start_time = time.time()
+add(3, 4)
+end_time = time.time()
+print &lsquo;total run-time: %f ms&rsquo; % ((end_time &ndash; start_time) * 1000)
+```</p>
+
+<p>Sau khi chạy <code>$ python add.py</code> có kết quả tương tự như sau:</p>
+
+<p><code>bash
+$ python add.py
+total run-time: 0.007153 ms
+</code></p>
+
+<p>Đấy là cách đo đơn giản nhất mà có thể làm được với bất kỳ ngôn ngữ nào, nhưng
+cách đo đếm này không hiệu quả khi cần đo đếm hàng nghìn hàm, code sẽ bị trùng
+lặp nhiều (&ldquo;boiler plate&rdquo;).</p>
+
+<h2>Đo Thời Gian Dùng &ldquo;decorator design pattern&rdquo;</h2>
+
+<p>Trong Python, có thể làm như sau:</p>
+
+<p>```python
+import time</p>
+
+<p>def timer(fn):</p>
+
+<pre><code>def wrapper(*args, **kwargs):
+    start_time = time.time()
+    result = fn(*args, **kwargs)
+    end_time = time.time()
+    print 'total run-time of %r: %f ms' % (fn.__name__, (end_time - start_time) * 1000)
+    return result
+return wrapper
+</code></pre>
+
+<p>def add(x, y):</p>
+
+<pre><code>return x + y
+</code></pre>
+
+<p>add = timer(add)</p>
+
+<p>def sub(x, y):</p>
+
+<pre><code>return x - y
+</code></pre>
+
+<p>sub = timer(sub)</p>
+
+<h1>test</h1>
+
+<p>add(3, 4)
+sub(3, 4)
+```</p>
+
+<p>Kết quả chạy có thể như sau:</p>
+
+<p><code>bash
+$ python add.py
+total run-time of 'add': 0.143051 ms
+total run-time of 'sub': 3.393173 ms
+</code></p>
+
+<p>Đây là cách làm thường thấy trước khi cú pháp &ldquo;decorator&rdquo; được giới thiệu, có
+thể dùng <code>timer</code> để đo đếm các hàm, ví dụ <code>add</code> và <code>sub</code> như ví dụ trên.</p>
+
+<h2>Dùng Cú Pháp Của &ldquo;decorator&rdquo;</h2>
+
+<p>Rất đơn giản, thay vì <code>add = timer(add)</code> mà dùng <code>@timer</code>:</p>
+
+<p>```python
+import time</p>
+
+<p>def timer(fn):</p>
+
+<pre><code>def wrapper(*args, **kwargs):
+    start_time = time.time()
+    result = fn(*args, **kwargs)
+    end_time = time.time()
+    print 'total run-time of %r: %f ms' % (fn.__name__, (end_time - start_time) * 1000)
+    return result
+return wrapper
+</code></pre>
+
+<p>@timer
+def add(x, y):</p>
+
+<pre><code>return x + y
+</code></pre>
+
+<p>@timer
+def sub(x, y):</p>
+
+<pre><code>return x - y
+</code></pre>
+
+<h1>test</h1>
+
+<p>add(3, 4)
+sub(3, 4)
+```</p>
+
+<p>Như vậy bằng việc dùng &ldquo;decorator&rdquo;, code Python dễ đọc hơn, lưu ý bạn có thể
+thêm nhiều &ldquo;decorator&rdquo; cho 1 hàm.</p>
+
+<h2>Ứng Dụng <code>timer</code></h2>
+
+<p>Đo đếm thời gian liên quan đến &ldquo;performance-tuning&rdquo; và &ldquo;timeout&rdquo; &ndash; giới hạn
+thời gian thực thi của hàm, nếu lâu quá thì thông báo lỗi và phải xử lý. Ví dụ
+chỉ cho hàm <code>add</code> trên được thực thi trong khoảng <code>0.007 ms</code> thì làm như sau:</p>
+
+<p>```python
+import sys
+import time</p>
+
+<p>class TimeoutException(Exception):</p>
+
+<pre><code>pass
+</code></pre>
+
+<p>def timeout(val=sys.maxsize, info=False):</p>
+
+<pre><code>def wrapper(fn):
+    def wrapper_fn(*args, **kwargs):
+        start_time = time.time()
+        result = fn(*args, **kwargs)
+        end_time = time.time()
+        run_time = (end_time - start_time) * 1000 # miliseconds
+        if val &lt; run_time:
+            raise TimeoutException('%r run-time: expected: %f ms, but actual: %f ms' % (fn.__name__, val, run_time))
+        if info:
+            print '%r run-time: %f ms' % (fn.__name__, run_time)
+        return result
+    return wrapper_fn
+return wrapper
+</code></pre>
+
+<p>@timeout(0.007)
+def add(x, y):</p>
+
+<pre><code>return x + y
+</code></pre>
+
+<p>@timeout(info=True)
+def sub(x, y):</p>
+
+<pre><code>return x - y
+</code></pre>
+
+<h1>Test</h1>
+
+<p>add(3, 4)</p>
+
+<p>sub(3, 4)
+```</p>
+
+<p><code>timeout</code> nhận 2 tham số là <code>val</code> &ndash; giá trị &ldquo;timeout&rdquo; và in ra thông tin thời
+gian chạy với tham số <code>info</code>.</p>
+
+<p>Khi thời gian thực thi của <code>add</code> quá 0.007 mili-giây sẽ xảy ra
+<code>TimeoutException</code> tương tự như lần chạy sau:</p>
+
+<p>```bash
+$ python add.py
+Traceback (most recent call last):
+  File &ldquo;test.py&rdquo;, line 35, in <module></p>
+
+<pre><code>add(3, 4)
+</code></pre>
+
+<p>  File &ldquo;test.py&rdquo;, line 17, in wrapper_fn</p>
+
+<pre><code>raise TimeoutException('%r run-time: expected: %f ms, but actual: %f ms' % (fn.__name__, val, run_time))
+</code></pre>
+
+<p><strong>main</strong>.TimeoutException: &lsquo;add&rsquo; run-time: expected: 0.007000 ms, but actual: 0.137091 ms
+```</p>
+
+<h2>Tổng Kết</h2>
+
+<p>Như vậy bạn có thể quản lý và đưa giới hạn thời gian thực thi cho bất kỳ hàm
+nào, điều này khá quan trọng với vấn đề &ldquo;performance&rdquo; cũng như &ldquo;security&rdquo; nhờ
+cách dùng &ldquo;decorator&rdquo; rất linh hoạt trong Python. Đây chỉ là một ứng dụng nho
+nhỏ của &ldquo;decorator&rdquo;, chúc bạn có thể áp dụng &ldquo;decorator&rdquo; trong nhiều bài
+toán thực tế hơn.</p>
+
+<h2>Đọc Thêm</h2>
+
+<ul>
+<li><a href="http://www.artima.com/weblogs/viewpost.jsp?thread=240808">http://www.artima.com/weblogs/viewpost.jsp?thread=240808</a></li>
+<li><a href="http://www.artima.com/weblogs/viewpost.jsp?thread=240845">http://www.artima.com/weblogs/viewpost.jsp?thread=240845</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Python_syntax_and_semantics#Decorators">http://en.wikipedia.org/wiki/Python_syntax_and_semantics#Decorators</a></li>
+</ul>
+
+
+<h2>Hình Ảnh</h2>
+
+<ul>
+<li><a href="http://www.vizteams.com/blog/why-python-as-programming-language-past-present-future">http://www.vizteams.com/blog/why-python-as-programming-language-past-present-future</a></li>
+</ul>
+
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>http://en.wikipedia.org/wiki/Decorator_pattern<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<li id="fn:2">
+<p>http://en.wikipedia.org/wiki/Aspect-oriented_programming<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Tại sao cần kiểm thử phần mềm?]]></title>
@@ -425,114 +963,6 @@ vựng khác nhau nên có thể từ của năm cũng khác nhau, dưới đây
 <p>http://www.oxforddictionaries.com/words/about-the-oxford-english-corpus<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
 </ol>
 </div>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Tổng thống Obama kêu gọi người dân Mỹ học lập trình]]></title>
-    <link href="http://blog.hoatle.info/2013/12/09/tong-thong-obama-keu-goi-nguoi-dan-my-hoc-lap-trinh/"/>
-    <updated>2013-12-09T20:49:00+00:00</updated>
-    <id>http://blog.hoatle.info/2013/12/09/tong-thong-obama-keu-goi-nguoi-dan-my-hoc-lap-trinh</id>
-    <content type="html"><![CDATA[<p><div class="embed-video-container"><iframe src="http://www.youtube.com/embed/6XvmhE1J9PY "></iframe></div></p>
-
-<p>Dịch lời:</p>
-
-<!-- more -->
-
-
-<p><blockquote><p></p></p><p><p>Chào các bạn,</p></p><p><p>Tuần này tôi rất vinh dự được tham gia cùng các sinh viên, giáo viên, doanh nghiệp và tổ chức phi lợi nhuận khởi động chương trình hành động lớn mới để hỗ trợ giáo dục khoa học máy tính ở các trường học Mỹ.</p></p><p><p>Học những kỹ năng này không những quan trọng cho tương lai của các bạn mà còn cho cả tương lai đất nước chúng ta. Nếu chúng ta muốn nước Mỹ tiếp tục dẫn đầu sự phát triển, chúng ta cần những người Mỹ trẻ, như các bạn, nắm vững những công cụ và công nghệ sẽ thay đổi mọi thứ chúng ta làm. Đó là lý do tôi yêu cầu các bạn cùng tham gia.</p></p><p><p>Đừng chỉ mua một trò chơi video mới, hãy làm một cái.</p></p><p><p>Đừng chỉ tải về ứng dụng mới nhất, hãy giúp thiết kế nó.</p></p><p><p>Đừng chỉ chơi trên điện thoại, hãy lập trình nó.</p></p><p><p>Không ai sinh ra đã là nhà khoa học máy tính nhưng với một chút chăm chỉ cộng với một chút kiến thức toán và khoa học thì bất kỳ ai cũng có thể trở thành người như vậy.</p></p><p><p>Tuần này là cơ hội để bạn hãy thử cho mình cơ hội lập trình. Và đừng để bất kỳ ai nói với bạn rằng &ldquo;bạn không thể&rdquo;.</p></p><p><p>Dù bạn có là thanh niên nam hay nữ, dù bạn sống ở thành phố hay nông thôn thì máy tính sẽ trở thành một phần quan trọng rất lớn cho tương lai của các bạn. Và nếu bạn sẵn sàng làm việc và học tập chăm chỉ, tương lai đó được định hình thế nào nằm cả trong tay các bạn.</p></p><p><p>Cảm ơn các bạn.</p></p><p><p></p></blockquote></p>
-
-<p>Xem thêm video cổ động:</p>
-
-<p><div class="embed-video-container"><iframe src="http://www.youtube.com/embed/FC5FbmsH4fw "></iframe></div></p>
-
-<p>Còn tương lai của nước Việt?</p>
-
-<p>1 &ndash; Học tiếng Anh</p>
-
-<p>2 &ndash; Học lập trình</p>
-
-<h2>Nên Xem Thêm</h2>
-
-<ul>
-<li><a href="http://code.org/">http://code.org/</a></li>
-<li><a href="https://www.youtube.com/user/CodeOrg">https://www.youtube.com/user/CodeOrg</a></li>
-<li><a href="https://news.ycombinator.com/item?id=6875842">https://news.ycombinator.com/item?id=6875842</a></li>
-</ul>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Điều gì làm nên hệ thống IT tốt?]]></title>
-    <link href="http://blog.hoatle.info/2013/12/08/dieu-gi-lam-nen-he-thong-it-tot/"/>
-    <updated>2013-12-08T23:32:00+00:00</updated>
-    <id>http://blog.hoatle.info/2013/12/08/dieu-gi-lam-nen-he-thong-it-tot</id>
-    <content type="html"><![CDATA[<p><img class="center" src="/images/2013/12/data-protection.jpg" title="Dữ liệu và bảo vệ dữ liệu" ></p>
-
-<p>Hệ thống IT (Information Technology) là gì? Hệ thống IT tốt cần đảm bảo điều gì?</p>
-
-<!-- more -->
-
-
-<h2>Hệ Thống IT Là Gì?</h2>
-
-<p>Nói ngắn gọn, hệ thống IT là hệ thống lưu trữ và xử lý dữ liệu.</p>
-
-<h2>Dữ Liệu (Data)</h2>
-
-<p>Chính vì vậy, dữ liệu là quan trọng nhất. Hệ thống IT tốt cần phải bảo vệ dữ liệu đó.</p>
-
-<h2>Bảo Vệ Dữ Liệu (Data Protection)</h2>
-
-<p>Cần:</p>
-
-<ul>
-<li><p>an toàn thông tin (security)</p></li>
-<li><p>sao chép dự phòng (backup) và phục hồi (recovery)</p></li>
-</ul>
-
-
-<h2>Tóm Lại</h2>
-
-<p>Một hệ thống IT tốt cần lưu trữ, xử lý dữ liệu và phải đảm bảo an toàn cho dữ liệu đó.</p>
-
-<p>Hệ thống IT tốt = dữ liệu + an toàn thông tin + sao chép dự phòng + phục hồi</p>
-
-<p>(A robust IT system = data + security + backup + recovery)</p>
-
-<h2>Áp Dụng Cho Teracy</h2>
-
-<p>Ngay từ những ngày đầu triển khai hệ thống IT, Teracy lấy mục tiêu phát triển hệ thống IT tốt làm
-một trong những tôn chỉ quan trọng sống còn cho các dịch vụ của mình.</p>
-
-<p>Chi tiết: <a href="http://dev.teracy.org/docs/intro.html#about-teracy">http://dev.teracy.org/docs/intro.html#about-teracy</a></p>
-
-<p>Tuy nhiên để triển khai hệ thống IT tốt không dễ và một ngày hai ngày là xong. Tuy đã có sự chuẩn bị
-ngay từ ban đầu nhưng một sự cố đáng tiếc đã xảy ra quá sớm khiến toàn bộ dữ liệu trên một VPS của
-Teracy đã biến mất hoàn toàn chỉ sau vài giờ (do sự bất cẩn khi chọn nhà cung cấp VPS không tốt và
-DEVOPS không kịp trở tay sau khi có thông báo dừng dịch vụ đột ngột của nhà cung cấp). Rất may là dữ
-liệu không có nhiều và đã có backup một phần nên sau 2 ngày toàn bộ dữ liệu đã được phục hồi. Những
-bài học đắt giá như vậy cần phải có để Teracy biết tầm quan trọng của dữ liệu và bảo vệ dữ liệu.</p>
-
-<h2>Nên Xem Thêm</h2>
-
-<ul>
-<li><a href="http://en.wikipedia.org/wiki/Backup">http://en.wikipedia.org/wiki/Backup</a></li>
-<li><a href="http://www.dpbestflow.org/links/39">http://www.dpbestflow.org/links/39</a></li>
-<li><a href="http://www.quora.com/What-tape-technology-does-Google-use-for-backups">http://www.quora.com/What-tape-technology-does-Google-use-for-backups</a></li>
-<li><a href="http://www.quora.com/Data/How-do-top-companies-like-Google-Microsoft-Facebook-backup-their-data-How-many-layers-of-backups-do-they-have">http://www.quora.com/Data/How-do-top-companies-like-Google-Microsoft-Facebook-backup-their-data-How-many-layers-of-backups-do-they-have</a></li>
-<li><a href="http://www.quora.com/Facebook-1/Does-Facebook-keep-a-redundant-copy-of-their-users-data-on-backup-tapes">http://www.quora.com/Facebook-1/Does-Facebook-keep-a-redundant-copy-of-their-users-data-on-backup-tapes</a></li>
-<li><a href="http://www.quora.com/Mark-Zuckerberg-1/Does-Mark-Zuckerberg-or-Facebook-employees-have-a-skeleton-key-granting-him-access-to-every-members-Facebook-profile-page-and-information">http://www.quora.com/Mark-Zuckerberg-1/Does-Mark-Zuckerberg-or-Facebook-employees-have-a-skeleton-key-granting-him-access-to-every-members-Facebook-profile-page-and-information</a></li>
-</ul>
-
-
-<h2>Ảnh Minh Hoạ</h2>
-
-<ul>
-<li><a href="http://signalhilldigital.com/wp-content/uploads/2012/11/privacy-e1354237310123.jpg">http://signalhilldigital.com/wp-content/uploads/2012/11/privacy-e1354237310123.jpg</a></li>
-</ul>
 
 ]]></content>
   </entry>
