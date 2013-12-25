@@ -4,7 +4,7 @@
   <title><![CDATA[blog.hoatle.info]]></title>
   <link href="http://blog.hoatle.info/atom.xml" rel="self"/>
   <link href="http://blog.hoatle.info/"/>
-  <updated>2013-12-25T22:16:48+00:00</updated>
+  <updated>2013-12-25T23:48:05+00:00</updated>
   <id>http://blog.hoatle.info/</id>
   <author>
     <name><![CDATA[hoatle]]></name>
@@ -225,359 +225,6 @@ thể dùng <code>timer</code> để đo đếm các hàm, ví dụ <code>add</c
 thêm nhiều &ldquo;decorator&rdquo; cho 1 hàm.</p>
 
 <h2>Ứng dụng <code>timer</code></h2>
-
-<p>Đo đếm thời gian liên quan đến &ldquo;performance-tuning&rdquo; và &ldquo;timeout&rdquo; &ndash; giới hạn
-thời gian thực thi của hàm, nếu lâu quá thì thông báo lỗi và phải xử lý. Ví dụ
-chỉ cho hàm <code>add</code> trên được thực thi trong khoảng <code>0.007 ms</code> thì làm như sau:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-<span class='line-number'>29</span>
-<span class='line-number'>30</span>
-<span class='line-number'>31</span>
-<span class='line-number'>32</span>
-<span class='line-number'>33</span>
-<span class='line-number'>34</span>
-<span class='line-number'>35</span>
-<span class='line-number'>36</span>
-<span class='line-number'>37</span>
-</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="kn">import</span> <span class="nn">sys</span>
-</span><span class='line'><span class="kn">import</span> <span class="nn">time</span>
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'><span class="k">class</span> <span class="nc">TimeoutException</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
-</span><span class='line'>    <span class="k">pass</span>
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'><span class="k">def</span> <span class="nf">timeout</span><span class="p">(</span><span class="n">val</span><span class="o">=</span><span class="n">sys</span><span class="o">.</span><span class="n">maxsize</span><span class="p">,</span> <span class="n">info</span><span class="o">=</span><span class="bp">False</span><span class="p">):</span>
-</span><span class='line'>    <span class="k">def</span> <span class="nf">wrapper</span><span class="p">(</span><span class="n">fn</span><span class="p">):</span>
-</span><span class='line'>        <span class="k">def</span> <span class="nf">wrapper_fn</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-</span><span class='line'>            <span class="n">start_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
-</span><span class='line'>            <span class="n">result</span> <span class="o">=</span> <span class="n">fn</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-</span><span class='line'>            <span class="n">end_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
-</span><span class='line'>            <span class="n">run_time</span> <span class="o">=</span> <span class="p">(</span><span class="n">end_time</span> <span class="o">-</span> <span class="n">start_time</span><span class="p">)</span> <span class="o">*</span> <span class="mi">1000</span> <span class="c"># miliseconds</span>
-</span><span class='line'>            <span class="k">if</span> <span class="n">val</span> <span class="o">&lt;</span> <span class="n">run_time</span><span class="p">:</span>
-</span><span class='line'>                <span class="k">raise</span> <span class="n">TimeoutException</span><span class="p">(</span><span class="s">&#39;</span><span class="si">%r</span><span class="s"> run-time: expected: </span><span class="si">%f</span><span class="s"> ms, but actual: </span><span class="si">%f</span><span class="s"> ms&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">fn</span><span class="o">.</span><span class="n">__name__</span><span class="p">,</span> <span class="n">val</span><span class="p">,</span> <span class="n">run_time</span><span class="p">))</span>
-</span><span class='line'>            <span class="k">if</span> <span class="n">info</span><span class="p">:</span>
-</span><span class='line'>                <span class="k">print</span> <span class="s">&#39;</span><span class="si">%r</span><span class="s"> run-time: </span><span class="si">%f</span><span class="s"> ms&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">fn</span><span class="o">.</span><span class="n">__name__</span><span class="p">,</span> <span class="n">run_time</span><span class="p">)</span>
-</span><span class='line'>            <span class="k">return</span> <span class="n">result</span>
-</span><span class='line'>        <span class="k">return</span> <span class="n">wrapper_fn</span>
-</span><span class='line'>    <span class="k">return</span> <span class="n">wrapper</span>
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'><span class="nd">@timeout</span><span class="p">(</span><span class="mf">0.007</span><span class="p">)</span>
-</span><span class='line'><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
-</span><span class='line'>    <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
-</span><span class='line'>
-</span><span class='line'><span class="nd">@timeout</span><span class="p">(</span><span class="n">info</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
-</span><span class='line'><span class="k">def</span> <span class="nf">sub</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
-</span><span class='line'>    <span class="k">return</span> <span class="n">x</span> <span class="o">-</span> <span class="n">y</span>
-</span><span class='line'>
-</span><span class='line'><span class="c"># Test</span>
-</span><span class='line'>
-</span><span class='line'><span class="n">add</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
-</span><span class='line'>
-</span><span class='line'><span class="n">sub</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><code>timeout</code> nhận 2 tham số là <code>val</code> &ndash; giá trị &ldquo;timeout&rdquo; và in ra thông tin thời
-gian chạy với tham số <code>info</code>.</p>
-
-<p>Khi thời gian thực thi của <code>add</code> quá 0.007 mili-giây sẽ xảy ra
-<code>TimeoutException</code> tương tự như lần chạy sau:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>python add.py
-</span><span class='line'>Traceback <span class="o">(</span>most recent call last<span class="o">)</span>:
-</span><span class='line'>  File <span class="s2">&quot;test.py&quot;</span>, line 35, in &lt;module&gt;
-</span><span class='line'>    add<span class="o">(</span>3, 4<span class="o">)</span>
-</span><span class='line'>  File <span class="s2">&quot;test.py&quot;</span>, line 17, in wrapper_fn
-</span><span class='line'>    raise TimeoutException<span class="o">(</span><span class="s1">&#39;%r run-time: expected: %f ms, but actual: %f ms&#39;</span> % <span class="o">(</span>fn.__name__, val, run_time<span class="o">))</span>
-</span><span class='line'>__main__.TimeoutException: <span class="s1">&#39;add&#39;</span> run-time: expected: 0.007000 ms, but actual: 0.137091 ms
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h2>Tổng Kết</h2>
-
-<p>Như vậy bạn có thể quản lý và đưa giới hạn thời gian thực thi cho bất kỳ hàm
-nào, điều này khá quan trọng với vấn đề &ldquo;performance&rdquo; cũng như &ldquo;security&rdquo; nhờ
-cách dùng &ldquo;decorator&rdquo; rất linh hoạt trong Python. Đây chỉ là một ứng dụng nho
-nhỏ của &ldquo;decorator&rdquo;, chúc bạn có thể áp dụng &ldquo;decorator&rdquo; trong nhiều bài
-toán thực tế hơn.</p>
-
-<h2>Đọc Thêm</h2>
-
-<ul>
-<li><a href="http://www.artima.com/weblogs/viewpost.jsp?thread=240808">http://www.artima.com/weblogs/viewpost.jsp?thread=240808</a></li>
-<li><a href="http://www.artima.com/weblogs/viewpost.jsp?thread=240845">http://www.artima.com/weblogs/viewpost.jsp?thread=240845</a></li>
-<li><a href="http://en.wikipedia.org/wiki/Python_syntax_and_semantics#Decorators">http://en.wikipedia.org/wiki/Python_syntax_and_semantics#Decorators</a></li>
-</ul>
-
-
-<h2>Hình Ảnh</h2>
-
-<ul>
-<li><a href="http://www.vizteams.com/blog/why-python-as-programming-language-past-present-future">http://www.vizteams.com/blog/why-python-as-programming-language-past-present-future</a></li>
-</ul>
-
-<div class="footnotes">
-<hr/>
-<ol>
-<li id="fn:1">
-<p>http://en.wikipedia.org/wiki/Decorator_pattern<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
-<li id="fn:2">
-<p>http://en.wikipedia.org/wiki/Aspect-oriented_programming<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
-</ol>
-</div>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Dùng "decorator" để đo thời gian thực thi của bất kỳ hàm nào trong Python]]></title>
-    <link href="http://blog.hoatle.info/2013/12/25/dung-decorator-de-do-thoi-gian-thuc-thi-cua-bat-ky-function-trong-python/"/>
-    <updated>2013-12-25T20:09:00+00:00</updated>
-    <id>http://blog.hoatle.info/2013/12/25/dung-decorator-de-do-thoi-gian-thuc-thi-cua-bat-ky-function-trong-python</id>
-    <content type="html"><![CDATA[<p><img class="center" src="http://blog.hoatle.info/images/2013/12/python-logo-master.png" title="Python Logo" ></p>
-
-<p>Python có cú pháp cho &ldquo;decorator&rdquo; rất linh hoạt, nó được sử dụng khá rộng rãi.
-Bài viết này tôi giới thiệu cách sử dụng &ldquo;decorator&rdquo; cho một ví dụ khá hay:
-dùng &ldquo;decorator&rdquo; để đo đếm thời gian thực thi của bất kỳ hàm nào.</p>
-
-<!-- more -->
-
-
-<h2>&ldquo;decorator&rdquo; là gì?</h2>
-
-<p>Bạn đừng nhầm lẫn &ldquo;decorator&rdquo; trong Python với &ldquo;decorator design pattern&rdquo;<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>
-vì nó còn làm được nhiều hơn thế, nó nghiêng về &ldquo;AOP (Aspect Oriented
-Programming)&rdquo;<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup> hơn.</p>
-
-<p>Để tìm hiểu nhiều hơn về &ldquo;decorator&rdquo; trong Python, bạn có thể xem các bài viết
-trong phần đọc thêm bên dưới.</p>
-
-<h2>Yêu Cầu</h2>
-
-<p>Đo thời gian thực thi của hàm sau (theo mili-giây):</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
-</span><span class='line'>    <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Lưu tệp tin là: &ldquo;add.py&rdquo;.</p>
-
-<h2>Đo Thời Gian Theo Cách Đơn Giản Nhất</h2>
-
-<p>Để đo thời gian thực thi, cách đơn giản nhất là đếm thời gian trước lúc chạy và
-sau khi chạy xong hàm, rồi lấy thời gian sau trừ thời gian trước cho khoảng
-thời gian thực thi.</p>
-
-<p>Có thể viết như sau:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="kn">import</span> <span class="nn">time</span>
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
-</span><span class='line'>    <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
-</span><span class='line'>
-</span><span class='line'><span class="c"># test</span>
-</span><span class='line'><span class="n">start_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
-</span><span class='line'><span class="n">add</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
-</span><span class='line'><span class="n">end_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
-</span><span class='line'><span class="k">print</span> <span class="s">&#39;total run-time: </span><span class="si">%f</span><span class="s"> ms&#39;</span> <span class="o">%</span> <span class="p">((</span><span class="n">end_time</span> <span class="o">-</span> <span class="n">start_time</span><span class="p">)</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">)</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Sau khi chạy <code>$ python add.py</code> có kết quả tương tự như sau:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>python add.py
-</span><span class='line'>total run-time: 0.007153 ms
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Đấy là cách đo đơn giản nhất mà có thể làm được với bất kỳ ngôn ngữ nào, nhưng
-cách đo đếm này không hiệu quả khi cần đo đếm hàng nghìn hàm, code sẽ bị trùng
-lặp nhiều (&ldquo;boiler plate&rdquo;).</p>
-
-<h2>Đo Thời Gian Dùng &ldquo;decorator design pattern&rdquo;</h2>
-
-<p>Trong Python, có thể làm như sau:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="kn">import</span> <span class="nn">time</span>
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'><span class="k">def</span> <span class="nf">timer</span><span class="p">(</span><span class="n">fn</span><span class="p">):</span>
-</span><span class='line'>    <span class="k">def</span> <span class="nf">wrapper</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-</span><span class='line'>        <span class="n">start_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
-</span><span class='line'>        <span class="n">result</span> <span class="o">=</span> <span class="n">fn</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-</span><span class='line'>        <span class="n">end_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
-</span><span class='line'>        <span class="k">print</span> <span class="s">&#39;total run-time of </span><span class="si">%r</span><span class="s">: </span><span class="si">%f</span><span class="s"> ms&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">fn</span><span class="o">.</span><span class="n">__name__</span><span class="p">,</span> <span class="p">(</span><span class="n">end_time</span> <span class="o">-</span> <span class="n">start_time</span><span class="p">)</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">)</span>
-</span><span class='line'>        <span class="k">return</span> <span class="n">result</span>
-</span><span class='line'>    <span class="k">return</span> <span class="n">wrapper</span>
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
-</span><span class='line'>    <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
-</span><span class='line'>
-</span><span class='line'><span class="n">add</span> <span class="o">=</span> <span class="n">timer</span><span class="p">(</span><span class="n">add</span><span class="p">)</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">def</span> <span class="nf">sub</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
-</span><span class='line'>    <span class="k">return</span> <span class="n">x</span> <span class="o">-</span> <span class="n">y</span>
-</span><span class='line'>
-</span><span class='line'><span class="n">sub</span> <span class="o">=</span> <span class="n">timer</span><span class="p">(</span><span class="n">sub</span><span class="p">)</span>
-</span><span class='line'>
-</span><span class='line'><span class="c"># test</span>
-</span><span class='line'><span class="n">add</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
-</span><span class='line'><span class="n">sub</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Kết quả chạy có thể như sau:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>python add.py
-</span><span class='line'>total run-time of <span class="s1">&#39;add&#39;</span>: 0.143051 ms
-</span><span class='line'>total run-time of <span class="s1">&#39;sub&#39;</span>: 3.393173 ms
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Đây là cách làm thường thấy trước khi cú pháp &ldquo;decorator&rdquo; được giới thiệu, có
-thể dùng <code>timer</code> để đo đếm các hàm, ví dụ <code>add</code> và <code>sub</code> như ví dụ trên.</p>
-
-<h2>Dùng Cú Pháp Của &ldquo;decorator&rdquo;</h2>
-
-<p>Rất đơn giản, thay vì <code>add = timer(add)</code> mà dùng <code>@timer</code>:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="kn">import</span> <span class="nn">time</span>
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'><span class="k">def</span> <span class="nf">timer</span><span class="p">(</span><span class="n">fn</span><span class="p">):</span>
-</span><span class='line'>    <span class="k">def</span> <span class="nf">wrapper</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-</span><span class='line'>        <span class="n">start_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
-</span><span class='line'>        <span class="n">result</span> <span class="o">=</span> <span class="n">fn</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-</span><span class='line'>        <span class="n">end_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
-</span><span class='line'>        <span class="k">print</span> <span class="s">&#39;total run-time of </span><span class="si">%r</span><span class="s">: </span><span class="si">%f</span><span class="s"> ms&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">fn</span><span class="o">.</span><span class="n">__name__</span><span class="p">,</span> <span class="p">(</span><span class="n">end_time</span> <span class="o">-</span> <span class="n">start_time</span><span class="p">)</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">)</span>
-</span><span class='line'>        <span class="k">return</span> <span class="n">result</span>
-</span><span class='line'>    <span class="k">return</span> <span class="n">wrapper</span>
-</span><span class='line'>
-</span><span class='line'><span class="nd">@timer</span>
-</span><span class='line'><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
-</span><span class='line'>    <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
-</span><span class='line'>
-</span><span class='line'><span class="nd">@timer</span>
-</span><span class='line'><span class="k">def</span> <span class="nf">sub</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
-</span><span class='line'>    <span class="k">return</span> <span class="n">x</span> <span class="o">-</span> <span class="n">y</span>
-</span><span class='line'>
-</span><span class='line'><span class="c"># test</span>
-</span><span class='line'><span class="n">add</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
-</span><span class='line'><span class="n">sub</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Như vậy bằng việc dùng &ldquo;decorator&rdquo;, code Python dễ đọc hơn, lưu ý bạn có thể
-thêm nhiều &ldquo;decorator&rdquo; cho 1 hàm.</p>
-
-<h2>Ứng Dụng <code>timer</code></h2>
 
 <p>Đo đếm thời gian liên quan đến &ldquo;performance-tuning&rdquo; và &ldquo;timeout&rdquo; &ndash; giới hạn
 thời gian thực thi của hàm, nếu lâu quá thì thông báo lỗi và phải xử lý. Ví dụ
@@ -3589,6 +3236,93 @@ Eclipse :).</p>
 <p>Click on this link and let&rsquo;s create great apps: <a href="http://www.eisbahn.jp/trac/osde/">http://www.eisbahn.jp/trac/osde/</a></p>
 
 <p>Everything there is good enough to code, much more easier to have your app in development stage :)</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[cuộc thi thiết kế logo cho Barcamp Hà Nội 2009]]></title>
+    <link href="http://blog.hoatle.info/2009/02/21/cuoc-thi-thiet-ke-logo-cho-barcamp-ha-noi-2009/"/>
+    <updated>2009-02-21T15:14:00+00:00</updated>
+    <id>http://blog.hoatle.info/2009/02/21/cuoc-thi-thiet-ke-logo-cho-barcamp-ha-noi-2009</id>
+    <content type="html"><![CDATA[<p><img class="center" src="http://blog.hoatle.info/images/barcamphanoismall2.png" title="Barcamp Hanoi 1 Logo" ></p>
+
+<p>Logo hiện tại các bạn đang thấy ở phần đầu trang này là logo cũ của Barcamp Hanoi lần 1. Một vài
+tháng trước, sau khi đặt logo này trên trang chủ, một số bạn đã góp ý nên thay logo cho Barcamp
+Hanoi lần 2. Quan sát các Barcamp được tổ chức ở nơi khác, logo cũng được thiết kế mới cho mỗi sự
+kiện hàng năm. Vì vậy những người chịu trách nhiệm tổ chức Barcamp Hanoi 2009 quyết định tổ chức một
+cuộc thi thiết kế logo nhỏ. Logo thắng cuộc sẽ được sử dụng để in trên các băng rôn, T-shirt, trên
+các tài liệu chính thức và sử dụng trên trang chủ. Các bạn có thể tìm hiểu thêm chi tiết về cuộc thi
+ngay dưới đây:</p>
+
+<!-- more -->
+
+
+<h2>Cuộc thi thiết kế logo Barcamp Hà Nội 2009</h2>
+
+<p>Nhằm mục đích giúp Barcamp Hanoi 2009 có một logo độc đáo và ý nghĩa.</p>
+
+<p><strong>Phần thưởng cho người thắng cuộc</strong></p>
+
+<ul>
+<li><p>Logo thắng cuộc và tác giả sẽ được thông báo rộng rãi để cộng đồng biết đến.</p></li>
+<li><p>Một T-shirt miễn phí có in logo thắng cuộc.</p></li>
+</ul>
+
+
+<p><strong>Hướng dẫn</strong></p>
+
+<p>Logo nên có những đặc điểm sau:</p>
+
+<ul>
+<li><p>Thể hiện được tinh thần của Barcamp (Các bạn có thể bắt đầu bằng cách sử dụng file chuẩn logo
+Barcamp ở đây)</p></li>
+<li><p>Độc đáo, dễ nhận biết, có nét đặc trưng (Đây là logo của Barcamp Hanoi chứ không phải một Barcamp
+chung chung)</p></li>
+<li><p>Giữ được thẩm mĩ khi sử dụng dưới các hình thức khác nhau: trên web, băng rôn, T-shirt,…</p></li>
+</ul>
+
+
+<p><strong>Tham khảo:</strong></p>
+
+<ul>
+<li><p>File chuẩn Logo Barcamp <a href="http://barcamp.org/SpreadBarCamp">http://barcamp.org/SpreadBarCamp</a></p></li>
+<li><p>Các mẫu logo ví dụ <a href="http://barcamp.org/LogoGallery">http://barcamp.org/LogoGallery</a></p></li>
+<li><p>Barcamp Saigon 2008 Logo <a href="http://www.barcampsaigon.org/dokuwiki/doku.php?id=2008_org_logo">http://www.barcampsaigon.org/dokuwiki/doku.php?id=2008_org_logo</a></p></li>
+<li><p>Barcamp Logos trên Google Image search <a href="http://images.google.com/images?q=Barcamp%20logo&amp;oe=utf-8&amp;rls=com.ubuntu:en-US:unofficial&amp;client=firefox-a&amp;um=1&amp;ie=UTF-8&amp;sa=N&amp;hl=en&amp;tab=wi">http://images.google.com/images?q=Barcamp%20logo&amp;oe=utf-8&amp;rls=com.ubuntu:en-US:unofficial&amp;client=firefox-a&amp;um=1&amp;ie=UTF-8&amp;sa=N&amp;hl=en&amp;tab=wi</a></p></li>
+</ul>
+
+
+<p><strong>Tham dự cuộc thi thế nào?</strong></p>
+
+<ul>
+<li><p>Đầu tiên hãy thiết kế một vài mẫu logo của riêng bạn. Bạn có thể đọc phần hướng dẫn ở trên để biết
+thêm chi tiết.</p></li>
+<li><p>Tải tác phẩm của bạn lên Flickr group <code>Barcamp Hanoi 2009 Logo Design Contest</code>.</p></li>
+<li><p>Sau một tuần, các logo sẽ được đặt lên trang chủ của Barcamp Hanoi để bầu chọn công khai. Chính
+các bạn quyết định logo nào sẽ được sử dụng cho Barcamp Hanoi 2009!</p></li>
+<li><p>Logo thắng cuộc sẽ được sử dụng trên băng rôn, T-shirt, các tài liệu và trên web để quảng bá cho
+Barcamp Hanoi 2009</p></li>
+<li><p>Nếu bạn có bất cứ thắc mắc gì, có thể comment ngay vào bài viết này.</p></li>
+</ul>
+
+
+<p><strong>Các nguyên tắc gửi tác phẩm</strong></p>
+
+<ul>
+<li><p>Bạn có thể gửi nhiều hơn một mẫu thiết kế</p></li>
+<li><p>Mẫu tải lên dưới định dạng JPG/GIF/PNG tuy nhiên bạn vẫn phải chuẩn bị phiên bản độ phân giải
+cao/dạng vector để phục vụ công tác in ấn nếu như bạn thắng cuộc.</p></li>
+<li><p>Khi gửi tác phẩm lên tức là bạn sẵn sàng bỏ quyền tác giả của mình với tác phẩm và đóng góp bản
+thiết kế của mình cho cộng đồng.</p></li>
+<li><p>Đánh dấu logo của bạn với cụm từ  “BCHN 2009 LContest” để những người chịu trách nhiệm tổ chức có
+thể biết đến tác phẩm của bạn nhanh hơn.</p></li>
+<li><p>Tham gia vào Flickr group Barcamp Hanoi 2009 Logo Design Contest và gửi tác phẩm của mình lên.</p></li>
+<li><p>Hãy đảm bảo email đăng ký ở Flickr của bạn là email thường dùng. Điều này giúp việc liên lạc với
+bạn thuận tiện hơn.</p></li>
+<li><p>Đừng quên, Hạn cuối gửi logo dự thi là <strong>Thứ 7 28 tháng 2 11 giờ 59 phút tối (GMT+7)</strong>. Bạn có
+<strong>một tuần</strong> để chuẩn bị, thiết kế và gửi dự thi. <strong>Hãy bắt đầu ngay bây giờ!</strong></p></li>
+</ul>
+
 ]]></content>
   </entry>
   
