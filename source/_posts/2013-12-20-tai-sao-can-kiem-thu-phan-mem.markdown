@@ -95,8 +95,8 @@ Kiểm thử có 4 cấp độ ("testing level") như sau:
 
 Càng ở cấp độ sau thì chi phí kiểm thử càng tốn kém hơn. Tuy nhiên, tự động hoá kiểm thử cho các cấp
 độ này hoàn toàn làm được, và thực sự là tôi đang làm rồi. Càng tự động hoá được nhiều, thì về lâu
-dài bạn sẽ tiết kiệm được rất nhiều chi phí. Chính vì thế mà "automation" là một trong những quan
-điểm phát triển của Teracy[^2] - startup chúng tôi đang dành tâm huyết gây dựng.
+dài bạn sẽ tiết kiệm được rất nhiều chi phí. Chính vì thế mà "automation" là một trong những triết
+lý phát triển của Teracy[^2] - startup chúng tôi đang dành tâm huyết gây dựng.
 
 
 Hôm trước bạn của tôi có hỏi trên Facebook[^3]:
