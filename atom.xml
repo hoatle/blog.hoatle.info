@@ -4,7 +4,7 @@
   <title><![CDATA[blog.hoatle.info]]></title>
   <link href="http://blog.hoatle.info/atom.xml" rel="self"/>
   <link href="http://blog.hoatle.info/"/>
-  <updated>2013-12-25T23:56:35+00:00</updated>
+  <updated>2013-12-26T00:03:48+00:00</updated>
   <id>http://blog.hoatle.info/</id>
   <author>
     <name><![CDATA[hoatle]]></name>
@@ -322,9 +322,9 @@ gian chạy với tham số <code>info</code>.</p>
 <span class='line-number'>7</span>
 </pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>python add.py
 </span><span class='line'>Traceback <span class="o">(</span>most recent call last<span class="o">)</span>:
-</span><span class='line'>  File <span class="s2">&quot;test.py&quot;</span>, line 35, in &lt;module&gt;
+</span><span class='line'>  File <span class="s2">&quot;add.py&quot;</span>, line 35, in &lt;module&gt;
 </span><span class='line'>    add<span class="o">(</span>3, 4<span class="o">)</span>
-</span><span class='line'>  File <span class="s2">&quot;test.py&quot;</span>, line 17, in wrapper_fn
+</span><span class='line'>  File <span class="s2">&quot;add.py&quot;</span>, line 17, in wrapper_fn
 </span><span class='line'>    raise TimeoutException<span class="o">(</span><span class="s1">&#39;%r run-time: expected: %f ms, but actual: %f ms&#39;</span> % <span class="o">(</span>fn.__name__, val, run_time<span class="o">))</span>
 </span><span class='line'>__main__.TimeoutException: <span class="s1">&#39;add&#39;</span> run-time: expected: 0.007000 ms, but actual: 0.137091 ms
 </span></code></pre></td></tr></table></div></figure>

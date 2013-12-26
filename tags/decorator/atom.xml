@@ -4,7 +4,7 @@
   <title><![CDATA[Tag: decorator | blog.hoatle.info]]></title>
   <link href="http://blog.hoatle.info/tags/decorator/atom.xml" rel="self"/>
   <link href="http://blog.hoatle.info/"/>
-  <updated>2013-12-25T23:56:35+00:00</updated>
+  <updated>2013-12-26T00:03:48+00:00</updated>
   <id>http://blog.hoatle.info/</id>
   <author>
     <name><![CDATA[hoatle]]></name>
@@ -233,12 +233,12 @@ gian chạy với tham số <code>info</code>.</p>
 <p>```bash
 $ python add.py
 Traceback (most recent call last):
-  File &ldquo;test.py&rdquo;, line 35, in <module></p>
+  File &ldquo;add.py&rdquo;, line 35, in <module></p>
 
 <pre><code>add(3, 4)
 </code></pre>
 
-<p>  File &ldquo;test.py&rdquo;, line 17, in wrapper_fn</p>
+<p>  File &ldquo;add.py&rdquo;, line 17, in wrapper_fn</p>
 
 <pre><code>raise TimeoutException('%r run-time: expected: %f ms, but actual: %f ms' % (fn.__name__, val, run_time))
 </code></pre>
