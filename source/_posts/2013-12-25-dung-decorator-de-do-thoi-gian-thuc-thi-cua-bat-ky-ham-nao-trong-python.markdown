@@ -218,9 +218,9 @@ Khi thời gian thực thi của `add` quá 0.007 mili-giây sẽ xảy ra
 ```bash
 $ python add.py
 Traceback (most recent call last):
-  File "test.py", line 35, in <module>
+  File "add.py", line 35, in <module>
     add(3, 4)
-  File "test.py", line 17, in wrapper_fn
+  File "add.py", line 17, in wrapper_fn
     raise TimeoutException('%r run-time: expected: %f ms, but actual: %f ms' % (fn.__name__, val, run_time))
 __main__.TimeoutException: 'add' run-time: expected: 0.007000 ms, but actual: 0.137091 ms
 ```
