@@ -10,8 +10,8 @@ tags:
     - "python"
     - "decorator"
 cover: /images/2013/12/python-logo-master.png
-description: Dùng "decorator" để đo thời gian thực thi của bất kỳ hàm nào trong Python
-keywords: python, decorator, timeout, hàm, đo thời gian
+description: Dùng decorator để đo thời gian thực thi của bất kỳ hàm nào trong Python
+keywords: python, decorator, timeout, timer, hàm, đo thời gian
 published: true
 ---
 
