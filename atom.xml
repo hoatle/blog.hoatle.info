@@ -4,7 +4,7 @@
   <title><![CDATA[blog.hoatle.info]]></title>
   <link href="http://blog.hoatle.info/atom.xml" rel="self"/>
   <link href="http://blog.hoatle.info/"/>
-  <updated>2013-12-26T00:13:11+00:00</updated>
+  <updated>2013-12-26T10:22:52+00:00</updated>
   <id>http://blog.hoatle.info/</id>
   <author>
     <name><![CDATA[hoatle]]></name>
@@ -282,7 +282,7 @@ chỉ cho hàm <code>add</code> trên được thực thi trong khoảng <code>0
 </span><span class='line'>            <span class="n">result</span> <span class="o">=</span> <span class="n">fn</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 </span><span class='line'>            <span class="n">end_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
 </span><span class='line'>            <span class="n">run_time</span> <span class="o">=</span> <span class="p">(</span><span class="n">end_time</span> <span class="o">-</span> <span class="n">start_time</span><span class="p">)</span> <span class="o">*</span> <span class="mi">1000</span> <span class="c"># miliseconds</span>
-</span><span class='line'>            <span class="k">if</span> <span class="n">val</span> <span class="o">&lt;</span> <span class="n">run_time</span><span class="p">:</span>
+</span><span class='line'>            <span class="k">if</span> <span class="n">run_time</span> <span class="o">&gt;</span> <span class="n">val</span><span class="p">:</span>
 </span><span class='line'>                <span class="k">raise</span> <span class="n">TimeoutException</span><span class="p">(</span><span class="s">&#39;</span><span class="si">%r</span><span class="s"> run-time: expected: </span><span class="si">%f</span><span class="s"> ms, but actual: </span><span class="si">%f</span><span class="s"> ms&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">fn</span><span class="o">.</span><span class="n">__name__</span><span class="p">,</span> <span class="n">val</span><span class="p">,</span> <span class="n">run_time</span><span class="p">))</span>
 </span><span class='line'>            <span class="k">if</span> <span class="n">info</span><span class="p">:</span>
 </span><span class='line'>                <span class="k">print</span> <span class="s">&#39;</span><span class="si">%r</span><span class="s"> run-time: </span><span class="si">%f</span><span class="s"> ms&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">fn</span><span class="o">.</span><span class="n">__name__</span><span class="p">,</span> <span class="n">run_time</span><span class="p">)</span>
