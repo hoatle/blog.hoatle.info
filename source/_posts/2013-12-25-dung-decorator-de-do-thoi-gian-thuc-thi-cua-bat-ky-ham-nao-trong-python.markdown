@@ -184,7 +184,7 @@ def timeout(val=sys.maxsize, info=False):
             result = fn(*args, **kwargs)
             end_time = time.time()
             run_time = (end_time - start_time) * 1000 # miliseconds
-            if val < run_time:
+            if run_time > val:
                 raise TimeoutException('%r run-time: expected: %f ms, but actual: %f ms' % (fn.__name__, val, run_time))
             if info:
                 print '%r run-time: %f ms' % (fn.__name__, run_time)
