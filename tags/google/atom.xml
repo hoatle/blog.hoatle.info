@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Tag: google | blog.hoatle.info]]></title>
+  <title><![CDATA[Tag: Google | blog.hoatle.info]]></title>
   <link href="http://blog.hoatle.info/tags/google/atom.xml" rel="self"/>
   <link href="http://blog.hoatle.info/"/>
-  <updated>2014-03-22T16:52:23+00:00</updated>
+  <updated>2014-03-22T16:59:14+00:00</updated>
   <id>http://blog.hoatle.info/</id>
   <author>
     <name><![CDATA[hoatle]]></name>
@@ -14,32 +14,287 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Where is my Google SearchWiki???]]></title>
-    <link href="http://blog.hoatle.info/2008/11/23/where-is-my-google-searchwiki/"/>
-    <updated>2008-11-23T09:36:00+00:00</updated>
-    <id>http://blog.hoatle.info/2008/11/23/where-is-my-google-searchwiki</id>
-    <content type="html"><![CDATA[<p>Where is the Google SearchWiki that is a new feature encouraging people to have search more with new
-experience? Just 2 days after Google&rsquo;s announcement it&rsquo;s gone. Does it mean that SearchWiki is not
-very helpful and Google decided to take it out?</p>
+    <title type="html"><![CDATA[Làm việc cho eXo Platform hay Google đây?]]></title>
+    <link href="http://blog.hoatle.info/2009/04/01/lam-viec-cho-exo-platform-hay-google-day/"/>
+    <updated>2009-04-01T22:35:00+00:00</updated>
+    <id>http://blog.hoatle.info/2009/04/01/lam-viec-cho-exo-platform-hay-google-day</id>
+    <content type="html"><![CDATA[<p><strong>Chú ý: Đây là bài viết trêu đùa ngày Cá Tháng Tư</strong></p>
 
-<p>Google says that this is a bug and is working on restoring SearchWiki now: “We’re really sorry that
-people can’t use SearchWiki at the moment &ndash; we’re working to fix the problem as quickly as we can.
-Please bear with us.”</p>
+<p>Tớ đã suy nghĩ rất nhiều. Chả là bên phía Google có đề nghị tớ qua làm việc (full-time) ở Singapore
+trong vòng 2 năm sau vụ ứng dụng OpenSocial của tớ (Music-Engine) đạt giải nhì trong cuộc thi viết
+ứng dụng OpenSocial khu vực Đông Nam Á do Google tổ chức. Tuy nhiên, không hiểu lý do phức tạp gì
+về vụ hải quan mà tớ không thể nhận được Ipod Touch như trong phần thưởng đã ghi, thay vào đó sẽ
+nhận được tiền mặt :(. Shannon Madison (là người chịu trách nhiệm chính của cuộc thi) và tớ gần đây
+đã bàn luận nhiều về cơ hội việc làm này. Chị ý bảo rằng một số nhân viên của Google sẽ tham gia
+BarCamp Hanoi 2009 này và sẽ hé lộ cho chúng ta biết về chiến lược của Google ở Đông Nam Á nói chung
+và Việt Nam nói riêng. Giờ thì tớ phải chọn: làm việc bán thời gian ở eXo Platform hay làm việc toàn
+thời gian cho Google ở Singapore trong vòng 2 năm.</p>
+
+<!-- more -->
+
+
+<p>Làm việc cho Google là một cơ hội tốt và hiếm có cho tương lai của tớ. Shannon cũng có nói về kế
+hoạch văn phòng đại diện của Google ở Việt Nam, so vậy nếu tớ làm việc cho Google ở Singapore xong
+2 năm thì có thể trở lại Việt Nam để làm ở văn phòng đại diện của Google ở Việt Nam. Tớ biết, đây
+là cơ hội rất tốt và hiếm hoi đê tớ có thể thử sức mình khi làm việc ở nước ngoài và lại là làm việc
+cho Google nữa chứ, sẽ tuyệt vời lắm chứ! Tuy nhiên, nếu tớ đồng ý làm việc ở Sing, điều đó có nghĩa
+là tớ phải ngừng việc học của mình ở HUT, nghĩa là tớ phải rờ xa gia đình, bạn bè và những kỷ niệm
+đẹp để đến đó làm việc. Thực sự tớ chưa bao giờ ra nước ngoài cả, nếu được vậy thì còn gì bằng.</p>
+
+<p>Tuy nhiên cũng không phải là không có khúc mắc. Tớ vừa mới làm việc ở eXo Platform được có 1 tháng
+rưỡi. Mọi thứ mới chỉ là bắt đầu và thực sự thì tớ chưa đạt được điều gì ở eXo Platform cả. Tớ đã
+cố gắng nhiều để được làm việc nơi đây. Chỉ sau một thời gian ngắn ngủi như vậy thôi thì tớ biết eXo
+Platform chính là môi trường tốt nhất ở Hà Nội này để cho tớ học tập, làm việc và có những người bạn
+tốt. Mọi người ở đây thật tốt, dường như tớ đã quen hết với mọi người rồi. Mọi người đã chia sẻ với
+nhau rất nhiều, nhất là trong các vụ: tiệc tùng đám cưới, chia tay (Jeremi), karaoke. Ngoài ra thì
+tớ cũng muốn tìm hiểu về eXo Platform sau đó áp dụng vào project cuối cùng ở Hanoi Aptech sau đó là
+tốt nghiệp.</p>
+
+<p>Giờ nếu tớ đồng ý sang Sing làm việc cho Google thì tớ phải từ bỏ nhiều thứ ở nơi đây. Nếu không thì
+tớ vẫn làm việc ở eXo Platform bình thường. Trời ơi!!! Làm thế nào bây giờ? Giá mà làm việc ở eXo
+Platform được 1 thời gian sau đó rồi mới nhận được lời đề nghị của Google có phải tốt hơn không. Tớ
+phải làm sao giờ, ai có thể cho tớ lời khuyên đúng đắn không :(?</p>
+
+<h2>Bình luận</h2>
+
+<ul>
+<li>xuân (2009-05-07 21:32):</li>
+</ul>
+
+
+<p><em>lucky you,</em></p>
+
+<p><em>Vì tớ mới nộp hồ sơ vào exo, nên cũng đã search google về exo (từ đó tìm ra site cậu), download, install &amp; test software của họ.</em></p>
+
+<p><em>sau khi phỏng vấn bên exo &amp; chờ qua hạn mà ko thấy hồi âm từ họ nên tớ đã apply vào cty khác, tuy ko pro như exo nhưng tớ cảm thấy khá là thoải mái ở cty mới này, quan trọng hơn là tớ có thể thực hiện project của tớ tại đây.</em></p>
+
+<p><em>mà cậu chơi drupal lâu chưa vậy ?</em></p>
+
+<ul>
+<li>hoatle (2009-05-09 21:32):</li>
+</ul>
+
+
+<p><em>Ừh, làm ở đâu không quan trọng lắm, quan trọng là được làm hết mình, thể hiện mình ^^.</em></p>
+
+<p><em>Chúc project của bạn thành công :).</em></p>
+
+<p><em>Tớ dùng Drupal cũng khá lâu rồi.</em></p>
 ]]></content>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[SearchWiki của Google đâu rồi???]]></title>
-    <link href="http://blog.hoatle.info/2008/11/23/searchwiki-cua-google-dau-roi/"/>
-    <updated>2008-11-23T09:30:00+00:00</updated>
-    <id>http://blog.hoatle.info/2008/11/23/searchwiki-cua-google-dau-roi</id>
-    <content type="html"><![CDATA[<p>Tính năng xã hội mới có tính kích thích, tạo thêm trải nghiệm cho người dùng khi sử dụng bộ máy tìm
-kiểm của Google đâu rồi? Chỉ sau hai ngày thì tính năng này không còn hoạt động nữa. Phải chăng
-SearchWiki không thực sự hữu dụng và Google quyết định gỡ bỏ?</p>
+    <title type="html"><![CDATA[Working for eXo Platform or Google?]]></title>
+    <link href="http://blog.hoatle.info/2009/04/01/working-for-exo-platform-or-google/"/>
+    <updated>2009-04-01T22:34:00+00:00</updated>
+    <id>http://blog.hoatle.info/2009/04/01/working-for-exo-platform-or-google</id>
+    <content type="html"><![CDATA[<p><strong>Note: This is an April Fool&rsquo;s Day joke</strong></p>
 
-<p>Theo Google lý do SearchWiki không hoạt động nữa là do SearchWiki có lỗi và họ đang cố gắng khắc
-phục sự cố: &ldquo;Chúng tôi rất lấy làm tiếc khi người dùng hiện không thể sử dụng SearchWiki &ndash; chúng tôi
-đang cố gắng hết sức khắc phục. Hãy thông cảm cho chúng tôi.&rdquo;</p>
+<p>I&rsquo;m thinking so much about this. I&rsquo;ve got an offer from Google to work in Singapore for about 2
+years after my OpenSocial application took the 2nd place in OpenSocial Application contest in SE
+Asia. However, I can&rsquo;t touch the Ipod Touch because of customs official issue but I coud get the
+money instead :(. Shannon Madison and I have been discussing about it in recent days. She said that
+someone from Google will take part in BarCamp Hanoi 2009 and will tell us about some stratergy in
+South East Asia in general and in Vietnam for specific. Now I have choose: having part-time job at
+eXo Platform or having full-time job from Google to work in Singapore for 2 years.</p>
+
+<!-- more -->
+
+
+<p>Working for Google is a very important opportunity for my future. Shannon said to me about the plan
+of Google to have representative office in Vietnam soon, so if I aggree to worked with them in
+Singapore in 2 years, and then I can come back to work in the representative office of Google in
+Hanoi. Well, I know this is the only chance for me to work abroad and work for Google. How
+interesting it is! However, if I agree to work in Singapore, it means that I have to discontinue my
+study at HUT university; it means that I have to leave my family, my friends and all my good
+memories behind to work there. I&rsquo;ve never been abroad, I love it.</p>
+
+<p>Another point to mention, I&rsquo;ve just been working at eXo Platform for 1,5 months. Everything has just
+started, I haven&rsquo;t done good job in eXo. I have tried much to work here. After a short period of
+time, I know eXo Platform is the best place in Hanoi for my study, work and friendship. Everyone
+here is very nice, we can easily get familar with each other. We share about many things: weeding,
+karaokeing, departure parties. I want to know more about eXo Platform, to understand it and apply it
+for my last project in Hanoi Aptech.</p>
+
+<p>So if I aggree to work for Google in Singapore, I have to give up so many things here. If not, I&rsquo;m
+still working in eXo Platform as is. Oh my God, how can I choose one? If only after some time
+working for eXo Platform, would I get this kind of offer from Google? Could anyone show me the
+right way :(?</p>
+
+<h2>Comments</h2>
+
+<ul>
+<li>hoatle (2009-05-30 07:59):</li>
+</ul>
+
+
+<p><em>Ok, thank for your visiting and replying :&ndash;). Currently, I&rsquo;m rather busy with my job at eXo
+Platform: being trained + learning. Hope that I will have more time to continue with my application
++ more application in the future. I&rsquo;m working with eXo Social &ndash; an enterprise social network
+supporting Open Social. There are many ways to get in touch ;&ndash;).</em></p>
+
+<ul>
+<li><a href="http://gergelyorosz.com/">Gergely Orosz</a> (2009-05-29 01:36):</li>
+</ul>
+
+
+<p><em>First of all, congratulations for the opportinity &ndash; even though I don&rsquo;t know you, getting an offer
+from Google is a rather rare thing in the IT sector.</em></p>
+
+<p><em>However the reason I&rsquo;m writing is because recently I started developing OpenSocial as in Hungary
+the biggest social networking site implemented OS support 1 month ago. I would be interested in your
+award winning application. I would be happy if I could get in touch with you.</em></p>
+
+<p><em>Cheers,</em></p>
+
+<p><em>Gergely</em></p>
+
+<ul>
+<li>Marvin Lee (2009-04-21 10:42):</li>
+</ul>
+
+
+<p><em>Hi Hoat,</em></p>
+
+<p><em>Although I only came to know about you or your site from the SE OpenSocial and Twitter, I think
+you&rsquo;re a special individual and the oppurtunity to join Google Singapore, although being away from
+Hanoi is a great chance for bigger things in the future.</em></p>
+
+<p><em>Of course there are things to give up and other things to gain in different places, but joining
+Google which has a lot of resources in terms of technologies and brand, can easily overcome the
+worries you have in mind I guess?</em></p>
+
+<p><em>And of course this is my personal opinion as I have never worked in Google before nor had I visited
+their offices yet, hence it&rsquo;s just my own views.</em></p>
+
+<p><em>However, I do wish you the very best in the choice you make. :&ndash;)</em></p>
+
+<ul>
+<li>your friends (2009-04-20 19:59):</li>
+</ul>
+
+
+<p><em>I think working for Google is a good opportunity and a big challenge for any developer. So, I
+understand why you are wondering about it. But as you said, it&rsquo;s good for your future so why don&rsquo;t
+you try to do?</em></p>
+
+<p><em>Completes your studying is the best way I think but you can not negotiate with Google about start
+working time, I think you can suspend your studying for 1 or 2 years as Bill Gate did. Maybe you can
+not make a company as Microsoft, but no one knows whether you will create a Google Viet Nam in
+future!</em></p>
+
+<p><em>You should think more what you lost, what you get if you work for Google and for Exo Platform. As
+you said, Exo is a good company in Ha Noi, but with my experiences, 1,5 months can not say anything.
+And are you sure that you understand everything about the one? Is it really good place as your
+feeling?</em></p>
+
+<p><em>You are having a big opportunity! I wish you will have good decision!</em></p>
+
+<ul>
+<li>dungiis (2009-04-20 16:16):</li>
+</ul>
+
+
+<p><em>Hoatle, You need all your courages to work for Google. I think it&rsquo;s truly a challenge for anyone</em></p>
+
+<ul>
+<li>nothing (2009-04-16 09:34)</li>
+</ul>
+
+
+<p><em>I think you shoud leave eXo and going to Singapo. Because in eXo you will not study nothing.</em></p>
+
+<ul>
+<li>Koen (2009-04-09 21:03):</li>
+</ul>
+
+
+<p><em>Maybe you can do both and bring both companies closer together!</em></p>
+
+<ul>
+<li>your friend (2009-04-03 15:15):</li>
+</ul>
+
+
+<p><em>Hi Hoat</em></p>
+
+<p><em>You are very young so there are a lot of chances is waitting and coming to you in the future.
+Google is really a great opportunity, but you should have considered and choosed what is the best
+practice actually. I have known that: youth always have a lot of dreams, ambitious &hellip;. and would
+like to meet some new chanllenges, new chances. Beside that, you also have known exo platform
+company is very good in Ha Noi where you are having the happiness time, good working eviroment,
+chances for developing and becaming your carreer in here &hellip; You are the last student year in
+University that means you have been farming tree and now its time to pick fruit, although the first
+fruit not sweet, luscious ones but that is you have done after working, studying so hard. So, why do
+not you continue to work in exo platform where you have been sowing seeds and it has been germing,
+so why do not you wait to harvest. I also wondering if exo platform has good environment same your
+opninon, why don&rsquo;t you try to disscuss with Officer Manager about integrated your applications for
+Music to EXO Product such as eXo Social or eXo Portal and they will be able to completely help you
+to develop, improve your product and in the future you can become a Product Manager EXO Social
+Music&hellip; I think: that is great chance and its possible.</em></p>
+
+<p><em>For Google, I think that this is only a &ldquo;strategy&rdquo; because there will be many changes and happened
+in 2 years &hellip; Whether you can work completely in 2 years with them and then whether they have
+established VPĐD in Vietnam or not? This is a completely question and strategy because of the
+biggest competitor of Google is Yahoo has done to establish Yahoo Vietnam Company in Viet nam.</em></p>
+
+<p><em>There is only my opinion. Of course the final decision is depend you. There are a lot of chances,
+but its important for us how can get and find favorable environment to develop and implement
+opportunities became true and success is very few. Please consider carefully and I wish the best
+wish for you in the future</em></p>
+
+<p><em>Thank a lot</em></p>
+
+<ul>
+<li>rebyn (2009-04-02 12:51):</li>
+</ul>
+
+
+<p><em>I bet you&rsquo;ll take the offer :D</em></p>
+
+<p><em>Departures are indispensable events in your life, especially when you have such a great opportunity
+like that. You can preserve your study at HUT by signing a form, go working for Google Singapore for
+one and half a year and get back and finish what you&rsquo;ve done.</em></p>
+
+<p><em>Singapore is not that far from Vietnam, now it takes you only 2 hrs to transfer between 2 nations.
+In addition, Vietnam working-environment is absolutely not as good as foreign ones for such talent
+guys like you.</em></p>
+
+<p><em>What you have to do: Get ready, set, and go. Don&rsquo;t hesitate at such interferences like that.</em></p>
+
+<p><em>Good luck.</em></p>
+
+<ul>
+<li>hoatle (2009-04-02 00:32):</li>
+</ul>
+
+
+<p><em>Well, thanks very much for your advice. I know, how can I miss such a great chance like this ;)</em></p>
+
+<p>— Anh Hùng (2009-04-01 23:13):</p>
+
+<p><em>Hello Hoạt,</em></p>
+
+<p><em>Firstly, let me congratulate on your getting this great opportunity from Google. You are the only
+Vietnamse &ndash; born, raised, and educated in Vietnam- I know who gets such an offer. :&ndash;)</em></p>
+
+<p><em>As I&rsquo;ve tweeted you, the best thing you should do, IMHO, is to reserve your study results at HUT
+and come to work for Google for 1 year (don&rsquo;t tell Google this though). If it fits you, then
+decide.</em></p>
+
+<p><em>For eXo Platform, while it is a great start, I think the sheer scale of Google will open you to new
+horizons and possessing a good understanding of how the biggest technology firm operates will be of
+huge benefits to you in the future.</em></p>
+
+<p><em>My mentor passed Google&rsquo;s 8 rounds of interview to become its Product Manager in SEA. It was a
+great opportunity but since Google is not doing anything great in Vietnam, he declined the offer a
+few months ago. However, Google Singapore is nice company with nice people, and this is something
+you should not miss.</em></p>
+
+<p><em>Part of the reason he quit was because he had already had a great business in Vietnam, a great
+family to take care of. You&rsquo;re different. Right? :&ndash;)</em></p>
+
+<p><em>Anyways, good luck!</em></p>
 ]]></content>
   </entry>
   
