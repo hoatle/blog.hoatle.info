@@ -27,6 +27,8 @@ công phần mềm trước để lấy ngắn (nguồn lực, vốn) nuôi dài
 Về mảng nghiên cứu, phát triển bạn sẽ được tiếp cận dần dần, nhưng trước mắt bạn cần phải là chiến
 binh để gia công phần mềm trước đã.
 
+<!-- more -->
+
 
 Tại sao lại là chiến binh?
 --------------------------
