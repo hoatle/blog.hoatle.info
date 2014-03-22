@@ -4,7 +4,7 @@
   <title><![CDATA[Category: vi | blog.hoatle.info]]></title>
   <link href="http://blog.hoatle.info/categories/vi/atom.xml" rel="self"/>
   <link href="http://blog.hoatle.info/"/>
-  <updated>2014-01-16T19:39:04+00:00</updated>
+  <updated>2014-03-22T16:52:23+00:00</updated>
   <id>http://blog.hoatle.info/</id>
   <author>
     <name><![CDATA[hoatle]]></name>
@@ -12,6 +12,112 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Cần "chiến binh" gia nhập đội phát triển]]></title>
+    <link href="http://blog.hoatle.info/2014/03/22/can-chien-binh-gia-nhap-doi-phat-trien/"/>
+    <updated>2014-03-22T15:46:00+00:00</updated>
+    <id>http://blog.hoatle.info/2014/03/22/can-chien-binh-gia-nhap-doi-phat-trien</id>
+    <content type="html"><![CDATA[<p><img class="center" src="/images/2014/03/poster_kick_ass.jpg"></p>
+
+<p>Sau gần một năm startup với Teracy, tôi cần tìm &ldquo;chiến binh&rdquo; gia nhập đội phát triển.</p>
+
+<p>Công việc sẽ là gia công phần mềm cho khách hàng, khách hàng hầu hết là các công ty Mỹ vì làm việc
+với họ rất tốt.</p>
+
+<p>Teracy có 2 mảng là gia công phần mềm và nghiên cứu phát triển, hiện tại tập trung phát triển mảng gia
+công phần mềm trước để lấy ngắn (nguồn lực, vốn) nuôi dài (nghiên cứu, phát triển).</p>
+
+<p>Về mảng nghiên cứu, phát triển bạn sẽ được tiếp cận dần dần, nhưng trước mắt bạn cần phải là chiến
+binh để gia công phần mềm trước đã.</p>
+
+<h2>Tại sao lại là chiến binh?</h2>
+
+<ul>
+<li><p>Vì bạn phải chiến đấu, tất nhiên là chiến đấu với những yêu cầu khá trừu tượng của khách hàng để
+hoàn thành nhiệm vụ được giao (có sự trợ giúp và code review từ tôi)</p></li>
+<li><p>Vì bạn sẽ phải chịu rất nhiều áp lực</p></li>
+<li><p>Vì bạn không thể chọn làm những việc tôi thích, bạn cần làm những việc khách hàng yêu cầu</p></li>
+<li><p>Vì bạn sẽ phải làm nhiều việc khác nhau, cả sở trường lẫn sở đoản, sở đoản thì phải biến nó thành
+sở trường trong thời gian ngắn (học kỹ năng mới)</p></li>
+</ul>
+
+
+<h2>Bạn cần gì?</h2>
+
+<ul>
+<li><p>1 chiếc laptop có thể làm việc được, ưu tiên Mac, Linux.</p></li>
+<li><p>Có kết nối Internet</p></li>
+<li><p>Cầu tiến, không bao giờ ngừng học hỏi</p></li>
+<li><p>Có kỹ năng làm được việc (yêu cầu cụ thể bên dưới)</p></li>
+<li><p>Làm việc nhóm tốt (nhận việc từ xa, giao tiếp từ xa.v.v&hellip;)</p></li>
+</ul>
+
+
+<h2>Những kỹ năng cần thiết?</h2>
+
+<ul>
+<li><p>Làm tốt với JavaScript</p></li>
+<li><p>Biết mà muốn làm việc với Python</p></li>
+<li><p>Biết làm 1 chút HTML/CSS là một lợi thế</p></li>
+<li><p>Tự quản lý thời gian của tôi, không bó buộc không gian, thời gian làm việc miễn hoành thành
+nhiệm vụ đã cam kết đúng thời hạn.</p></li>
+<li><p>Luôn phải làm hài lòng khách hàng</p></li>
+</ul>
+
+
+<h2>Ví dụ những công việc cụ thể điển hình?</h2>
+
+<ol>
+<li><p>Viết chrome extension hiện chỉ số cổ phiếu thay đổi theo thời gian 1 giây (dữ liệu giả do bạn
+tạo và chạy ngẫu nhiên)</p></li>
+<li><p>Viết Notify component và notify service cho reactjs dùng twitter bootstrap alert component,
+viết trong 8h (với giả sử bạn chưa biết gì về reactjs)</p></li>
+<li><p>Có 2 nút &ldquo;Next&rdquo; và &ldquo;Previous&rdquo; cho Image Slider, bình thường click vào những nút này sẽ hiển thị
+ảnh tiếp theo hoặc trước đó. Yêu cầu là khi nhấn giữ chuột lâu các nút này thì các ảnh tự nhảy,
+càng nhấn giữ lâu thì ảnh nhảy càng nhanh. (làm trong vòng 12h để tích hợp vào backbone
+application hiện có)</p></li>
+<li><p>Dùng CollectionView của Chaplin để quản lý các views trong backbone application</p></li>
+<li><p>Fix failing tests of a Django application and improve it</p></li>
+<li><p>Xây dựng gulp build system cho ứng dụng web để compile reactjs (.jsx) thành (.js), đóng gói ứng
+dùng thành các bản phân phối cho chrome extension, web</p></li>
+<li><p>Convert code HTML/CSS hiện có đang viết rất dở, dùng jquery-ui, chuyển sang dùng twitter bootstrap</p></li>
+<li><p>2 way data-binding for backbone model and view</p></li>
+<li><p>v.v&hellip;</p></li>
+</ol>
+
+
+<h2>Bạn được những gì?</h2>
+
+<ul>
+<li><p>Lương cạnh tranh, nếu làm trung bình khá thì ít nhất 1 tháng bạn được trả $700/tháng</p></li>
+<li><p>Lương phụ thuộc vào khả năng của bạn</p></li>
+<li><p>Có cơ hội góp vốn, cổ phần</p></li>
+<li><p>Rèn luyện bản thân vì đây là công việc không phải dành cho tất cả mọi người, chỉ dành cho những
+chiến binh và biết chiến đấu thật tốt</p></li>
+<li><p>Được tham gia làm việc nhóm với nhiều loại công việc thú vị khác nhau</p></li>
+</ul>
+
+
+<p>Nhiều công việc áp lực, thú vị, thử thách đang chờ bạn. Hãy liên lạc ngay với tôi, mọi liên lạc hãy
+gửi về: hoatlevan at gmail dot com với:</p>
+
+<ul>
+<li><p>Giới thiệu bản thân</p></li>
+<li><p>Bạn nghĩ gì về những công việc cụ thể điển hình trên?</p></li>
+</ul>
+
+
+<p>Cảm ơn bạn đã quan tâm!</p>
+
+<h2>Hình Ảnh</h2>
+
+<ul>
+<li><a href="http://blog.affenheimtheater.de/en/2010/03/14/kick-ass-vintage-posters/">http://blog.affenheimtheater.de/en/2010/03/14/kick-ass-vintage-posters/</a></li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Giải thích trực quan các trình độ học vấn]]></title>
@@ -606,185 +712,6 @@ hai từ rất tương đồng, tạo ra sự thú vị mà tôi thấy rất t�
 <p>http://www.imdb.com/title/tt1453405/<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
 <li id="fn:3">
 <p>http://www.oxforddictionaries.com/definition/english/ta-da<a href="#fnref:3" rev="footnote">&#8617;</a></p></li>
-</ol>
-</div>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[selfie (tự sướng) - từ của năm 2013 theo từ điển Oxford]]></title>
-    <link href="http://blog.hoatle.info/2013/12/10/selfie-tu-suong-tu-cua-nam-2013-theo-tu-dien-oxford/"/>
-    <updated>2013-12-10T22:35:00+00:00</updated>
-    <id>http://blog.hoatle.info/2013/12/10/selfie-tu-suong-tu-cua-nam-2013-theo-tu-dien-oxford</id>
-    <content type="html"><![CDATA[<p><img class="center" src="/images/2013/12/presidential-selfie.jpg" title="Tổng thống Obama tự sướng cùng thủ tướng Anh và Đan Mạch tại lễ tưởng niệm cố tổng thống Nam Phi Nelson Mandela" ></p>
-
-<p>Hình trên là ảnh tổng thống Obama tự sướng cùng thủ tướng Anh và Đan Mạch tại lễ tưởng niệm cố tổng
-thống Nam Phi Nelson Mandela đang bị truyền thông chỉ trích gần đây. Ảnh đại diện chỉ mang mục đích
-giới thiệu đến từ &ldquo;tự sướng (selfie)&rdquo; &ndash; từ của năm 2013 theo từ điển Oxford.</p>
-
-<!-- more -->
-
-
-<h2>Định Nghĩa &ldquo;selfie&rdquo;</h2>
-
-<p><strong>1. Định nghĩa bằng tiếng Anh theo từ điển Oxford<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup></strong></p>
-
-<p><strong>selfie</strong></p>
-
-<p>Pronunciation: /ˈsɛlfi/</p>
-
-<p>(also <em>selfy</em>)</p>
-
-<p> <em>noun (plural <strong>selfies</strong>)</em></p>
-
-<p><em>informal</em></p>
-
-<p>  a photograph that one has taken of oneself, typically one taken with a smartphone or webcam and
-  uploaded to a social media website:</p>
-
-<p>  <em>occasional selfies are acceptable, but posting a new picture of yourself every day isn’t necessary</em></p>
-
-<p><strong>Origin:</strong></p>
-
-<p>early 21st century: from self + -ie</p>
-
-<p><strong>2. Dịch định nghĩa &ldquo;selfie&rdquo; sang tiếng Việt:</strong></p>
-
-<p><strong>selfie</strong></p>
-
-<p>Phiên âm: /ˈsɛlfi/</p>
-
-<p>(hay <em>selfy</em>)</p>
-
-<p> <em>danh từ (số nhiều <strong>selfies</strong>)</em></p>
-
-<p><em>thân mật</em></p>
-
-<p>  bức ảnh được một người tự chụp, thường được chụp bằng điện thoại hoặc webcam và được tải lên
-  các trang mạng xã hội:</p>
-
-<p>  <em>tự sướng thường xuyên thì chấp nhận được, nhưng ngày nào cũng đăng ảnh thì không cần thiết</em></p>
-
-<p><strong>Nguồn gốc:</strong></p>
-
-<p>Đầu thế kỷ 21: bắt nguồn từ self + -ie</p>
-
-<h2>Nguồn Gốc Của &ldquo;selfie&rdquo;</h2>
-
-<p>Theo thông tin của <code>Oxford English Corpus</code><sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup> &ndash; nghiên cứu ngôn ngữ dựa trên những bằng chứng thực
-tế thì &ldquo;selfie&rdquo; đã được sử dụng từ năm 2003, nhưng có những nghiên cứu sâu hơn chỉ ra rằng nó đã
-được sử dụng từ năm 2002, bắt nguồn từ một diễn đàn của Australia.</p>
-
-<p>&ldquo;selfie&rdquo; ban đầu được dùng ở các trang mạng xã hội và chia sẻ ảnh như Flickr và MySpace nhưng đến
-tận năm gần đây thì nó mới thực sự phổ biến do sự phổ biến của điện thoại thông minh giúp việc tự
-chụp hình và chia sẻ ảnh dễ dàng hơn bao giờ hết.</p>
-
-<p>Sự phổ biến tăng dần của &ldquo;selfie&rdquo; (tự sướng) tăng mạnh trong năm 2013 theo biểu đồ dưới đây:</p>
-
-<p><img class="center" src="/images/2013/12/selfie-graph.jpg" title="biểu đồ sự phổ biến của từ selfie" ></p>
-
-<p>(đơn vị = tần suất/ 1 tỉ từ)</p>
-
-<h2>Các Từ Liên Quan Có Hậu Tố &ldquo;-ie&rdquo;</h2>
-
-<p>Có rất nhiều từ liên quan có hậu tố &ldquo;-ie&rdquo; được tạo ra với nghĩa tự sướng:</p>
-
-<ul>
-<li><p><code>helfie</code>: tự sướng với tóc (<code>a picture of one’s hair</code>)</p></li>
-<li><p><code>welfie</code>: tự sướng khi tập thể hình (<code>workout selfie</code>)</p></li>
-<li><p><code>drelfie</code>: tự sướng khi say (<code>drunken selfie</code>)</p></li>
-<li><p>&hellip;</p></li>
-</ul>
-
-
-<h2>Thông Tin Trực Quan (infographic) Về &ldquo;selfie&rdquo;</h2>
-
-<p>Để hiểu hơn về &ldquo;selfie&rdquo;, từ điển Oxford còn cung cấp thông tin trực quan sau đây:</p>
-
-<p><img class="center" src="/images/2013/12/infographic-selfie-oxford-dictionaries-word-of-the-year-2013.jpg" title="thông tin trực quan về selfie &ndash; tự sướng" ></p>
-
-<h2>Từ Của Năm Qua Các Năm</h2>
-
-<p>Nhân viên Oxford duy trì 2 loại từ điển là Anh-Anh và Anh-Mỹ. Do từng nước có sự phát triển vốn từ
-vựng khác nhau nên có thể từ của năm cũng khác nhau, dưới đây là danh sách:</p>
-
-<table>
-  <tr>
-    <th>Năm</th>
-    <th>Từ của năm theo Anh-Anh</th>
-    <th>Từ của năm theo Anh-Mỹ</th>
-  </tr>
-  <tr>
-    <td>2004</td>
-    <td colspan="2" align="center">chav</td>
-  </tr>
-  <tr>
-    <td>2005</td>
-    <td>sudoku</td>
-    <td>podcast</td>
-  </tr>
-  <tr>
-    <td>2006</td>
-    <td>bovvered</td>
-    <td>carbon-neutral</td>
-  </tr>
-  <tr>
-    <td>2007</td>
-    <td>carbon footprint</td>
-    <td>locavore</td>
-  </tr>
-  <tr>
-    <td>2008</td>
-    <td>credit crunch</td>
-    <td>hypermiling</td>
-  </tr>
-  <tr>
-    <td>2009</td>
-    <td>simples</td>
-    <td>unfriend</td>
-  </tr>
-  <tr>
-    <td>2010</td>
-    <td>big society</td>
-    <td>refudiate</td>
-  </tr>
-  <tr>
-    <td>2011</td>
-    <td colspan="2" align="center">squeezed middle</td>
-  </tr>
-  <tr>
-    <td>2012</td>
-    <td>omnishambles</td>
-    <td>GIF (verb)</td>
-  </tr>
-</table>
-
-
-<h2>Tham Khảo</h2>
-
-<ul>
-<li><a href="http://blog.oxforddictionaries.com/2013/11/word-of-the-year-2013-winner/">http://blog.oxforddictionaries.com/2013/11/word-of-the-year-2013-winner/</a></li>
-<li><a href="http://blog.oxforddictionaries.com/2013/11/an-infographic-of-selfie/">http://blog.oxforddictionaries.com/2013/11/an-infographic-of-selfie/</a></li>
-<li><a href="http://newsfeed.time.com/2013/11/18/and-oxfords-word-of-the-year-is">http://newsfeed.time.com/2013/11/18/and-oxfords-word-of-the-year-is</a></li>
-<li><a href="http://www.oxforddictionaries.com/definition/english/selfie">http://www.oxforddictionaries.com/definition/english/selfie</a></li>
-</ul>
-
-
-<h2>Hình Minh Hoạ</h2>
-
-<ul>
-<li><a href="http://mashable.com/2013/12/10/obama-nelson-mandela-funeral-selfie/">http://mashable.com/2013/12/10/obama-nelson-mandela-funeral-selfie/</a></li>
-<li><a href="http://blog.oxforddictionaries.com/2013/11/an-infographic-of-selfie/">http://blog.oxforddictionaries.com/2013/11/an-infographic-of-selfie/</a></li>
-</ul>
-
-<div class="footnotes">
-<hr/>
-<ol>
-<li id="fn:1">
-<p>http://www.oxforddictionaries.com/definition/english/selfie<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
-<li id="fn:2">
-<p>http://www.oxforddictionaries.com/words/about-the-oxford-english-corpus<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
 </ol>
 </div>
 

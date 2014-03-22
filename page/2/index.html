@@ -115,6 +115,57 @@
       
   <header>
     
+      <h1 class="entry-title"><a href="/2010/01/16/dynamic-arguments-binding-with-opensocial-message-bundle/">Dynamic Arguments Binding With OpenSocial Message Bundle</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time itemprop="datePublished" content="2010-01-16T19:44:00+00:00" datetime="2010-01-16T19:44:00+00:00" pubdate data-updated="true">Jan 16<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h2>Problem</h2>
+
+<ul>
+<li><p>Working with OpenSocial message bundle for localization, sometimes it&rsquo;s necessary to bind dynamic
+arguments to the message. For example, we have greeting message like this: <code>Hello {user}</code> in which
+user will be replaced by user&rsquo;s name. But currently with OpenSocial api, we can&rsquo;t. We just can get
+message bundle by the key without passing any arguments for substitution.</p></li>
+<li><p>So this is my approach: using <code>eXo.social.Locale.getMsg(key)</code> the same as <code>prefs.getMsg(key)</code> and
+<code>eXo.social.Locale.getMsg(key, [val1, val2,...]);</code> for dynamic arguments binding with message bundle.</p></li>
+</ul>
+
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/2010/01/16/dynamic-arguments-binding-with-opensocial-message-bundle/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/2010/01/09/gan-nhieu-ham-xu-ly-su-kien-vao-mot-phan-tu-trong-javascript/">Gán Nhiều Hàm Xử Lý Sự Kiện Vào Một Phần Tử Trong JavaScript</a></h1>
     
     
@@ -551,52 +602,6 @@ dụng OpenSocial. Code cho vui ý mà, hè hè ;)</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/2009/02/22/osde-great-for-opensocial-developers/">OSDE - Great for OpenSocial Developers</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time itemprop="datePublished" content="2009-02-22T22:53:00+00:00" datetime="2009-02-22T22:53:00+00:00" pubdate data-updated="true">Feb 22<span>nd</span>, 2009</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>This afternoon I just hit with this project: OSDE &ndash; OpenSocial Developement Environment and loved it
-at first sight :). This project is awesome for OpenSocial developers to work on their own
-environment. I remembered on the first days of developing app, registered all opensocial containers,
-make friends [for test :)] and then test the app. Somehow boring steps and not the pro way of app
-development. What if you can not have internet connnection but you still want to test you opensocial
-app. OSDE &ndash; OpenSocial Developement Environment is our solution. This is a great module for
-Eclipse :).</p>
-
-<p>Click on this link and let&rsquo;s create great apps: <a href="http://www.eisbahn.jp/trac/osde/">http://www.eisbahn.jp/trac/osde/</a></p>
-
-<p>Everything there is good enough to code, much more easier to have your app in development stage :)</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/page/3/">&larr; Older</a>
@@ -614,6 +619,10 @@ Eclipse :).</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/2014/03/22/can-chien-binh-gia-nhap-doi-phat-trien/">Cần &#8220;Chiến Binh&#8221; Gia Nhập đội Phát Triển</a>
+      </li>
+    
+      <li class="post">
         <a href="/2014/01/16/giai-thich-truc-quan-cac-trinh-do-hoc-van/">Giải Thích Trực Quan Các Trình độ Học Vấn</a>
       </li>
     
@@ -627,10 +636,6 @@ Eclipse :).</p>
     
       <li class="post">
         <a href="/2013/12/11/dich-ta-da-hay-ta-dah-sang-tieng-viet-the-nao/">Dịch &#8220;Ta-da&#8221; Hay &#8220;Ta-dah&#8221; Sang Tiếng Việt Thế Nào?</a>
-      </li>
-    
-      <li class="post">
-        <a href="/2013/12/10/selfie-tu-suong-tu-cua-nam-2013-theo-tu-dien-oxford/">Selfie (Tự Sướng) - Từ Của Năm 2013 Theo Từ điển Oxford</a>
       </li>
     
   </ul>

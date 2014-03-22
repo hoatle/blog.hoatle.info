@@ -4,7 +4,7 @@
   <title><![CDATA[blog.hoatle.info]]></title>
   <link href="http://blog.hoatle.info/atom.xml" rel="self"/>
   <link href="http://blog.hoatle.info/"/>
-  <updated>2014-01-16T19:39:04+00:00</updated>
+  <updated>2014-03-22T16:52:23+00:00</updated>
   <id>http://blog.hoatle.info/</id>
   <author>
     <name><![CDATA[hoatle]]></name>
@@ -12,6 +12,112 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Cần "chiến binh" gia nhập đội phát triển]]></title>
+    <link href="http://blog.hoatle.info/2014/03/22/can-chien-binh-gia-nhap-doi-phat-trien/"/>
+    <updated>2014-03-22T15:46:00+00:00</updated>
+    <id>http://blog.hoatle.info/2014/03/22/can-chien-binh-gia-nhap-doi-phat-trien</id>
+    <content type="html"><![CDATA[<p><img class="center" src="http://blog.hoatle.info/images/2014/03/poster_kick_ass.jpg"></p>
+
+<p>Sau gần một năm startup với Teracy, tôi cần tìm &ldquo;chiến binh&rdquo; gia nhập đội phát triển.</p>
+
+<p>Công việc sẽ là gia công phần mềm cho khách hàng, khách hàng hầu hết là các công ty Mỹ vì làm việc
+với họ rất tốt.</p>
+
+<p>Teracy có 2 mảng là gia công phần mềm và nghiên cứu phát triển, hiện tại tập trung phát triển mảng gia
+công phần mềm trước để lấy ngắn (nguồn lực, vốn) nuôi dài (nghiên cứu, phát triển).</p>
+
+<p>Về mảng nghiên cứu, phát triển bạn sẽ được tiếp cận dần dần, nhưng trước mắt bạn cần phải là chiến
+binh để gia công phần mềm trước đã.</p>
+
+<h2>Tại sao lại là chiến binh?</h2>
+
+<ul>
+<li><p>Vì bạn phải chiến đấu, tất nhiên là chiến đấu với những yêu cầu khá trừu tượng của khách hàng để
+hoàn thành nhiệm vụ được giao (có sự trợ giúp và code review từ tôi)</p></li>
+<li><p>Vì bạn sẽ phải chịu rất nhiều áp lực</p></li>
+<li><p>Vì bạn không thể chọn làm những việc tôi thích, bạn cần làm những việc khách hàng yêu cầu</p></li>
+<li><p>Vì bạn sẽ phải làm nhiều việc khác nhau, cả sở trường lẫn sở đoản, sở đoản thì phải biến nó thành
+sở trường trong thời gian ngắn (học kỹ năng mới)</p></li>
+</ul>
+
+
+<h2>Bạn cần gì?</h2>
+
+<ul>
+<li><p>1 chiếc laptop có thể làm việc được, ưu tiên Mac, Linux.</p></li>
+<li><p>Có kết nối Internet</p></li>
+<li><p>Cầu tiến, không bao giờ ngừng học hỏi</p></li>
+<li><p>Có kỹ năng làm được việc (yêu cầu cụ thể bên dưới)</p></li>
+<li><p>Làm việc nhóm tốt (nhận việc từ xa, giao tiếp từ xa.v.v&hellip;)</p></li>
+</ul>
+
+
+<h2>Những kỹ năng cần thiết?</h2>
+
+<ul>
+<li><p>Làm tốt với JavaScript</p></li>
+<li><p>Biết mà muốn làm việc với Python</p></li>
+<li><p>Biết làm 1 chút HTML/CSS là một lợi thế</p></li>
+<li><p>Tự quản lý thời gian của tôi, không bó buộc không gian, thời gian làm việc miễn hoành thành
+nhiệm vụ đã cam kết đúng thời hạn.</p></li>
+<li><p>Luôn phải làm hài lòng khách hàng</p></li>
+</ul>
+
+
+<h2>Ví dụ những công việc cụ thể điển hình?</h2>
+
+<ol>
+<li><p>Viết chrome extension hiện chỉ số cổ phiếu thay đổi theo thời gian 1 giây (dữ liệu giả do bạn
+tạo và chạy ngẫu nhiên)</p></li>
+<li><p>Viết Notify component và notify service cho reactjs dùng twitter bootstrap alert component,
+viết trong 8h (với giả sử bạn chưa biết gì về reactjs)</p></li>
+<li><p>Có 2 nút &ldquo;Next&rdquo; và &ldquo;Previous&rdquo; cho Image Slider, bình thường click vào những nút này sẽ hiển thị
+ảnh tiếp theo hoặc trước đó. Yêu cầu là khi nhấn giữ chuột lâu các nút này thì các ảnh tự nhảy,
+càng nhấn giữ lâu thì ảnh nhảy càng nhanh. (làm trong vòng 12h để tích hợp vào backbone
+application hiện có)</p></li>
+<li><p>Dùng CollectionView của Chaplin để quản lý các views trong backbone application</p></li>
+<li><p>Fix failing tests of a Django application and improve it</p></li>
+<li><p>Xây dựng gulp build system cho ứng dụng web để compile reactjs (.jsx) thành (.js), đóng gói ứng
+dùng thành các bản phân phối cho chrome extension, web</p></li>
+<li><p>Convert code HTML/CSS hiện có đang viết rất dở, dùng jquery-ui, chuyển sang dùng twitter bootstrap</p></li>
+<li><p>2 way data-binding for backbone model and view</p></li>
+<li><p>v.v&hellip;</p></li>
+</ol>
+
+
+<h2>Bạn được những gì?</h2>
+
+<ul>
+<li><p>Lương cạnh tranh, nếu làm trung bình khá thì ít nhất 1 tháng bạn được trả $700/tháng</p></li>
+<li><p>Lương phụ thuộc vào khả năng của bạn</p></li>
+<li><p>Có cơ hội góp vốn, cổ phần</p></li>
+<li><p>Rèn luyện bản thân vì đây là công việc không phải dành cho tất cả mọi người, chỉ dành cho những
+chiến binh và biết chiến đấu thật tốt</p></li>
+<li><p>Được tham gia làm việc nhóm với nhiều loại công việc thú vị khác nhau</p></li>
+</ul>
+
+
+<p>Nhiều công việc áp lực, thú vị, thử thách đang chờ bạn. Hãy liên lạc ngay với tôi, mọi liên lạc hãy
+gửi về: hoatlevan at gmail dot com với:</p>
+
+<ul>
+<li><p>Giới thiệu bản thân</p></li>
+<li><p>Bạn nghĩ gì về những công việc cụ thể điển hình trên?</p></li>
+</ul>
+
+
+<p>Cảm ơn bạn đã quan tâm!</p>
+
+<h2>Hình Ảnh</h2>
+
+<ul>
+<li><a href="http://blog.affenheimtheater.de/en/2010/03/14/kick-ass-vintage-posters/">http://blog.affenheimtheater.de/en/2010/03/14/kick-ass-vintage-posters/</a></li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Giải thích trực quan các trình độ học vấn]]></title>
@@ -3310,25 +3416,6 @@ và thực sự là module tuyệt vời cho Eclipse để phát triển các �
 
 <p>Tuyệt vời, không thể nói gì hơn :). Thực sự có module này mình hào hứng hơn để phát triển các ứng
 dụng OpenSocial. Code cho vui ý mà, hè hè ;)</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[OSDE - great for OpenSocial developers]]></title>
-    <link href="http://blog.hoatle.info/2009/02/22/osde-great-for-opensocial-developers/"/>
-    <updated>2009-02-22T22:53:00+00:00</updated>
-    <id>http://blog.hoatle.info/2009/02/22/osde-great-for-opensocial-developers</id>
-    <content type="html"><![CDATA[<p>This afternoon I just hit with this project: OSDE &ndash; OpenSocial Developement Environment and loved it
-at first sight :). This project is awesome for OpenSocial developers to work on their own
-environment. I remembered on the first days of developing app, registered all opensocial containers,
-make friends [for test :)] and then test the app. Somehow boring steps and not the pro way of app
-development. What if you can not have internet connnection but you still want to test you opensocial
-app. OSDE &ndash; OpenSocial Developement Environment is our solution. This is a great module for
-Eclipse :).</p>
-
-<p>Click on this link and let&rsquo;s create great apps: <a href="http://www.eisbahn.jp/trac/osde/">http://www.eisbahn.jp/trac/osde/</a></p>
-
-<p>Everything there is good enough to code, much more easier to have your app in development stage :)</p>
 ]]></content>
   </entry>
   
