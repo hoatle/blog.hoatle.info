@@ -62,16 +62,16 @@ Bạn cần gì?
 Những kỹ năng cần thiết?
 ------------------------
 
-- Làm tốt với JavaScript
+- Làm khá tốt với JavaScript là yêu cầu bắt buộc
 
-- Biết mà muốn làm việc với Python
+- Biết 1 chút mà muốn làm việc với Python là một lợi thế
 
 - Biết làm 1 chút HTML/CSS là một lợi thế
 
 - Tự quản lý thời gian của mình, không bó buộc không gian, thời gian làm việc miễn hoành thành
   nhiệm vụ đã cam kết đúng thời hạn
 
-- Sự hài lòng của khách hàng là ưu tiên hàng đầu
+- Khiến khách hàng luôn hài lòng là ưu tiên hàng đầu ("deliver more than you can promise.")
 
 
 
