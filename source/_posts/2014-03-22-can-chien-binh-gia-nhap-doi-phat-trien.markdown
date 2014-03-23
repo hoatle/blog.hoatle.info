@@ -68,10 +68,11 @@ Những kỹ năng cần thiết?
 
 - Biết làm 1 chút HTML/CSS là một lợi thế
 
-- Tự quản lý thời gian của tôi, không bó buộc không gian, thời gian làm việc miễn hoành thành
-  nhiệm vụ đã cam kết đúng thời hạn.
+- Tự quản lý thời gian của mình, không bó buộc không gian, thời gian làm việc miễn hoành thành
+  nhiệm vụ đã cam kết đúng thời hạn
 
-- Luôn phải làm hài lòng khách hàng
+- Sự hài lòng của khách hàng là ưu tiên hàng đầu
+
 
 
 Ví dụ những công việc cụ thể điển hình?
