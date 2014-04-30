@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Cần "chiến binh" gia nhập đội phát triển'
+title: 'Cần chiến binh gia nhập đội phát triển, lương ít nhất $700/tháng'
 author: hoatle
 date: 2014-03-22 15:46
 comments: true
@@ -38,7 +38,8 @@ hoàn thành nhiệm vụ được giao (có sự trợ giúp và code review t�
 
 - Vì bạn sẽ phải chịu rất nhiều áp lực
 
-- Vì bạn không thể chọn làm những việc tôi thích, bạn cần làm những việc khách hàng yêu cầu
+- Vì bạn không thể chọn làm những việc chỉ mình bạn thích, bạn cần làm cả những việc khách hàng yêu
+  cầu
 
 - Vì bạn sẽ phải làm nhiều việc khác nhau, cả sở trường lẫn sở đoản, sở đoản thì phải biến nó thành
 sở trường trong thời gian ngắn (học kỹ năng mới)
@@ -62,7 +63,12 @@ Bạn cần gì?
 Những kỹ năng cần thiết?
 ------------------------
 
-- Làm khá tốt với JavaScript là yêu cầu bắt buộc
+- Làm khá tốt với JavaScript là yêu cầu bắt buộc (Nắm rõ OOP, Scope, Closure, etc.)
+
+- Làm việc tốt với Git là yêu cầu bắt buộc (Bắt buộc sử dụng command line và biết sử dụng những lệnh
+  sau http://dev.teracy.org/docs/most_used_git_commands.html)
+
+- Tiếng Anh khá tốt là yêu cầu bắt buộc
 
 - Biết 1 chút mà muốn làm việc với Python là một lợi thế
 
@@ -78,29 +84,171 @@ Những kỹ năng cần thiết?
 Ví dụ những công việc cụ thể điển hình?
 ---------------------------------------
 
-1. Viết chrome extension hiện chỉ số cổ phiếu thay đổi theo thời gian 1 giây (dữ liệu giả do bạn
+-  Viết chrome extension hiện chỉ số cổ phiếu thay đổi theo thời gian 1 giây (dữ liệu giả do bạn
    tạo và chạy ngẫu nhiên)
 
-2. Viết Notify component và notify service cho reactjs dùng twitter bootstrap alert component,
+-  Viết Notify component và notify service cho reactjs dùng twitter bootstrap alert component,
    viết trong 8h (với giả sử bạn chưa biết gì về reactjs)
 
-3. Có 2 nút "Next" và "Previous" cho Image Slider, bình thường click vào những nút này sẽ hiển thị
+-  Có 2 nút "Next" và "Previous" cho Image Slider, bình thường click vào những nút này sẽ hiển thị
    ảnh tiếp theo hoặc trước đó. Yêu cầu là khi nhấn giữ chuột lâu các nút này thì các ảnh tự nhảy,
    càng nhấn giữ lâu thì ảnh nhảy càng nhanh. (làm trong vòng 12h để tích hợp vào backbone
    application hiện có)
 
-4. Dùng CollectionView của Chaplin để quản lý các views trong backbone application
+-  Dùng CollectionView của Chaplin để quản lý các views trong backbone application
 
-5. Fix failing tests of a Django application and improve it
+-  Fix failing tests of a Django application and improve it
 
-6. Xây dựng gulp build system cho ứng dụng web để compile reactjs (.jsx) thành (.js), đóng gói ứng
+-  Xây dựng gulp build system cho ứng dụng web để compile reactjs (.jsx) thành (.js), đóng gói ứng
    dùng thành các bản phân phối cho chrome extension, web
 
-7. Convert code HTML/CSS hiện có đang viết rất dở, dùng jquery-ui, chuyển sang dùng twitter bootstrap
+-  Convert code HTML/CSS hiện có đang viết rất dở, dùng jquery-ui, chuyển sang dùng twitter bootstrap
 
-8. 2 way data-binding for backbone model and view
+-  2 way data-binding for backbone model and view
 
-9. v.v...
+-  Bạn có 2 iframe trong 1 trang web, làm thế nào để truyền lệnh từ iframe này qua iframe kia?
+
+-  Chọn 1 vùng hình chữ nhật trên 1 canvas và làm mở 1 phần được chọn đó.
+
+-  Hãy implement eyedropper cho 1 canvas element?
+
+-  Implement class `Settings` theo spec docs sau:
+
+```
+  /**
+   * Settings class to support json deep model setting.
+   *
+   * For example:
+   *
+   * var settings = new Settings({
+   *   env: 'dev',
+   *   payment: {
+   *     method: 'paypal'
+   *   }
+   * });
+   *
+   * var env = settings.get('env');
+   * var paymentMethod = settings.get('payment.method');
+   *
+   * settings.set('payment', {
+   *   method: 'stripe',
+   *   activated: false
+   * }, true);
+   *
+   * var paymentActivated = settings.get('payment.activated');
+   *
+   * key must be valid javascript identifier and does not contain ".".
+   *
+   * @constructor
+   */
+  function Settings() {
+    //TODO: implement this
+  }
+
+  //supported methods
+
+
+  /**
+   * Gets setting by key, if the key does not exist:
+   * + throw Error
+   *
+   * + If default def is provided and key does not exist, return def.
+   *
+   * @param key the specified key
+   * @param def the default value if key is not found
+   */
+  Settings.prototype.get = function(key, def) {
+    //TODO: implement this
+  }
+
+  /**
+   * Sets new key
+   *
+   * by default, does not allow overwrite existing key.
+   *
+   * if overwrite existing key without forcing, throw Error.
+   *
+   * @param key
+   * @param value
+   * @param force
+   */
+  Settings.prototype.set = function(key, value, force) {
+    //TODO: implement this
+  }
+
+  /**
+   * Checks if a key is valid or not.
+   *
+   * key must be valid javascript identifier and does not contain "."
+   *
+   * @param key
+   */
+  Settings.prototype.isValidKey = function(key) {
+    //TODO: implement this
+  }
+```
+
+-  Hãy implement `template` function theo spec docs sau:
+
+```
+/**
+ * Creates a compile template function to construct parsed string from string template and params object.
+ *
+ * var compileTemplate = template(strTemplate);
+ * var parsedString = compileTemplate(params, [strict]);
+ *
+ * params is required otherwise error will be thrown.
+ *
+ * By default, strict is true and if there is any missing params key for strTemplate then
+ * an error will be thrown.
+ *
+ * If params has unused keys in strTemplate, that keys will be ignored.
+ *
+ * If strict is false then parsedString will be returned with missing keys.
+ *
+ * Note: template key must match: \w+
+ *
+ * For example:
+ *
+ * var helloTemplate = template('Hello {{name}}!'),
+ *     urlTemplate = template('/{{resource}}/{{id}}.json');
+ *
+ * var output = helloTemplate({name: 'World'}); // => Hello World!
+ *
+ * helloTemplate(); // => error is thrown
+ * helloTemplate({}); // => error is thrown
+ *
+ * var output2 = helloTemplate({}, false); // => Hello {{name}}!
+ *
+ * var userUrl = urlTemplate({resource: 'users', id: 1}); // => /users/1.json
+ *
+ * var pricesTemplate = template('/prices?marketplace={{marketplace}}&&num_results={{num_result}}&&since={{since}}', {
+ *   defaults: {
+ *     num_result: 80
+ *   },
+ *   processors: {
+ *     since: function(processedStr, paramValue, params) {
+ *       if (_.isUndefined(paramValue)) {
+ *         processedStr = processStr.replace('&&since={{since}}', '');
+ *       }
+ *       return processedStr;
+ *     }
+ *   }
+ * });
+ *
+ * pricesTemplate({marketplace: 'mtgox'}); => /prices/marketplace=mtgox&&num_results=80
+ *
+ * @param str the string template
+ * @param options the optional options
+ * @return a compiled template function
+ */
+
+ function template(str, opts) {
+  //TODO: implement this
+ }
+```
+
+- v.v...
 
 
 Bạn được những gì?
@@ -117,6 +265,9 @@ Bạn được những gì?
 
 - Được tham gia làm việc nhóm với nhiều loại công việc thú vị khác nhau
 
+- Có nhiều chế độ hỗ trợ thêm như: hỗ trợ bữa ăn (1 bữa với part-time, 2 bữa với full-time; hỗ trợ
+  và khuyến khích nhân viên tập gym để nâng cao sức khoẻ.v.v...)
+
 
 Nhiều công việc áp lực, thú vị, thử thách đang chờ bạn. Hãy liên lạc ngay với tôi, mọi liên lạc hãy
 gửi về: hoatlevan at gmail dot com với:
@@ -127,6 +278,7 @@ gửi về: hoatlevan at gmail dot com với:
 
 
 Cảm ơn bạn đã quan tâm!
+
 
 
 Hình Ảnh
