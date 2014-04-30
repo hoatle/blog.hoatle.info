@@ -16,7 +16,7 @@ published: true
 
 {% img center /images/2014/03/poster_kick_ass.jpg %}
 
-Sau gần một năm startup với Teracy, tôi cần tìm "chiến binh" gia nhập đội phát triển.
+Sau gần một năm startup với Teracy, mình cần tìm "chiến binh" gia nhập đội phát triển.
 
 Công việc sẽ là gia công phần mềm cho khách hàng, khách hàng hầu hết là các công ty Mỹ vì làm việc
 với họ rất tốt.
@@ -34,7 +34,7 @@ Tại sao lại là chiến binh?
 --------------------------
 
 - Vì bạn phải chiến đấu, tất nhiên là chiến đấu với những yêu cầu khá trừu tượng của khách hàng để
-hoàn thành nhiệm vụ được giao (có sự trợ giúp và code review từ tôi)
+hoàn thành nhiệm vụ được giao (có sự trợ giúp và code review từ mình và các đồng nghiệp)
 
 - Vì bạn sẽ phải chịu rất nhiều áp lực
 
@@ -269,7 +269,10 @@ Bạn được những gì?
   và khuyến khích nhân viên tập gym để nâng cao sức khoẻ.v.v...)
 
 
-Nhiều công việc áp lực, thú vị, thử thách đang chờ bạn. Hãy liên lạc ngay với tôi, mọi liên lạc hãy
+Bạn ứng tuyển thế nào?
+----------------------
+
+Nhiều công việc áp lực, thú vị, thử thách đang chờ bạn. Hãy liên lạc ngay với mình, mọi liên lạc hãy
 gửi về: hoatlevan at gmail dot com với:
 
 - Giới thiệu bản thân
